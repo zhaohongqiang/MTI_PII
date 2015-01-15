@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:shape="rectangle"
+    >
+    <stroke
+        android:width="2dp"
+        android:color="#333333"
+        />
+    <corners 
+        android:radius="8dp"
+        />
+
+</shape>
+<!-- From: file:/F:/迈世通程序/MT254xCoreS透传模块/Android%20app/TruthBlue2_1/res/drawable/edtshape.xml -->
