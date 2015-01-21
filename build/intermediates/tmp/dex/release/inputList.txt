@@ -1,0 +1,2 @@
+C:\Users\zhao\AndroidStudioProjects\TruthBlue2_1\build\intermediates\classes\release
+C:\Users\zhao\AndroidStudioProjects\TruthBlue2_1\build\intermediates\pre-dexed\release\android-support-v4-01fb166e16a01f8fbf7f871556b1053f45f8b2cc.jar

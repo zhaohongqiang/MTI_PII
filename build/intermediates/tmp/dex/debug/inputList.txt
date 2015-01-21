@@ -1,2 +1,2 @@
-F:\迈世通程序\MT254xCoreS透传模块\Android app\TruthBlue2_1\build\intermediates\classes\debug
-F:\迈世通程序\MT254xCoreS透传模块\Android app\TruthBlue2_1\build\intermediates\pre-dexed\debug\android-support-v4-599279aee3153074191afb2a1a6410808bd8997b.jar
+C:\Users\zhao\AndroidStudioProjects\TruthBlue2_1\build\intermediates\classes\debug
+C:\Users\zhao\AndroidStudioProjects\TruthBlue2_1\build\intermediates\pre-dexed\debug\android-support-v4-01fb166e16a01f8fbf7f871556b1053f45f8b2cc.jar
