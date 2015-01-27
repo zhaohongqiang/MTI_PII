@@ -6,6 +6,10 @@ public class SampleGattAttributes {
     private static HashMap<String, String> attributes = new HashMap();
  
     static {
+        //user
+        attributes.put("0000faf0-0000-1000-8000-00805f9b34fb", "MedNovo MTI-PII");
+        attributes.put("0000faf1-0000-1000-8000-00805f9b34fb", "MTI-PII DataTransmisson");//不起作用？？？
+
         // Sample Services.
         attributes.put("0000180d-0000-1000-8000-00805f9b34fb", "Heart Rate Service");
         attributes.put("0000180a-0000-1000-8000-00805f9b34fb", "Device Information Service");

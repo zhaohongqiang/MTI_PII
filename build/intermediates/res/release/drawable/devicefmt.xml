@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <corners android:radius="14dp" />
-    <stroke android:width="2dip" android:color="#000000" />
-
-</shape>
-<!-- From: file:/C:/Users/zhao/AndroidStudioProjects/TruthBlue2_1/res/drawable/devicefmt.xml -->
