@@ -1,2 +1,2 @@
-C:\Users\zhao\AndroidStudioProjects\TruthBlue2_1\build\intermediates\classes\debug
-C:\Users\zhao\AndroidStudioProjects\TruthBlue2_1\build\intermediates\pre-dexed\debug\android-support-v4-01fb166e16a01f8fbf7f871556b1053f45f8b2cc.jar
+C:\Users\zhao\AndroidStudioProjects\MTI_PII\build\intermediates\classes\debug
+C:\Users\zhao\AndroidStudioProjects\MTI_PII\build\intermediates\pre-dexed\debug\android-support-v4-de8692e354694abb028ec5ccd4e083d3790079ef.jar

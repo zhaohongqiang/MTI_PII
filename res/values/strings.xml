@@ -4,5 +4,6 @@
     <string name="app_name">MTI-PII</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+    <string name="versionCode_PII">1</string>//Insulin_pump 胰岛素泵
+    <string name="versionName_PII">1.0</string>
 </resources>

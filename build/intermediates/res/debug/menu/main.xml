@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.mt.truthblue2_1.MainActivity" >
+    tools:context="com.mednovo.mti_pii.MainActivity" >
 
     <item
         android:id="@+id/action_settings"
@@ -9,4 +9,4 @@
         android:title="@string/action_settings"/>
 
 </menu>
-<!-- From: file:/C:/Users/zhao/AndroidStudioProjects/TruthBlue2_1/res/menu/main.xml -->
+<!-- From: file:/C:/Users/zhao/AndroidStudioProjects/MTI_PII/res/menu/main.xml -->
