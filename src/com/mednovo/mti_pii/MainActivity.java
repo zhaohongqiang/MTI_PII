@@ -5,7 +5,7 @@ import java.util.List;
 import com.mednovo.mtblesdk.MTBeacon;
 import com.mednovo.tools.Tools;
 import com.mednovo.mti_pii.BLEService.LocalBinder;
-import com.mt.truthblue2_1.R;
+import com.mednovo.mti_pii.R;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

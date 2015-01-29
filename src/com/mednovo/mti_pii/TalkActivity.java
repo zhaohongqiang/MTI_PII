@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.UUID;
 
 import com.mednovo.tools.Tools;
-import com.mt.truthblue2_1.R;
+import com.mednovo.mti_pii.R;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothGattCharacteristic;
