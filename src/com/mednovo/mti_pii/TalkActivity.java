@@ -60,8 +60,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 	private void setBroadcastReceiver() {
 		// 创建一个IntentFilter对象，将其action指定为BluetoothDevice.ACTION_FOUND
-		IntentFilter intentFilter = new IntentFilter(
-				BLEService.ACTION_DATA_CHANGE);
+		IntentFilter intentFilter = new IntentFilter(BLEService.ACTION_DATA_CHANGE);
 		intentFilter.addAction(BLEService.ACTION_READ_OVER);
 		intentFilter.addAction(BLEService.ACTION_RSSI_READ);
 		intentFilter.addAction(BLEService.ACTION_STATE_CONNECTED);
@@ -188,15 +187,14 @@ public class TalkActivity extends Activity implements OnClickListener {
 		talking_conect_flag_txt.setText("已连接");
 		fmt_adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_spinner_item, FMT_SELCET);
-		fmt_adapter
-				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		fmt_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		read_fmt_select.setAdapter(fmt_adapter); // 发送和读取数据格式
 		read_fmt_select.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 			@Override
-			public void onItemSelected(AdapterView<?> arg0, View arg1,
-					int arg2, long arg3) {
-				read_fmt_int = arg2;
+			public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+
+                read_fmt_int = arg2;
 			}
 
 			@Override
@@ -205,12 +203,10 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 		});
 		write_fmt_select.setAdapter(fmt_adapter);
-		write_fmt_select
-				.setOnItemSelectedListener(new OnItemSelectedListener() {
+		write_fmt_select.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 					@Override
-					public void onItemSelected(AdapterView<?> arg0, View arg1,
-							int arg2, long arg3) {
+					public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 						write_fmt_int = arg2;
 						switch (write_fmt_int) {
 						case 0:
@@ -271,8 +267,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 			BluetoothGattDescriptor descriptor = mBluetoothGattCharacteristic
 					.getDescriptor(UUID
 							.fromString("00002902-0000-1000-8000-00805f9b34fb"));
-			descriptor
-					.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
+			descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
 			Tools.mBLEService.mBluetoothGatt.writeDescriptor(descriptor);
 		}
 	}
@@ -311,8 +306,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 				convertView = mInflater.inflate(R.layout.msg_from_fmt, null);
 			}
 
-			TextView msg_nameid = (TextView) convertView
-					.findViewById(R.id.msg_nameid);
+			TextView msg_nameid = (TextView) convertView.findViewById(R.id.msg_nameid);
 			TextView msg_id = (TextView) convertView.findViewById(R.id.msg_id);
 
 			msg_nameid.setText(getItem(position).getName());
@@ -371,8 +365,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 				send_time_edit.setText("10");
 				delay_time_int = 10;
 			} else {
-				delay_time_int = Integer.parseInt(send_time_edit.getText()
-						.toString());
+				delay_time_int = Integer.parseInt(send_time_edit.getText().toString());
 			}
 			sendontime_handl.sendEmptyMessageDelayed(0, delay_time_int);
 
