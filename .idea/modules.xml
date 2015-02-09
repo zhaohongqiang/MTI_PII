@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MTI_PII.iml" filepath="$PROJECT_DIR$/MTI_PII.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MedNovo_PII.iml" filepath="$PROJECT_DIR$/MedNovo_PII.iml" />
     </modules>
   </component>
 </project>

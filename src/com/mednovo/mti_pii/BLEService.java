@@ -34,8 +34,7 @@ public class BLEService extends Service {
 	private BluetoothGattCallback mGattCallback = new BluetoothGattCallback() {
 
 		@Override
-		public void onConnectionStateChange(BluetoothGatt gatt, int status,
-				int newState) {
+		public void onConnectionStateChange(BluetoothGatt gatt, int status,	int newState) {
 			super.onConnectionStateChange(gatt, status, newState);
 			if (newState == BluetoothProfile.STATE_CONNECTED) { // 链接成功
 				System.out.println("CONNECTED");
@@ -61,16 +60,14 @@ public class BLEService extends Service {
 		}
 
 		@Override
-		public void onDescriptorRead(BluetoothGatt gatt,
-				BluetoothGattDescriptor descriptor, int status) {
+		public void onDescriptorRead(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status) {
 			super.onDescriptorRead(gatt, descriptor, status);
 
 			broadcastUpdate(ACTION_READ_Descriptor_OVER, status);
 		}
 
 		@Override
-		public void onCharacteristicRead(BluetoothGatt gatt,
-				BluetoothGattCharacteristic characteristic, int status) {
+		public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
 			super.onCharacteristicRead(gatt, characteristic, status);
 			
 			if (status == BluetoothGatt.GATT_SUCCESS) {
@@ -79,16 +76,14 @@ public class BLEService extends Service {
 		}
 
 		@Override
-		public void onCharacteristicChanged(BluetoothGatt gatt,
-				BluetoothGattCharacteristic characteristic) {
+		public void onCharacteristicChanged(BluetoothGatt gatt,	BluetoothGattCharacteristic characteristic) {
 			super.onCharacteristicChanged(gatt, characteristic);
 			broadcastUpdate(ACTION_DATA_CHANGE, characteristic.getValue());
 		}
 		
 
 		@Override
-		public void onCharacteristicWrite(BluetoothGatt gatt,
-				BluetoothGattCharacteristic characteristic, int status) {
+		public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
 			super.onCharacteristicWrite(gatt, characteristic, status);
 			broadcastUpdate(ACTION_WRITE_OVER, status);
 		}
@@ -159,8 +154,7 @@ public class BLEService extends Service {
 			return false;
 		}
 		
-		mBluetoothGatt = device_tmp.connectGatt(getApplicationContext(), false,
-				mGattCallback);
+		mBluetoothGatt = device_tmp.connectGatt(getApplicationContext(), false, mGattCallback);
 		return true;
 	}
 		
@@ -175,8 +169,7 @@ public class BLEService extends Service {
 	}
 	
 	// 检查是否连接
-	public boolean isConnected()
-	{
+	public boolean isConnected() {
 		return connect_flag;
 	}
 	

@@ -8,7 +8,8 @@ public class SampleGattAttributes {
     static {
         //user
         attributes.put("0000faf0-0000-1000-8000-00805f9b34fb", "MedNovo MTI-PII");
-        attributes.put("0000faf1-0000-1000-8000-00805f9b34fb", "MTI-PII DataTransmisson");//不起作用？？？
+        attributes.put("0000faf1-0000-1000-8000-00805f9b34fb", "MTI-PII DataTransmisson");
+        attributes.put("0000faf2-0000-1000-8000-00805f9b34fb", "MTI-PII RemoteContol");
 
         // Sample Services.
         attributes.put("0000180d-0000-1000-8000-00805f9b34fb", "Heart Rate Service");

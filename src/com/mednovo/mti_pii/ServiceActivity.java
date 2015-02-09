@@ -30,6 +30,7 @@ import android.widget.ExpandableListView;
 import android.widget.Toast;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.SimpleExpandableListAdapter;
+import android.util.Log;
 
 public class ServiceActivity extends Activity {
 
@@ -64,8 +65,7 @@ public class ServiceActivity extends Activity {
 		public void onReceive(Context context, Intent intent) {
 			String action = intent.getAction();
 			if (BLEService.ACTION_READ_Descriptor_OVER.equals(action)) {
-				if (BluetoothGatt.GATT_SUCCESS == intent.getIntExtra("value",
-						-1)) {
+				if (BluetoothGatt.GATT_SUCCESS == intent.getIntExtra("value",-1)) {
 					read_name_flag = true;
 				}
 				return;
@@ -119,8 +119,7 @@ public class ServiceActivity extends Activity {
 			public boolean onChildClick(ExpandableListView parent, View v,
 					int groupPosition, int childPosition, long id) {
 
-				Intent intent = new Intent(getApplicationContext(),
-						TalkActivity.class);
+				Intent intent = new Intent(getApplicationContext(),	TalkActivity.class);
 				intent.putExtra("one", groupPosition);
 				intent.putExtra("two", childPosition);
 				startActivityForResult(intent, 0);
@@ -219,8 +218,7 @@ public class ServiceActivity extends Activity {
 			}
 			
 			read_name_flag = false; // 读取设备名
-			List<BluetoothGattService> services = Tools.mBLEService.mBluetoothGatt
-					.getServices();
+			List<BluetoothGattService> services = Tools.mBLEService.mBluetoothGatt.getServices();
 			
 			System.out.println("services.size-->"+services.size());
 			if(services.size() == 0){
@@ -256,12 +254,10 @@ public class ServiceActivity extends Activity {
 					Map<String, String> child_data = new HashMap<String, String>(); // 添加一个二级条目
 					uuid = gattCharacteristic.getUuid().toString();
 					BluetoothGattDescriptor descriptor = gattCharacteristic
-							.getDescriptor(UUID
-									.fromString("00002901-0000-1000-8000-00805f9b34fb"));
+							.getDescriptor(UUID.fromString("00002901-0000-1000-8000-00805f9b34fb"));
 					if (null != descriptor) {
 						read_name_flag = false;
-						Tools.mBLEService.mBluetoothGatt
-								.readDescriptor(descriptor);
+						Tools.mBLEService.mBluetoothGatt.readDescriptor(descriptor);
 						while (!read_name_flag) {// 等待读取完成
 							if (exit_activity || bind_flag){
 								bind_flag = false;
@@ -270,16 +266,18 @@ public class ServiceActivity extends Activity {
 							}
 						}
 						try {
-							child_data.put("name",
-									new String(descriptor.getValue(),
-											"GB2312"));
+
+							child_data.put("name",new String(descriptor.getValue(),"GB2312"));
+                            String name1 = new String(descriptor.getValue(),"GB2312");
+                            Log.v("name1",""+ name1);
+
+                            child_data.put("name", SampleGattAttributes.lookup(uuid, "unknow"));
+
 						} catch (UnsupportedEncodingException e) {
 							e.printStackTrace();
 						}
 					} else {
-						child_data
-								.put("name", SampleGattAttributes.lookup(
-										uuid, "unknow"));
+						child_data.put("name", SampleGattAttributes.lookup(uuid, "unknow"));
 					}
 
 					String pro = "";

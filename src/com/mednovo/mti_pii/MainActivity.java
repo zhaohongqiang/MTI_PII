@@ -93,18 +93,13 @@ public class MainActivity extends Activity {
 				convertView = mInflater.inflate(R.layout.devicefmt, null);
 			}
 
-			TextView device_name_txt = (TextView) convertView
-					.findViewById(R.id.device_name_txt);
-			TextView device_rssi_txt = (TextView) convertView
-					.findViewById(R.id.device_rssi_txt);
-			TextView device_mac_txt = (TextView) convertView
-					.findViewById(R.id.device_mac_txt);
+			TextView device_name_txt = (TextView) convertView.findViewById(R.id.device_name_txt);
+			TextView device_rssi_txt = (TextView) convertView.findViewById(R.id.device_rssi_txt);
+			TextView device_mac_txt = (TextView) convertView.findViewById(R.id.device_mac_txt);
 
 			device_name_txt.setText(getItem(position).GetDevice().getName());
-			device_mac_txt.setText("Mac: "
-					+ getItem(position).GetDevice().getAddress());
-			device_rssi_txt.setText("Rssi: "
-					+ getItem(position).GetAveragerssi());
+			device_mac_txt.setText("Mac: " + getItem(position).GetDevice().getAddress());
+			device_rssi_txt.setText("Rssi: " + getItem(position).GetAveragerssi());
 
 			return convertView;
 		}
@@ -137,10 +132,8 @@ public class MainActivity extends Activity {
 					int position, long id) {
 				// scan_flag = false;
 				// Tools.mBLEService.stopscanBle(mLeScanCallback);
-				Intent intent = new Intent(getApplicationContext(),
-						ServiceActivity.class);
-				intent.putExtra("device", scan_devices_dis.get(position)
-						.GetDevice());
+				Intent intent = new Intent(getApplicationContext(),	ServiceActivity.class);
+				intent.putExtra("device", scan_devices_dis.get(position).GetDevice());
 				startActivity(intent);
 			}
 		});
@@ -235,5 +228,6 @@ public class MainActivity extends Activity {
 	protected void onDestroy() {
 		super.onDestroy();
 		unbindService(connection);
+        Tools.mBLEService.mBluetoothAdapter.disable();//πÿ±’¿∂—¿
 	}
 }

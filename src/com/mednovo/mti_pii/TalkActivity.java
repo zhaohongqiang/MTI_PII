@@ -18,6 +18,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -111,7 +113,8 @@ public class TalkActivity extends Activity implements OnClickListener {
 		switch (read_fmt_int) {
 		case 0: // 字符串显示
 			try {
-				tmp = new String(tmp_byte, "GB2312");
+				//tmp = new String(tmp_byte, "GB2312");
+                tmp = new String(tmp_byte, "utf-8");//修改读取格式为utf-8型
 			} catch (UnsupportedEncodingException e) {
 				e.printStackTrace();
 			}
@@ -138,7 +141,8 @@ public class TalkActivity extends Activity implements OnClickListener {
 			break;
 		}
 
-		ChatMsgFmt entity2 = new ChatMsgFmt("Device", tmp, MESSAGE_FROM.OTHERS);
+		//ChatMsgFmt entity2 = new ChatMsgFmt("Device", tmp, MESSAGE_FROM.OTHERS);
+        ChatMsgFmt entity2 = new ChatMsgFmt("蓝牙端", tmp, MESSAGE_FROM.OTHERS);
 		chat_list.add(entity2);
 		chat_list_adapter.notifyDataSetChanged();
 	}
@@ -151,6 +155,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private ToggleButton talking_stopdis_btn;
 	private ListView chatist;
 	private Spinner write_fmt_select;
+    private Spinner send_fmt_select;
 	private EditText edit_string_id;
 	private EditText edit_hex_id;
 	private EditText edit_shi_id;
@@ -163,7 +168,10 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private ChatAdapater chat_list_adapter;
 	private ArrayAdapter<String> fmt_adapter;
 	private static final String FMT_SELCET[] = { "Str", "Hex", "Dec" };
+    private ArrayAdapter<String> send_adapter;
+    private static final String SEND_SELCET[] = { "R_SN", "R_VER", "中国", "外国", "R_SN", "R_VER", "中国", "外国" };
 	private int write_fmt_int; // 发送数据格式 整形
+    private int send_fmt_int;
 	private int read_fmt_int = 0; // 接收数据格式 整形
 	private int proper = 0; // 通道权限
 
@@ -172,9 +180,10 @@ public class TalkActivity extends Activity implements OnClickListener {
 		talking_read_btn = (Button) findViewById(R.id.talking_read_btn);
 		talking_clear_btn = (Button) findViewById(R.id.talking_clear_btn);
 		read_fmt_select = (Spinner) findViewById(R.id.read_fmt_select);
-		talking_stopdis_btn = (ToggleButton) findViewById(R.id.talking_stopdis_btn);
+		talking_stopdis_btn  = (ToggleButton) findViewById(R.id.talking_stopdis_btn);
 		chatist = (ListView) findViewById(R.id.chatist);
 		write_fmt_select = (Spinner) findViewById(R.id.write_fmt_select);
+        send_fmt_select = (Spinner) findViewById(R.id.send_fmt_select);
 		edit_string_id = (EditText) findViewById(R.id.edit_string_id);
 		edit_hex_id = (EditText) findViewById(R.id.edit_hex_id);
 		edit_shi_id = (EditText) findViewById(R.id.edit_shi_id);
@@ -243,6 +252,47 @@ public class TalkActivity extends Activity implements OnClickListener {
 					}
 
 				});
+
+        send_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, SEND_SELCET);
+        send_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        send_fmt_select.setAdapter(send_adapter);
+        send_fmt_select.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                send_fmt_int = arg2;
+
+                byte[] sendmsg= new byte[20];
+                try {
+                    sendmsg = SEND_SELCET[send_fmt_int].getBytes("GB2312");
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                if (sendmsg == null) {
+                    return;
+                }
+
+                String newsendmsg = null;
+                try {
+                    newsendmsg = new String(sendmsg,"GB2312");
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+
+                ChatMsgFmt entity = new ChatMsgFmt("手机端", newsendmsg, MESSAGE_FROM.ME);
+                chat_list.add(entity);
+                chat_list_adapter.notifyDataSetChanged();
+
+                mBluetoothGattCharacteristic.setValue(sendmsg);
+                Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+            }
+
+        });
+
 		chat_list_adapter = new ChatAdapater(getApplicationContext());
 		chatist.setAdapter(chat_list_adapter);
 		talking_read_btn.setOnClickListener(this);
@@ -369,13 +419,13 @@ public class TalkActivity extends Activity implements OnClickListener {
 			}
 			sendontime_handl.sendEmptyMessageDelayed(0, delay_time_int);
 
-			byte[] sendmsg = getMsgEdit(false); // 发送数据
+			byte[] sendmsg = getMsgEdit(true); // 发送数据 sendmsg = getMsgEdit(false); // 发送数据
 			if (sendmsg == null) {
 				return;
 			}
+            Log.v("sendmsg", "" + sendmsg);
 			mBluetoothGattCharacteristic.setValue(sendmsg);
-			Tools.mBLEService.mBluetoothGatt
-					.writeCharacteristic(mBluetoothGattCharacteristic);
+			Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
 		}
 	};
 
@@ -400,13 +450,11 @@ public class TalkActivity extends Activity implements OnClickListener {
 			}
 
 			mBluetoothGattCharacteristic.setValue(sendmsg);
-			Tools.mBLEService.mBluetoothGatt
-					.writeCharacteristic(mBluetoothGattCharacteristic);
+			Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
 			return;
 		}
 		if (v == talking_read_btn) { // 读取按钮
-			Tools.mBLEService.mBluetoothGatt
-					.readCharacteristic(mBluetoothGattCharacteristic);
+			Tools.mBLEService.mBluetoothGatt.readCharacteristic(mBluetoothGattCharacteristic);
 			return;
 		}
 		if (v == send_onTime_checkbox) { // 定时发送数据
@@ -478,7 +526,8 @@ public class TalkActivity extends Activity implements OnClickListener {
 			return null;
 		// 显示
 		if (dis_flag) {
-			ChatMsgFmt entity = new ChatMsgFmt("Me", tmp_str, MESSAGE_FROM.ME);
+			//ChatMsgFmt entity = new ChatMsgFmt("Me", tmp_str, MESSAGE_FROM.ME);
+            ChatMsgFmt entity = new ChatMsgFmt("手机端", tmp_str, MESSAGE_FROM.ME);
 			chat_list.add(entity);
 			chat_list_adapter.notifyDataSetChanged();
 		}
