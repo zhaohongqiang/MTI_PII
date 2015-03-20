@@ -7,4 +7,5 @@
     <string name="versionCode_PII">1</string>//Insulin_pump 胰岛素泵
     <string name="versionName_PII">1.0</string>
     <string name="edit_string">你好</string>
+    <string name="AlwaysUse">常用命令</string>
 </resources>

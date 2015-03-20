@@ -24,7 +24,9 @@ public final class R {
         public static final int tomsgshp=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001b;
+        public static final int AlwaysUse=0x7f080014;
+        public static final int action_settings=0x7f08001d;
+        public static final int alwaysuse_Layout=0x7f080013;
         public static final int ble_listview=0x7f080000;
         public static final int chatist=0x7f080011;
         public static final int child_uuid_txt=0x7f080008;
@@ -32,25 +34,25 @@ public final class R {
         public static final int device_mac_txt=0x7f080003;
         public static final int device_name_txt=0x7f080001;
         public static final int device_rssi_txt=0x7f080002;
-        public static final int edit_hex_id=0x7f080018;
-        public static final int edit_shi_id=0x7f080019;
-        public static final int edit_string_id=0x7f080017;
+        public static final int edit_hex_id=0x7f08001a;
+        public static final int edit_shi_id=0x7f08001b;
+        public static final int edit_string_id=0x7f080019;
         public static final int grounp_uuid_txt=0x7f08000a;
         public static final int grounpname_txt=0x7f080009;
         public static final int msg_id=0x7f080005;
         public static final int msg_nameid=0x7f080004;
         public static final int prov=0x7f080007;
         public static final int read_fmt_select=0x7f08000f;
-        public static final int send_fmt_select=0x7f080013;
-        public static final int send_onTime_checkbox=0x7f080014;
-        public static final int send_time_edit=0x7f080015;
-        public static final int sendbuttonid=0x7f08001a;
+        public static final int send_fmt_select=0x7f080015;
+        public static final int send_onTime_checkbox=0x7f080016;
+        public static final int send_time_edit=0x7f080017;
+        public static final int sendbuttonid=0x7f08001c;
         public static final int service_list_view=0x7f08000b;
         public static final int talking_clear_btn=0x7f08000e;
         public static final int talking_conect_flag_txt=0x7f08000c;
         public static final int talking_read_btn=0x7f08000d;
         public static final int talking_stopdis_btn=0x7f080010;
-        public static final int write_fmt_select=0x7f080016;
+        public static final int write_fmt_select=0x7f080018;
         public static final int writeable_Layout=0x7f080012;
     }
     public static final class layout {
@@ -67,12 +69,13 @@ public final class R {
         public static final int main=0x7f070000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050000;
-        public static final int app_name=0x7f050001;
-        public static final int edit_string=0x7f050002;
-        public static final int hello_world=0x7f050003;
-        public static final int versionCode_PII=0x7f050004;
-        public static final int versionName_PII=0x7f050005;
+        public static final int AlwaysUse=0x7f050000;
+        public static final int action_settings=0x7f050001;
+        public static final int app_name=0x7f050002;
+        public static final int edit_string=0x7f050003;
+        public static final int hello_world=0x7f050004;
+        public static final int versionCode_PII=0x7f050005;
+        public static final int versionName_PII=0x7f050006;
     }
     public static final class style {
         /** 

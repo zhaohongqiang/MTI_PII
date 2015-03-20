@@ -163,13 +163,17 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private CheckBox send_onTime_checkbox;
 	private EditText send_time_edit;
 	private LinearLayout writeable_Layout;
+    private LinearLayout alwaysuse_Layout;
 
 	private List<ChatMsgFmt> chat_list = new ArrayList<ChatMsgFmt>();
 	private ChatAdapater chat_list_adapter;
 	private ArrayAdapter<String> fmt_adapter;
 	private static final String FMT_SELCET[] = { "Str", "Hex", "Dec" };
     private ArrayAdapter<String> send_adapter;
-    private static final String SEND_SELCET[] = { "R_SN", "R_VER", "中国", "外国", "R_SN", "R_VER", "中国", "外国" };
+    private static final String SEND_SELCET[] = { "A8080100001678A2", "A80811000017BDA2", "A808130000B67DA2",
+                                                  "A80814000007BCA2", "A80820000187B2A2", "A808210001D672A2",
+                                                  "A8082200012672A2", "A80823000177B2A2", "A808240001C673A2",
+                                                  "A80825000197B3A2", "A80826000167B3A2", "A8082700013673A2"};
 	private int write_fmt_int; // 发送数据格式 整形
     private int send_fmt_int;
 	private int read_fmt_int = 0; // 接收数据格式 整形
@@ -191,10 +195,11 @@ public class TalkActivity extends Activity implements OnClickListener {
 		send_onTime_checkbox = (CheckBox) findViewById(R.id.send_onTime_checkbox);
 		send_time_edit = (EditText) findViewById(R.id.send_time_edit);
 		writeable_Layout = (LinearLayout) findViewById(R.id.writeable_Layout);
+        alwaysuse_Layout = (LinearLayout) findViewById(R.id.alwaysuse_Layout);
 
 		// 初始化控件参数
 		talking_conect_flag_txt.setText("已连接");
-		fmt_adapter = new ArrayAdapter<String>(this,
+		fmt_adapter = new ArayAdapter<String>(this,
 				android.R.layout.simple_spinner_item, FMT_SELCET);
 		fmt_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		read_fmt_select.setAdapter(fmt_adapter); // 发送和读取数据格式
@@ -261,30 +266,47 @@ public class TalkActivity extends Activity implements OnClickListener {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 send_fmt_int = arg2;
+                if(true) {
+                    //=============================================================================================
+                    byte[] sendmsg = getNewMsgEdit(true); // 发送数据
+                    if (sendmsg == null) {
+                        return;
+                    }
+                    Log.v("sendmsg", "" + sendmsg);
+                    mBluetoothGattCharacteristic.setValue(sendmsg);
+                    Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
+                    //=============================================================================================
+                }else {
+                    byte[] sendmsg = new byte[40];
+                    try {
+                        sendmsg = SEND_SELCET[send_fmt_int].getBytes("utf-8");//GB2312
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    }
+                    if (sendmsg == null) {
+                        return;
+                    }
+                    if (!Tools.mBLEService.isConnected()) {
+                        Toast.makeText(getApplicationContext(), "已断开连接", Toast.LENGTH_LONG)
+                                .show();
+                        return;
+                    }
 
-                byte[] sendmsg= new byte[20];
-                try {
-                    sendmsg = SEND_SELCET[send_fmt_int].getBytes("GB2312");
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();
+                    String newsendmsg = null;
+                    try {
+                        newsendmsg = new String(sendmsg, "utf-8");//GB2312
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    }
+                    //ChatMsgFmt entity = new ChatMsgFmt("手机端", SEND_SELCET[send_fmt_int], MESSAGE_FROM.ME);
+                    ChatMsgFmt entity = new ChatMsgFmt("手机端", newsendmsg, MESSAGE_FROM.ME);
+                    chat_list.add(entity);
+                    chat_list_adapter.notifyDataSetChanged();
+
+                    mBluetoothGattCharacteristic.setValue(sendmsg);
+                    Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
                 }
-                if (sendmsg == null) {
-                    return;
-                }
-
-                String newsendmsg = null;
-                try {
-                    newsendmsg = new String(sendmsg,"GB2312");
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();
-                }
-
-                ChatMsgFmt entity = new ChatMsgFmt("手机端", newsendmsg, MESSAGE_FROM.ME);
-                chat_list.add(entity);
-                chat_list_adapter.notifyDataSetChanged();
-
-                mBluetoothGattCharacteristic.setValue(sendmsg);
-                Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
+                send_fmt_int = 0;
             }
 
             @Override
@@ -309,6 +331,10 @@ public class TalkActivity extends Activity implements OnClickListener {
 		if ((0 != (proper & BluetoothGattCharacteristic.PROPERTY_WRITE))
 				|| (0 != (proper & BluetoothGattCharacteristic.PROPERTY_WRITE_NO_RESPONSE))) { // 可写
 			writeable_Layout.setVisibility(View.VISIBLE);
+            alwaysuse_Layout.setVisibility(View.INVISIBLE);//不可见
+            if(0 != (proper & 0x02)) {//可读
+                alwaysuse_Layout.setVisibility(View.VISIBLE);//可见 打开常用命令
+            }
 		}
 		if ((0 != (proper & BluetoothGattCharacteristic.PROPERTY_NOTIFY))
 				|| (0 != (proper & BluetoothGattCharacteristic.PROPERTY_INDICATE))) { // 通知
@@ -534,6 +560,45 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 		return write_msg_byte;
 	}
+
+    //获取常用内容
+    private byte[] getNewMsgEdit(boolean dis_flag) {
+        String tmp_str = "";
+        byte[] tmp_byte = null;
+        byte[] write_msg_byte = null;
+
+        tmp_str = SEND_SELCET[send_fmt_int];
+        if (0 == tmp_str.length())
+            return null;
+
+        tmp_byte = SEND_SELCET[send_fmt_int].getBytes();
+        write_msg_byte = new byte[tmp_byte.length / 2 + tmp_byte.length % 2];
+        for (int i = 0; i < tmp_byte.length; i++) {
+            if ((tmp_byte[i] <= '9') && (tmp_byte[i] >= '0')) {
+                if (0 == i % 2)
+                    write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - '0') * 16) & 0xFF);
+                else
+                    write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - '0') & 0xFF);
+            } else {
+                if (0 == i % 2)
+                    write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - 'a' + 10) * 16) & 0xFF);
+                else
+                    write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - 'a' + 10) & 0xFF);
+            }
+        }
+
+        if (0 == tmp_str.length())
+            return null;
+        // 显示
+        if (dis_flag) {
+            //ChatMsgFmt entity = new ChatMsgFmt("Me", tmp_str, MESSAGE_FROM.ME);
+            ChatMsgFmt entity = new ChatMsgFmt("手机端", tmp_str, MESSAGE_FROM.ME);
+            chat_list.add(entity);
+            chat_list_adapter.notifyDataSetChanged();
+        }
+        return write_msg_byte;
+    }
+
 
 	@Override
 	protected void onResume() {

@@ -91,11 +91,23 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            android:id="@+id/alwaysuse_Layout">
+
+            <TextView
+                android:id="@+id/AlwaysUse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/AlwaysUse"
+                android:textSize="17sp"
+                android:textColor="#ff000000"
+                android:layout_marginLeft="10dp" />
 
             <Spinner
                 android:id="@+id/send_fmt_select"
-                android:layout_width="80dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content" />
         </LinearLayout>
         <LinearLayout
