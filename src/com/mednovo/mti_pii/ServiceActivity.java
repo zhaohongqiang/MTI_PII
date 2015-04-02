@@ -269,7 +269,7 @@ public class ServiceActivity extends Activity {
 
 							child_data.put("name",new String(descriptor.getValue(),"GB2312"));
                             String name1 = new String(descriptor.getValue(),"GB2312");
-                            Log.v("name1",""+ name1);
+                            Log.v("zhq_log name1",""+ name1);
 
                             child_data.put("name", SampleGattAttributes.lookup(uuid, "unknow"));
 

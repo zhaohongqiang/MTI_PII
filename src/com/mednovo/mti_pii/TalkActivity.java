@@ -2,9 +2,15 @@ package com.mednovo.mti_pii;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+//import java.util.HashMap;
 import java.util.List;
+//import java.util.Map;
 import java.util.UUID;
 
+//import com.mednovo.tools.CommandsEnum;
+//import com.mednovo.tools.CommandsNewEnum;
+import com.mednovo.tools.CommandsFound;
+import com.mednovo.tools.DataTransmission;
 import com.mednovo.tools.Tools;
 import com.mednovo.mti_pii.R;
 
@@ -165,17 +171,26 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private LinearLayout writeable_Layout;
     private LinearLayout alwaysuse_Layout;
 
+    private LinearLayout generalsend_command;
+    private EditText defaultcontrol_code;
+    private Button general_sendbut;
+
 	private List<ChatMsgFmt> chat_list = new ArrayList<ChatMsgFmt>();
 	private ChatAdapater chat_list_adapter;
 	private ArrayAdapter<String> fmt_adapter;
 	private static final String FMT_SELCET[] = { "Str", "Hex", "Dec" };
     private ArrayAdapter<String> send_adapter;
-    private static final String SEND_SELCET[] = { "A8080100001678A2", "A80811000017BDA2", "A808130000B67DA2",
+    private static final String SEND_SELCET[] = { "设置出厂数据", "读取出厂数据", "设置系统设置数据", "读取系统设置数据",
+                                                     "设置基础率数据", "读取基础率数据", "读取运行状态数据", "读取即时大剂量记录",
+                                                        "读取定时大剂量记录", "读取暂停泵记录", "读取基础率记录", "读取暂时率记录",
+                                                           "读取日总量记录", "读取事件记录", "读取排气记录"};
+
+    /*  private static final String SEND_SELCET[] = { "A8080100001678A2", "A80811000017BDA2", "A808130000B67DA2",
                                                   "A80814000007BCA2", "A80820000187B2A2", "A808210001D672A2",
                                                   "A8082200012672A2", "A80823000177B2A2", "A808240001C673A2",
-                                                  "A80825000197B3A2", "A80826000167B3A2", "A8082700013673A2"};
+                                                  "A80825000197B3A2", "A80826000167B3A2", "A8082700013673A2"};*/
 	private int write_fmt_int; // 发送数据格式 整形
-    private int send_fmt_int;
+    private int send_fmt_int = 0;
 	private int read_fmt_int = 0; // 接收数据格式 整形
 	private int proper = 0; // 通道权限
 
@@ -197,9 +212,12 @@ public class TalkActivity extends Activity implements OnClickListener {
 		writeable_Layout = (LinearLayout) findViewById(R.id.writeable_Layout);
         alwaysuse_Layout = (LinearLayout) findViewById(R.id.alwaysuse_Layout);
 
+        generalsend_command = (LinearLayout) findViewById(R.id.generalsend_command);
+        defaultcontrol_code = (EditText) findViewById(R.id.DefaultControl_code);//控制码
+        general_sendbut = (Button) findViewById(R.id.General_sendbutton);
 		// 初始化控件参数
 		talking_conect_flag_txt.setText("已连接");
-		fmt_adapter = new ArayAdapter<String>(this,
+		fmt_adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_spinner_item, FMT_SELCET);
 		fmt_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		read_fmt_select.setAdapter(fmt_adapter); // 发送和读取数据格式
@@ -266,15 +284,22 @@ public class TalkActivity extends Activity implements OnClickListener {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 send_fmt_int = arg2;
+
+                if(send_fmt_int < 7){
+                    generalsend_command.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
+                }else{
+                    generalsend_command.setVisibility(View.VISIBLE);//可见
+                }
+
                 if(true) {
                     //=============================================================================================
-                    byte[] sendmsg = getNewMsgEdit(true); // 发送数据
+                    /*byte[] sendmsg = getNewMsgEdit(true); // 发送数据
                     if (sendmsg == null) {
                         return;
                     }
-                    Log.v("sendmsg", "" + sendmsg);
+                    Log.v("zhq_log sendmsg", "" + sendmsg);
                     mBluetoothGattCharacteristic.setValue(sendmsg);
-                    Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
+                    Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);*/
                     //=============================================================================================
                 }else {
                     byte[] sendmsg = new byte[40];
@@ -306,7 +331,7 @@ public class TalkActivity extends Activity implements OnClickListener {
                     mBluetoothGattCharacteristic.setValue(sendmsg);
                     Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
                 }
-                send_fmt_int = 0;
+                //send_fmt_int = 0;
             }
 
             @Override
@@ -322,6 +347,9 @@ public class TalkActivity extends Activity implements OnClickListener {
 		talking_stopdis_btn.setOnClickListener(this);
 		sendbuttonid.setOnClickListener(this);
 		send_onTime_checkbox.setOnClickListener(this);
+
+        general_sendbut.setOnClickListener(this);
+
 
 		// 查看是有什么权限
 		proper = mBluetoothGattCharacteristic.getProperties();
@@ -449,7 +477,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 			if (sendmsg == null) {
 				return;
 			}
-            Log.v("sendmsg", "" + sendmsg);
+            Log.v("zhq_log sendmsg", "" + sendmsg);
 			mBluetoothGattCharacteristic.setValue(sendmsg);
 			Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
 		}
@@ -469,12 +497,22 @@ public class TalkActivity extends Activity implements OnClickListener {
 					.show();
 			return;
 		}
+        if (v == general_sendbut) { // 发送按钮
+            byte[] sendmsg = getNewMsgEdit(true);
+            if (sendmsg == null) {
+                return;
+            }
+            Log.v("zhq_log 常用 sendmsg", "" + sendmsg);
+            mBluetoothGattCharacteristic.setValue(sendmsg);
+            Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
+            return;
+        }
 		if (v == sendbuttonid) { // 发送按钮
 			byte[] sendmsg = getMsgEdit(true);
 			if (sendmsg == null) {
 				return;
 			}
-
+            Log.v("zhq_log sendmsg", "" + sendmsg);
 			mBluetoothGattCharacteristic.setValue(sendmsg);
 			Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
 			return;
@@ -561,38 +599,120 @@ public class TalkActivity extends Activity implements OnClickListener {
 		return write_msg_byte;
 	}
 
-    //获取常用内容
-    private byte[] getNewMsgEdit(boolean dis_flag) {
-        String tmp_str = "";
-        byte[] tmp_byte = null;
-        byte[] write_msg_byte = null;
+    private int getsendint(int send_fmt_int ){
+        return   send_fmt_int;
+    }
 
-        tmp_str = SEND_SELCET[send_fmt_int];
-        if (0 == tmp_str.length())
-            return null;
+    /**
+     *
+     * 演示枚举类型的遍历
+     */
 
-        tmp_byte = SEND_SELCET[send_fmt_int].getBytes();
-        write_msg_byte = new byte[tmp_byte.length / 2 + tmp_byte.length % 2];
-        for (int i = 0; i < tmp_byte.length; i++) {
-            if ((tmp_byte[i] <= '9') && (tmp_byte[i] >= '0')) {
-                if (0 == i % 2)
-                    write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - '0') * 16) & 0xFF);
-                else
-                    write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - '0') & 0xFF);
-            } else {
-                if (0 == i % 2)
-                    write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - 'a' + 10) * 16) & 0xFF);
-                else
-                    write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - 'a' + 10) & 0xFF);
+    /*private void testCommandEnum(CommandsEnum commandsEnum) {
+
+        CommandsEnum[] allCommand = CommandsEnum.values();
+
+        for (CommandsEnum aCommand : allCommand) {
+
+            System.out.println("当前命令name：" + aCommand.name());
+
+            System.out.println("当前命令ordinal：" + aCommand.ordinal());
+
+            System.out.println("当前命令：" + aCommand);
+
+            if(aCommand.ordinal() == send_fmt_int){
+                return ;
             }
+
         }
 
-        if (0 == tmp_str.length())
+    }*/
+
+
+    //获取常用内容
+    private byte[] getNewMsgEdit(boolean dis_flag) {
+        String tmp_str = "";//发送数据
+        byte[] tmp_byte = null;
+        byte[] write_msg_byte = null;
+        String tmp_contror_code = "00";//控制码
+
+         //CommandsEnum commandsEnum = CommandsEnum.SET_FACTORYDATA; //枚举类型
+
+        Log.v("zhq_log CommandsFound  send_fmt_int ",""+ send_fmt_int);
+
+        if(true) {
+            if(send_fmt_int < 7){
+                tmp_str = DataTransmission.Data_Transmission(
+                        SEND_SELCET[send_fmt_int],send_fmt_int,tmp_contror_code);
+            }else{//控制码显示
+                tmp_contror_code = defaultcontrol_code.getText().toString();
+                if(tmp_contror_code != null && tmp_contror_code.length() != 0){
+                    tmp_str = DataTransmission.Data_Transmission(
+                            SEND_SELCET[send_fmt_int],send_fmt_int,tmp_contror_code);
+                }else{
+                    Toast.makeText(getApplicationContext(), "请输入需要查询第几条记录", Toast.LENGTH_LONG)
+                            .show();
+                    return null;
+                }
+            }
+
+            //tmp_str = SEND_SELCET[send_fmt_int];
+            if (0 == tmp_str.length())
+                return null;
+
+            tmp_byte = tmp_str.getBytes();
+            write_msg_byte = new byte[tmp_byte.length / 2 + tmp_byte.length % 2];
+            for (int i = 0; i < tmp_byte.length; i++) {
+                if ((tmp_byte[i] <= '9') && (tmp_byte[i] >= '0')) {
+                    if (0 == i % 2)
+                        write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - '0') * 16) & 0xFF);
+                    else
+                        write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - '0') & 0xFF);
+                } else {
+                    if (0 == i % 2)
+                        write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - 'a' + 10) * 16) & 0xFF);
+                    else
+                        write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - 'a' + 10) & 0xFF);
+                }
+            }
+
+            if (0 == tmp_str.length())
+                return null;
+        }else {
+            tmp_str = SEND_SELCET[send_fmt_int];
+            if (0 == tmp_str.length())
+                return null;
+
+            tmp_byte = SEND_SELCET[send_fmt_int].getBytes();
+            write_msg_byte = new byte[tmp_byte.length / 2 + tmp_byte.length % 2];
+            for (int i = 0; i < tmp_byte.length; i++) {
+                if ((tmp_byte[i] <= '9') && (tmp_byte[i] >= '0')) {
+                    if (0 == i % 2)
+                        write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - '0') * 16) & 0xFF);
+                    else
+                        write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - '0') & 0xFF);
+                } else {
+                    if (0 == i % 2)
+                        write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - 'a' + 10) * 16) & 0xFF);
+                    else
+                        write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - 'a' + 10) & 0xFF);
+                }
+            }
+
+            if (0 == tmp_str.length())
+                return null;
+        }
+
+        if (!Tools.mBLEService.isConnected()) {
+            Toast.makeText(getApplicationContext(), "已断开连接", Toast.LENGTH_LONG)
+                    .show();
             return null;
+        }
+
         // 显示
         if (dis_flag) {
             //ChatMsgFmt entity = new ChatMsgFmt("Me", tmp_str, MESSAGE_FROM.ME);
-            ChatMsgFmt entity = new ChatMsgFmt("手机端", tmp_str, MESSAGE_FROM.ME);
+            ChatMsgFmt entity = new ChatMsgFmt("手机端", SEND_SELCET[send_fmt_int], MESSAGE_FROM.ME);
             chat_list.add(entity);
             chat_list_adapter.notifyDataSetChanged();
         }
