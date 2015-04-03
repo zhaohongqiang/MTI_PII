@@ -25,10 +25,14 @@ public final class R {
     }
     public static final class id {
         public static final int AlwaysUse=0x7f090014;
-        public static final int Control_code=0x7f090017;
-        public static final int DefaultControl_code=0x7f090018;
-        public static final int General_sendbutton=0x7f09001b;
-        public static final int action_settings=0x7f090021;
+        public static final int CompensationStepNum=0x7f09001d;
+        public static final int Concentration_change=0x7f090022;
+        public static final int Control_code=0x7f090025;
+        public static final int Control_code_name=0x7f090024;
+        public static final int Driving_scheme=0x7f090020;
+        public static final int General_sendbutton=0x7f090028;
+        public static final int action_settings=0x7f09002e;
+        public static final int allow_or_refuse=0x7f09001b;
         public static final int alwaysuse_Layout=0x7f090013;
         public static final int ble_listview=0x7f090000;
         public static final int chatist=0x7f090011;
@@ -37,30 +41,42 @@ public final class R {
         public static final int device_mac_txt=0x7f090003;
         public static final int device_name_txt=0x7f090001;
         public static final int device_rssi_txt=0x7f090002;
-        public static final int edit_hex_id=0x7f09001e;
-        public static final int edit_shi_id=0x7f09001f;
-        public static final int edit_string_id=0x7f09001d;
-        public static final int generalsend_command=0x7f090016;
+        public static final int edit_hex_id=0x7f09002b;
+        public static final int edit_shi_id=0x7f09002c;
+        public static final int edit_string_id=0x7f09002a;
+        public static final int factorydata=0x7f090016;
+        public static final int generalsend_command=0x7f090023;
         public static final int grounp_uuid_txt=0x7f09000a;
         public static final int grounpname_txt=0x7f090009;
         public static final int msg_id=0x7f090005;
         public static final int msg_nameid=0x7f090004;
+        public static final int open_bluetooth=0x7f09001a;
         public static final int prov=0x7f090007;
         public static final int read_fmt_select=0x7f09000f;
         public static final int send_fmt_select=0x7f090015;
-        public static final int send_onTime_checkbox=0x7f090019;
-        public static final int send_time_edit=0x7f09001a;
-        public static final int sendbuttonid=0x7f090020;
+        public static final int send_onTime_checkbox=0x7f090026;
+        public static final int send_time_edit=0x7f090027;
+        public static final int sendbuttonid=0x7f09002d;
+        public static final int serial_num=0x7f090018;
+        public static final int serial_num_name=0x7f090017;
         public static final int service_list_view=0x7f09000b;
         public static final int talking_clear_btn=0x7f09000e;
         public static final int talking_conect_flag_txt=0x7f09000c;
         public static final int talking_read_btn=0x7f09000d;
         public static final int talking_stopdis_btn=0x7f090010;
-        public static final int write_fmt_select=0x7f09001c;
+        public static final int textView=0x7f09001c;
+        public static final int textView2=0x7f09001f;
+        public static final int textView3=0x7f090021;
+        public static final int textView4=0x7f09001e;
+        public static final int textView5=0x7f090019;
+        public static final int write_fmt_select=0x7f090029;
         public static final int writeable_Layout=0x7f090012;
     }
     public static final class integer {
-        public static final int max_controlcode_len=0x7f050000;
+        public static final int max_CompensationStepNum_len=0x7f050000;
+        public static final int max_Driving_scheme_len=0x7f050001;
+        public static final int max_controlcode_len=0x7f050002;
+        public static final int max_serialnum_len=0x7f050003;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -76,17 +92,30 @@ public final class R {
         public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int AlwaysUse=0x7f060000;
-        public static final int Control_code=0x7f060001;
-        public static final int DefaultControl_code=0x7f060002;
-        public static final int Input_digits=0x7f060003;
-        public static final int Set_factorydata=0x7f060004;
-        public static final int action_settings=0x7f060005;
-        public static final int app_name=0x7f060006;
-        public static final int edit_string=0x7f060007;
-        public static final int hello_world=0x7f060008;
-        public static final int versionCode_PII=0x7f060009;
-        public static final int versionName_PII=0x7f06000a;
+        public static final int Allow=0x7f060000;
+        public static final int AlwaysUse=0x7f060001;
+        public static final int CompensationStepNum=0x7f060002;
+        public static final int Concentration_change=0x7f060003;
+        public static final int Control_code=0x7f060004;
+        public static final int DefaultControl_code=0x7f060005;
+        public static final int Driving_scheme=0x7f060006;
+        public static final int Input_digits=0x7f060007;
+        public static final int Open_Bluetooth=0x7f060008;
+        public static final int Refuse=0x7f060009;
+        public static final int Serial_Num=0x7f06000a;
+        public static final int Set_factorydata=0x7f06000b;
+        public static final int Set_fail=0x7f06000c;
+        public static final int Set_successfully=0x7f06000d;
+        public static final int action_settings=0x7f06000e;
+        public static final int app_name=0x7f06000f;
+        public static final int default_CompensationStepNum=0x7f060010;
+        public static final int default_Driving_scheme=0x7f060011;
+        public static final int default_serialnum=0x7f060012;
+        public static final int edit_string=0x7f060013;
+        public static final int hello_world=0x7f060014;
+        public static final int versionCode_PII=0x7f060015;
+        public static final int versionName_PII=0x7f060016;
+        public static final int version_software=0x7f060017;
     }
     public static final class style {
         /** 

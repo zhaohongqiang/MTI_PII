@@ -39,6 +39,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -171,8 +172,10 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private LinearLayout writeable_Layout;
     private LinearLayout alwaysuse_Layout;
 
+
     private LinearLayout generalsend_command;
-    private EditText defaultcontrol_code;
+	private TableLayout factory_data;
+    private EditText control_code;
     private Button general_sendbut;
 
 	private List<ChatMsgFmt> chat_list = new ArrayList<ChatMsgFmt>();
@@ -213,7 +216,8 @@ public class TalkActivity extends Activity implements OnClickListener {
         alwaysuse_Layout = (LinearLayout) findViewById(R.id.alwaysuse_Layout);
 
         generalsend_command = (LinearLayout) findViewById(R.id.generalsend_command);
-        defaultcontrol_code = (EditText) findViewById(R.id.DefaultControl_code);//控制码
+		factory_data = (TableLayout) findViewById(R.id.factorydata);
+        control_code = (EditText) findViewById(R.id.Control_code);//控制码
         general_sendbut = (Button) findViewById(R.id.General_sendbutton);
 		// 初始化控件参数
 		talking_conect_flag_txt.setText("已连接");
@@ -285,11 +289,17 @@ public class TalkActivity extends Activity implements OnClickListener {
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 send_fmt_int = arg2;
 
-                if(send_fmt_int < 7){
+                if(send_fmt_int < 7){//记录
                     generalsend_command.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
                 }else{
                     generalsend_command.setVisibility(View.VISIBLE);//可见
                 }
+
+				if(send_fmt_int < 2){//出厂数据
+					factory_data.setVisibility(View.VISIBLE);//可见
+				}else{
+					factory_data.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
+				}
 
                 if(true) {
                     //=============================================================================================
@@ -645,7 +655,7 @@ public class TalkActivity extends Activity implements OnClickListener {
                 tmp_str = DataTransmission.Data_Transmission(
                         SEND_SELCET[send_fmt_int],send_fmt_int,tmp_contror_code);
             }else{//控制码显示
-                tmp_contror_code = defaultcontrol_code.getText().toString();
+                tmp_contror_code = control_code.getText().toString();
                 if(tmp_contror_code != null && tmp_contror_code.length() != 0){
                     tmp_str = DataTransmission.Data_Transmission(
                             SEND_SELCET[send_fmt_int],send_fmt_int,tmp_contror_code);

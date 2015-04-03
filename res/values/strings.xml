@@ -10,6 +10,22 @@
     <string name="AlwaysUse">常用命令</string>
     <string name="Set_factorydata">设置出厂数据</string>
     <string name="Control_code">读取第几条记录</string>
-    <string name="DefaultControl_code">00</string>
+    <string name="DefaultControl_code">01</string>
     <string name="Input_digits">0123456789abcdef</string>
+
+    <string name="default_serialnum">0101143300001</string>
+    <string name="Serial_Num">产品序列号</string>
+    <string name="CompensationStepNum">补偿步数</string>
+    <string name="default_CompensationStepNum">15</string>
+    <string name="Driving_scheme">驱动方案</string>
+    <string name="default_Driving_scheme">1</string>
+    <string name="Concentration_change">更改浓度</string>
+    <string name="Set_successfully">设置成功</string>
+    <string name="Set_fail">设置失败</string>
+
+    <string name="Open_Bluetooth">开启蓝牙</string>
+    <string name="Allow">允许</string>
+    <string name="Refuse">拒绝</string>
+    <string name="version_software">软件版本</string>
+
 </resources>

@@ -104,7 +104,165 @@
                 android:id="@+id/send_fmt_select"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content" />
+
         </LinearLayout>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/factorydata"
+            android:shrinkColumns="1">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp">
+
+                <TextView
+                    android:id="@+id/serial_num_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/Serial_Num"
+                    android:textSize="17sp"
+                    android:textColor="#ff000000"
+                    android:layout_marginLeft="10dp" />
+
+                <EditText
+                    android:text="@string/default_serialnum"
+                    android:id="@+id/serial_num"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:maxLength="@integer/max_serialnum_len"
+                    android:editable="false"
+                    android:inputType="numberDecimal"
+                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(请输入13位)"
+                    android:id="@+id/textView5" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp">
+
+                <TextView
+                    android:id="@+id/open_bluetooth"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/Open_Bluetooth"
+                    android:textSize="17sp"
+                    android:textColor="#ff000000"
+                    android:layout_marginLeft="10dp"/>
+
+                <Switch
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textOn="@string/Allow"
+                    android:textOff="@string/Refuse"
+                    android:id="@+id/allow_or_refuse"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="1dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    
+                    android:text="@string/CompensationStepNum"
+                    android:textSize="17sp"
+                    android:textColor="#ff000000"
+                    android:layout_marginLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/CompensationStepNum"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:maxLength="@integer/max_CompensationStepNum_len"
+                    android:editable="false"
+                    android:inputType="numberDecimal"
+                    android:text="@string/default_CompensationStepNum" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(请输入1—16)"
+                    android:id="@+id/textView4" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="1dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/Driving_scheme"
+                    android:textSize="17sp"
+                    android:textColor="#ff000000"
+                    android:layout_marginLeft="10dp" />
+
+                <EditText
+                    android:id="@+id/Driving_scheme"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:maxLength="@integer/max_Driving_scheme_len"
+                    android:editable="false"
+                    android:inputType="numberDecimal"
+                    android:text="@string/default_Driving_scheme" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(请输入1—6)"
+                    android:id="@+id/textView4" />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="1dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/Concentration_change"
+                    android:textSize="17sp"
+                    android:textColor="#ff000000"
+                    android:layout_marginLeft="10dp" />
+
+                <Switch
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textOn="@string/Allow"
+                    android:textOff="@string/Refuse"
+                    android:id="@+id/Concentration_change"/>
+
+            </TableRow>
+
+        </TableLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -112,7 +270,7 @@
             android:id="@+id/generalsend_command">
 
             <TextView
-                android:id="@+id/Control_code"
+                android:id="@+id/Control_code_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -123,8 +281,8 @@
                 android:layout_marginLeft="10dp" />
 
             <EditText
-                android:text="01"
-                android:id="@+id/DefaultControl_code"
+                android:text="@string/DefaultControl_code"
+                android:id="@+id/Control_code"
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
