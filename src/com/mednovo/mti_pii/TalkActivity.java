@@ -35,6 +35,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -175,6 +176,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 
     private LinearLayout generalsend_command;
 	private TableLayout factory_data;
+	private GridLayout system_set;
     private EditText control_code;
     private Button general_sendbut;
 
@@ -217,8 +219,10 @@ public class TalkActivity extends Activity implements OnClickListener {
 
         generalsend_command = (LinearLayout) findViewById(R.id.generalsend_command);
 		factory_data = (TableLayout) findViewById(R.id.factorydata);
+		system_set = (GridLayout) findViewById(R.id.system_set);
         control_code = (EditText) findViewById(R.id.Control_code);//控制码
         general_sendbut = (Button) findViewById(R.id.General_sendbutton);
+
 		// 初始化控件参数
 		talking_conect_flag_txt.setText("已连接");
 		fmt_adapter = new ArrayAdapter<String>(this,
@@ -299,6 +303,12 @@ public class TalkActivity extends Activity implements OnClickListener {
 					factory_data.setVisibility(View.VISIBLE);//可见
 				}else{
 					factory_data.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
+				}
+
+				if((send_fmt_int == 2) || (send_fmt_int == 3)){//出厂数据
+					system_set.setVisibility(View.VISIBLE);//可见
+				}else{
+					system_set.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
 				}
 
                 if(true) {

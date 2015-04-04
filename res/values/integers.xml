@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="max_controlcode_len">3</integer>
+    <integer name="max_serialnum_len">13</integer>
+    <integer name="max_CompensationStepNum_len">2</integer>
+    <integer name="max_Driving_scheme_len">1</integer>
+    <integer name="max_meal_bolus_len">2</integer>
+    <integer name="max_basal_rate_len">2</integer>
+    <integer name="max_Dose_value_len">2</integer>
+    <integer name="max_Hours_len">1</integer>
+    <integer name="max_daily_total_len">3</integer>
+    <integer name="max_Concentration_set_len">5</integer>
+
+
 </resources>

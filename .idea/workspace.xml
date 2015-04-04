@@ -40,13 +40,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$ChatMsgFmt.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$ChatMsgFmt.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$MESSAGE_FROM.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$MESSAGE_FROM.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/android-support-v4-de8692e354694abb028ec5ccd4e083d3790079ef.jar" afterPath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/android-support-v4-de8692e354694abb028ec5ccd4e083d3790079ef.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/model_data.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MTI_PII.iml" afterPath="$PROJECT_DIR$/MTI_PII.iml" />
@@ -108,67 +105,80 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="talk_activity.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="talk_activity.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="109" column="20" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
+          <provider editor-type-id="android-designer">
             <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommandsFound.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CommandsFound.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TalkActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33147633">
-              <caret line="489" column="42" selection-start-line="489" selection-start-column="42" selection-end-line="489" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.26440677">
+              <caret line="455" column="23" selection-start-line="455" selection-start-column="23" selection-end-line="455" selection-end-column="23" />
               <folding>
-                <element signature="e#2592#3393#0" expanded="true" />
-                <element signature="e#3392#3393#0" expanded="true" />
-                <element signature="e#5374#5386#0" expanded="true" />
-                <element signature="e#14795#14796#0" expanded="true" />
-                <element signature="e#14844#14845#0" expanded="true" />
-                <element signature="e#14883#14884#0" expanded="true" />
-                <element signature="e#14915#14916#0" expanded="true" />
-                <element signature="e#14972#14973#0" expanded="true" />
-                <element signature="e#15011#15012#0" expanded="true" />
-                <element signature="e#15064#15065#0" expanded="true" />
-                <element signature="e#15088#15089#0" expanded="true" />
-                <element signature="e#15883#15884#0" expanded="true" />
-                <element signature="e#15903#15904#0" expanded="true" />
-                <element signature="e#15931#15932#0" expanded="true" />
-                <element signature="e#15950#15951#0" expanded="true" />
-                <element signature="e#15985#15986#0" expanded="true" />
-                <element signature="e#16005#16006#0" expanded="true" />
-                <element signature="e#16190#17085#0" expanded="true" />
-                <element signature="e#17084#17085#0" expanded="true" />
-                <element signature="e#20315#20316#0" expanded="true" />
-                <element signature="e#20352#20353#0" expanded="true" />
+                <element signature="e#3639#3658#0" expanded="true" />
+                <element signature="e#4560#4584#0" expanded="true" />
+                <element signature="e#4775#4807#0" expanded="true" />
+                <element signature="e#5037#5066#0" expanded="true" />
+                <element signature="e#5363#5377#0" expanded="true" />
+                <element signature="e#5717#5741#0" expanded="true" />
+                <element signature="n#EditText#1;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="e#5932#5964#0" expanded="true" />
+                <element signature="e#6194#6223#0" expanded="true" />
+                <element signature="n#TextView#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="e#6520#6534#0" expanded="true" />
+                <element signature="n#TextView#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="e#6917#6942#0" expanded="true" />
+                <element signature="n#TextView#5;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="e#7419#7434#0" expanded="true" />
+                <element signature="e#7625#7648#0" expanded="true" />
+                <element signature="e#7880#7904#0" expanded="true" />
+                <element signature="n#TextView#7;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="e#8500#8520#0" expanded="true" />
+                <element signature="n#EditText#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="e#8711#8739#0" expanded="true" />
+                <element signature="e#8971#9000#0" expanded="true" />
+                <element signature="n#TextView#8;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#9;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="e#9595#9620#0" expanded="true" />
+                <element signature="n#EditText#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="e#9811#9844#0" expanded="true" />
+                <element signature="e#10075#10105#0" expanded="true" />
+                <element signature="e#10402#10416#0" expanded="true" />
+                <element signature="e#10756#10783#0" expanded="true" />
+                <element signature="e#10974#11009#0" expanded="true" />
+                <element signature="e#11243#11279#0" expanded="true" />
+                <element signature="e#12222#12242#0" expanded="true" />
+                <element signature="e#12453#12480#0" expanded="true" />
+                <element signature="e#12727#12755#0" expanded="true" />
+                <element signature="e#13600#13624#0" expanded="true" />
+                <element signature="e#13946#13961#0" expanded="true" />
+                <element signature="e#13998#14014#0" expanded="true" />
+                <element signature="e#14570#14599#0" expanded="true" />
+                <element signature="e#15031#15069#0" expanded="true" />
+                <element signature="e#15202#15239#0" expanded="true" />
+                <element signature="e#15957#15981#0" expanded="true" />
+                <element signature="e#16409#16442#0" expanded="true" />
+                <element signature="e#16575#16607#0" expanded="true" />
+                <element signature="e#17324#17354#0" expanded="true" />
+                <element signature="e#17677#17692#0" expanded="true" />
+                <element signature="e#17729#17745#0" expanded="true" />
+                <element signature="e#18413#18435#0" expanded="true" />
+                <element signature="e#18626#18655#0" expanded="true" />
+                <element signature="e#18883#18913#0" expanded="true" />
+                <element signature="n#LinearLayout#2;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="e#21254#21276#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <file leaf-file-name="TalkActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-4.625">
+              <caret line="311" column="17" selection-start-line="311" selection-start-column="17" selection-end-line="311" selection-end-column="17" />
+              <folding>
+                <element signature="e#5440#5452#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -809,8 +819,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/talk_activity.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values/integers.xml" />
         <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/talk_activity.xml" />
       </list>
     </option>
   </component>
@@ -830,7 +842,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1370" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -872,15 +884,74 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="MTI_PII" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MTI_PII" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MTI_PII" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles.xml" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MTI_PII" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MTI_PII" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MTI_PII" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MTI_PII" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dimens.xml" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1011,11 +1082,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.27032322" />
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.23.2:5555" />
@@ -1025,6 +1099,8 @@
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.project.structure.last.selected" value="MTI_PII" />
     <property name="android.project.structure.proportion" value="0.15" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="446" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.SHOW" value="true" />
   </component>
   <component name="RunManager" selected="Android Application.MTI_PII">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1220,6 +1296,13 @@
       <option name="number" value="Default" />
       <updated>1428034507007</updated>
     </task>
+    <task id="LOCAL-00001" summary="增加设置读取出厂数据的布局，采用TableLayout 实现">
+      <created>1428042021399</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1428042021399</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1232,35 +1315,35 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1370" height="744" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.4939302" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.4939302" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.50689656" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.5121396" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33103448" sideWeight="0.5273141" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3275862" sideWeight="0.48786038" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.330781" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3275862" sideWeight="0.48786038" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.47875568" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.4757208" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33103448" sideWeight="0.4757208" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3275862" sideWeight="0.5121396" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33103448" sideWeight="0.47268587" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5121396" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24355084" sideWeight="0.48850575" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24349158" sideWeight="0.48850575" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.49310344" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24355084" sideWeight="0.5114943" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31034482" sideWeight="0.4939302" order="13" side_tool="false" content_ui="tabs" x="24" y="248" width="1318" height="232" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38275862" sideWeight="0.4939302" order="13" side_tool="false" content_ui="tabs" x="24" y="248" width="1318" height="232" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1280,19 +1363,180 @@
     <option name="LAST_COMMIT_MESSAGE" value="增加设置读取出厂数据的布局，采用TableLayout 实现" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
-      <provider editor-type-id="text-editor">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="20" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="20" />
+          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+          <folding>
+            <element signature="e#3639#3658#0" expanded="true" />
+            <element signature="e#4560#4584#0" expanded="true" />
+            <element signature="e#4775#4807#0" expanded="true" />
+            <element signature="e#5037#5066#0" expanded="true" />
+            <element signature="e#5363#5377#0" expanded="true" />
+            <element signature="e#5717#5741#0" expanded="true" />
+            <element signature="n#EditText#1;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#5932#5964#0" expanded="true" />
+            <element signature="e#6194#6223#0" expanded="true" />
+            <element signature="n#TextView#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#6520#6534#0" expanded="true" />
+            <element signature="n#TextView#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#6917#6942#0" expanded="true" />
+            <element signature="n#TextView#5;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#7419#7434#0" expanded="true" />
+            <element signature="e#7625#7648#0" expanded="true" />
+            <element signature="e#7880#7904#0" expanded="true" />
+            <element signature="n#TextView#7;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#8500#8520#0" expanded="true" />
+            <element signature="n#EditText#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#8711#8739#0" expanded="true" />
+            <element signature="e#8971#9000#0" expanded="true" />
+            <element signature="n#TextView#8;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#9;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#9595#9620#0" expanded="true" />
+            <element signature="n#EditText#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#9811#9844#0" expanded="true" />
+            <element signature="e#10075#10105#0" expanded="true" />
+            <element signature="e#10402#10416#0" expanded="true" />
+            <element signature="e#10756#10783#0" expanded="true" />
+            <element signature="e#10974#11009#0" expanded="true" />
+            <element signature="e#11243#11279#0" expanded="true" />
+            <element signature="e#12222#12242#0" expanded="true" />
+            <element signature="e#12453#12480#0" expanded="true" />
+            <element signature="e#12727#12755#0" expanded="true" />
+            <element signature="e#13600#13624#0" expanded="true" />
+            <element signature="e#13946#13961#0" expanded="true" />
+            <element signature="e#13998#14014#0" expanded="true" />
+            <element signature="e#14570#14599#0" expanded="true" />
+            <element signature="e#15031#15069#0" expanded="true" />
+            <element signature="e#15202#15239#0" expanded="true" />
+            <element signature="e#15957#15981#0" expanded="true" />
+            <element signature="e#16409#16442#0" expanded="true" />
+            <element signature="e#16575#16607#0" expanded="true" />
+            <element signature="e#17324#17354#0" expanded="true" />
+            <element signature="e#17677#17692#0" expanded="true" />
+            <element signature="e#17729#17745#0" expanded="true" />
+            <element signature="e#18413#18435#0" expanded="true" />
+            <element signature="e#18626#18655#0" expanded="true" />
+            <element signature="e#18883#18913#0" expanded="true" />
+            <element signature="n#LinearLayout#2;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#21254#21276#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/integers.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="37" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CommandsFound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="648" column="67" selection-start-line="648" selection-start-column="52" selection-end-line="648" selection-end-column="67" />
+          <folding>
+            <element signature="e#5440#5452#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="109" column="20" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="20" />
+          <folding>
+            <element signature="e#3639#3658#0" expanded="true" />
+            <element signature="e#4560#4584#0" expanded="true" />
+            <element signature="e#4775#4807#0" expanded="true" />
+            <element signature="e#5037#5066#0" expanded="true" />
+            <element signature="e#5363#5377#0" expanded="true" />
+            <element signature="e#5717#5741#0" expanded="true" />
+            <element signature="n#EditText#1;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#5932#5964#0" expanded="true" />
+            <element signature="e#6194#6223#0" expanded="true" />
+            <element signature="n#TextView#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#6520#6534#0" expanded="true" />
+            <element signature="n#TextView#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#6917#6942#0" expanded="true" />
+            <element signature="n#TextView#5;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#7419#7434#0" expanded="true" />
+            <element signature="e#7625#7648#0" expanded="true" />
+            <element signature="e#7880#7904#0" expanded="true" />
+            <element signature="n#TextView#7;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#8500#8520#0" expanded="true" />
+            <element signature="n#EditText#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#8711#8739#0" expanded="true" />
+            <element signature="e#8971#9000#0" expanded="true" />
+            <element signature="n#TextView#8;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#9;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#9595#9620#0" expanded="true" />
+            <element signature="n#EditText#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#9811#9844#0" expanded="true" />
+            <element signature="e#10075#10105#0" expanded="true" />
+            <element signature="e#10402#10416#0" expanded="true" />
+            <element signature="e#10756#10783#0" expanded="true" />
+            <element signature="e#10974#11009#0" expanded="true" />
+            <element signature="e#11243#11279#0" expanded="true" />
+            <element signature="e#12222#12242#0" expanded="true" />
+            <element signature="e#12453#12480#0" expanded="true" />
+            <element signature="e#12727#12755#0" expanded="true" />
+            <element signature="e#13600#13624#0" expanded="true" />
+            <element signature="e#13946#13961#0" expanded="true" />
+            <element signature="e#13998#14014#0" expanded="true" />
+            <element signature="e#14570#14599#0" expanded="true" />
+            <element signature="e#15031#15069#0" expanded="true" />
+            <element signature="e#15202#15239#0" expanded="true" />
+            <element signature="e#15957#15981#0" expanded="true" />
+            <element signature="e#16409#16442#0" expanded="true" />
+            <element signature="e#16575#16607#0" expanded="true" />
+            <element signature="e#17324#17354#0" expanded="true" />
+            <element signature="e#17677#17692#0" expanded="true" />
+            <element signature="e#17729#17745#0" expanded="true" />
+            <element signature="e#18413#18435#0" expanded="true" />
+            <element signature="e#18626#18655#0" expanded="true" />
+            <element signature="e#18883#18913#0" expanded="true" />
+            <element signature="n#LinearLayout#2;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#21254#21276#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CommandsFound.java">
@@ -1308,27 +1552,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="511" column="34" selection-start-line="511" selection-start-column="34" selection-end-line="511" selection-end-column="34" />
           <folding>
-            <element signature="e#2592#3393#0" expanded="true" />
-            <element signature="e#3392#3393#0" expanded="true" />
-            <element signature="e#5374#5386#0" expanded="true" />
-            <element signature="e#14795#14796#0" expanded="true" />
-            <element signature="e#14844#14845#0" expanded="true" />
-            <element signature="e#14883#14884#0" expanded="true" />
-            <element signature="e#14915#14916#0" expanded="true" />
-            <element signature="e#14972#14973#0" expanded="true" />
-            <element signature="e#15011#15012#0" expanded="true" />
-            <element signature="e#15064#15065#0" expanded="true" />
-            <element signature="e#15088#15089#0" expanded="true" />
-            <element signature="e#15883#15884#0" expanded="true" />
-            <element signature="e#15903#15904#0" expanded="true" />
-            <element signature="e#15931#15932#0" expanded="true" />
-            <element signature="e#15950#15951#0" expanded="true" />
-            <element signature="e#15985#15986#0" expanded="true" />
-            <element signature="e#16005#16006#0" expanded="true" />
-            <element signature="e#16190#17085#0" expanded="true" />
-            <element signature="e#17084#17085#0" expanded="true" />
-            <element signature="e#20315#20316#0" expanded="true" />
-            <element signature="e#20352#20353#0" expanded="true" />
+            <element signature="e#5440#5452#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1342,14 +1566,67 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="118" column="43" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="43" />
-          <folding />
+          <folding>
+            <element signature="e#3639#3658#0" expanded="true" />
+            <element signature="e#4560#4584#0" expanded="true" />
+            <element signature="e#4775#4807#0" expanded="true" />
+            <element signature="e#5037#5066#0" expanded="true" />
+            <element signature="e#5363#5377#0" expanded="true" />
+            <element signature="e#5717#5741#0" expanded="true" />
+            <element signature="n#EditText#1;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#5932#5964#0" expanded="true" />
+            <element signature="e#6194#6223#0" expanded="true" />
+            <element signature="n#TextView#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#6520#6534#0" expanded="true" />
+            <element signature="n#TextView#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#6917#6942#0" expanded="true" />
+            <element signature="n#TextView#5;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#7419#7434#0" expanded="true" />
+            <element signature="e#7625#7648#0" expanded="true" />
+            <element signature="e#7880#7904#0" expanded="true" />
+            <element signature="n#TextView#7;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#8500#8520#0" expanded="true" />
+            <element signature="n#EditText#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#8711#8739#0" expanded="true" />
+            <element signature="e#8971#9000#0" expanded="true" />
+            <element signature="n#TextView#8;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#9;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#9595#9620#0" expanded="true" />
+            <element signature="n#EditText#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#9811#9844#0" expanded="true" />
+            <element signature="e#10075#10105#0" expanded="true" />
+            <element signature="e#10402#10416#0" expanded="true" />
+            <element signature="e#10756#10783#0" expanded="true" />
+            <element signature="e#10974#11009#0" expanded="true" />
+            <element signature="e#11243#11279#0" expanded="true" />
+            <element signature="e#12222#12242#0" expanded="true" />
+            <element signature="e#12453#12480#0" expanded="true" />
+            <element signature="e#12727#12755#0" expanded="true" />
+            <element signature="e#13600#13624#0" expanded="true" />
+            <element signature="e#13946#13961#0" expanded="true" />
+            <element signature="e#13998#14014#0" expanded="true" />
+            <element signature="e#14570#14599#0" expanded="true" />
+            <element signature="e#15031#15069#0" expanded="true" />
+            <element signature="e#15202#15239#0" expanded="true" />
+            <element signature="e#15957#15981#0" expanded="true" />
+            <element signature="e#16409#16442#0" expanded="true" />
+            <element signature="e#16575#16607#0" expanded="true" />
+            <element signature="e#17324#17354#0" expanded="true" />
+            <element signature="e#17677#17692#0" expanded="true" />
+            <element signature="e#17729#17745#0" expanded="true" />
+            <element signature="e#18413#18435#0" expanded="true" />
+            <element signature="e#18626#18655#0" expanded="true" />
+            <element signature="e#18883#18913#0" expanded="true" />
+            <element signature="n#LinearLayout#2;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#21254#21276#0" expanded="true" />
+          </folding>
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable/frommsgshp.xml">
@@ -1380,40 +1657,73 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
           <folding>
-            <element signature="e#2592#3393#0" expanded="true" />
-            <element signature="e#3392#3393#0" expanded="true" />
-            <element signature="e#5374#5386#0" expanded="true" />
-            <element signature="e#14795#14796#0" expanded="true" />
-            <element signature="e#14844#14845#0" expanded="true" />
-            <element signature="e#14883#14884#0" expanded="true" />
-            <element signature="e#14915#14916#0" expanded="true" />
-            <element signature="e#14972#14973#0" expanded="true" />
-            <element signature="e#15011#15012#0" expanded="true" />
-            <element signature="e#15064#15065#0" expanded="true" />
-            <element signature="e#15088#15089#0" expanded="true" />
-            <element signature="e#15883#15884#0" expanded="true" />
-            <element signature="e#15903#15904#0" expanded="true" />
-            <element signature="e#15931#15932#0" expanded="true" />
-            <element signature="e#15950#15951#0" expanded="true" />
-            <element signature="e#15985#15986#0" expanded="true" />
-            <element signature="e#16005#16006#0" expanded="true" />
-            <element signature="e#16190#17085#0" expanded="true" />
-            <element signature="e#17084#17085#0" expanded="true" />
-            <element signature="e#20315#20316#0" expanded="true" />
-            <element signature="e#20352#20353#0" expanded="true" />
+            <element signature="e#5440#5452#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="118" column="43" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="43" />
-          <folding />
+          <folding>
+            <element signature="e#3639#3658#0" expanded="true" />
+            <element signature="e#4560#4584#0" expanded="true" />
+            <element signature="e#4775#4807#0" expanded="true" />
+            <element signature="e#5037#5066#0" expanded="true" />
+            <element signature="e#5363#5377#0" expanded="true" />
+            <element signature="e#5717#5741#0" expanded="true" />
+            <element signature="n#EditText#1;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#5932#5964#0" expanded="true" />
+            <element signature="e#6194#6223#0" expanded="true" />
+            <element signature="n#TextView#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#6520#6534#0" expanded="true" />
+            <element signature="n#TextView#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#6917#6942#0" expanded="true" />
+            <element signature="n#TextView#5;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#7419#7434#0" expanded="true" />
+            <element signature="e#7625#7648#0" expanded="true" />
+            <element signature="e#7880#7904#0" expanded="true" />
+            <element signature="n#TextView#7;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#8500#8520#0" expanded="true" />
+            <element signature="n#EditText#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#8711#8739#0" expanded="true" />
+            <element signature="e#8971#9000#0" expanded="true" />
+            <element signature="n#TextView#8;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#9;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#9595#9620#0" expanded="true" />
+            <element signature="n#EditText#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#9811#9844#0" expanded="true" />
+            <element signature="e#10075#10105#0" expanded="true" />
+            <element signature="e#10402#10416#0" expanded="true" />
+            <element signature="e#10756#10783#0" expanded="true" />
+            <element signature="e#10974#11009#0" expanded="true" />
+            <element signature="e#11243#11279#0" expanded="true" />
+            <element signature="e#12222#12242#0" expanded="true" />
+            <element signature="e#12453#12480#0" expanded="true" />
+            <element signature="e#12727#12755#0" expanded="true" />
+            <element signature="e#13600#13624#0" expanded="true" />
+            <element signature="e#13946#13961#0" expanded="true" />
+            <element signature="e#13998#14014#0" expanded="true" />
+            <element signature="e#14570#14599#0" expanded="true" />
+            <element signature="e#15031#15069#0" expanded="true" />
+            <element signature="e#15202#15239#0" expanded="true" />
+            <element signature="e#15957#15981#0" expanded="true" />
+            <element signature="e#16409#16442#0" expanded="true" />
+            <element signature="e#16575#16607#0" expanded="true" />
+            <element signature="e#17324#17354#0" expanded="true" />
+            <element signature="e#17677#17692#0" expanded="true" />
+            <element signature="e#17729#17745#0" expanded="true" />
+            <element signature="e#18413#18435#0" expanded="true" />
+            <element signature="e#18626#18655#0" expanded="true" />
+            <element signature="e#18883#18913#0" expanded="true" />
+            <element signature="n#LinearLayout#2;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#21254#21276#0" expanded="true" />
+          </folding>
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable/frommsgshp.xml">
@@ -1444,40 +1754,73 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
           <folding>
-            <element signature="e#2592#3393#0" expanded="true" />
-            <element signature="e#3392#3393#0" expanded="true" />
-            <element signature="e#5374#5386#0" expanded="true" />
-            <element signature="e#14795#14796#0" expanded="true" />
-            <element signature="e#14844#14845#0" expanded="true" />
-            <element signature="e#14883#14884#0" expanded="true" />
-            <element signature="e#14915#14916#0" expanded="true" />
-            <element signature="e#14972#14973#0" expanded="true" />
-            <element signature="e#15011#15012#0" expanded="true" />
-            <element signature="e#15064#15065#0" expanded="true" />
-            <element signature="e#15088#15089#0" expanded="true" />
-            <element signature="e#15883#15884#0" expanded="true" />
-            <element signature="e#15903#15904#0" expanded="true" />
-            <element signature="e#15931#15932#0" expanded="true" />
-            <element signature="e#15950#15951#0" expanded="true" />
-            <element signature="e#15985#15986#0" expanded="true" />
-            <element signature="e#16005#16006#0" expanded="true" />
-            <element signature="e#16190#17085#0" expanded="true" />
-            <element signature="e#17084#17085#0" expanded="true" />
-            <element signature="e#20315#20316#0" expanded="true" />
-            <element signature="e#20352#20353#0" expanded="true" />
+            <element signature="e#5440#5452#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3639#3658#0" expanded="true" />
+            <element signature="e#4560#4584#0" expanded="true" />
+            <element signature="e#4775#4807#0" expanded="true" />
+            <element signature="e#5037#5066#0" expanded="true" />
+            <element signature="e#5363#5377#0" expanded="true" />
+            <element signature="e#5717#5741#0" expanded="true" />
+            <element signature="n#EditText#1;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#5932#5964#0" expanded="true" />
+            <element signature="e#6194#6223#0" expanded="true" />
+            <element signature="n#TextView#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#6520#6534#0" expanded="true" />
+            <element signature="n#TextView#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#6917#6942#0" expanded="true" />
+            <element signature="n#TextView#5;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#7419#7434#0" expanded="true" />
+            <element signature="e#7625#7648#0" expanded="true" />
+            <element signature="e#7880#7904#0" expanded="true" />
+            <element signature="n#TextView#7;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#8500#8520#0" expanded="true" />
+            <element signature="n#EditText#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#8711#8739#0" expanded="true" />
+            <element signature="e#8971#9000#0" expanded="true" />
+            <element signature="n#TextView#8;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#9;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#9595#9620#0" expanded="true" />
+            <element signature="n#EditText#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#9811#9844#0" expanded="true" />
+            <element signature="e#10075#10105#0" expanded="true" />
+            <element signature="e#10402#10416#0" expanded="true" />
+            <element signature="e#10756#10783#0" expanded="true" />
+            <element signature="e#10974#11009#0" expanded="true" />
+            <element signature="e#11243#11279#0" expanded="true" />
+            <element signature="e#12222#12242#0" expanded="true" />
+            <element signature="e#12453#12480#0" expanded="true" />
+            <element signature="e#12727#12755#0" expanded="true" />
+            <element signature="e#13600#13624#0" expanded="true" />
+            <element signature="e#13946#13961#0" expanded="true" />
+            <element signature="e#13998#14014#0" expanded="true" />
+            <element signature="e#14570#14599#0" expanded="true" />
+            <element signature="e#15031#15069#0" expanded="true" />
+            <element signature="e#15202#15239#0" expanded="true" />
+            <element signature="e#15957#15981#0" expanded="true" />
+            <element signature="e#16409#16442#0" expanded="true" />
+            <element signature="e#16575#16607#0" expanded="true" />
+            <element signature="e#17324#17354#0" expanded="true" />
+            <element signature="e#17677#17692#0" expanded="true" />
+            <element signature="e#17729#17745#0" expanded="true" />
+            <element signature="e#18413#18435#0" expanded="true" />
+            <element signature="e#18626#18655#0" expanded="true" />
+            <element signature="e#18883#18913#0" expanded="true" />
+            <element signature="n#LinearLayout#2;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#21254#21276#0" expanded="true" />
+          </folding>
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CommandsFound.java">
@@ -1493,27 +1836,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <element signature="e#2592#3393#0" expanded="true" />
-            <element signature="e#3392#3393#0" expanded="true" />
-            <element signature="e#5374#5386#0" expanded="true" />
-            <element signature="e#14795#14796#0" expanded="true" />
-            <element signature="e#14844#14845#0" expanded="true" />
-            <element signature="e#14883#14884#0" expanded="true" />
-            <element signature="e#14915#14916#0" expanded="true" />
-            <element signature="e#14972#14973#0" expanded="true" />
-            <element signature="e#15011#15012#0" expanded="true" />
-            <element signature="e#15064#15065#0" expanded="true" />
-            <element signature="e#15088#15089#0" expanded="true" />
-            <element signature="e#15883#15884#0" expanded="true" />
-            <element signature="e#15903#15904#0" expanded="true" />
-            <element signature="e#15931#15932#0" expanded="true" />
-            <element signature="e#15950#15951#0" expanded="true" />
-            <element signature="e#15985#15986#0" expanded="true" />
-            <element signature="e#16005#16006#0" expanded="true" />
-            <element signature="e#16190#17085#0" expanded="true" />
-            <element signature="e#17084#17085#0" expanded="true" />
-            <element signature="e#20315#20316#0" expanded="true" />
-            <element signature="e#20352#20353#0" expanded="true" />
+            <element signature="e#5440#5452#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1533,15 +1856,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
-      <provider editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="20" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="20" />
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/os/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22562674">
+          <caret line="84" column="50" selection-start-line="84" selection-start-column="50" selection-end-line="84" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/devicefmt.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/service_grounp_fmt.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/service_page.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/service_child_fmt.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/msg_to_fmt.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/msg_from_fmt.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CommandsFound.java">
@@ -1552,40 +1956,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.48">
+          <caret line="44" column="35" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/integers.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33147633">
-          <caret line="489" column="42" selection-start-line="489" selection-start-column="42" selection-end-line="489" selection-end-column="42" />
+        <state vertical-scroll-proportion="-4.625">
+          <caret line="311" column="17" selection-start-line="311" selection-start-column="17" selection-end-line="311" selection-end-column="17" />
           <folding>
-            <element signature="e#2592#3393#0" expanded="true" />
-            <element signature="e#3392#3393#0" expanded="true" />
-            <element signature="e#5374#5386#0" expanded="true" />
-            <element signature="e#14795#14796#0" expanded="true" />
-            <element signature="e#14844#14845#0" expanded="true" />
-            <element signature="e#14883#14884#0" expanded="true" />
-            <element signature="e#14915#14916#0" expanded="true" />
-            <element signature="e#14972#14973#0" expanded="true" />
-            <element signature="e#15011#15012#0" expanded="true" />
-            <element signature="e#15064#15065#0" expanded="true" />
-            <element signature="e#15088#15089#0" expanded="true" />
-            <element signature="e#15883#15884#0" expanded="true" />
-            <element signature="e#15903#15904#0" expanded="true" />
-            <element signature="e#15931#15932#0" expanded="true" />
-            <element signature="e#15950#15951#0" expanded="true" />
-            <element signature="e#15985#15986#0" expanded="true" />
-            <element signature="e#16005#16006#0" expanded="true" />
-            <element signature="e#16190#17085#0" expanded="true" />
-            <element signature="e#17084#17085#0" expanded="true" />
-            <element signature="e#20315#20316#0" expanded="true" />
-            <element signature="e#20352#20353#0" expanded="true" />
+            <element signature="e#5440#5452#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26440677">
+          <caret line="455" column="23" selection-start-line="455" selection-start-column="23" selection-end-line="455" selection-end-column="23" />
+          <folding>
+            <element signature="e#3639#3658#0" expanded="true" />
+            <element signature="e#4560#4584#0" expanded="true" />
+            <element signature="e#4775#4807#0" expanded="true" />
+            <element signature="e#5037#5066#0" expanded="true" />
+            <element signature="e#5363#5377#0" expanded="true" />
+            <element signature="e#5717#5741#0" expanded="true" />
+            <element signature="n#EditText#1;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#5932#5964#0" expanded="true" />
+            <element signature="e#6194#6223#0" expanded="true" />
+            <element signature="n#TextView#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#6520#6534#0" expanded="true" />
+            <element signature="n#TextView#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#6917#6942#0" expanded="true" />
+            <element signature="n#TextView#5;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#7419#7434#0" expanded="true" />
+            <element signature="e#7625#7648#0" expanded="true" />
+            <element signature="e#7880#7904#0" expanded="true" />
+            <element signature="n#TextView#7;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#8500#8520#0" expanded="true" />
+            <element signature="n#EditText#3;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#8711#8739#0" expanded="true" />
+            <element signature="e#8971#9000#0" expanded="true" />
+            <element signature="n#TextView#8;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#9;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#9595#9620#0" expanded="true" />
+            <element signature="n#EditText#4;n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#9811#9844#0" expanded="true" />
+            <element signature="e#10075#10105#0" expanded="true" />
+            <element signature="e#10402#10416#0" expanded="true" />
+            <element signature="e#10756#10783#0" expanded="true" />
+            <element signature="e#10974#11009#0" expanded="true" />
+            <element signature="e#11243#11279#0" expanded="true" />
+            <element signature="e#12222#12242#0" expanded="true" />
+            <element signature="e#12453#12480#0" expanded="true" />
+            <element signature="e#12727#12755#0" expanded="true" />
+            <element signature="e#13600#13624#0" expanded="true" />
+            <element signature="e#13946#13961#0" expanded="true" />
+            <element signature="e#13998#14014#0" expanded="true" />
+            <element signature="e#14570#14599#0" expanded="true" />
+            <element signature="e#15031#15069#0" expanded="true" />
+            <element signature="e#15202#15239#0" expanded="true" />
+            <element signature="e#15957#15981#0" expanded="true" />
+            <element signature="e#16409#16442#0" expanded="true" />
+            <element signature="e#16575#16607#0" expanded="true" />
+            <element signature="e#17324#17354#0" expanded="true" />
+            <element signature="e#17677#17692#0" expanded="true" />
+            <element signature="e#17729#17745#0" expanded="true" />
+            <element signature="e#18413#18435#0" expanded="true" />
+            <element signature="e#18626#18655#0" expanded="true" />
+            <element signature="e#18883#18913#0" expanded="true" />
+            <element signature="n#LinearLayout#2;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#21254#21276#0" expanded="true" />
           </folding>
         </state>
       </provider>

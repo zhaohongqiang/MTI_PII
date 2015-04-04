@@ -17,7 +17,9 @@
             android:gravity="center"
             android:text="已连接"
             android:textColor="#FFFFFF"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
 
         <Button
             android:id="@+id/talking_read_btn"
@@ -81,8 +83,7 @@
         android:id="@+id/writeable_Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="gone">
+        android:orientation="vertical">
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
@@ -106,6 +107,193 @@
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="12"
+            android:id="@+id/system_set"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/system_set1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/max_meal_bolus"
+                android:textSize="17sp"
+                android:textColor="#ff000000"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:text="@string/default_max_meal_bolus"
+                android:id="@+id/max_meal_bolus"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:maxLength="@integer/max_meal_bolus_len"
+                android:editable="false"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:text="@string/unit"
+                android:id="@+id/set1" />
+
+            <TextView
+                android:id="@+id/system_set2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/max_basal_rate"
+                android:textSize="17sp"
+                android:textColor="#ff000000"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:text="@string/default_max_basal_rate"
+                android:id="@+id/max_basal_rate"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:maxLength="@integer/max_basal_rate_len"
+                android:editable="false"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:text="@string/unit"
+                android:id="@+id/set2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowSpan="2"
+                android:layout_gravity="fill"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/max_hours_bolus"
+                android:textSize="17sp"
+                android:textColor="#ff000000"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/set3_4" />
+
+            <TextView
+                android:id="@+id/system_set3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/Hours"
+                android:textSize="17sp"
+                android:textColor="#ff000000"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:text="@string/default_Hours"
+                android:id="@+id/max_hours_bolus1"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:maxLength="@integer/max_Hours_len"
+                android:editable="false"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小时"
+                android:id="@+id/set3_2"/>
+
+            <TextView
+                android:id="@+id/system_set4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/Dose_value"
+                android:textSize="17sp"
+                android:textColor="#ff000000"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:text="@string/default_Dose_value"
+                android:id="@+id/max_hours_bolus2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:maxLength="@integer/max_Dose_value_len"
+                android:editable="false"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="剂量"
+                android:id="@+id/set4" />
+
+            <TextView
+                android:id="@+id/system_set5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/max_daily_total"
+                android:textSize="17sp"
+                android:textColor="#ff000000"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:text="@string/default_max_daily_total"
+                android:id="@+id/max_daily_total"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:maxLength="@integer/max_daily_total_len"
+                android:editable="false"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:text="@string/unit"
+                android:id="@+id/set5" />
+
+            <TextView
+                android:id="@+id/system_set6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/Concentration_set"
+                android:textSize="17sp"
+                android:textColor="#ff000000"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:text="@string/default_Concentration_set"
+                android:id="@+id/Concentration_set"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:maxLength="@integer/max_Concentration_set_len"
+                android:editable="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:id="@+id/set6" />
+
+        </GridLayout>
 
         <TableLayout
             android:layout_width="fill_parent"
@@ -267,7 +455,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:id="@+id/generalsend_command">
+            android:id="@+id/generalsend_command"
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/Control_code_name"

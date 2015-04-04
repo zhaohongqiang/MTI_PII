@@ -8,7 +8,9 @@
     <string name="versionName_PII">1.0</string>
     <string name="edit_string">你好</string>
     <string name="AlwaysUse">常用命令</string>
+
     <string name="Set_factorydata">设置出厂数据</string>
+
     <string name="Control_code">读取第几条记录</string>
     <string name="DefaultControl_code">01</string>
     <string name="Input_digits">0123456789abcdef</string>
@@ -27,5 +29,27 @@
     <string name="Allow">允许</string>
     <string name="Refuse">拒绝</string>
     <string name="version_software">软件版本</string>
+
+    <string name="unit">单位</string>
+    <string name="max_meal_bolus">最大大剂量</string>
+    <string name="default_max_meal_bolus">25</string>
+    <string name="max_basal_rate">最大基础率</string>
+    <string name="default_max_basal_rate">4</string>
+    <string name="max_hours_bolus">最大时段量</string>
+    <string name="Dose_value">剂量值</string>
+    <string name="default_Dose_value">30</string>
+    <string name="Hours">小时值</string>
+    <string name="default_Hours">1</string>
+    <string name="max_daily_total">最大日总量</string>
+    <string name="default_max_daily_total">60</string>
+    <string name="Concentration_set">设置浓度</string>
+    <string name="default_Concentration_set">U-40</string>
+    <string name="system_set">系统设置</string>
+    <string name="lcd_setup">液晶设置</string>
+    <string name="ring_setup">鸣笛设置</string>
+    <string name="language_set">语言设置</string>
+    <string name="time_set">设置时间</string>
+
+
 
 </resources>
