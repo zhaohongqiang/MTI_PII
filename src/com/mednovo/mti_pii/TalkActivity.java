@@ -175,7 +175,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 
     private LinearLayout generalsend_command;
-	private TableLayout factory_data;
+	private GridLayout factory_data;
 	private GridLayout system_set;
     private EditText control_code;
     private Button general_sendbut;
@@ -218,7 +218,7 @@ public class TalkActivity extends Activity implements OnClickListener {
         alwaysuse_Layout = (LinearLayout) findViewById(R.id.alwaysuse_Layout);
 
         generalsend_command = (LinearLayout) findViewById(R.id.generalsend_command);
-		factory_data = (TableLayout) findViewById(R.id.factorydata);
+		factory_data = (GridLayout) findViewById(R.id.factorydata);
 		system_set = (GridLayout) findViewById(R.id.system_set);
         control_code = (EditText) findViewById(R.id.Control_code);//¿ØÖÆÂë
         general_sendbut = (Button) findViewById(R.id.General_sendbutton);

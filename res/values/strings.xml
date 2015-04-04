@@ -44,11 +44,16 @@
     <string name="default_max_daily_total">60</string>
     <string name="Concentration_set">设置浓度</string>
     <string name="default_Concentration_set">U-40</string>
-    <string name="system_set">系统设置</string>
+    <string name="system_set">系统设置值</string>
     <string name="lcd_setup">液晶设置</string>
+    <string name="Often_display">常显示</string>
+    <string name="Not_Often_display">不常显示</string>
     <string name="ring_setup">鸣笛设置</string>
     <string name="language_set">语言设置</string>
+    <string name="Chinese">中文</string>
+    <string name="English">English</string>
     <string name="time_set">设置时间</string>
+    <string name="default_time_set">2015.12.12.12.00</string>
 
 
 
