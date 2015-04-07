@@ -29,6 +29,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
@@ -53,6 +54,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 		setContentView(R.layout.talk_activity);
 
 		Intent intent = getIntent();
@@ -177,6 +179,9 @@ public class TalkActivity extends Activity implements OnClickListener {
     private LinearLayout generalsend_command;
 	private GridLayout factory_data;
 	private GridLayout system_set;
+	private GridLayout basal_rate_set_one;
+	private GridLayout basal_rate_set_two;
+	private GridLayout basal_rate_set_three;
     private EditText control_code;
     private Button general_sendbut;
 
@@ -220,6 +225,9 @@ public class TalkActivity extends Activity implements OnClickListener {
         generalsend_command = (LinearLayout) findViewById(R.id.generalsend_command);
 		factory_data = (GridLayout) findViewById(R.id.factorydata);
 		system_set = (GridLayout) findViewById(R.id.system_set);
+		basal_rate_set_one =(GridLayout) findViewById(R.id.basal_rate_set_one);
+		basal_rate_set_two =(GridLayout) findViewById(R.id.basal_rate_set_two);
+		basal_rate_set_three =(GridLayout) findViewById(R.id.basal_rate_set_three);
         control_code = (EditText) findViewById(R.id.Control_code);//控制码
         general_sendbut = (Button) findViewById(R.id.General_sendbutton);
 
@@ -305,10 +313,78 @@ public class TalkActivity extends Activity implements OnClickListener {
 					factory_data.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
 				}
 
-				if((send_fmt_int == 2) || (send_fmt_int == 3)){//出厂数据
+				if((send_fmt_int == 2) || (send_fmt_int == 3)){//系统设置
 					system_set.setVisibility(View.VISIBLE);//可见
 				}else{
 					system_set.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
+				}
+
+				if((send_fmt_int == 4) || (send_fmt_int == 5)){//基础率
+					basal_rate_set_one.setVisibility(View.VISIBLE);//可见
+				}else{
+					basal_rate_set_one.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
+				}
+
+				switch (send_fmt_int){
+					case CommandsFound.SET_FACTORYDATA:
+						Log.v("zhq_log CommandsFound SET_FACTORYDATA ",""+ CommandsFound.SET_FACTORYDATA);
+						break;
+					case CommandsFound.READ_FACTORYDATA:
+						Log.v("zhq_log CommandsFound READ_FACTORYDATA ",""+ CommandsFound.READ_FACTORYDATA);
+
+						break;
+					case CommandsFound.SET_SYSSETDATA:
+						Log.v("zhq_log CommandsFound",""+ CommandsFound.SET_SYSSETDATA);
+						break;
+					case CommandsFound.READ_SYSSETDATA:
+						Log.v("zhq_log CommandsFound",""+ CommandsFound.READ_SYSSETDATA);
+
+						break;
+					case CommandsFound.SET_BASALDATA:
+						Log.v("zhq_log CommandsFound",""+ CommandsFound.SET_BASALDATA);
+						break;
+					case CommandsFound.READ_BASALDATA:
+						Log.v("zhq_log CommandsFound",""+ CommandsFound.READ_BASALDATA);
+
+						break;
+					case CommandsFound.READ_RUNNINGDATA:
+						Log.v("zhq_log CommandsFound",""+ CommandsFound.READ_RUNNINGDATA);
+
+						break;
+					case CommandsFound.READ_MEALBOLUSRECORD:
+						Log.v("zhq_log CommandsFound",""+ CommandsFound.READ_MEALBOLUSRECORD);
+
+						break;
+					case CommandsFound.READ_TIMEBOLUSRECORD:
+						Log.v("zhq_log CommandsFound",""+ CommandsFound.READ_TIMEBOLUSRECORD);
+
+						break;
+					case CommandsFound.READ_SUSPENDEDPUMPRECORD:
+						Log.v("zhq_log CommandsFound",""+ CommandsFound.READ_SUSPENDEDPUMPRECORD);
+
+						break;
+					case CommandsFound.READ_BASALRECORD:
+						Log.v("zhq_log CommandsFound",""+ CommandsFound.READ_BASALRECORD);
+
+						break;
+					case CommandsFound.READ_TEMPORARYRECORD:
+						Log.v("zhq_log CommandsFound",""+ CommandsFound.READ_TEMPORARYRECORD);
+
+						break;
+					case CommandsFound.READ_DAILYTOTALRECORD:
+						Log.v("zhq_log CommandsFound",""+ CommandsFound.READ_DAILYTOTALRECORD);
+
+						break;
+					case CommandsFound.READ_EVENTRECORD:
+						Log.v("zhq_log CommandsFound",""+ CommandsFound.READ_EVENTRECORD);
+
+						break;
+					case CommandsFound.READ_EXHAUSTRECORD:
+						Log.v("zhq_log CommandsFound",""+ CommandsFound.READ_EVENTRECORD);
+
+						break;
+					default:
+						break;
 				}
 
                 if(true) {

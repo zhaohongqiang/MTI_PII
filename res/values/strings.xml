@@ -26,35 +26,93 @@
     <string name="Set_fail">设置失败</string>
 
     <string name="Open_Bluetooth">开启蓝牙</string>
-    <string name="Allow">允许</string>
-    <string name="Refuse">拒绝</string>
+    <string name="Allow">1</string>//允许
+    <string name="Refuse">0</string>//拒绝
     <string name="version_software">软件版本</string>
 
-    <string name="unit">单位</string>
-    <string name="max_meal_bolus">最大大剂量</string>
+
+    <string name="max_meal_bolus">最大大剂量(U)</string>
     <string name="default_max_meal_bolus">25</string>
+    <string name="meal_bolus_unit">U</string>
+
     <string name="max_basal_rate">最大基础率</string>
     <string name="default_max_basal_rate">4</string>
+    <string name="basal_rate_unit">U/h</string>
+    <string name="basal_rate">基础率</string>
+    <string name="default_basal_rate">4</string>
+
     <string name="max_hours_bolus">最大时段量</string>
-    <string name="Dose_value">剂量值</string>
+    <string name="Dose_value">剂量(U)</string>
     <string name="default_Dose_value">30</string>
-    <string name="Hours">小时值</string>
+    <string name="Hours">小时</string>
     <string name="default_Hours">1</string>
-    <string name="max_daily_total">最大日总量</string>
+
+    <string name="max_daily_total">最大日总量(U)</string>
     <string name="default_max_daily_total">60</string>
-    <string name="Concentration_set">设置浓度</string>
-    <string name="default_Concentration_set">U-40</string>
+    <string name="daily_total_unit">U</string>
+
+    <string name="Concentration_set">浓度(单位/ml)</string>
+    <string name="default_Concentration_set">U40</string>
     <string name="system_set">系统设置值</string>
-    <string name="lcd_setup">液晶设置</string>
+    <string name="lcd_setup">液晶</string>
     <string name="Often_display">常显示</string>
     <string name="Not_Often_display">不常显示</string>
-    <string name="ring_setup">鸣笛设置</string>
-    <string name="language_set">语言设置</string>
+    <string name="ring_setup">鸣笛</string>
+    <string name="language_set">语言</string>
     <string name="Chinese">中文</string>
     <string name="English">English</string>
+    <string name="LPM_Status">低功耗状态</string>
+    <string name="Low_Power">低功耗</string>
+    <string name="High_Power">高功耗</string>
+    <string name="LCDBK_OnOff">液晶背光状态</string>
+    <string name="LCDBK_On">开</string>
+    <string name="LCDBK_Off">关</string>
+    <string name="KeyLock_Status">键盘锁状态</string>
+    <string name="Lock">锁定</string>
+    <string name="Unlock">未锁定</string>
+
     <string name="time_set">设置时间</string>
     <string name="default_time_set">2015.12.12.12.00</string>
 
+    <string name="basal_rate_set">设置基础率</string>
+    <string name="basal_rate_default_unit">(单位：U/h)</string>
+    <string name="default_hour_value">00</string>
+    <string name="hour_1">时段00—01</string>
+    <string name="hour_2">时段01—02</string>
+    <string name="hour_3">时段02—03</string>
+    <string name="hour_4">时段03—04</string>
+    <string name="hour_5">时段04—05</string>
+    <string name="hour_6">时段05—06</string>
+    <string name="hour_7">时段06—07</string>
+    <string name="hour_8">时段07—08</string>
+    <string name="hour_9">时段08—09</string>
+    <string name="hour_10">时段09—10</string>
+    <string name="hour_11">时段10—11</string>
+    <string name="hour_12">时段11—12</string>
+    <string name="hour_13">时段12—13</string>
+    <string name="hour_14">时段13—14</string>
+    <string name="hour_15">时段14—15</string>
+    <string name="hour_16">时段15—16</string>
+    <string name="hour_17">时段16—17</string>
+    <string name="hour_18">时段17—18</string>
+    <string name="hour_19">时段18—19</string>
+    <string name="hour_20">时段19—20</string>
+    <string name="hour_21">时段20—21</string>
+    <string name="hour_22">时段21—22</string>
+    <string name="hour_23">时段22—23</string>
+    <string name="hour_24">时段23—24</string>
 
+    <string name="Temporary_rate">暂时率</string>
+    <string name="Temporary_rate_time">暂时率时间</string>
+    <string name="Temporary_rate_set">暂时率比值</string>
+    <string name="meal_bolus">即时大剂量</string>
+    <string name="meal_bolus_set">1</string>//即时大剂量默认值
+    <string name="time_bolus">定时大剂量</string>
+    <string name="time_bolus_set">1</string>//定时大剂量默认值
+    <string name="time_bolus_time">定时大剂量时间</string>
+    <string name="Cumulative_input">累计输注量</string>
+    <string name="default_Cumulative_input">0</string>
+    <string name="Power">系统电量</string>
+    <string name="default_Power">100%</string>
 
 </resources>
