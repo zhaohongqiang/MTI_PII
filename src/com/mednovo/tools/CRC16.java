@@ -177,6 +177,19 @@ public class CRC16{
         bb[bb.length-2]=(byte) ((0xff00 & ri) >> 8);
         return bb;
     }
+    public static boolean checkBuf(byte[] bb,int CRC16_len){
+        CRC16 crc16 = new CRC16();
+        crc16.update(bb, CRC16_len -3);
+        int ri = crc16.getValue();
+        if(bb[CRC16_len-2]==(byte)(ri&0xff)
+                && bb[CRC16_len-3]==(byte) ((0xff00 & ri) >> 8)){
+            return true;
+        }else
+        {
+            return false;
+        }
+    }
+
     public static boolean checkBuf(byte[] bb){
         CRC16 crc16 = new CRC16();
         crc16.update(bb, bb.length-2);
@@ -186,6 +199,7 @@ public class CRC16{
             return true;
         return false;
     }
+
     public static String getBufHexStr(byte[] raw){
         if ( raw == null ) {
             return null;

@@ -114,7 +114,7 @@
             android:layout_height="wrap_content"
             android:columnCount="4"
             android:rowCount="5"
-            android:visibility="gone"
+            android:visibility="visible"
             android:id="@+id/factorydata">
 
             <TextView
@@ -142,10 +142,68 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="(请输入13位)"
-                android:id="@+id/textView5" />
+                android:id="@+id/factory_set1" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/factory_set2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/Open_Bluetooth"
+                android:textSize="17sp"
+                android:textColor="#ff000000"
+                android:layout_marginLeft="10dp"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:thumbTextPadding="10dp"
+                android:switchMinWidth="56dp"
+                android:textOn="@string/Yes"
+                android:textOff="@string/No"
+                android:id="@+id/open_bluetooth"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/open_bluetooth_read"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:text="否"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/factory_set3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/Concentration_change"
+                android:textSize="17sp"
+                android:textColor="#ff000000"
+                android:layout_marginLeft="10dp" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:thumbTextPadding="10dp"
+                android:switchMinWidth="56dp"
+                android:textOn="@string/Allow"
+                android:textOff="@string/Refuse"
+                android:id="@+id/Concentration_change"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/Concentration_change_read"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:text="允许"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/factory_set4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -168,10 +226,10 @@
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="2"
                 android:text="(请输入1—16)"
-                android:id="@+id/textView4" />
+                android:id="@+id/factory_set4_1" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/factory_set5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -194,46 +252,25 @@
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="2"
                 android:text="(请输入1—6)"
-                android:id="@+id/textView4" />
+                android:id="@+id/factory_set5_1" />
 
             <TextView
-                android:id="@+id/open_bluetooth"
+                android:id="@+id/factory_set6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/Open_Bluetooth"
-                android:textSize="17sp"
-                android:textColor="#ff000000"
-                android:layout_marginLeft="10dp"/>
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:thumbTextPadding="10dp"
-                android:switchMinWidth="56dp"
-                android:textOn="@string/Allow"
-                android:textOff="@string/Refuse"
-                android:id="@+id/allow_or_refuse" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/Concentration_change"
+                android:text="@string/version_software"
                 android:textSize="17sp"
                 android:textColor="#ff000000"
                 android:layout_marginLeft="10dp" />
 
-            <Switch
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/version_software"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:thumbTextPadding="10dp"
-                android:switchMinWidth="56dp"
-                android:textOn="@string/Allow"
-                android:textOff="@string/Refuse"
-                android:id="@+id/Concentration_change" />
-
+                android:layout_columnSpan="2"
+                android:editable="false"
+                android:text="@string/default_version_software" />
 
         </GridLayout>
 

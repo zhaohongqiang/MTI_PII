@@ -18,7 +18,7 @@
     <string name="default_serialnum">0101143300001</string>
     <string name="Serial_Num">产品序列号</string>
     <string name="CompensationStepNum">补偿步数</string>
-    <string name="default_CompensationStepNum">15</string>
+    <string name="default_CompensationStepNum">16</string>
     <string name="Driving_scheme">驱动方案</string>
     <string name="default_Driving_scheme">1</string>
     <string name="Concentration_change">更改浓度</string>
@@ -26,10 +26,13 @@
     <string name="Set_fail">设置失败</string>
 
     <string name="Open_Bluetooth">开启蓝牙</string>
-    <string name="Allow">1</string>//允许
-    <string name="Refuse">0</string>//拒绝
-    <string name="version_software">软件版本</string>
+    <string name="Allow">允许</string>//允许
+    <string name="Refuse">拒绝</string>//拒绝
+    <string name="Yes">是</string>
+    <string name="No">否</string>
 
+    <string name="version_software">软件版本</string>
+    <string name="default_version_software">Ver1.0.0</string>
 
     <string name="max_meal_bolus">最大大剂量(U)</string>
     <string name="default_max_meal_bolus">25</string>
