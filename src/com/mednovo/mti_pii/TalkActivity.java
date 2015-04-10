@@ -172,12 +172,9 @@ public class TalkActivity extends Activity implements OnClickListener {
 	 * @param tmp_byte
 	 */
 	private void CRC16_recive_msg(byte[] tmp_byte) {//解析数据
-		if (talking_stopdis_btn.isChecked())
+		if (talking_stopdis_btn.isChecked()) {
 			return; // 停止显示
-
-		String tmp = "";
-		String receive = "";
-
+		}
 		if (0 == tmp_byte.length) {
 			return;
 		}
@@ -196,35 +193,26 @@ public class TalkActivity extends Activity implements OnClickListener {
 			case CommandsFound.READ_EXHAUSTRECORD:
 
 				if(((byte) 0xA8) == tmp_byte[0]){
-					//Arrays.fill(receive_bytes, (byte) 0);
+					Arrays.fill(receive_bytes, (byte) 0);//清空
 					System.arraycopy(tmp_byte,0,receive_bytes,0,tmp_byte.length);
 					receive_len_total = byteToHexStringToDec(tmp_byte[1]);
-					//接收的字节为20的整数倍时cycle_index循环减少一次
-					//cycle_index = ((0 == (receive_len_total % 20)) ?(receive_len_total/20 - 1):(receive_len_total/20));
 					CRC16_len = tmp_byte.length;
-					//cycle_index = CRC16_len/20 + ((0 == (CRC16_len % 20)) ?0:1);
 					cycle_index = CRC16_len/20;
 					if(0 == cycle_index && (((byte) 0xA2) == tmp_byte[tmp_byte.length - 1])){//长度不满20字节
 						System.arraycopy(tmp_byte,tmp_byte.length - 3, CRC16_bytes,0,2);
-						if(true == CRC16.checkBuf(receive_bytes,CRC16_len)){
+						if(CRC16.checkBuf(receive_bytes,CRC16_len)){
 							System.out.print("zhq_log CRC16校验正确！");
 						}
 					}
 				}else{//数据大于20个字节
 					CRC16_len = CRC16_len + tmp_byte.length;
 					cycle_index = (CRC16_len - 1)/20;
-					/*while(cycle_index != 0) {
-						//System.arraycopy(tmp_byte, 0, receive_bytes, 20*tmp_index, tmp_byte.length);
-						cycle_index--;tmp_index++;
-					}*/
 					System.arraycopy(tmp_byte, 0, receive_bytes, 20*cycle_index, tmp_byte.length);
-					//tmp_index = 1;//恢复默认值
-
-					System.arraycopy(tmp_byte,tmp_byte.length - 3, CRC16_bytes,0,2);
-
-					if(true == CRC16.checkBuf(receive_bytes,CRC16_len)){
-						System.out.print("zhq_log CRC16校验正确！");
-						tmp_index = 1;cycle_index = 0;//恢复默认值
+					System.arraycopy(tmp_byte,tmp_byte.length - 3, CRC16_bytes,0,2);//获取CRC校验值
+					if(((byte) 0xA2) == tmp_byte[tmp_byte.length - 1]){//数据接收完毕
+						if(CRC16.checkBuf(receive_bytes,CRC16_len)){//验证CRC
+							System.out.print("zhq_log CRC16校验正确！");
+						}
 					}
 				}
 				break;
@@ -360,8 +348,9 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 
 	private void Analysis_all_recive_msg(byte[] tmp_byte) {//解析数据
-		if (talking_stopdis_btn.isChecked())
+		if (talking_stopdis_btn.isChecked()) {
 			return; // 停止显示
+		}
 
 		String tmp = "";
 		String receive = "";
@@ -445,7 +434,13 @@ public class TalkActivity extends Activity implements OnClickListener {
 		String Basalrecord_month = "";
 		String Basalrecord_day = "";
 
-		String Basalrecord_value = "";
+		String[] Basalrecord_tmp_value = new String[100];
+		final   String BasalHour_tmp[] = {"时段00—01: ","时段01—02: ","时段02—03: ","时段03—04: ",
+											"时段04—05: ","时段05—06: ","时段06—07: ","时段07—08: ",
+											"时段08—09: ","时段09—10: ","时段10—11: ","时段11—12: ",
+											"时段12—13: ","时段13—14: ","时段14—15: ","时段15—16: ",
+											"时段16—17: ","时段17—18: ","时段18—19: ","时段19—20: ",
+											"时段20—21: ","时段21—22: ","时段22—23: ","时段23—24: "};
 
 		final byte[] tmp_Basalrecord_total = new byte[1];
 		final byte[] tmp_Basalrecord_num = new byte[1];
@@ -750,14 +745,18 @@ public class TalkActivity extends Activity implements OnClickListener {
 						Basalrecord_month = tmp_add_zero(Basalrecord_month);//个位数加零
 						Basalrecord_day = tmp_add_zero(Basalrecord_day);
 
-						//Basalrecord_value = tmp_two_decimal_places(tmp_Basalrecord_value);
-
 						receive = receive + "\r\n"
 								+ "记录数  " + Basalrecord_num + "/" + Basalrecord_total + "\r\n"
 								+ "日期  " + Basalrecord_year + "-"
 								+	Basalrecord_month + "-"
 								+ Basalrecord_day + "\r\n"
-								+ "剂量值  " + "U";
+								+ "剂量值" + "\r\n";
+						for(int i=0;i<48;i+=2){
+							Basalrecord_tmp_value[i/2] = twobytesTodecimal_places(tmp_Basalrecord_value[i],tmp_Basalrecord_value[i+1]);
+							receive = receive + BasalHour_tmp[i/2] + Basalrecord_tmp_value[i/2] + " U/h" + "\r\n";
+						}
+						Log.v("zhq_log  receive ","" + receive);
+
 					}
 				}
 				break;
@@ -991,6 +990,39 @@ public class TalkActivity extends Activity implements OnClickListener {
 		return result;
 	}
 
+	private String tmp_two_decimal_places_byte(byte tmp) {//保留小数点后两位
+		String result = "";
+		DecimalFormat df = new DecimalFormat("0.00");//格式化小数，不足的补0
+		result = df.format(((double)(byteToHexStringToDec(tmp)))/100);
+		return result;
+	}
+
+	private String twobytesTodecimal_places(byte tmpfirst, byte tmpend) {//整数转换为浮点类型 保留小数点后两位
+		String result = "";
+		DecimalFormat df = new DecimalFormat("0.00");//格式化小数，不足的补0
+		result = df.format(((double)(twobyteToHexStringToDec(tmpfirst,tmpend)))/100);
+		return result;
+	}
+
+	private static int twobyteToHexStringToDec(byte tmpfirst, byte tmpend) {//2个byte型转换为十进制
+		String result = "";
+		int tmp = 0;
+		{
+			String hexStringfirst = Integer.toHexString(tmpfirst & 0xFF);
+			if (hexStringfirst.length() == 1) {
+				hexStringfirst = '0' + hexStringfirst;
+			}
+			String hexStringend = Integer.toHexString(tmpend & 0xFF);
+			if (hexStringend.length() == 1) {
+				hexStringend = '0' + hexStringend;
+			}
+
+			result = hexStringfirst.toUpperCase() + hexStringend.toUpperCase();
+		}
+		tmp = Integer.parseInt(result, 16);
+		return tmp;
+	}
+
 	private String tmp_add_zero(String tmp) {
 		if(tmp.length()<2)
 		{
@@ -1121,7 +1153,6 @@ public class TalkActivity extends Activity implements OnClickListener {
     private int CRC16_len = 0;
 	private int receive_len_total = 0;
 	private int cycle_index = 0;
-	private int tmp_index = 1;
 
 	private void initView() {
 		talking_conect_flag_txt = (TextView) findViewById(R.id.talking_conect_flag_txt);
@@ -1602,7 +1633,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 						write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - '0') & 0xFF);
 				} else {
 					if (0 == i % 2)
-						write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - 'a' + 10) * 16) & 0xFF);
+						write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - 'a' + 10) * 16) & 0xFF);//小写字母，否则改为‘A’
 					else
 						write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - 'a' + 10) & 0xFF);
 				}
@@ -1681,71 +1712,41 @@ public class TalkActivity extends Activity implements OnClickListener {
         String tmp_contror_code = "00";//控制码
 
          //CommandsEnum commandsEnum = CommandsEnum.SET_FACTORYDATA; //枚举类型
-
         Log.v("zhq_log CommandsFound  send_fmt_int ",""+ send_fmt_int);
 
-        if(true) {
-            if(send_fmt_int < 7){
-                tmp_str = DataTransmission.Data_Transmission(
-                        SEND_SELCET[send_fmt_int],send_fmt_int,tmp_contror_code);
-            }else{//控制码显示
-                tmp_contror_code = control_code.getText().toString();
-                if(tmp_contror_code != null && tmp_contror_code.length() != 0){
-                    tmp_str = DataTransmission.Data_Transmission(
-                            SEND_SELCET[send_fmt_int],send_fmt_int,tmp_contror_code);
-                }else{
-                    Toast.makeText(getApplicationContext(), "请输入需要查询第几条记录", Toast.LENGTH_LONG)
-                            .show();
-                    return null;
-                }
-            }
+		if(send_fmt_int < 7){
+			tmp_str = DataTransmission.Data_Transmission(
+					SEND_SELCET[send_fmt_int],send_fmt_int,tmp_contror_code);
+		}else{//控制码显示
+			tmp_contror_code = control_code.getText().toString();
+			if(tmp_contror_code != null && tmp_contror_code.length() != 0){
+				tmp_str = DataTransmission.Data_Transmission(
+						SEND_SELCET[send_fmt_int],send_fmt_int,tmp_contror_code);
+			}else{
+				Toast.makeText(getApplicationContext(), "请输入需要查询第几条记录", Toast.LENGTH_LONG)
+						.show();
+				return null;
+			}
+		}
 
-            //tmp_str = SEND_SELCET[send_fmt_int];
-            if (0 == tmp_str.length())
-                return null;
+		if (0 == tmp_str.length())
+			return null;
 
-            tmp_byte = tmp_str.getBytes();
-            write_msg_byte = new byte[tmp_byte.length / 2 + tmp_byte.length % 2];
-            for (int i = 0; i < tmp_byte.length; i++) {
-                if ((tmp_byte[i] <= '9') && (tmp_byte[i] >= '0')) {
-                    if (0 == i % 2)
-                        write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - '0') * 16) & 0xFF);
-                    else
-                        write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - '0') & 0xFF);
-                } else {
-                    if (0 == i % 2)
-                        write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - 'a' + 10) * 16) & 0xFF);
-                    else
-                        write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - 'a' + 10) & 0xFF);
-                }
-            }
-
-            if (0 == tmp_str.length())
-                return null;
-        }else {
-            tmp_str = SEND_SELCET[send_fmt_int];
-            if (0 == tmp_str.length())
-                return null;
-
-            tmp_byte = SEND_SELCET[send_fmt_int].getBytes();
-            write_msg_byte = new byte[tmp_byte.length / 2 + tmp_byte.length % 2];
-            for (int i = 0; i < tmp_byte.length; i++) {
-                if ((tmp_byte[i] <= '9') && (tmp_byte[i] >= '0')) {
-                    if (0 == i % 2)
-                        write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - '0') * 16) & 0xFF);
-                    else
-                        write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - '0') & 0xFF);
-                } else {
-                    if (0 == i % 2)
-                        write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - 'a' + 10) * 16) & 0xFF);
-                    else
-                        write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - 'a' + 10) & 0xFF);
-                }
-            }
-
-            if (0 == tmp_str.length())
-                return null;
-        }
+		tmp_byte = tmp_str.getBytes();
+		write_msg_byte = new byte[tmp_byte.length / 2 + tmp_byte.length % 2];
+		for (int i = 0; i < tmp_byte.length; i++) {
+			if ((tmp_byte[i] <= '9') && (tmp_byte[i] >= '0')) {
+				if (0 == i % 2)
+					write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - '0') * 16) & 0xFF);
+				else
+					write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - '0') & 0xFF);
+			} else {
+				if (0 == i % 2)
+					write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - 'A' + 10) * 16) & 0xFF);
+				else
+					write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - 'A' + 10) & 0xFF);
+			}
+		}
 
         if (!Tools.mBLEService.isConnected()) {
             Toast.makeText(getApplicationContext(), "已断开连接", Toast.LENGTH_LONG)
