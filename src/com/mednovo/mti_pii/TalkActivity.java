@@ -375,6 +375,63 @@ public class TalkActivity extends Activity implements OnClickListener {
 		final byte[] tmp_version_software = new byte[6];
 
 		/**
+		 * @param 系统设置数据定义
+		 */
+		String Max_meal_bolus_txt = "";
+		String Max_basal_rate_txt = "";
+		String Max_hours_bolus_hours_txt = "";
+		String Max_hours_bolus_dosevalue_txt = "";
+		String Max_daily_total_txt = "";
+		String System_flag = "";
+		String System_year_txt = "";
+		String System_month_txt = "";
+		String System_day_txt = "";
+		String System_hour_txt = "";
+		String System_min_txt = "";
+
+		final byte[] tmp_Max_meal_bolus = new byte[2];
+		final byte[] tmp_Max_basal_rate = new byte[2];
+		final byte[] tmp_Max_hours_bolus_hours = new byte[2];
+		final byte[] tmp_Max_hours_bolus_dosevalue = new byte[2];
+		final byte[] tmp_Max_daily_total = new byte[2];
+		final byte[] tmp_Concentration_set = new byte[1];
+		//final byte[] tmp_System_flag = new byte[1];
+		final byte[] tmp_System_time = new byte[5];
+
+		/**
+		 * @param 运行状态数据定义
+		 */
+		String Basal_Infusion_value = "";
+		String Temporary_Infusion_value = "";
+		String Temporary_Infusion_hour_start = "";
+		String Temporary_Infusion_min_start = "";
+		String Temporary_Infusion_hour_end = "";
+		String Temporary_Infusion_min_end = "";
+		String Temporary_set = "";
+		String Meal_bolus_Infusion_value = "";
+		String Time_bolus_Infusion_value = "";
+		String Time_bolus_Infusion_hour_start = "";
+		String Time_bolus_Infusion_hour_end = "";
+		String Time_bolus_Infusion_min_start = "";
+		String Time_bolus_Infusion_min_end = "";
+		String Time_bolus_Infusion_set_value = "";
+		String Cumulative_input = "";
+		String Power = "";
+
+		final byte[] tmp_Basal_Infusion_value = new byte[2];
+		final byte[] tmp_Temporary_Infusion_value = new byte[2];
+		final byte[] tmp_Temporary_Infusion_time = new byte[4];
+		final byte[] tmp_Temporary_set = new byte[1];
+
+		final byte[] tmp_Meal_bolus_Infusion_value = new byte[2];
+		final byte[] tmp_Time_bolus_Infusion_value = new byte[2];
+		final byte[] tmp_Time_bolus_Infusion_time = new byte[4];
+		final byte[] tmp_Time_bolus_Infusion_set_value = new byte[2];
+		final byte[] tmp_Cumulative_input = new byte[2];
+		final byte[] tmp_Power = new byte[1];
+
+
+		/**
 		 * @param 即时大剂量记录定义
 		 */
 		String Mealbolusrecord_total = "";
@@ -446,6 +503,15 @@ public class TalkActivity extends Activity implements OnClickListener {
 		final byte[] tmp_Basalrecord_num = new byte[1];
 		final byte[] tmp_Basalrecord_time = new byte[3];
 		final byte[] tmp_Basalrecord_value = new byte[48];
+
+		/**
+		 * @param 读取基础率数据定义
+		 */
+
+		final byte[] tmp_BasalData_total = new byte[1];
+		final byte[] tmp_BasalData_value = new byte[48];
+		String[] BasalData_tmp_value = new String[100];
+
 
 		/**
 		 * @param 暂时率记录定义
@@ -566,10 +632,151 @@ public class TalkActivity extends Activity implements OnClickListener {
 				}
 				break;
 			case CommandsFound.READ_SYSSETDATA:
+				if((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1]) ){
+					System.arraycopy(tmp_byte,3,tmp_Max_meal_bolus,0,2);
+					System.arraycopy(tmp_byte,5,tmp_Max_basal_rate,0,2);
+					System.arraycopy(tmp_byte,7,tmp_Max_hours_bolus_hours,0,2);
+					System.arraycopy(tmp_byte,9,tmp_Max_hours_bolus_dosevalue,0,2);
+					System.arraycopy(tmp_byte,11,tmp_Max_daily_total,0,2);
+					System.arraycopy(tmp_byte,13,tmp_Concentration_set,0,1);
+					//System.arraycopy(tmp_byte,14,tmp_System_flag,0,1);
+					System.arraycopy(tmp_byte, 15, tmp_System_time, 0, 5);
+
+					Max_meal_bolus_txt = tmp_two_decimal_places(tmp_Max_meal_bolus);
+					Max_basal_rate_txt = tmp_two_decimal_places(tmp_Max_basal_rate);
+					Max_hours_bolus_hours_txt = bytesToHexStringToDecString(tmp_Max_hours_bolus_hours);
+					Max_hours_bolus_dosevalue_txt = tmp_two_decimal_places(tmp_Max_hours_bolus_dosevalue);
+					Max_daily_total_txt = tmp_two_decimal_places(tmp_Max_daily_total);
+
+					//System_flag = byteToBit(tmp_byte[14]);
+					System_flag = system_set_status(tmp_byte[14]);
+
+					System_year_txt = byteToHexStringToDecString(tmp_System_time[0]);
+					System_month_txt = byteToHexStringToDecString(tmp_System_time[1]);
+					System_day_txt = byteToHexStringToDecString(tmp_System_time[2]);
+					System_hour_txt = byteToHexStringToDecString(tmp_System_time[3]);
+					System_min_txt = byteToHexStringToDecString(tmp_System_time[4]);
+
+					System_year_txt = tmp_add_zero(System_year_txt);//个位数加零
+					System_month_txt = tmp_add_zero(System_month_txt);//个位数加零
+					System_day_txt = tmp_add_zero(System_day_txt);
+					System_hour_txt = tmp_add_zero(System_hour_txt);
+					System_min_txt = tmp_add_zero(System_min_txt);
+
+					receive = "最大大剂量  "+ Max_meal_bolus_txt + " U" + "\r\n"
+							+ "最大基础率  " + Max_basal_rate_txt + " U/h" + "\r\n"
+							+ "最大时段量  "
+							+ Max_hours_bolus_hours_txt + " 小时 " + Max_hours_bolus_dosevalue_txt + "  U" + "\r\n"
+							+ "最大日总量  " + Max_daily_total_txt + " U" + "\r\n";
+
+					if(((byte) 0x00) == tmp_byte[13]){//浓度设定
+						receive = receive + "浓度设定： U40" + "\r\n";
+					}else{
+						receive = receive + "浓度设定： U100" + "\r\n";
+					}
+
+					receive = receive + System_flag
+							+ "日期  " + System_year_txt + "-"
+							+	System_month_txt + "-"
+							+ System_day_txt + "\r\n"
+							+ "时间  " + System_hour_txt + ":" + System_min_txt;
+				}
 				break;
 			case CommandsFound.READ_BASALDATA:
+				if((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1]) ){//数据接收完整
+					{
+						System.arraycopy(tmp_byte, 3, tmp_BasalData_value, 0, 48);
+
+						receive = "剂量值" + "\r\n";
+						for(int i=0;i<48;i+=2){
+							BasalData_tmp_value[i/2] = twobytesTodecimal_places(tmp_BasalData_value[i],tmp_BasalData_value[i+1]);
+							receive = receive + BasalHour_tmp[i/2] + BasalData_tmp_value[i/2] + " U/h" + "\r\n";
+						}
+						Log.v("zhq_log  receive ","" + receive);
+
+					}
+				}
 				break;
 			case CommandsFound.READ_RUNNINGDATA:
+				if((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1]) ){
+					System.arraycopy(tmp_byte,3,tmp_Basal_Infusion_value,0,2);
+					System.arraycopy(tmp_byte,5,tmp_Temporary_Infusion_value,0,2);
+					System.arraycopy(tmp_byte,7,tmp_Temporary_Infusion_time,0,4);
+					System.arraycopy(tmp_byte,11,tmp_Temporary_set,0,1);
+					System.arraycopy(tmp_byte,12,tmp_Meal_bolus_Infusion_value,0,2);
+					System.arraycopy(tmp_byte,14,tmp_Time_bolus_Infusion_value,0,2);
+					System.arraycopy(tmp_byte,16,tmp_Time_bolus_Infusion_time,0,4);
+					System.arraycopy(tmp_byte,20,tmp_Time_bolus_Infusion_set_value,0,2);
+					System.arraycopy(tmp_byte,22,tmp_Cumulative_input,0,2);
+					System.arraycopy(tmp_byte,24,tmp_Power,0,1);
+					//System.arraycopy(tmp_byte,25,tmp_System_flag,0,1);
+					System.arraycopy(tmp_byte,26,tmp_System_time,0,5);
+
+					Basal_Infusion_value = tmp_two_decimal_places(tmp_Basal_Infusion_value);
+					Temporary_Infusion_value = tmp_two_decimal_places(tmp_Temporary_Infusion_value);
+					Temporary_Infusion_hour_start = byteToHexStringToDecString(tmp_Temporary_Infusion_time[0]);
+					Temporary_Infusion_min_start = byteToHexStringToDecString(tmp_Temporary_Infusion_time[1]);
+					Temporary_Infusion_hour_end = byteToHexStringToDecString(tmp_Temporary_Infusion_time[2]);
+					Temporary_Infusion_min_end = byteToHexStringToDecString(tmp_Temporary_Infusion_time[3]);
+
+					Temporary_Infusion_hour_start = tmp_add_zero(Temporary_Infusion_hour_start);//个位数加零
+					Temporary_Infusion_min_start = tmp_add_zero(Temporary_Infusion_min_start);//个位数加零
+					Temporary_Infusion_hour_end = tmp_add_zero(Temporary_Infusion_hour_end);
+					Temporary_Infusion_min_end = tmp_add_zero(Temporary_Infusion_min_end);
+
+					Temporary_set = bytesToHexStringToDecString(tmp_Temporary_set);
+
+					Meal_bolus_Infusion_value = tmp_two_decimal_places(tmp_Meal_bolus_Infusion_value);
+					Time_bolus_Infusion_value = tmp_two_decimal_places(tmp_Time_bolus_Infusion_value);
+					Time_bolus_Infusion_hour_start = byteToHexStringToDecString(tmp_Time_bolus_Infusion_time[0]);
+					Time_bolus_Infusion_min_start = byteToHexStringToDecString(tmp_Time_bolus_Infusion_time[1]);
+					Time_bolus_Infusion_hour_end = byteToHexStringToDecString(tmp_Time_bolus_Infusion_time[2]);
+					Time_bolus_Infusion_min_end = byteToHexStringToDecString(tmp_Time_bolus_Infusion_time[3]);
+
+					Time_bolus_Infusion_hour_start = tmp_add_zero(Time_bolus_Infusion_hour_start);//个位数加零
+					Time_bolus_Infusion_min_start = tmp_add_zero(Time_bolus_Infusion_min_start);//个位数加零
+					Time_bolus_Infusion_hour_end = tmp_add_zero(Time_bolus_Infusion_hour_end);
+					Time_bolus_Infusion_min_end = tmp_add_zero(Time_bolus_Infusion_min_end);
+
+					Time_bolus_Infusion_set_value = tmp_two_decimal_places(tmp_Time_bolus_Infusion_set_value);
+
+					Cumulative_input = tmp_two_decimal_places(tmp_Cumulative_input);
+					Power = bytesToHexStringToDecString(tmp_Power);
+					System_flag = system_set_status(tmp_byte[25]);
+
+					System_year_txt = byteToHexStringToDecString(tmp_System_time[0]);
+					System_month_txt = byteToHexStringToDecString(tmp_System_time[1]);
+					System_day_txt = byteToHexStringToDecString(tmp_System_time[2]);
+					System_hour_txt = byteToHexStringToDecString(tmp_System_time[3]);
+					System_min_txt = byteToHexStringToDecString(tmp_System_time[4]);
+
+					System_year_txt = tmp_add_zero(System_year_txt);//个位数加零
+					System_month_txt = tmp_add_zero(System_month_txt);//个位数加零
+					System_day_txt = tmp_add_zero(System_day_txt);
+					System_hour_txt = tmp_add_zero(System_hour_txt);
+					System_min_txt = tmp_add_zero(System_min_txt);
+
+					receive = "基础率输注值  "+ Basal_Infusion_value + " U/h" + "\r\n"
+							+ "暂时率输注值  " + Temporary_Infusion_value + " U/h" + "\r\n"
+							+ "时间  "
+							+ Temporary_Infusion_hour_start + ":" + Temporary_Infusion_min_start + "-"
+							+ Temporary_Infusion_hour_end + ":" + Temporary_Infusion_min_end + "\r\n"
+							+ "比值  " + Temporary_set + "%" + "\r\n"
+							+ "即时大剂量输注值  " + Meal_bolus_Infusion_value + " U\r\n"
+							+ "定时大剂量输注值  " + Time_bolus_Infusion_value + " U\r\n"
+							+ "时间  "
+							+ Time_bolus_Infusion_hour_start + ":" + Time_bolus_Infusion_min_start + "-"
+							+ Time_bolus_Infusion_hour_end + ":" + Time_bolus_Infusion_min_end + "\r\n"
+							+ "定时大剂量设置值  " + Time_bolus_Infusion_set_value + " U\r\n"
+							+ "累计输注量  " + Cumulative_input + " U\r\n"
+							+ "系统电量  " + Power + "%\r\n"
+							+ System_flag
+							+ "日期  " + System_year_txt + "-"
+							+	System_month_txt + "-"
+							+ System_day_txt + "\r\n"
+							+ "时间  " + System_hour_txt + ":" + System_min_txt;
+
+				}
 				break;
 			case CommandsFound.READ_MEALBOLUSRECORD:
 				if((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1]) ){//数据接收完整
@@ -981,6 +1188,72 @@ public class TalkActivity extends Activity implements OnClickListener {
 		chat_list.add(entity2);
 		chat_list_adapter.notifyDataSetChanged();
 
+	}
+
+	private String system_set_status(byte b) {
+		String result = "";
+		if((byte) 0 == (byte) ((b >> 0) & 0x1)){
+			result = "液晶设置状态： 不常显示\n";
+		}else{
+			result = "液晶设置状态： 常显示\n";
+		}
+		if((byte) 0 == (byte) ((b >> 1) & 0x1)){
+			result += "液晶开关状态： 关闭\n";
+		}else{
+			result += "液晶开关状态： 开\n";
+		}
+		if((byte) 0 == (byte) ((b >> 2) & 0x1)){
+			result += "鸣笛设置状态： 不鸣笛\n";
+		}else{
+			result += "鸣笛设置状态： 鸣笛\n";
+		}
+		if((byte) 0 == (byte) ((b >> 3) & 0x1)){
+			result += "语言设置状态： English\n";
+		}else{
+			result += "语言设置状态： 中文\n";
+		}
+		if((byte) 0 == (byte) ((b >> 4) & 0x1)){
+			result += "低功耗状态： 非低功耗\n";
+		}else{
+			result += "低功耗状态： 低功耗\n";
+		}
+		if((byte) 0 == (byte) ((b >> 5) & 0x1)){
+			result += "液晶背光状态： 关闭\n";
+		}else{
+			result += "液晶背光状态： 开\n";
+		}
+		if((byte) 0 == (byte) ((b >> 6) & 0x1)){
+			result += "键盘锁定状态： 未锁定\n";
+		}else{
+			result += "键盘锁定状态： 锁定\n";
+		}
+		return result;
+	}
+
+	/**
+	 * 将byte转换为一个长度为8的byte数组，数组每个值代表bit
+	 */
+	private byte[] getBooleanArray(byte b) {
+		byte[] array = new byte[8];
+		for (int i = 7; i >= 0; i--) {
+			array[i] = (byte)(b & 1);
+			b = (byte) (b >> 1);
+		}
+		return array;
+	}
+	/**
+	 * 把byte转为字符串的bit
+	 */
+	private String byteToBit(byte b) {
+		return ""
+				/*+ (byte) ((b >> 7) & 0x1) + (byte) ((b >> 6) & 0x1)
+				+ (byte) ((b >> 5) & 0x1) + (byte) ((b >> 4) & 0x1)
+				+ (byte) ((b >> 3) & 0x1) + (byte) ((b >> 2) & 0x1)
+				+ (byte) ((b >> 1) & 0x1) + (byte) ((b >> 0) & 0x1);*/
+				+ (byte) ((b >> 0) & 0x1) + (byte) ((b >> 1) & 0x1)
+				+ (byte) ((b >> 2) & 0x1) + (byte) ((b >> 3) & 0x1)
+				+ (byte) ((b >> 4) & 0x1) + (byte) ((b >> 5) & 0x1)
+				+ (byte) ((b >> 6) & 0x1) + (byte) ((b >> 7) & 0x1);
 	}
 
 	private String tmp_two_decimal_places(byte[] tmp) {//保留小数点后两位
