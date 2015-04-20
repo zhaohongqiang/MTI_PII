@@ -14,6 +14,7 @@ import java.util.UUID;
 import com.mednovo.tools.CRC16;
 import com.mednovo.tools.CommandsFound;
 import com.mednovo.tools.DataTransmission;
+import com.mednovo.tools.GeneralCommands;
 import com.mednovo.tools.Tools;
 import com.mednovo.mti_pii.R;
 
@@ -369,10 +370,10 @@ public class TalkActivity extends Activity implements OnClickListener {
 		String version_software_txt = "";
 		String Concentration_change_txt = "";
 
-		final byte[] tmp_Serial_Num = new byte[13];
-		final byte[] tmp_CompensationStepNum = new byte[2];
-		final byte[] tmp_Driving_scheme = new byte[1];
-		final byte[] tmp_version_software = new byte[6];
+		byte[] tmp_Serial_Num = new byte[13];
+		byte[] tmp_CompensationStepNum = new byte[2];
+		byte[] tmp_Driving_scheme = new byte[1];
+		byte[] tmp_version_software = new byte[6];
 
 		/**
 		 * @param 系统设置数据定义
@@ -521,14 +522,16 @@ public class TalkActivity extends Activity implements OnClickListener {
 		String Temporaryrecord_year = "";
 		String Temporaryrecord_month = "";
 		String Temporaryrecord_day = "";
-		String Temporaryrecord_hour = "";
-		String Temporaryrecord_min = "";
+		String Temporaryrecord_hour_start = "";
+		String Temporaryrecord_min_start = "";
+		String Temporaryrecord_hour_end = "";
+		String Temporaryrecord_min_end = "";
 		String Temporaryrecord_value = "";
 
 		final byte[] tmp_Temporaryrecord_total = new byte[1];
 		final byte[] tmp_Temporaryrecord_num = new byte[1];
-		final byte[] tmp_Temporaryrecord_time = new byte[5];
-		final byte[] tmp_Temporaryrecord_value = new byte[2];
+		final byte[] tmp_Temporaryrecord_time = new byte[7];
+		final byte[] tmp_Temporaryrecord_value = new byte[1];
 
 		/**
 		 * @param 日总量记录定义
@@ -579,6 +582,13 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 
 		switch (send_fmt_int){
+			case CommandsFound.SET_FACTORYDATA:
+
+				break;
+			case CommandsFound.SET_SYSSETDATA:
+				break;
+			case CommandsFound.SET_BASALDATA:
+				break;
 			case CommandsFound.READ_FACTORYDATA:
 				if((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1]) ){
 					System.arraycopy(tmp_byte,3,tmp_Serial_Num,0,13);
@@ -974,7 +984,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 						Toast.makeText(getApplicationContext(), "无记录", Toast.LENGTH_LONG)
 								.show();
 					}else{
-						if(((byte) 0x00) == tmp_byte[12]){//读取
+						if(((byte) 0x00) == tmp_byte[13]){//读取
 							receive = "读取成功";
 						}else{
 							receive = "读取失败";
@@ -982,8 +992,8 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 						System.arraycopy(tmp_byte, 3, tmp_Temporaryrecord_total, 0, 1);
 						System.arraycopy(tmp_byte, 4, tmp_Temporaryrecord_num, 0, 1);
-						System.arraycopy(tmp_byte, 5, tmp_Temporaryrecord_time, 0, 5);
-						System.arraycopy(tmp_byte, 10, tmp_Temporaryrecord_value, 0, 2);
+						System.arraycopy(tmp_byte, 5, tmp_Temporaryrecord_time, 0, 7);
+						System.arraycopy(tmp_byte, 12, tmp_Temporaryrecord_value, 0, 1);
 
 						Temporaryrecord_total = bytesToHexStringToDecString(tmp_Temporaryrecord_total);
 						Temporaryrecord_num = bytesToHexStringToDecString(tmp_Temporaryrecord_num);
@@ -991,23 +1001,29 @@ public class TalkActivity extends Activity implements OnClickListener {
 						Temporaryrecord_year = byteToHexStringToDecString(tmp_Temporaryrecord_time[0]);
 						Temporaryrecord_month = byteToHexStringToDecString(tmp_Temporaryrecord_time[1]);
 						Temporaryrecord_day = byteToHexStringToDecString(tmp_Temporaryrecord_time[2]);
-						Temporaryrecord_hour = byteToHexStringToDecString(tmp_Temporaryrecord_time[3]);
-						Temporaryrecord_min = byteToHexStringToDecString(tmp_Temporaryrecord_time[4]);
+						Temporaryrecord_hour_start = byteToHexStringToDecString(tmp_Temporaryrecord_time[3]);
+						Temporaryrecord_min_start = byteToHexStringToDecString(tmp_Temporaryrecord_time[4]);
+						Temporaryrecord_hour_end = byteToHexStringToDecString(tmp_Temporaryrecord_time[5]);
+						Temporaryrecord_min_end = byteToHexStringToDecString(tmp_Temporaryrecord_time[6]);
 
 						Temporaryrecord_year = tmp_add_zero(Temporaryrecord_year);//个位数加零
 						Temporaryrecord_month = tmp_add_zero(Temporaryrecord_month);//个位数加零
 						Temporaryrecord_day = tmp_add_zero(Temporaryrecord_day);
-						Temporaryrecord_hour = tmp_add_zero(Temporaryrecord_hour);
-						Temporaryrecord_min = tmp_add_zero(Temporaryrecord_min);
+						Temporaryrecord_hour_start = tmp_add_zero(Temporaryrecord_hour_start);
+						Temporaryrecord_min_start = tmp_add_zero(Temporaryrecord_min_start);
+						Temporaryrecord_hour_end = tmp_add_zero(Temporaryrecord_hour_end);
+						Temporaryrecord_min_end = tmp_add_zero(Temporaryrecord_min_end);
 
 						Temporaryrecord_value = bytesToHexStringToDecString(tmp_Temporaryrecord_value);
 
 						receive = receive + "\r\n"
 								+ "记录数  " + Temporaryrecord_num + "/" + Temporaryrecord_total + "\r\n"
-								+ "日期  " + Temporaryrecord_year + "-"
-								+	Temporaryrecord_month + "-"
-								+ Temporaryrecord_day + "\r\n"
-								+ "时间  " + Temporaryrecord_hour + ":" + Temporaryrecord_min + "\r\n"
+								+ "日期  "   + Temporaryrecord_year + "-"
+												+ Temporaryrecord_month + "-"
+													+ Temporaryrecord_day + "\r\n"
+								+ "时间  "
+								+ Temporaryrecord_hour_start + ":" + Temporaryrecord_min_start + "-"
+								+ Temporaryrecord_hour_end + ":" + Temporaryrecord_min_end +"\r\n"
 								+ "暂时率  " + Temporaryrecord_value + "%";
 					}
 				}
@@ -1273,7 +1289,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private String twobytesTodecimal_places(byte tmpfirst, byte tmpend) {//整数转换为浮点类型 保留小数点后两位
 		String result = "";
 		DecimalFormat df = new DecimalFormat("0.00");//格式化小数，不足的补0
-		result = df.format(((double)(twobyteToHexStringToDec(tmpfirst,tmpend)))/100);
+		result = df.format(((double)(twobyteToHexStringToDec(tmpfirst, tmpend)))/100);
 		return result;
 	}
 
@@ -1304,7 +1320,39 @@ public class TalkActivity extends Activity implements OnClickListener {
 		return tmp;
 	}
 
-	private static String bytesToHexStringToDecString(byte[] contror_code) {//byte型转换为十六进制
+	private static byte[] StringToHexBytes(String result) {//String型转换为byte十六进制
+		//String result = "";
+		byte[] tmp_byte = null;
+		byte[] return_byte = null;
+
+		/*for (int i = 0; i < byte_data.length; i++) {
+			String hexString = Integer.toHexString(byte_data[i] & 0xFF);
+
+			if (hexString.length() == 1) {
+				hexString = '0' + hexString;
+			}
+			result += hexString.toUpperCase();
+		}*/
+
+		tmp_byte = result.getBytes();
+		return_byte = new byte[tmp_byte.length / 2 + tmp_byte.length % 2];
+		for (int i = 0; i < tmp_byte.length; i++) {
+			if ((tmp_byte[i] <= '9') && (tmp_byte[i] >= '0')) {
+				if (0 == i % 2)
+					return_byte[i / 2] = (byte) (((tmp_byte[i] - '0') * 16) & 0xFF);
+				else
+					return_byte[i / 2] |= (byte) ((tmp_byte[i] - '0') & 0xFF);
+			} else {
+				if (0 == i % 2)
+					return_byte[i / 2] = (byte) (((tmp_byte[i] - 'A' + 10) * 16) & 0xFF);
+				else
+					return_byte[i / 2] |= (byte) ((tmp_byte[i] - 'A' + 10) & 0xFF);
+			}
+		}
+		return return_byte;
+	}
+
+	private static String bytesToHexStringToDecString(byte[] contror_code) {//byte[]型转换为十六进制
 		String result = "";
 		int tmp = 0;
 		for (int i = 0; i < contror_code.length; i++) {
@@ -1320,7 +1368,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 		return Integer.toString(tmp);
 	}
 
-	private static int bytesToHexStringToInt(byte[] contror_code) {//byte型转换为十六进制
+	private static int bytesToHexStringToInt(byte[] contror_code) {//byte[]型转换为十六进制
 		String result = "";
 		int tmp = 0;
 		for (int i = 0; i < contror_code.length; i++) {
@@ -1336,7 +1384,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 		return tmp;
 	}
 
-	private static int byteToHexStringToDec(byte contror_code) {//byte型转换为十六进制
+	private static int byteToHexStringToDec(byte contror_code) {//byte型转换为十进制
 		String result = "";
 		int tmp = 0;
 		{
@@ -1393,6 +1441,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private EditText Driving_scheme;
 	private EditText version_software;
 	private Switch Open_Bluetooth;
+	private Switch Concentration_change;
 	private EditText Open_Bluetooth_Read;
 	private	EditText Concentration_change_read;
 
@@ -1402,6 +1451,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private GridLayout basal_rate_set_three;
     private EditText control_code;
     private Button general_sendbut;
+	private Button button_success;
 
 	private List<ChatMsgFmt> chat_list = new ArrayList<ChatMsgFmt>();
 	private ChatAdapater chat_list_adapter;
@@ -1454,6 +1504,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 		version_software = (EditText) findViewById(R.id.version_software);
 		Open_Bluetooth = (Switch) findViewById(R.id.open_bluetooth);
 		Open_Bluetooth_Read = (EditText) findViewById(R.id.open_bluetooth_read);
+		Concentration_change = (Switch) findViewById(R.id.Concentration_change);
 		Concentration_change_read = (EditText) findViewById(R.id.Concentration_change_read);
 
 		system_set = (GridLayout) findViewById(R.id.system_set);
@@ -1462,6 +1513,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 		basal_rate_set_three =(GridLayout) findViewById(R.id.basal_rate_set_three);
         control_code = (EditText) findViewById(R.id.Control_code);//控制码
         general_sendbut = (Button) findViewById(R.id.General_sendbutton);
+		button_success = (Button) findViewById(R.id.button_success);
 
 		// 初始化控件参数
 		talking_conect_flag_txt.setText("已连接");
@@ -1533,7 +1585,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 			public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 				send_fmt_int = arg2;
 
-				if(false) {
+				if (false) {
 					if (send_fmt_int < 7) {//记录
 						generalsend_command.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
 					} else {
@@ -1686,18 +1738,35 @@ public class TalkActivity extends Activity implements OnClickListener {
 		send_onTime_checkbox.setOnClickListener(this);
 
         general_sendbut.setOnClickListener(this);
+		button_success.setOnClickListener(this);
 		Open_Bluetooth.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				if (isChecked) {
+					//选中时 do some thing
+					Open_Bluetooth.setText("开");
+					GeneralCommands.Bluetooth_Allow = "00";
+				} else {
+					//非选中时 do some thing
+					Open_Bluetooth.setText("关");
+					GeneralCommands.Bluetooth_Allow = "FF";
+				}
+			}
+		});
+
+		Concentration_change.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if(isChecked) {
 					//选中时 do some thing
-					Open_Bluetooth.setText("开");
+					GeneralCommands.Concentration_change = "00";//允许
 				} else {
 					//非选中时 do some thing
-					Open_Bluetooth.setText("关");
+					GeneralCommands.Concentration_change = "FF";//禁止
 				}
 			}
 		});
+
 
 		// 查看是有什么权限
 		proper = mBluetoothGattCharacteristic.getProperties();
@@ -1831,6 +1900,9 @@ public class TalkActivity extends Activity implements OnClickListener {
 		}
 	};
 
+	/**
+	 * @param v
+	 */
 	// 按钮监听
 	@Override
 	public void onClick(View v) {
@@ -1844,6 +1916,48 @@ public class TalkActivity extends Activity implements OnClickListener {
 			Toast.makeText(getApplicationContext(), "已断开连接", Toast.LENGTH_LONG)
 					.show();
 			return;
+		}
+		if(v == button_success){
+			String Data_field_txt = "";
+
+			switch(send_fmt_int) {
+				case CommandsFound.SET_FACTORYDATA:
+					String Serial_Num_txt = Serial_Num.getText().toString();
+					byte[] tmp_Serial_Num = new byte[13];
+					try {//getbytes可能会不存在这种字符集，所以异常处理
+						tmp_Serial_Num = Serial_Num_txt.getBytes("utf-8");//string 转 byte[]
+					} catch (UnsupportedEncodingException e) {
+						e.printStackTrace();
+					}
+				/*byte[] tmp_Serial_Num = DataTransmission.DectoBytes(Serial_Num_txt);*/
+					Serial_Num_txt = DataTransmission.bytesToHexString(tmp_Serial_Num);
+					Log.v("zhq_log Serial_Num_txt", "" + Serial_Num_txt);
+
+					String CompensationStepNum_txt = CompensationStepNum.getText().toString();
+					byte[] tmp_CompensationStepNum_txt = DataTransmission.DectoBytes(CompensationStepNum_txt);
+					CompensationStepNum_txt = "00" + DataTransmission.bytesToHexString(tmp_CompensationStepNum_txt);
+					Log.v("zhq_log CompensationStepNum_txt", "" + CompensationStepNum_txt);
+
+					String Driving_scheme_txt = Driving_scheme.getText().toString();
+					byte[] tmp_Driving_scheme_txt = DataTransmission.DectoBytes(Driving_scheme_txt);
+					Driving_scheme_txt = DataTransmission.bytesToHexString(tmp_Driving_scheme_txt);
+					Log.v("zhq_log Driving_scheme_txt", "" + Driving_scheme_txt);
+
+					Data_field_txt = Serial_Num_txt + GeneralCommands.Bluetooth_Allow
+							+ CompensationStepNum_txt + Driving_scheme_txt
+							+ GeneralCommands.Concentration_change;
+
+					break;
+				case CommandsFound.SET_SYSSETDATA:
+
+					break;
+				case CommandsFound.SET_BASALDATA:
+					break;
+				default:
+					break;
+			}
+			Log.v("zhq_log 数据域","" + Data_field_txt);
+			GeneralCommands.Data_field = Data_field_txt;
 		}
         if (v == general_sendbut) { // 发送按钮
             byte[] sendmsg = getNewMsgEdit(true);

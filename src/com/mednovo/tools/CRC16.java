@@ -226,9 +226,11 @@ public class CRC16{
 //   }
 
         byte[] sbuf = CRC16.getSendBuf(tem);
-        System.out.println("zhq_log 这是得到的crc "+CRC16.getBufHexStr(sbuf));
+        System.out.println("zhq_log 这是得到的crc " + CRC16.getBufHexStr(sbuf));
+
         //return CRC16.getBufHexStr(sbuf).substring(12, 16).toLowerCase();
-        return (CRC16.getBufHexStr(sbuf).substring(10, 14).toUpperCase());
+        //return (CRC16.getBufHexStr(sbuf).substring(10, 14).toUpperCase());
+        return (CRC16.getBufHexStr(sbuf).substring(tem.length(), tem.length()+4).toUpperCase());
     }
 
 

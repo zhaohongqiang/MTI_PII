@@ -42,6 +42,9 @@ public class GeneralCommands {//常用命令
     * End_bit           结束位 0xA2
     * */
 
+    public static String   Bluetooth_Allow = "00";
+    public static String   Concentration_change = "00";
+
     public static String   Start_bit ="A8";
     public static String   Frame_length ="08";
     public static String   Function_code ="01";

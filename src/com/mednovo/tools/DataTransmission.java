@@ -32,8 +32,38 @@ public class DataTransmission{
         //======结束位=======End_bit ="A2"=================
         switch (send_fmt_int){
             case CommandsFound.SET_FACTORYDATA:
-                Log.v("zhq_log CommandsFound SET_FACTORYDATA ",""+ CommandsFound.SET_FACTORYDATA);
+                Log.v("zhq_log CommandsFound SET_FACTORYDATA ", "" + CommandsFound.SET_FACTORYDATA);
+
+                command.put("Frame_length",//帧长度
+                        GeneralCommands.lookup_framelength(commandname, "Frame_length"));
+                //command.put("Commandname", commandname);//命令
+                GeneralCommands.Frame_length = command.get("Frame_length");
+                Log.v("zhq_log 帧长度 frame_length", "" + GeneralCommands.Frame_length);
+
+                command.put("Function_code",//功能码
+                        GeneralCommands.lookup(commandname, "Function_code"));
+                //command.put("Commandname", commandname);//命令
+                GeneralCommands.Function_code = command.get("Function_code");
+                Log.v("zhq_log 功能码 function_code",""+ GeneralCommands.Function_code);
+
                 //GeneralCommands.Data_field = ;
+                Log.v("zhq_log 数据域 Data_field",""+ GeneralCommands.Data_field);
+                Log.v("zhq_log 控制码 Control_code",""+ GeneralCommands.Control_code);
+
+
+                Data_TmpTransmission = GeneralCommands.Start_bit + GeneralCommands.Frame_length
+                        + GeneralCommands.Function_code + GeneralCommands.Data_field
+                        + GeneralCommands.Control_code;
+                Log.v("zhq_log 数据发送Data_TmpTransmission = ","" + Data_TmpTransmission);
+
+                GeneralCommands.CRC_check = CRC16.getCrc(Data_TmpTransmission);//CRC校验码
+                Log.v("zhq_log CRC_check","" + GeneralCommands.CRC_check);
+
+                Data_Transmission = GeneralCommands.Start_bit + GeneralCommands.Frame_length
+                        + GeneralCommands.Function_code + GeneralCommands.Data_field
+                        + GeneralCommands.Control_code + GeneralCommands.CRC_check
+                        + GeneralCommands.End_bit;
+                Log.v("zhq_log 数据发送Data_Transmission = ","" + Data_Transmission);
                 break;
             case CommandsFound.SET_SYSSETDATA:
                 Log.v("zhq_log CommandsFound SET_SYSSETDATA ",""+ CommandsFound.SET_SYSSETDATA);
@@ -53,6 +83,9 @@ public class DataTransmission{
                 //command.put("Commandname", commandname);//命令
                 GeneralCommands.Function_code = command.get("Function_code");
                 Log.v("zhq_log 功能码 function_code",""+ GeneralCommands.Function_code);
+
+                GeneralCommands.Data_field = "00";
+                Log.v("zhq_log 数据域 Data_field",""+ GeneralCommands.Data_field);
 
                 if(send_fmt_int < 7) {
                     GeneralCommands.Control_code = contror_code;//控制码
@@ -235,7 +268,7 @@ public class DataTransmission{
         return Data_Transmission;//newsendB;
     }
 
-    private static byte[] DectoBytes(String contror_code) {//输入的“第几条记录”（整数控制码）转换为byte类型
+    public static byte[] DectoBytes(String contror_code) {//输入的“第几条记录”（整数控制码）转换为byte类型
         byte[] bytecontror_code = null;
 
         if (0 == contror_code.length())
@@ -259,7 +292,7 @@ public class DataTransmission{
         return bytecontror_code;
     }
 
-    private static String bytesToHexString(byte[] contror_code) {//byte型“第几条记录”转换为十六进制
+    public static String bytesToHexString(byte[] contror_code) {//byte型“第几条记录”转换为十六进制
         String result = "";
         for (int i = 0; i < contror_code.length; i++) {
             String hexString = Integer.toHexString(contror_code[i] & 0xFF);

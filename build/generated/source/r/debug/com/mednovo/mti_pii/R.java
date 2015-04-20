@@ -32,8 +32,8 @@ public final class R {
         public static final int Control_code=0x7f090077;
         public static final int Control_code_name=0x7f090076;
         public static final int Driving_scheme=0x7f090024;
-        public static final int General_sendbutton=0x7f09007a;
-        public static final int action_settings=0x7f090080;
+        public static final int General_sendbutton=0x7f09007b;
+        public static final int action_settings=0x7f090081;
         public static final int alwaysuse_Layout=0x7f090013;
         public static final int basal_rate_set0=0x7f090041;
         public static final int basal_rate_set1=0x7f090043;
@@ -65,15 +65,16 @@ public final class R {
         public static final int basal_rate_set_two=0x7f090053;
         public static final int basal_set0=0x7f090042;
         public static final int ble_listview=0x7f090000;
+        public static final int button_success=0x7f09007a;
         public static final int chatist=0x7f090011;
         public static final int child_uuid_txt=0x7f090008;
         public static final int childname_txt=0x7f090006;
         public static final int device_mac_txt=0x7f090003;
         public static final int device_name_txt=0x7f090001;
         public static final int device_rssi_txt=0x7f090002;
-        public static final int edit_hex_id=0x7f09007d;
-        public static final int edit_shi_id=0x7f09007e;
-        public static final int edit_string_id=0x7f09007c;
+        public static final int edit_hex_id=0x7f09007e;
+        public static final int edit_shi_id=0x7f09007f;
+        public static final int edit_string_id=0x7f09007d;
         public static final int factory_set1=0x7f090019;
         public static final int factory_set2=0x7f09001a;
         public static final int factory_set3=0x7f09001d;
@@ -127,7 +128,7 @@ public final class R {
         public static final int send_fmt_select=0x7f090015;
         public static final int send_onTime_checkbox=0x7f090078;
         public static final int send_time_edit=0x7f090079;
-        public static final int sendbuttonid=0x7f09007f;
+        public static final int sendbuttonid=0x7f090080;
         public static final int serial_num=0x7f090018;
         public static final int serial_num_name=0x7f090017;
         public static final int service_list_view=0x7f09000b;
@@ -151,7 +152,7 @@ public final class R {
         public static final int talking_stopdis_btn=0x7f090010;
         public static final int time_set=0x7f090038;
         public static final int version_software=0x7f090027;
-        public static final int write_fmt_select=0x7f09007b;
+        public static final int write_fmt_select=0x7f09007c;
         public static final int writeable_Layout=0x7f090012;
     }
     public static final class integer {
