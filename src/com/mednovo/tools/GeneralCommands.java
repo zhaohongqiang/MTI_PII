@@ -44,6 +44,14 @@ public class GeneralCommands {//≥£”√√¸¡Ó
 
     public static String   Bluetooth_Allow = "00";
     public static String   Concentration_change = "00";
+    public static String   lcd_setup ="1";
+    public static String   lcd_OnOff ="1";
+    public static String   ring_setup ="1";
+    public static String   language_set ="1";
+    public static String   LPM_Status ="0";
+    public static String   LcdBk_OnOff ="0";
+    public static String   KeyLock ="0";
+    public static String   Extra ="0";
 
     public static String   Start_bit ="A8";
     public static String   Frame_length ="08";

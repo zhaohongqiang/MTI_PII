@@ -2,9 +2,11 @@ package com.mednovo.mti_pii;
 
 import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 //import java.util.HashMap;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 //import java.util.Map;
 import java.util.UUID;
@@ -339,8 +341,8 @@ public class TalkActivity extends Activity implements OnClickListener {
 		}
 
 		//ChatMsgFmt entity2 = new ChatMsgFmt("Device", tmp, MESSAGE_FROM.OTHERS);
-		//ChatMsgFmt entity2 = new ChatMsgFmt("蓝牙端", tmp, MESSAGE_FROM.OTHERS);
-		ChatMsgFmt entity2 = new ChatMsgFmt("蓝牙端", receive, MESSAGE_FROM.OTHERS);
+		ChatMsgFmt entity2 = new ChatMsgFmt("蓝牙端", tmp, MESSAGE_FROM.OTHERS);
+		//ChatMsgFmt entity2 = new ChatMsgFmt("蓝牙端", receive, MESSAGE_FROM.OTHERS);
 		chat_list.add(entity2);
 		chat_list_adapter.notifyDataSetChanged();
 
@@ -1272,6 +1274,63 @@ public class TalkActivity extends Activity implements OnClickListener {
 				+ (byte) ((b >> 6) & 0x1) + (byte) ((b >> 7) & 0x1);
 	}
 
+	/**
+	 * Bit转Byte
+	 */
+	private byte BitToByte(String byteStr) {
+		int re, len;
+		if (null == byteStr) {
+			return 0;
+		}
+		len = byteStr.length();
+		if (len != 4 && len != 8) {
+			return 0;
+		}
+		if (len == 8) {// 8 bit处理
+			if (byteStr.charAt(0) == '0') {// 正数
+				re = Integer.parseInt(byteStr, 2);
+			} else {// 负数
+				re = Integer.parseInt(byteStr, 2) - 256;
+			}
+		} else {//4 bit处理
+			re = Integer.parseInt(byteStr, 2);
+		}
+		return (byte) re;
+	}
+
+	private String Add_zero(String tmp) {//前缀增加0
+		String result = "";
+
+		if(3 == tmp.length()){
+			result = "0" + tmp;
+		}else if(2 == tmp.length()){
+			result = "00" + tmp;
+		}else if(1 == tmp.length()){
+			result = "000" + tmp;
+		}else if(0 == tmp.length()){
+			result = "0000" + tmp;
+		}else{
+			result = tmp;
+		}
+		return result;
+	}
+
+	private String Expand_multiple_flag(byte[] tmp) {//扩大100倍转换为十六进制
+		String result = "";
+		DecimalFormat df = new DecimalFormat("0000");
+		result = df.format((bytesToHexStringToInt(tmp))*100);
+		result = DataTransmission.bytesToHexString(DataTransmission.DectoBytes(result));
+		return result;
+	}
+
+	private String Expand_multiple(byte[] tmp) {//扩大100倍转换为十六进制
+		String result = "";
+		DecimalFormat df = new DecimalFormat("0000");
+		result = df.format((bytesToHexStringToInt(tmp))*100);
+		result = DataTransmission.bytesToHexString(DataTransmission.DectoBytes(result));
+		return result;
+	}
+
 	private String tmp_two_decimal_places(byte[] tmp) {//保留小数点后两位
 		String result = "";
 		DecimalFormat df = new DecimalFormat("0.00");//格式化小数，不足的补0
@@ -1446,6 +1505,17 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private	EditText Concentration_change_read;
 
 	private GridLayout system_set;
+	private EditText max_meal_bolus;
+	private EditText max_basal_rate;
+	private EditText max_hours_bolus_Hours;
+	private EditText max_hours_bolus_Dose_value;
+	private EditText max_daily_total;
+	private EditText Concentration_set;
+	private EditText time_set;
+	private Switch lcd_setup;
+	private Switch ring_setup;
+	private Switch language_set;
+
 	private GridLayout basal_rate_set_one;
 	private GridLayout basal_rate_set_two;
 	private GridLayout basal_rate_set_three;
@@ -1508,6 +1578,17 @@ public class TalkActivity extends Activity implements OnClickListener {
 		Concentration_change_read = (EditText) findViewById(R.id.Concentration_change_read);
 
 		system_set = (GridLayout) findViewById(R.id.system_set);
+		max_meal_bolus = (EditText) findViewById(R.id.max_meal_bolus);
+		max_basal_rate = (EditText) findViewById(R.id.max_basal_rate);
+		max_hours_bolus_Hours = (EditText) findViewById(R.id.max_hours_bolus1);
+		max_hours_bolus_Dose_value = (EditText) findViewById(R.id.max_hours_bolus2);
+		max_daily_total = (EditText) findViewById(R.id.max_daily_total);
+		Concentration_set = (EditText) findViewById(R.id.Concentration_set);
+		time_set = (EditText) findViewById(R.id.time_set);
+		lcd_setup = (Switch) findViewById(R.id.lcd_setup);
+		ring_setup = (Switch) findViewById(R.id.ring_setup);
+		language_set = (Switch) findViewById(R.id.language_set);
+
 		basal_rate_set_one =(GridLayout) findViewById(R.id.basal_rate_set_one);
 		basal_rate_set_two =(GridLayout) findViewById(R.id.basal_rate_set_two);
 		basal_rate_set_three =(GridLayout) findViewById(R.id.basal_rate_set_three);
@@ -1767,6 +1848,45 @@ public class TalkActivity extends Activity implements OnClickListener {
 			}
 		});
 
+		lcd_setup.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				if(isChecked) {
+					//选中时 do some thing
+					GeneralCommands.lcd_setup = "1";
+				} else {
+					//非选中时 do some thing
+					GeneralCommands.lcd_setup = "0";
+				}
+			}
+		});
+
+		ring_setup.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				if(isChecked) {
+					//选中时 do some thing
+					GeneralCommands.ring_setup = "1";
+				} else {
+					//非选中时 do some thing
+					GeneralCommands.ring_setup = "0";
+				}
+			}
+		});
+
+		language_set.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				if(isChecked) {
+					//选中时 do some thing
+					GeneralCommands.language_set = "1";
+				} else {
+					//非选中时 do some thing
+					GeneralCommands.language_set = "0";
+				}
+			}
+		});
+
 
 		// 查看是有什么权限
 		proper = mBluetoothGattCharacteristic.getProperties();
@@ -1935,7 +2055,8 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 					String CompensationStepNum_txt = CompensationStepNum.getText().toString();
 					byte[] tmp_CompensationStepNum_txt = DataTransmission.DectoBytes(CompensationStepNum_txt);
-					CompensationStepNum_txt = "00" + DataTransmission.bytesToHexString(tmp_CompensationStepNum_txt);
+					CompensationStepNum_txt = DataTransmission.bytesToHexString(tmp_CompensationStepNum_txt);
+					CompensationStepNum_txt = Add_zero(CompensationStepNum_txt);
 					Log.v("zhq_log CompensationStepNum_txt", "" + CompensationStepNum_txt);
 
 					String Driving_scheme_txt = Driving_scheme.getText().toString();
@@ -1949,6 +2070,76 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 					break;
 				case CommandsFound.SET_SYSSETDATA:
+					String max_meal_bolus_txt = max_meal_bolus.getText().toString();
+					byte[] tmp_max_meal_bolus_txt = DataTransmission.DectoBytes(max_meal_bolus_txt);
+					max_meal_bolus_txt = Expand_multiple(tmp_max_meal_bolus_txt);
+					max_meal_bolus_txt = Add_zero(max_meal_bolus_txt);
+					Log.v("zhq_log max_meal_bolus_txt", "" + max_meal_bolus_txt);
+
+					String max_basal_rate_txt = max_basal_rate.getText().toString();
+					max_basal_rate_txt = Add_zero(Expand_multiple(DataTransmission.DectoBytes(max_basal_rate_txt)));
+					Log.v("zhq_log max_basal_rate_txt", "" + max_basal_rate_txt);
+
+					String max_hours_bolus_Hours_txt = max_hours_bolus_Hours.getText().toString();
+					max_hours_bolus_Hours_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.DectoBytes(max_hours_bolus_Hours_txt)));
+					Log.v("zhq_log max_hours_bolus_Hours_txt", "" + max_hours_bolus_Hours_txt);
+
+					String max_hours_bolus_Dose_value_txt = max_hours_bolus_Dose_value.getText().toString();
+					max_hours_bolus_Dose_value_txt = Add_zero(
+														Expand_multiple(
+																DataTransmission.DectoBytes(max_hours_bolus_Dose_value_txt)));
+					Log.v("zhq_log max_hours_bolus_Dose_value_txt", "" + max_hours_bolus_Dose_value_txt);
+
+					String max_daily_total_txt = max_daily_total.getText().toString();
+					max_daily_total_txt = Add_zero(
+							Expand_multiple(
+									DataTransmission.DectoBytes(max_daily_total_txt)));
+					Log.v("zhq_log max_daily_total_txt", "" + max_daily_total_txt);
+
+					String Concentration_set_txt = Concentration_set.getText().toString();
+					if("U40".equals(Concentration_set_txt)){
+						Concentration_set_txt = "00";
+					}else{
+						Concentration_set_txt = "01";
+					}
+
+					/*String tmp_system_flag = GeneralCommands.lcd_setup + GeneralCommands.lcd_OnOff
+							+ GeneralCommands.ring_setup + GeneralCommands.language_set
+							+ GeneralCommands.LPM_Status + GeneralCommands.LcdBk_OnOff
+							+ GeneralCommands.KeyLock + GeneralCommands.Extra;*/
+					String tmp_system_flag = GeneralCommands.Extra + GeneralCommands.KeyLock
+							+ GeneralCommands.LcdBk_OnOff + GeneralCommands.LPM_Status
+							+ GeneralCommands.language_set + GeneralCommands.ring_setup
+							+ GeneralCommands.lcd_OnOff + GeneralCommands.lcd_setup;
+					byte System_flag_byte = BitToByte(tmp_system_flag);
+					byte[] System_flag_bytes = new byte[1];
+					System_flag_bytes[0] = System_flag_byte;
+
+					String System_flag = DataTransmission.bytesToHexString(System_flag_bytes);
+
+					SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+					Date curDate = new Date(System.currentTimeMillis());//获取当前时间
+					String time = formatter.format(curDate);
+					time_set.setText(time.toCharArray(),0,time.length());//当前时间
+
+					String time_set_txt = time_set.getText().toString();
+					String [] tmp = time_set_txt.split(" ");
+					String [] year = tmp[0].split("-");
+					String [] hour = tmp[1].split(":");
+
+					String year_set = DataTransmission.bytesToHexString(DataTransmission.DectoBytes(year[0]));
+					String month_set = DataTransmission.bytesToHexString(DataTransmission.DectoBytes(year[1]));
+					String day_set = DataTransmission.bytesToHexString(DataTransmission.DectoBytes(year[2]));
+
+					String hour_set = DataTransmission.bytesToHexString(DataTransmission.DectoBytes(hour[0]));
+					String min_set = DataTransmission.bytesToHexString(DataTransmission.DectoBytes(hour[1]));
+
+
+					Data_field_txt = max_meal_bolus_txt + max_basal_rate_txt + max_hours_bolus_Hours_txt
+							+ max_hours_bolus_Dose_value_txt + max_daily_total_txt + Concentration_set_txt
+							+ System_flag + year_set + month_set + day_set + hour_set +min_set;
 
 					break;
 				case CommandsFound.SET_BASALDATA:

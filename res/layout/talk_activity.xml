@@ -114,7 +114,7 @@
             android:layout_height="wrap_content"
             android:columnCount="4"
             android:rowCount="5"
-            android:visibility="visible"
+            android:visibility="gone"
             android:id="@+id/factorydata">
 
             <TextView
@@ -163,7 +163,8 @@
                 android:textOn="@string/Yes"
                 android:textOff="@string/No"
                 android:id="@+id/open_bluetooth"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:checked="true" />
 
             <EditText
                 android:id="@+id/open_bluetooth_read"
@@ -460,7 +461,8 @@
                 android:textOn="@string/Often_display"
                 android:textOff="@string/Not_Often_display"
                 android:id="@+id/lcd_setup"
-                android:layout_columnSpan="4"/>
+                android:layout_columnSpan="4"
+                android:checked="true" />
 
             <TextView
                 android:id="@+id/set8_2"
@@ -481,7 +483,8 @@
                 android:textOn="@string/Allow"
                 android:textOff="@string/Refuse"
                 android:id="@+id/ring_setup"
-                android:layout_columnSpan="4"/>
+                android:layout_columnSpan="4"
+                android:checked="true" />
 
             <TextView
                 android:id="@+id/set8_3"
@@ -502,7 +505,8 @@
                 android:textOn="@string/Chinese"
                 android:textOff="@string/English"
                 android:id="@+id/language_set"
-                android:layout_columnSpan="4"/>
+                android:layout_columnSpan="4"
+                android:checked="true" />
 
         </GridLayout>
 
@@ -512,7 +516,7 @@
             android:columnCount="4"
             android:rowCount="5"
             android:id="@+id/basal_rate_set_one"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <TextView
                 android:id="@+id/basal_rate_set0"
