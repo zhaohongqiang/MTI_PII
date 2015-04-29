@@ -33,7 +33,9 @@ public class DataTransmission{
         switch (send_fmt_int){
             case CommandsFound.SET_FACTORYDATA:
             case CommandsFound.SET_SYSSETDATA:
-                Log.v("zhq_log CommandsFound SET_FACTORYDATA  SET_SYSSETDATA", String.format("%d  %d", CommandsFound.SET_FACTORYDATA, CommandsFound.SET_SYSSETDATA));
+            case CommandsFound.SET_BASALDATA:
+                Log.v("zhq_log CommandsFound SET_FACTORYDATA  SET_SYSSETDATA SET_BASALDATA",
+                        String.format("%d  %d  %d", CommandsFound.SET_FACTORYDATA, CommandsFound.SET_SYSSETDATA, CommandsFound.SET_BASALDATA));
 
                 command.put("Frame_length",//帧长度
                         GeneralCommands.lookup_framelength(commandname, "Frame_length"));
@@ -65,9 +67,6 @@ public class DataTransmission{
                         + GeneralCommands.Control_code + GeneralCommands.CRC_check
                         + GeneralCommands.End_bit;
                 Log.v("zhq_log 数据发送Data_Transmission = ","" + Data_Transmission);
-                break;
-            case CommandsFound.SET_BASALDATA:
-                Log.v("zhq_log CommandsFound SET_BASALDATA ",""+ CommandsFound.SET_BASALDATA);
                 break;
             default://发送数据
                 command.put("Frame_length",//帧长度
@@ -275,6 +274,39 @@ public class DataTransmission{
         int data_int = Integer.parseInt(contror_code);
         int byte_size = 0;
 
+        if(data_int == 0){//传入的数为0
+            byte_size = 1;
+            bytecontror_code = new byte[byte_size];
+            bytecontror_code[0] = (byte) (0xFF & (data_int % 256));
+            return bytecontror_code;
+        }//当为0时  待验证
+        for (byte_size = 0; data_int != 0; byte_size++) { // 计算占用字节数
+            data_int /= 256;
+        }
+
+        bytecontror_code = new byte[byte_size];
+
+        data_int = Integer.parseInt(contror_code);
+        /*for (int i = 0; i < byte_size; i++) { // 转换
+            bytecontror_code[i] = (byte) (0xFF & (data_int % 256));
+            data_int /= 256;
+        }//转换出来高位在后*/
+        for (int i = byte_size; i > 0; i--) { // 转换
+            bytecontror_code[i - 1] = (byte) (0xFF & (data_int % 256));
+            data_int /= 256;
+        }
+        return bytecontror_code;
+    }
+
+    public static byte[] Expand_DectoBytes(String contror_code) {//扩大100倍
+        byte[] bytecontror_code = null;
+
+        if (0 == contror_code.length())
+            return null;
+
+        int data_int = (int)((Float.parseFloat(contror_code))*100);
+        int byte_size = 0;
+
         if(data_int == 0){
             byte_size = 1;
         }//当为0时  待验证
@@ -284,7 +316,7 @@ public class DataTransmission{
 
         bytecontror_code = new byte[byte_size];
 
-        data_int = Integer.parseInt(contror_code);
+        data_int = (int)((Float.parseFloat(contror_code))*100);
         /*for (int i = 0; i < byte_size; i++) { // 转换
             bytecontror_code[i] = (byte) (0xFF & (data_int % 256));
             data_int /= 256;

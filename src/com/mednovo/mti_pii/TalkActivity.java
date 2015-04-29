@@ -30,6 +30,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.Messenger;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -103,8 +104,8 @@ public class TalkActivity extends Activity implements OnClickListener {
 				}
 				// 读取数据
 				if (BLEService.ACTION_READ_OVER.equals(action)) {
-					//dis_recive_msg(intent.getByteArrayExtra("value"));
-					Analysis_recive_msg(intent.getByteArrayExtra("value"));
+					dis_recive_msg(intent.getByteArrayExtra("value"));
+					//Analysis_recive_msg(intent.getByteArrayExtra("value"));
 					return;
 				}
 
@@ -182,6 +183,10 @@ public class TalkActivity extends Activity implements OnClickListener {
 			return;
 		}
 		switch (send_fmt_int){
+			case CommandsFound.SET_FACTORYDATA:
+			case CommandsFound.SET_SYSSETDATA:
+			case CommandsFound.SET_BASALDATA:
+
 			case CommandsFound.READ_FACTORYDATA:
 			case CommandsFound.READ_SYSSETDATA:
 			case CommandsFound.READ_BASALDATA:
@@ -585,11 +590,15 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 		switch (send_fmt_int){
 			case CommandsFound.SET_FACTORYDATA:
-
-				break;
 			case CommandsFound.SET_SYSSETDATA:
-				break;
 			case CommandsFound.SET_BASALDATA:
+				if((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1]) ) {
+					if(((byte) 0x00) == tmp_byte[3]){//返回结果
+						receive = "设置成功";
+					}else{
+						receive = "设置失败";
+					}
+				}
 				break;
 			case CommandsFound.READ_FACTORYDATA:
 				if((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1]) ){
@@ -1519,6 +1528,31 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private GridLayout basal_rate_set_one;
 	private GridLayout basal_rate_set_two;
 	private GridLayout basal_rate_set_three;
+	private EditText hour_value1;
+	private EditText hour_value2;
+	private EditText hour_value3;
+	private EditText hour_value4;
+	private EditText hour_value5;
+	private EditText hour_value6;
+	private EditText hour_value7;
+	private EditText hour_value8;
+	private EditText hour_value9;
+	private EditText hour_value10;
+	private EditText hour_value11;
+	private EditText hour_value12;
+	private EditText hour_value13;
+	private EditText hour_value14;
+	private EditText hour_value15;
+	private EditText hour_value16;
+	private EditText hour_value17;
+	private EditText hour_value18;
+	private EditText hour_value19;
+	private EditText hour_value20;
+	private EditText hour_value21;
+	private EditText hour_value22;
+	private EditText hour_value23;
+	private EditText hour_value24;
+
     private EditText control_code;
     private Button general_sendbut;
 	private Button button_success;
@@ -1589,9 +1623,34 @@ public class TalkActivity extends Activity implements OnClickListener {
 		ring_setup = (Switch) findViewById(R.id.ring_setup);
 		language_set = (Switch) findViewById(R.id.language_set);
 
-		basal_rate_set_one =(GridLayout) findViewById(R.id.basal_rate_set_one);
-		basal_rate_set_two =(GridLayout) findViewById(R.id.basal_rate_set_two);
-		basal_rate_set_three =(GridLayout) findViewById(R.id.basal_rate_set_three);
+		basal_rate_set_one = (GridLayout) findViewById(R.id.basal_rate_set_one);
+		basal_rate_set_two = (GridLayout) findViewById(R.id.basal_rate_set_two);
+		basal_rate_set_three = (GridLayout) findViewById(R.id.basal_rate_set_three);
+		hour_value1 = (EditText) findViewById(R.id.hour_value1);
+		hour_value2 = (EditText) findViewById(R.id.hour_value2);
+		hour_value3 = (EditText) findViewById(R.id.hour_value3);
+		hour_value4 = (EditText) findViewById(R.id.hour_value4);
+		hour_value5 = (EditText) findViewById(R.id.hour_value5);
+		hour_value6 = (EditText) findViewById(R.id.hour_value6);
+		hour_value7 = (EditText) findViewById(R.id.hour_value7);
+		hour_value8 = (EditText) findViewById(R.id.hour_value8);
+		hour_value9 = (EditText) findViewById(R.id.hour_value9);
+		hour_value10 = (EditText) findViewById(R.id.hour_value10);
+		hour_value11 = (EditText) findViewById(R.id.hour_value11);
+		hour_value12 = (EditText) findViewById(R.id.hour_value12);
+		hour_value13 = (EditText) findViewById(R.id.hour_value13);
+		hour_value14 = (EditText) findViewById(R.id.hour_value14);
+		hour_value15 = (EditText) findViewById(R.id.hour_value15);
+		hour_value16 = (EditText) findViewById(R.id.hour_value16);
+		hour_value17 = (EditText) findViewById(R.id.hour_value17);
+		hour_value18 = (EditText) findViewById(R.id.hour_value18);
+		hour_value19 = (EditText) findViewById(R.id.hour_value19);
+		hour_value20 = (EditText) findViewById(R.id.hour_value20);
+		hour_value21 = (EditText) findViewById(R.id.hour_value21);
+		hour_value22 = (EditText) findViewById(R.id.hour_value22);
+		hour_value23 = (EditText) findViewById(R.id.hour_value23);
+		hour_value24 = (EditText) findViewById(R.id.hour_value24);
+
         control_code = (EditText) findViewById(R.id.Control_code);//控制码
         general_sendbut = (Button) findViewById(R.id.General_sendbutton);
 		button_success = (Button) findViewById(R.id.button_success);
@@ -2021,7 +2080,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 	};
 
 	/**
-	 * @param v
+	 * @param 点击事件    /
 	 */
 	// 按钮监听
 	@Override
@@ -2119,10 +2178,10 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 					String System_flag = DataTransmission.bytesToHexString(System_flag_bytes);
 
-					SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+					SimpleDateFormat formatter = new SimpleDateFormat("yy-MM-dd HH:mm");
 					Date curDate = new Date(System.currentTimeMillis());//获取当前时间
 					String time = formatter.format(curDate);
-					time_set.setText(time.toCharArray(),0,time.length());//当前时间
+					//time_set.setText(time.toCharArray(),0,time.length());//当前时间
 
 					String time_set_txt = time_set.getText().toString();
 					String [] tmp = time_set_txt.split(" ");
@@ -2143,6 +2202,155 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 					break;
 				case CommandsFound.SET_BASALDATA:
+					String hour_value1_txt = hour_value1.getText().toString();
+					hour_value1_txt = Add_zero(
+											DataTransmission.bytesToHexString(
+													DataTransmission.Expand_DectoBytes(hour_value1_txt)));
+					Log.v("zhq_log hour_value1_txt", "" + hour_value1_txt);
+
+					String hour_value2_txt = hour_value2.getText().toString();
+					hour_value2_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value2_txt)));
+					Log.v("zhq_log hour_value2_txt", "" + hour_value2_txt);
+
+					String hour_value3_txt = hour_value3.getText().toString();
+					hour_value3_txt = Add_zero(
+											DataTransmission.bytesToHexString(
+													DataTransmission.Expand_DectoBytes(hour_value3_txt)));
+					Log.v("zhq_log hour_value3_txt", "" + hour_value3_txt);
+
+					String hour_value4_txt = hour_value4.getText().toString();
+					hour_value4_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value4_txt)));
+					Log.v("zhq_log hour_value4_txt", "" + hour_value4_txt);
+
+					String hour_value5_txt = hour_value5.getText().toString();
+					hour_value5_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value5_txt)));
+					Log.v("zhq_log hour_value5_txt", "" + hour_value5_txt);
+
+					String hour_value6_txt = hour_value6.getText().toString();
+					hour_value6_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value6_txt)));
+					Log.v("zhq_log hour_value6_txt", "" + hour_value6_txt);
+
+					String hour_value7_txt = hour_value7.getText().toString();
+					hour_value7_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value7_txt)));
+					Log.v("zhq_log hour_value7_txt", "" + hour_value7_txt);
+
+					String hour_value8_txt = hour_value8.getText().toString();
+					hour_value8_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value8_txt)));
+					Log.v("zhq_log hour_value8_txt", "" + hour_value8_txt);
+
+					String hour_value9_txt = hour_value9.getText().toString();
+					hour_value9_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value9_txt)));
+					Log.v("zhq_log hour_value9_txt", "" + hour_value9_txt);
+
+					String hour_value10_txt = hour_value10.getText().toString();
+					hour_value10_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value10_txt)));
+					Log.v("zhq_log hour_value10_txt", "" + hour_value10_txt);
+
+					String hour_value11_txt = hour_value11.getText().toString();
+					hour_value11_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value11_txt)));
+					Log.v("zhq_log hour_value11_txt", "" + hour_value11_txt);
+
+					String hour_value12_txt = hour_value12.getText().toString();
+					hour_value12_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value12_txt)));
+					Log.v("zhq_log hour_value12_txt", "" + hour_value12_txt);
+
+					String hour_value13_txt = hour_value13.getText().toString();
+					hour_value13_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value13_txt)));
+					Log.v("zhq_log hour_value13_txt", "" + hour_value13_txt);
+
+					String hour_value14_txt = hour_value14.getText().toString();
+					hour_value14_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value14_txt)));
+					Log.v("zhq_log hour_value14_txt", "" + hour_value14_txt);
+
+					String hour_value15_txt = hour_value15.getText().toString();
+					hour_value15_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value15_txt)));
+					Log.v("zhq_log hour_value15_txt", "" + hour_value15_txt);
+
+					String hour_value16_txt = hour_value16.getText().toString();
+					hour_value16_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value16_txt)));
+					Log.v("zhq_log hour_value16_txt", "" + hour_value16_txt);
+
+					String hour_value17_txt = hour_value7.getText().toString();
+					hour_value17_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value17_txt)));
+					Log.v("zhq_log hour_value17_txt", "" + hour_value17_txt);
+
+					String hour_value18_txt = hour_value18.getText().toString();
+					hour_value18_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value18_txt)));
+					Log.v("zhq_log hour_value18_txt", "" + hour_value18_txt);
+
+					String hour_value19_txt = hour_value19.getText().toString();
+					hour_value19_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value19_txt)));
+					Log.v("zhq_log hour_value19_txt", "" + hour_value19_txt);
+
+					String hour_value20_txt = hour_value20.getText().toString();
+					hour_value20_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value20_txt)));
+					Log.v("zhq_log hour_value20_txt", "" + hour_value20_txt);
+
+					String hour_value21_txt = hour_value21.getText().toString();
+					hour_value21_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value21_txt)));
+					Log.v("zhq_log hour_value21_txt", "" + hour_value21_txt);
+
+					String hour_value22_txt = hour_value22.getText().toString();
+					hour_value22_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value22_txt)));
+					Log.v("zhq_log hour_value22_txt", "" + hour_value22_txt);
+
+					String hour_value23_txt = hour_value23.getText().toString();
+					hour_value23_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value23_txt)));
+					Log.v("zhq_log hour_value23_txt", "" + hour_value23_txt);
+
+					String hour_value24_txt = hour_value24.getText().toString();
+					hour_value24_txt = Add_zero(
+							DataTransmission.bytesToHexString(
+									DataTransmission.Expand_DectoBytes(hour_value24_txt)));
+					Log.v("zhq_log hour_value24_txt", "" + hour_value24_txt);
+					Data_field_txt = hour_value1_txt + hour_value2_txt + hour_value3_txt + hour_value4_txt
+									+ hour_value5_txt + hour_value6_txt + hour_value7_txt + hour_value8_txt
+									+ hour_value9_txt + hour_value10_txt + hour_value11_txt + hour_value12_txt
+									+ hour_value13_txt + hour_value14_txt + hour_value15_txt + hour_value16_txt
+									+ hour_value17_txt + hour_value18_txt + hour_value19_txt + hour_value20_txt
+									+ hour_value21_txt + hour_value22_txt + hour_value23_txt + hour_value24_txt;
 					break;
 				default:
 					break;
@@ -2156,8 +2364,43 @@ public class TalkActivity extends Activity implements OnClickListener {
                 return;
             }
             Log.v("zhq_log 常用 sendmsg", "" + sendmsg);
-            mBluetoothGattCharacteristic.setValue(sendmsg);
-            Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
+
+			if(sendmsg.length == sendmsg[1]){
+
+			}else{
+				Toast.makeText(getApplicationContext(), "数据长度错误", Toast.LENGTH_LONG)
+						.show();
+				return;
+			}
+
+
+			int tmp = (sendmsg.length - 1)/20 + 1;
+			//byte[] newsendmsg new byte[20];
+			if(sendmsg.length <= 20){
+				mBluetoothGattCharacteristic.setValue(sendmsg);
+				Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
+			}
+			else {//发送数据超过20个字节时
+				for (int i = 0;i < tmp;i++) {
+					int j = (i == tmp - 1) ? (sendmsg.length - i*20) : 20;
+					byte[] newsendmsg  = new byte[j];
+
+					System.arraycopy(sendmsg, 0 + i*20, newsendmsg, 0, j);
+					mBluetoothGattCharacteristic.setValue(newsendmsg);
+					boolean status = Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
+					Log.v("zhq_log status", "" + status);
+					System.out.println(Arrays.toString(newsendmsg));
+					/*try {
+						Thread.currentThread();
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}*/
+				}
+			}
+            //mBluetoothGattCharacteristic.setValue(sendmsg);
+            //boolean status = Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
+
             return;
         }
 		if (v == sendbuttonid) { // 发送按钮
@@ -2167,7 +2410,8 @@ public class TalkActivity extends Activity implements OnClickListener {
 			}
             Log.v("zhq_log sendmsg", "" + sendmsg);
 			mBluetoothGattCharacteristic.setValue(sendmsg);
-			Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
+			boolean back = Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
+			Log.v("zhq_log back", "" + back);
 			return;
 		}
 		if (v == talking_read_btn) { // 读取按钮

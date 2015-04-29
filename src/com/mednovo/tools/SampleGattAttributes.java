@@ -7,8 +7,10 @@ public class SampleGattAttributes {
  
     static {
         //user
-        attributes.put("0000faf0-0000-1000-8000-00805f9b34fb", "MedNovo MTI-PII");
-        attributes.put("0000faf1-0000-1000-8000-00805f9b34fb", "MTI-PII DataTransmisson");
+        attributes.put("0000faf0-0000-1000-8000-00805f9b34fb", "MTI-PII");
+        attributes.put("0000faf1-0000-1000-8000-00805f9b34fb", "MTI-PII Êý¾Ý´«Êä");
+        //attributes.put("0000faf0-0000-1000-8000-00805f9b34fb", "MedNovo MTI-PII");
+        //attributes.put("0000faf1-0000-1000-8000-00805f9b34fb", "MTI-PII DataTransmisson");
         attributes.put("0000faf2-0000-1000-8000-00805f9b34fb", "MTI-PII RemoteContol");
 
         // Sample Services.

@@ -19,6 +19,7 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CUSTOM_FILTER" value="zhq_log" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="028c36fd-bc0a-4a05-bd31-c63923839796" name="Default" comment="增加设置读取出厂数据的布局，采用TableLayout 实现">
@@ -30,6 +31,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$string.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$string.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$style.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/tools/SampleGattAttributes.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/tools/SampleGattAttributes.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$1.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$2.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$3.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$3.class" />
@@ -42,12 +44,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java" afterPath="$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/tools/GeneralCommands.java" afterPath="$PROJECT_DIR$/src/com/mednovo/tools/GeneralCommands.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/mednovo/mti_pii/R.java" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/mednovo/mti_pii/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/tools/SampleGattAttributes.java" afterPath="$PROJECT_DIR$/src/com/mednovo/tools/SampleGattAttributes.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java" afterPath="$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/talk_activity.xml" afterPath="$PROJECT_DIR$/res/layout/talk_activity.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -97,195 +100,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="talk_activity.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="talk_activity.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="698" column="21" selection-start-line="698" selection-start-column="21" selection-end-line="698" selection-end-column="21" />
+              <caret line="116" column="40" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
               <folding>
                 <element signature="n#RelativeLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-                <element signature="n#ListView#0;n#LinearLayout#0;n#!!top" expanded="false" />
-                <element signature="n#LinearLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-                <element signature="n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-                <element signature="e#4526#4546#0" expanded="true" />
-                <element signature="e#4989#5017#0" expanded="true" />
-                <element signature="e#5587#5611#0" expanded="true" />
-                <element signature="e#6046#6059#0" expanded="true" />
-                <element signature="e#6092#6104#0" expanded="true" />
-                <element signature="e#6791#6821#0" expanded="true" />
-                <element signature="e#7257#7272#0" expanded="true" />
-                <element signature="e#7305#7321#0" expanded="true" />
-                <element signature="e#7982#8011#0" expanded="true" />
-                <element signature="e#8357#8395#0" expanded="true" />
-                <element signature="e#8516#8553#0" expanded="true" />
-                <element signature="e#9081#9105#0" expanded="true" />
-                <element signature="e#9447#9480#0" expanded="true" />
-                <element signature="e#9601#9633#0" expanded="true" />
-                <element signature="e#10160#10186#0" expanded="true" />
-                <element signature="e#10613#10647#0" expanded="true" />
-                <element signature="n#GridLayout#1;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-                <element signature="e#13112#13135#0" expanded="true" />
-                <element signature="e#13318#13342#0" expanded="true" />
-                <element signature="e#13694#13709#0" expanded="true" />
-                <element signature="e#13811#13839#0" expanded="true" />
-                <element signature="e#14071#14100#0" expanded="true" />
-                <element signature="e#14451#14471#0" expanded="true" />
-                <element signature="e#15029#15054#0" expanded="true" />
-                <element signature="e#15245#15278#0" expanded="true" />
-                <element signature="e#15460#15490#0" expanded="true" />
-                <element signature="e#15887#15914#0" expanded="true" />
-                <element signature="e#16056#16091#0" expanded="true" />
-                <element signature="e#16321#16357#0" expanded="true" />
-                <element signature="e#16658#16676#0" expanded="true" />
-                <element signature="e#16867#16893#0" expanded="true" />
-                <element signature="e#17424#17444#0" expanded="true" />
-                <element signature="e#17865#17884#0" expanded="true" />
-                <element signature="e#18274#18297#0" expanded="true" />
-                <element signature="e#18330#18357#0" expanded="true" />
-                <element signature="e#18782#18802#0" expanded="true" />
-                <element signature="e#19192#19207#0" expanded="true" />
-                <element signature="e#19240#19256#0" expanded="true" />
-                <element signature="e#19682#19704#0" expanded="true" />
-                <element signature="e#20094#20111#0" expanded="true" />
-                <element signature="e#20144#20161#0" expanded="true" />
-                <element signature="n#GridLayout#2;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-                <element signature="e#20899#20923#0" expanded="true" />
-                <element signature="e#21314#21347#0" expanded="true" />
-                <element signature="e#21697#21713#0" expanded="true" />
-                <element signature="e#21904#21932#0" expanded="true" />
-                <element signature="e#22159#22188#0" expanded="true" />
-                <element signature="e#22542#22558#0" expanded="true" />
-                <element signature="e#22749#22777#0" expanded="true" />
-                <element signature="e#23004#23033#0" expanded="true" />
-                <element signature="e#23387#23403#0" expanded="true" />
-                <element signature="e#23594#23622#0" expanded="true" />
-                <element signature="e#23849#23878#0" expanded="true" />
-                <element signature="e#24232#24248#0" expanded="true" />
-                <element signature="e#24439#24467#0" expanded="true" />
-                <element signature="e#24694#24723#0" expanded="true" />
-                <element signature="e#25077#25093#0" expanded="true" />
-                <element signature="e#25284#25312#0" expanded="true" />
-                <element signature="e#25539#25568#0" expanded="true" />
-                <element signature="e#25922#25938#0" expanded="true" />
-                <element signature="e#26129#26157#0" expanded="true" />
-                <element signature="e#26384#26413#0" expanded="true" />
-                <element signature="e#26767#26783#0" expanded="true" />
-                <element signature="e#26974#27002#0" expanded="true" />
-                <element signature="e#27229#27258#0" expanded="true" />
-                <element signature="e#27612#27628#0" expanded="true" />
-                <element signature="e#27819#27847#0" expanded="true" />
-                <element signature="e#28074#28103#0" expanded="true" />
                 <element signature="n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-                <element signature="e#28754#28778#0" expanded="true" />
-                <element signature="e#29552#29568#0" expanded="true" />
-                <element signature="e#29759#29787#0" expanded="true" />
-                <element signature="e#30398#30415#0" expanded="true" />
-                <element signature="e#30606#30634#0" expanded="true" />
-                <element signature="e#30862#30891#0" expanded="true" />
-                <element signature="e#31246#31263#0" expanded="true" />
-                <element signature="e#31454#31482#0" expanded="true" />
-                <element signature="e#31710#31739#0" expanded="true" />
-                <element signature="e#32094#32111#0" expanded="true" />
-                <element signature="e#32302#32330#0" expanded="true" />
-                <element signature="e#32558#32587#0" expanded="true" />
-                <element signature="e#32942#32959#0" expanded="true" />
-                <element signature="e#33150#33178#0" expanded="true" />
-                <element signature="e#33406#33435#0" expanded="true" />
-                <element signature="e#33998#34026#0" expanded="true" />
-                <element signature="e#34254#34283#0" expanded="true" />
-                <element signature="e#34846#34874#0" expanded="true" />
-                <element signature="e#35102#35131#0" expanded="true" />
-                <element signature="e#35694#35722#0" expanded="true" />
-                <element signature="e#35950#35979#0" expanded="true" />
+                <element signature="n#TextView#1;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#2;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#0;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#3;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#1;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#4;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#2;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#5;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#3;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#6;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#4;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#7;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#5;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#8;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#6;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#9;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#7;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
                 <element signature="n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-                <element signature="e#36632#36656#0" expanded="true" />
-                <element signature="e#37047#37080#0" expanded="true" />
-                <element signature="e#37431#37448#0" expanded="true" />
-                <element signature="e#37639#37667#0" expanded="true" />
-                <element signature="e#37895#37924#0" expanded="true" />
-                <element signature="e#38279#38296#0" expanded="true" />
-                <element signature="e#38487#38515#0" expanded="true" />
-                <element signature="e#38743#38772#0" expanded="true" />
-                <element signature="e#39127#39144#0" expanded="true" />
-                <element signature="e#39335#39363#0" expanded="true" />
-                <element signature="e#39591#39620#0" expanded="true" />
-                <element signature="e#39975#39992#0" expanded="true" />
-                <element signature="e#40183#40211#0" expanded="true" />
-                <element signature="e#40439#40468#0" expanded="true" />
-                <element signature="e#40823#40840#0" expanded="true" />
-                <element signature="e#41031#41059#0" expanded="true" />
-                <element signature="e#41287#41316#0" expanded="true" />
-                <element signature="e#41671#41688#0" expanded="true" />
-                <element signature="e#41879#41907#0" expanded="true" />
-                <element signature="e#42135#42164#0" expanded="true" />
-                <element signature="e#42519#42536#0" expanded="true" />
-                <element signature="e#42727#42755#0" expanded="true" />
-                <element signature="e#42983#43012#0" expanded="true" />
-                <element signature="e#43367#43384#0" expanded="true" />
-                <element signature="e#43575#43603#0" expanded="true" />
-                <element signature="e#43831#43860#0" expanded="true" />
+                <element signature="n#TextView#0;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#1;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#2;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#0;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#3;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#1;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#4;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#2;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#5;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#3;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#6;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#4;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#7;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#5;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#8;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#6;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#TextView#9;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="n#EditText#7;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
                 <element signature="n#LinearLayout#1;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TalkActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2162" column="40" selection-start-line="2162" selection-start-column="40" selection-end-line="2162" selection-end-column="40" />
-              <folding>
-                <element signature="e#3000#4112#0" expanded="true" />
-                <element signature="e#4111#4112#0" expanded="true" />
-                <element signature="class#59875:60111" expanded="false" />
-                <element signature="method#onItemSelected#0;class#59875:60111" expanded="false" />
-                <element signature="method#onNothingSelected#0;class#59875:60111" expanded="false" />
-                <element signature="class#60207:61446" expanded="false" />
-                <element signature="method#onNothingSelected#0;class#61753:67354" expanded="false" />
-                <element signature="e#67831#68228#0" expanded="true" />
-                <element signature="e#68227#68228#0" expanded="true" />
-                <element signature="e#68282#68628#0" expanded="true" />
-                <element signature="e#68627#68628#0" expanded="true" />
-                <element signature="e#68671#68985#0" expanded="true" />
-                <element signature="e#68984#68985#0" expanded="true" />
-                <element signature="e#69029#69345#0" expanded="true" />
-                <element signature="e#69344#69345#0" expanded="true" />
-                <element signature="e#69391#69711#0" expanded="true" />
-                <element signature="e#69710#69711#0" expanded="true" />
-                <element signature="e#71007#71008#0" expanded="true" />
-                <element signature="e#71056#71057#0" expanded="true" />
-                <element signature="e#71095#71096#0" expanded="true" />
-                <element signature="e#71127#71128#0" expanded="true" />
-                <element signature="e#71184#71185#0" expanded="true" />
-                <element signature="e#71223#71224#0" expanded="true" />
-                <element signature="e#71276#71277#0" expanded="true" />
-                <element signature="e#71300#71301#0" expanded="true" />
-                <element signature="method#getView#0;class#ChatAdapater#0;class#TalkActivity#0" expanded="false" />
-                <element signature="e#72095#72096#0" expanded="true" />
-                <element signature="e#72115#72116#0" expanded="true" />
-                <element signature="e#72143#72144#0" expanded="true" />
-                <element signature="e#72162#72163#0" expanded="true" />
-                <element signature="e#72197#72198#0" expanded="true" />
-                <element signature="e#72217#72218#0" expanded="true" />
-                <element signature="e#72402#73297#0" expanded="true" />
-                <element signature="e#73296#73297#0" expanded="true" />
-                <element signature="e#82022#82023#0" expanded="true" />
-                <element signature="e#82059#82060#0" expanded="true" />
-              </folding>
-            </state>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <file leaf-file-name="TalkActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="79" column="36" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
-              <folding />
+            <state vertical-scroll-proportion="1.337963">
+              <caret line="2364" column="13" selection-start-line="2364" selection-start-column="13" selection-end-line="2364" selection-end-column="13" />
+              <folding>
+                <element signature="e#3029#4141#0" expanded="true" />
+                <element signature="e#4140#4141#0" expanded="true" />
+                <element signature="class#62412:62648" expanded="false" />
+                <element signature="method#onItemSelected#0;class#62412:62648" expanded="false" />
+                <element signature="method#onNothingSelected#0;class#62412:62648" expanded="false" />
+                <element signature="class#62744:63983" expanded="false" />
+                <element signature="method#onNothingSelected#0;class#64290:69891" expanded="false" />
+                <element signature="e#70368#70765#0" expanded="true" />
+                <element signature="e#70764#70765#0" expanded="true" />
+                <element signature="e#70819#71165#0" expanded="true" />
+                <element signature="e#71164#71165#0" expanded="true" />
+                <element signature="e#71208#71522#0" expanded="true" />
+                <element signature="e#71521#71522#0" expanded="true" />
+                <element signature="e#71566#71882#0" expanded="true" />
+                <element signature="e#71881#71882#0" expanded="true" />
+                <element signature="e#71928#72248#0" expanded="true" />
+                <element signature="e#72247#72248#0" expanded="true" />
+                <element signature="e#73477#73504#0" expanded="true" />
+                <element signature="e#73544#73545#0" expanded="true" />
+                <element signature="e#73593#73594#0" expanded="true" />
+                <element signature="e#73632#73633#0" expanded="true" />
+                <element signature="e#73664#73665#0" expanded="true" />
+                <element signature="e#73721#73722#0" expanded="true" />
+                <element signature="e#73760#73761#0" expanded="true" />
+                <element signature="e#73813#73814#0" expanded="true" />
+                <element signature="e#73837#73838#0" expanded="true" />
+                <element signature="method#getView#0;class#ChatAdapater#0;class#TalkActivity#0" expanded="false" />
+                <element signature="e#74632#74633#0" expanded="true" />
+                <element signature="e#74652#74653#0" expanded="true" />
+                <element signature="e#74680#74681#0" expanded="true" />
+                <element signature="e#74699#74700#0" expanded="true" />
+                <element signature="e#74734#74735#0" expanded="true" />
+                <element signature="e#74754#74755#0" expanded="true" />
+                <element signature="e#74939#75834#0" expanded="true" />
+                <element signature="e#75833#75834#0" expanded="true" />
+                <element signature="e#92660#92661#0" expanded="true" />
+                <element signature="e#92697#92698#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -294,7 +205,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
               <folding>
                 <element signature="e#680#730#0" expanded="false" />
               </folding>
@@ -302,24 +213,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CRC16.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CRC16.java">
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
-              <folding>
-                <element signature="e#8892#8893#0" expanded="false" />
-                <element signature="e#8932#8933#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-7.48">
+              <caret line="85" column="42" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneralCommands.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/GeneralCommands.java">
+      <file leaf-file-name="CRC16.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CRC16.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.03125">
+              <caret line="228" column="8" selection-start-line="228" selection-start-column="8" selection-end-line="228" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -963,12 +871,14 @@
       <list>
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/values/integers.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/mednovo/tools/CRC16.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/tools/GeneralCommands.java" />
-        <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/tools/SampleGattAttributes.java" />
         <option value="$PROJECT_DIR$/res/layout/talk_activity.xml" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/MainActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java" />
       </list>
     </option>
   </component>
@@ -1037,6 +947,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1218,6 +1130,10 @@
               <option name="myItemId" value="mednovo" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mtblesdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1235,8 +1151,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1472,29 +1386,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.4939302" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.49081165" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24961714" sideWeight="0.30182928" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19984686" sideWeight="0.31656805" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.55819297" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.56431854" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.330781" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38965517" sideWeight="0.4777948" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.49693722" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.44180703" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.43568146" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28793103" sideWeight="0.4333844" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33103448" sideWeight="0.53292495" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.212098" sideWeight="0.47560975" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.4303216" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4448276" sideWeight="0.4517611" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.212098" sideWeight="0.47560975" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19984686" sideWeight="0.6981707" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19984686" sideWeight="0.6834319" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24355084" sideWeight="0.5114943" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40172413" sideWeight="0.4770291" order="13" side_tool="false" content_ui="tabs" x="24" y="248" width="1318" height="232" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51896554" sideWeight="0.5482389" order="13" side_tool="false" content_ui="tabs" x="24" y="248" width="1318" height="232" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1502,6 +1414,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.6689655" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" x="802" y="139" width="500" height="141" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.330781" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1524,912 +1438,557 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>96</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>106</line>
-          <properties />
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>99</line>
-          <properties />
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>793</line>
+          <line>802</line>
           <properties />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>805</line>
+          <line>814</line>
           <properties />
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>810</line>
+          <line>819</line>
           <properties />
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>796</line>
+          <line>805</line>
           <properties />
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>830</line>
+          <line>839</line>
           <properties />
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>820</line>
+          <line>829</line>
           <properties />
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>823</line>
+          <line>832</line>
           <properties />
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>841</line>
+          <line>850</line>
           <properties />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>858</line>
+          <line>867</line>
           <properties />
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>982</line>
+          <line>991</line>
           <properties />
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>988</line>
+          <line>997</line>
           <properties />
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1033</line>
+          <line>1042</line>
           <properties />
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1039</line>
+          <line>1048</line>
           <properties />
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1061</line>
+          <line>1070</line>
           <properties />
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1050</line>
+          <line>1059</line>
           <properties />
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1122</line>
+          <line>1131</line>
           <properties />
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1134</line>
+          <line>1143</line>
           <properties />
           <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1137</line>
+          <line>1146</line>
           <properties />
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>200</line>
-          <properties />
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>976</line>
+          <line>985</line>
           <properties />
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>706</line>
+          <line>715</line>
           <properties />
           <option name="timeStamp" value="112" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>646</line>
+          <line>655</line>
           <properties />
           <option name="timeStamp" value="114" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>654</line>
+          <line>663</line>
           <properties />
           <option name="timeStamp" value="115" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>653</line>
+          <line>662</line>
           <properties />
           <option name="timeStamp" value="116" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>665</line>
+          <line>674</line>
           <properties />
           <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>663</line>
+          <line>672</line>
           <properties />
           <option name="timeStamp" value="121" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1247</line>
+          <line>1256</line>
           <properties />
           <option name="timeStamp" value="122" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>742</line>
+          <line>751</line>
           <properties />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>719</line>
+          <line>728</line>
           <properties />
           <option name="timeStamp" value="125" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>752</line>
+          <line>761</line>
           <properties />
           <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>770</line>
+          <line>779</line>
           <properties />
           <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>754</line>
+          <line>763</line>
           <properties />
           <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1336</line>
-          <properties />
-          <option name="timeStamp" value="129" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2055</line>
-          <properties />
-          <option name="timeStamp" value="137" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java</url>
-          <line>35</line>
-          <properties />
-          <option name="timeStamp" value="140" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2064</line>
-          <properties />
-          <option name="timeStamp" value="145" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2053</line>
-          <properties />
-          <option name="timeStamp" value="150" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2153</line>
+          <line>2361</line>
           <properties />
           <option name="timeStamp" value="151" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java</url>
-          <line>66</line>
+          <line>68</line>
           <properties />
           <option name="timeStamp" value="152" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java</url>
-          <line>60</line>
-          <properties />
-          <option name="timeStamp" value="153" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java</url>
-          <line>50</line>
-          <properties />
-          <option name="timeStamp" value="155" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java</url>
-          <line>76</line>
+          <line>75</line>
           <properties />
           <option name="timeStamp" value="156" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java</url>
-          <line>100</line>
+          <line>99</line>
           <properties />
           <option name="timeStamp" value="157" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java</url>
-          <line>109</line>
+          <line>108</line>
           <properties />
           <option name="timeStamp" value="158" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2158</line>
-          <properties />
-          <option name="timeStamp" value="161" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2159</line>
-          <properties />
-          <option name="timeStamp" value="162" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2312</line>
-          <properties />
-          <option name="timeStamp" value="182" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2163</line>
+          <line>2406</line>
           <properties />
           <option name="timeStamp" value="183" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2221</line>
+          <line>2465</line>
           <properties />
           <option name="timeStamp" value="184" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2230</line>
+          <line>2474</line>
           <properties />
           <option name="timeStamp" value="185" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2234</line>
+          <line>2478</line>
           <properties />
           <option name="timeStamp" value="186" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2241</line>
+          <line>2485</line>
           <properties />
           <option name="timeStamp" value="188" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2225</line>
+          <line>2469</line>
           <properties />
           <option name="timeStamp" value="189" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2228</line>
+          <line>2472</line>
           <properties />
           <option name="timeStamp" value="190" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2226</line>
+          <line>2470</line>
           <properties />
           <option name="timeStamp" value="191" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2251</line>
+          <line>2495</line>
           <properties />
           <option name="timeStamp" value="195" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2058</line>
-          <properties />
-          <option name="timeStamp" value="197" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2059</line>
-          <properties />
-          <option name="timeStamp" value="198" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2139</line>
+          <line>2198</line>
           <properties />
           <option name="timeStamp" value="209" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2149</line>
+          <line>2357</line>
           <properties />
           <option name="timeStamp" value="210" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2111</line>
+          <line>2170</line>
           <properties />
           <option name="timeStamp" value="223" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2119</line>
+          <line>2178</line>
           <properties />
           <option name="timeStamp" value="226" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2123</line>
+          <line>2182</line>
           <properties />
           <option name="timeStamp" value="227" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2128</line>
+          <line>2208</line>
           <properties />
-          <option name="timeStamp" value="231" />
+          <option name="timeStamp" value="236" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2129</line>
+          <line>2204</line>
           <properties />
-          <option name="timeStamp" value="232" />
+          <option name="timeStamp" value="237" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2136</line>
+          <line>2214</line>
           <properties />
-          <option name="timeStamp" value="233" />
+          <option name="timeStamp" value="238" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2127</line>
+          <line>2220</line>
           <properties />
-          <option name="timeStamp" value="235" />
+          <option name="timeStamp" value="239" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2205</line>
+          <properties />
+          <option name="timeStamp" value="240" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2346</line>
+          <properties />
+          <option name="timeStamp" value="244" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2417</line>
+          <properties />
+          <option name="timeStamp" value="246" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>106</line>
+          <properties />
+          <option name="timeStamp" value="247" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2412</line>
+          <properties />
+          <option name="timeStamp" value="248" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2413</line>
+          <properties />
+          <option name="timeStamp" value="249" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2400</line>
+          <properties />
+          <option name="timeStamp" value="252" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2401</line>
+          <properties />
+          <option name="timeStamp" value="253" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>116</line>
+          <properties />
+          <option name="timeStamp" value="256" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>113</line>
+          <properties />
+          <option name="timeStamp" value="257" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2135</line>
+          <properties />
+          <option name="timeStamp" value="259" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2139</line>
+          <properties />
+          <option name="timeStamp" value="260" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2157</line>
+          <properties />
+          <option name="timeStamp" value="261" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2151</line>
+          <properties />
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2145</line>
+          <properties />
+          <option name="timeStamp" value="263" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>675</line>
+          <properties />
+          <option name="timeStamp" value="264" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2191</line>
+          <properties />
+          <option name="timeStamp" value="268" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2190</line>
+          <properties />
+          <option name="timeStamp" value="269" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2192</line>
+          <properties />
+          <option name="timeStamp" value="271" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2194</line>
+          <properties />
+          <option name="timeStamp" value="272" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2195</line>
+          <properties />
+          <option name="timeStamp" value="273" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java</url>
+          <line>277</line>
+          <properties />
+          <option name="timeStamp" value="277" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java</url>
+          <line>280</line>
+          <properties />
+          <option name="timeStamp" value="282" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2367</line>
+          <properties />
+          <option name="timeStamp" value="283" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2370</line>
+          <properties />
+          <option name="timeStamp" value="284" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="236" />
+      <option name="time" value="285" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="MTI_PII">
         <watch expression="Data_field_txt" language="JAVA" custom="" />
-        <watch expression="System_flag" language="JAVA" custom="" />
-        <watch expression="temp" language="JAVA" custom="" />
-        <watch expression="year" language="JAVA" custom="" />
+        <watch expression="Data_Transmission" language="JAVA" custom="" />
+        <watch expression="sendmsg" language="JAVA" custom="" />
+        <watch expression="newsendmsg" language="JAVA" custom="" />
+        <watch expression="sendmsg.length" language="JAVA" custom="" />
+        <watch expression="action" language="JAVA" custom="" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="118" column="43" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="43" />
-          <folding>
-            <element signature="n#RelativeLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="n#ListView#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="n#LinearLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#4526#4546#0" expanded="true" />
-            <element signature="e#4989#5017#0" expanded="true" />
-            <element signature="e#5587#5611#0" expanded="true" />
-            <element signature="e#6046#6059#0" expanded="true" />
-            <element signature="e#6092#6104#0" expanded="true" />
-            <element signature="e#6791#6821#0" expanded="true" />
-            <element signature="e#7257#7272#0" expanded="true" />
-            <element signature="e#7305#7321#0" expanded="true" />
-            <element signature="e#7982#8011#0" expanded="true" />
-            <element signature="e#8357#8395#0" expanded="true" />
-            <element signature="e#8516#8553#0" expanded="true" />
-            <element signature="e#9081#9105#0" expanded="true" />
-            <element signature="e#9447#9480#0" expanded="true" />
-            <element signature="e#9601#9633#0" expanded="true" />
-            <element signature="e#10160#10186#0" expanded="true" />
-            <element signature="e#10613#10647#0" expanded="true" />
-            <element signature="n#GridLayout#1;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#13112#13135#0" expanded="true" />
-            <element signature="e#13318#13342#0" expanded="true" />
-            <element signature="e#13694#13709#0" expanded="true" />
-            <element signature="e#13811#13839#0" expanded="true" />
-            <element signature="e#14071#14100#0" expanded="true" />
-            <element signature="e#14451#14471#0" expanded="true" />
-            <element signature="e#15029#15054#0" expanded="true" />
-            <element signature="e#15245#15278#0" expanded="true" />
-            <element signature="e#15460#15490#0" expanded="true" />
-            <element signature="e#15887#15914#0" expanded="true" />
-            <element signature="e#16056#16091#0" expanded="true" />
-            <element signature="e#16321#16357#0" expanded="true" />
-            <element signature="e#16658#16676#0" expanded="true" />
-            <element signature="e#16867#16893#0" expanded="true" />
-            <element signature="e#17424#17444#0" expanded="true" />
-            <element signature="e#17865#17884#0" expanded="true" />
-            <element signature="e#18274#18297#0" expanded="true" />
-            <element signature="e#18330#18357#0" expanded="true" />
-            <element signature="e#18782#18802#0" expanded="true" />
-            <element signature="e#19192#19207#0" expanded="true" />
-            <element signature="e#19240#19256#0" expanded="true" />
-            <element signature="e#19682#19704#0" expanded="true" />
-            <element signature="e#20094#20111#0" expanded="true" />
-            <element signature="e#20144#20161#0" expanded="true" />
-            <element signature="n#GridLayout#2;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#20899#20923#0" expanded="true" />
-            <element signature="e#21314#21347#0" expanded="true" />
-            <element signature="e#21697#21713#0" expanded="true" />
-            <element signature="e#21904#21932#0" expanded="true" />
-            <element signature="e#22159#22188#0" expanded="true" />
-            <element signature="e#22542#22558#0" expanded="true" />
-            <element signature="e#22749#22777#0" expanded="true" />
-            <element signature="e#23004#23033#0" expanded="true" />
-            <element signature="e#23387#23403#0" expanded="true" />
-            <element signature="e#23594#23622#0" expanded="true" />
-            <element signature="e#23849#23878#0" expanded="true" />
-            <element signature="e#24232#24248#0" expanded="true" />
-            <element signature="e#24439#24467#0" expanded="true" />
-            <element signature="e#24694#24723#0" expanded="true" />
-            <element signature="e#25077#25093#0" expanded="true" />
-            <element signature="e#25284#25312#0" expanded="true" />
-            <element signature="e#25539#25568#0" expanded="true" />
-            <element signature="e#25922#25938#0" expanded="true" />
-            <element signature="e#26129#26157#0" expanded="true" />
-            <element signature="e#26384#26413#0" expanded="true" />
-            <element signature="e#26767#26783#0" expanded="true" />
-            <element signature="e#26974#27002#0" expanded="true" />
-            <element signature="e#27229#27258#0" expanded="true" />
-            <element signature="e#27612#27628#0" expanded="true" />
-            <element signature="e#27819#27847#0" expanded="true" />
-            <element signature="e#28074#28103#0" expanded="true" />
-            <element signature="n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#28754#28778#0" expanded="true" />
-            <element signature="e#29552#29568#0" expanded="true" />
-            <element signature="e#29759#29787#0" expanded="true" />
-            <element signature="e#30398#30415#0" expanded="true" />
-            <element signature="e#30606#30634#0" expanded="true" />
-            <element signature="e#30862#30891#0" expanded="true" />
-            <element signature="e#31246#31263#0" expanded="true" />
-            <element signature="e#31454#31482#0" expanded="true" />
-            <element signature="e#31710#31739#0" expanded="true" />
-            <element signature="e#32094#32111#0" expanded="true" />
-            <element signature="e#32302#32330#0" expanded="true" />
-            <element signature="e#32558#32587#0" expanded="true" />
-            <element signature="e#32942#32959#0" expanded="true" />
-            <element signature="e#33150#33178#0" expanded="true" />
-            <element signature="e#33406#33435#0" expanded="true" />
-            <element signature="e#33998#34026#0" expanded="true" />
-            <element signature="e#34254#34283#0" expanded="true" />
-            <element signature="e#34846#34874#0" expanded="true" />
-            <element signature="e#35102#35131#0" expanded="true" />
-            <element signature="e#35694#35722#0" expanded="true" />
-            <element signature="e#35950#35979#0" expanded="true" />
-            <element signature="n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#36632#36656#0" expanded="true" />
-            <element signature="e#37047#37080#0" expanded="true" />
-            <element signature="e#37431#37448#0" expanded="true" />
-            <element signature="e#37639#37667#0" expanded="true" />
-            <element signature="e#37895#37924#0" expanded="true" />
-            <element signature="e#38279#38296#0" expanded="true" />
-            <element signature="e#38487#38515#0" expanded="true" />
-            <element signature="e#38743#38772#0" expanded="true" />
-            <element signature="e#39127#39144#0" expanded="true" />
-            <element signature="e#39335#39363#0" expanded="true" />
-            <element signature="e#39591#39620#0" expanded="true" />
-            <element signature="e#39975#39992#0" expanded="true" />
-            <element signature="e#40183#40211#0" expanded="true" />
-            <element signature="e#40439#40468#0" expanded="true" />
-            <element signature="e#40823#40840#0" expanded="true" />
-            <element signature="e#41031#41059#0" expanded="true" />
-            <element signature="e#41287#41316#0" expanded="true" />
-            <element signature="e#41671#41688#0" expanded="true" />
-            <element signature="e#41879#41907#0" expanded="true" />
-            <element signature="e#42135#42164#0" expanded="true" />
-            <element signature="e#42519#42536#0" expanded="true" />
-            <element signature="e#42727#42755#0" expanded="true" />
-            <element signature="e#42983#43012#0" expanded="true" />
-            <element signature="e#43367#43384#0" expanded="true" />
-            <element signature="e#43575#43603#0" expanded="true" />
-            <element signature="e#43831#43860#0" expanded="true" />
-            <element signature="n#LinearLayout#1;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/frommsgshp.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CRC16.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="251" column="11" selection-start-line="251" selection-start-column="11" selection-end-line="251" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CommandsFound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
-          <folding>
-            <element signature="e#3000#4112#0" expanded="true" />
-            <element signature="e#4111#4112#0" expanded="true" />
-            <element signature="class#59875:60111" expanded="false" />
-            <element signature="method#onItemSelected#0;class#59875:60111" expanded="false" />
-            <element signature="method#onNothingSelected#0;class#59875:60111" expanded="false" />
-            <element signature="class#60207:61446" expanded="false" />
-            <element signature="method#onNothingSelected#0;class#61753:67354" expanded="false" />
-            <element signature="e#67831#68228#0" expanded="true" />
-            <element signature="e#68227#68228#0" expanded="true" />
-            <element signature="e#68282#68628#0" expanded="true" />
-            <element signature="e#68627#68628#0" expanded="true" />
-            <element signature="e#68671#68985#0" expanded="true" />
-            <element signature="e#68984#68985#0" expanded="true" />
-            <element signature="e#69029#69345#0" expanded="true" />
-            <element signature="e#69344#69345#0" expanded="true" />
-            <element signature="e#69391#69711#0" expanded="true" />
-            <element signature="e#69710#69711#0" expanded="true" />
-            <element signature="e#71007#71008#0" expanded="true" />
-            <element signature="e#71056#71057#0" expanded="true" />
-            <element signature="e#71095#71096#0" expanded="true" />
-            <element signature="e#71127#71128#0" expanded="true" />
-            <element signature="e#71184#71185#0" expanded="true" />
-            <element signature="e#71223#71224#0" expanded="true" />
-            <element signature="e#71276#71277#0" expanded="true" />
-            <element signature="e#71300#71301#0" expanded="true" />
-            <element signature="method#getView#0;class#ChatAdapater#0;class#TalkActivity#0" expanded="false" />
-            <element signature="e#72095#72096#0" expanded="true" />
-            <element signature="e#72115#72116#0" expanded="true" />
-            <element signature="e#72143#72144#0" expanded="true" />
-            <element signature="e#72162#72163#0" expanded="true" />
-            <element signature="e#72197#72198#0" expanded="true" />
-            <element signature="e#72217#72218#0" expanded="true" />
-            <element signature="e#72402#73297#0" expanded="true" />
-            <element signature="e#73296#73297#0" expanded="true" />
-            <element signature="e#82022#82023#0" expanded="true" />
-            <element signature="e#82059#82060#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#RelativeLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="n#ListView#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="n#LinearLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#4526#4546#0" expanded="true" />
-            <element signature="e#4989#5017#0" expanded="true" />
-            <element signature="e#5587#5611#0" expanded="true" />
-            <element signature="e#6046#6059#0" expanded="true" />
-            <element signature="e#6092#6104#0" expanded="true" />
-            <element signature="e#6791#6821#0" expanded="true" />
-            <element signature="e#7257#7272#0" expanded="true" />
-            <element signature="e#7305#7321#0" expanded="true" />
-            <element signature="e#7982#8011#0" expanded="true" />
-            <element signature="e#8357#8395#0" expanded="true" />
-            <element signature="e#8516#8553#0" expanded="true" />
-            <element signature="e#9081#9105#0" expanded="true" />
-            <element signature="e#9447#9480#0" expanded="true" />
-            <element signature="e#9601#9633#0" expanded="true" />
-            <element signature="e#10160#10186#0" expanded="true" />
-            <element signature="e#10613#10647#0" expanded="true" />
-            <element signature="n#GridLayout#1;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#13112#13135#0" expanded="true" />
-            <element signature="e#13318#13342#0" expanded="true" />
-            <element signature="e#13694#13709#0" expanded="true" />
-            <element signature="e#13811#13839#0" expanded="true" />
-            <element signature="e#14071#14100#0" expanded="true" />
-            <element signature="e#14451#14471#0" expanded="true" />
-            <element signature="e#15029#15054#0" expanded="true" />
-            <element signature="e#15245#15278#0" expanded="true" />
-            <element signature="e#15460#15490#0" expanded="true" />
-            <element signature="e#15887#15914#0" expanded="true" />
-            <element signature="e#16056#16091#0" expanded="true" />
-            <element signature="e#16321#16357#0" expanded="true" />
-            <element signature="e#16658#16676#0" expanded="true" />
-            <element signature="e#16867#16893#0" expanded="true" />
-            <element signature="e#17424#17444#0" expanded="true" />
-            <element signature="e#17865#17884#0" expanded="true" />
-            <element signature="e#18274#18297#0" expanded="true" />
-            <element signature="e#18330#18357#0" expanded="true" />
-            <element signature="e#18782#18802#0" expanded="true" />
-            <element signature="e#19192#19207#0" expanded="true" />
-            <element signature="e#19240#19256#0" expanded="true" />
-            <element signature="e#19682#19704#0" expanded="true" />
-            <element signature="e#20094#20111#0" expanded="true" />
-            <element signature="e#20144#20161#0" expanded="true" />
-            <element signature="n#GridLayout#2;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#20899#20923#0" expanded="true" />
-            <element signature="e#21314#21347#0" expanded="true" />
-            <element signature="e#21697#21713#0" expanded="true" />
-            <element signature="e#21904#21932#0" expanded="true" />
-            <element signature="e#22159#22188#0" expanded="true" />
-            <element signature="e#22542#22558#0" expanded="true" />
-            <element signature="e#22749#22777#0" expanded="true" />
-            <element signature="e#23004#23033#0" expanded="true" />
-            <element signature="e#23387#23403#0" expanded="true" />
-            <element signature="e#23594#23622#0" expanded="true" />
-            <element signature="e#23849#23878#0" expanded="true" />
-            <element signature="e#24232#24248#0" expanded="true" />
-            <element signature="e#24439#24467#0" expanded="true" />
-            <element signature="e#24694#24723#0" expanded="true" />
-            <element signature="e#25077#25093#0" expanded="true" />
-            <element signature="e#25284#25312#0" expanded="true" />
-            <element signature="e#25539#25568#0" expanded="true" />
-            <element signature="e#25922#25938#0" expanded="true" />
-            <element signature="e#26129#26157#0" expanded="true" />
-            <element signature="e#26384#26413#0" expanded="true" />
-            <element signature="e#26767#26783#0" expanded="true" />
-            <element signature="e#26974#27002#0" expanded="true" />
-            <element signature="e#27229#27258#0" expanded="true" />
-            <element signature="e#27612#27628#0" expanded="true" />
-            <element signature="e#27819#27847#0" expanded="true" />
-            <element signature="e#28074#28103#0" expanded="true" />
-            <element signature="n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#28754#28778#0" expanded="true" />
-            <element signature="e#29552#29568#0" expanded="true" />
-            <element signature="e#29759#29787#0" expanded="true" />
-            <element signature="e#30398#30415#0" expanded="true" />
-            <element signature="e#30606#30634#0" expanded="true" />
-            <element signature="e#30862#30891#0" expanded="true" />
-            <element signature="e#31246#31263#0" expanded="true" />
-            <element signature="e#31454#31482#0" expanded="true" />
-            <element signature="e#31710#31739#0" expanded="true" />
-            <element signature="e#32094#32111#0" expanded="true" />
-            <element signature="e#32302#32330#0" expanded="true" />
-            <element signature="e#32558#32587#0" expanded="true" />
-            <element signature="e#32942#32959#0" expanded="true" />
-            <element signature="e#33150#33178#0" expanded="true" />
-            <element signature="e#33406#33435#0" expanded="true" />
-            <element signature="e#33998#34026#0" expanded="true" />
-            <element signature="e#34254#34283#0" expanded="true" />
-            <element signature="e#34846#34874#0" expanded="true" />
-            <element signature="e#35102#35131#0" expanded="true" />
-            <element signature="e#35694#35722#0" expanded="true" />
-            <element signature="e#35950#35979#0" expanded="true" />
-            <element signature="n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#36632#36656#0" expanded="true" />
-            <element signature="e#37047#37080#0" expanded="true" />
-            <element signature="e#37431#37448#0" expanded="true" />
-            <element signature="e#37639#37667#0" expanded="true" />
-            <element signature="e#37895#37924#0" expanded="true" />
-            <element signature="e#38279#38296#0" expanded="true" />
-            <element signature="e#38487#38515#0" expanded="true" />
-            <element signature="e#38743#38772#0" expanded="true" />
-            <element signature="e#39127#39144#0" expanded="true" />
-            <element signature="e#39335#39363#0" expanded="true" />
-            <element signature="e#39591#39620#0" expanded="true" />
-            <element signature="e#39975#39992#0" expanded="true" />
-            <element signature="e#40183#40211#0" expanded="true" />
-            <element signature="e#40439#40468#0" expanded="true" />
-            <element signature="e#40823#40840#0" expanded="true" />
-            <element signature="e#41031#41059#0" expanded="true" />
-            <element signature="e#41287#41316#0" expanded="true" />
-            <element signature="e#41671#41688#0" expanded="true" />
-            <element signature="e#41879#41907#0" expanded="true" />
-            <element signature="e#42135#42164#0" expanded="true" />
-            <element signature="e#42519#42536#0" expanded="true" />
-            <element signature="e#42727#42755#0" expanded="true" />
-            <element signature="e#42983#43012#0" expanded="true" />
-            <element signature="e#43367#43384#0" expanded="true" />
-            <element signature="e#43575#43603#0" expanded="true" />
-            <element signature="e#43831#43860#0" expanded="true" />
-            <element signature="n#LinearLayout#1;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CommandsFound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="e#3000#4112#0" expanded="true" />
-            <element signature="e#4111#4112#0" expanded="true" />
-            <element signature="class#59875:60111" expanded="false" />
-            <element signature="method#onItemSelected#0;class#59875:60111" expanded="false" />
-            <element signature="method#onNothingSelected#0;class#59875:60111" expanded="false" />
-            <element signature="class#60207:61446" expanded="false" />
-            <element signature="method#onNothingSelected#0;class#61753:67354" expanded="false" />
-            <element signature="e#67831#68228#0" expanded="true" />
-            <element signature="e#68227#68228#0" expanded="true" />
-            <element signature="e#68282#68628#0" expanded="true" />
-            <element signature="e#68627#68628#0" expanded="true" />
-            <element signature="e#68671#68985#0" expanded="true" />
-            <element signature="e#68984#68985#0" expanded="true" />
-            <element signature="e#69029#69345#0" expanded="true" />
-            <element signature="e#69344#69345#0" expanded="true" />
-            <element signature="e#69391#69711#0" expanded="true" />
-            <element signature="e#69710#69711#0" expanded="true" />
-            <element signature="e#71007#71008#0" expanded="true" />
-            <element signature="e#71056#71057#0" expanded="true" />
-            <element signature="e#71095#71096#0" expanded="true" />
-            <element signature="e#71127#71128#0" expanded="true" />
-            <element signature="e#71184#71185#0" expanded="true" />
-            <element signature="e#71223#71224#0" expanded="true" />
-            <element signature="e#71276#71277#0" expanded="true" />
-            <element signature="e#71300#71301#0" expanded="true" />
-            <element signature="method#getView#0;class#ChatAdapater#0;class#TalkActivity#0" expanded="false" />
-            <element signature="e#72095#72096#0" expanded="true" />
-            <element signature="e#72115#72116#0" expanded="true" />
-            <element signature="e#72143#72144#0" expanded="true" />
-            <element signature="e#72162#72163#0" expanded="true" />
-            <element signature="e#72197#72198#0" expanded="true" />
-            <element signature="e#72217#72218#0" expanded="true" />
-            <element signature="e#72402#73297#0" expanded="true" />
-            <element signature="e#73296#73297#0" expanded="true" />
-            <element signature="e#82022#82023#0" expanded="true" />
-            <element signature="e#82059#82060#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/frommsgshp.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/os/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22562674">
-          <caret line="84" column="50" selection-start-line="84" selection-start-column="50" selection-end-line="84" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/devicefmt.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/service_grounp_fmt.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/service_page.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/service_child_fmt.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/msg_to_fmt.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/msg_from_fmt.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="android-dummy://MTI_PII/MTI_PII/Translations Editor">
@@ -2550,20 +2109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/bluetooth/BluetoothGattCharacteristic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3305785">
-          <caret line="216" column="28" selection-start-line="216" selection-start-column="28" selection-end-line="216" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41586074">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/widget/CompoundButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33240223">
@@ -2577,25 +2122,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/BLEService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CRC16.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
-          <folding>
-            <element signature="e#8892#8893#0" expanded="false" />
-            <element signature="e#8932#8933#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2634,22 +2160,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="79" column="36" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/java/text/SimpleDateFormat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="247" column="11" selection-start-line="247" selection-start-column="11" selection-end-line="247" selection-end-column="11" />
-          <folding>
-            <element signature="e#13814#13815#0" expanded="false" />
-            <element signature="e#13864#13865#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2661,10 +2175,186 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/bluetooth/BluetoothGattCharacteristic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47384617">
+          <caret line="287" column="7" selection-start-line="287" selection-start-column="7" selection-end-line="287" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mtblesdk/MTBeacon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15017065">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/bluetooth/BluetoothGatt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="947" column="49" selection-start-line="947" selection-start-column="49" selection-end-line="947" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37974682">
+          <caret line="815" column="23" selection-start-line="815" selection-start-column="23" selection-end-line="815" selection-end-column="23" />
+          <folding>
+            <element signature="e#38254#38255#0" expanded="false" />
+            <element signature="e#38284#38285#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/view/LayoutInflater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23037975">
+          <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38567492">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/SampleGattAttributes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38481012">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/content/ContextWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33164558">
+          <caret line="464" column="18" selection-start-line="464" selection-start-column="18" selection-end-line="464" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/content/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.90379745">
+          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21835443">
+          <caret line="531" column="29" selection-start-line="531" selection-start-column="29" selection-end-line="531" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/BLEService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23602484">
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CRC16.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.03125">
+          <caret line="228" column="8" selection-start-line="228" selection-start-column="8" selection-end-line="228" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/ServiceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33224756">
+          <caret line="65" column="47" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.48">
+          <caret line="85" column="42" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="116" column="40" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
+          <folding>
+            <element signature="n#RelativeLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#1;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#2;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#0;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#3;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#1;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#4;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#2;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#5;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#3;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#6;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#4;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#7;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#5;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#8;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#6;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#9;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#7;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#0;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#1;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#2;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#0;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#3;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#1;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#4;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#2;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#5;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#3;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#6;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#4;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#7;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#5;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#8;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#6;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#TextView#9;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#EditText#7;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="n#LinearLayout#1;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9307833">
+          <caret line="194" column="0" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
           <folding>
             <element signature="e#680#730#0" expanded="false" />
           </folding>
@@ -2673,179 +2363,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2162" column="40" selection-start-line="2162" selection-start-column="40" selection-end-line="2162" selection-end-column="40" />
+        <state vertical-scroll-proportion="1.337963">
+          <caret line="2364" column="13" selection-start-line="2364" selection-start-column="13" selection-end-line="2364" selection-end-column="13" />
           <folding>
-            <element signature="e#3000#4112#0" expanded="true" />
-            <element signature="e#4111#4112#0" expanded="true" />
-            <element signature="class#59875:60111" expanded="false" />
-            <element signature="method#onItemSelected#0;class#59875:60111" expanded="false" />
-            <element signature="method#onNothingSelected#0;class#59875:60111" expanded="false" />
-            <element signature="class#60207:61446" expanded="false" />
-            <element signature="method#onNothingSelected#0;class#61753:67354" expanded="false" />
-            <element signature="e#67831#68228#0" expanded="true" />
-            <element signature="e#68227#68228#0" expanded="true" />
-            <element signature="e#68282#68628#0" expanded="true" />
-            <element signature="e#68627#68628#0" expanded="true" />
-            <element signature="e#68671#68985#0" expanded="true" />
-            <element signature="e#68984#68985#0" expanded="true" />
-            <element signature="e#69029#69345#0" expanded="true" />
-            <element signature="e#69344#69345#0" expanded="true" />
-            <element signature="e#69391#69711#0" expanded="true" />
-            <element signature="e#69710#69711#0" expanded="true" />
-            <element signature="e#71007#71008#0" expanded="true" />
-            <element signature="e#71056#71057#0" expanded="true" />
-            <element signature="e#71095#71096#0" expanded="true" />
-            <element signature="e#71127#71128#0" expanded="true" />
-            <element signature="e#71184#71185#0" expanded="true" />
-            <element signature="e#71223#71224#0" expanded="true" />
-            <element signature="e#71276#71277#0" expanded="true" />
-            <element signature="e#71300#71301#0" expanded="true" />
+            <element signature="e#3029#4141#0" expanded="true" />
+            <element signature="e#4140#4141#0" expanded="true" />
+            <element signature="class#62412:62648" expanded="false" />
+            <element signature="method#onItemSelected#0;class#62412:62648" expanded="false" />
+            <element signature="method#onNothingSelected#0;class#62412:62648" expanded="false" />
+            <element signature="class#62744:63983" expanded="false" />
+            <element signature="method#onNothingSelected#0;class#64290:69891" expanded="false" />
+            <element signature="e#70368#70765#0" expanded="true" />
+            <element signature="e#70764#70765#0" expanded="true" />
+            <element signature="e#70819#71165#0" expanded="true" />
+            <element signature="e#71164#71165#0" expanded="true" />
+            <element signature="e#71208#71522#0" expanded="true" />
+            <element signature="e#71521#71522#0" expanded="true" />
+            <element signature="e#71566#71882#0" expanded="true" />
+            <element signature="e#71881#71882#0" expanded="true" />
+            <element signature="e#71928#72248#0" expanded="true" />
+            <element signature="e#72247#72248#0" expanded="true" />
+            <element signature="e#73477#73504#0" expanded="true" />
+            <element signature="e#73544#73545#0" expanded="true" />
+            <element signature="e#73593#73594#0" expanded="true" />
+            <element signature="e#73632#73633#0" expanded="true" />
+            <element signature="e#73664#73665#0" expanded="true" />
+            <element signature="e#73721#73722#0" expanded="true" />
+            <element signature="e#73760#73761#0" expanded="true" />
+            <element signature="e#73813#73814#0" expanded="true" />
+            <element signature="e#73837#73838#0" expanded="true" />
             <element signature="method#getView#0;class#ChatAdapater#0;class#TalkActivity#0" expanded="false" />
-            <element signature="e#72095#72096#0" expanded="true" />
-            <element signature="e#72115#72116#0" expanded="true" />
-            <element signature="e#72143#72144#0" expanded="true" />
-            <element signature="e#72162#72163#0" expanded="true" />
-            <element signature="e#72197#72198#0" expanded="true" />
-            <element signature="e#72217#72218#0" expanded="true" />
-            <element signature="e#72402#73297#0" expanded="true" />
-            <element signature="e#73296#73297#0" expanded="true" />
-            <element signature="e#82022#82023#0" expanded="true" />
-            <element signature="e#82059#82060#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="698" column="21" selection-start-line="698" selection-start-column="21" selection-end-line="698" selection-end-column="21" />
-          <folding>
-            <element signature="n#RelativeLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="n#ListView#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="n#LinearLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="n#GridLayout#0;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#4526#4546#0" expanded="true" />
-            <element signature="e#4989#5017#0" expanded="true" />
-            <element signature="e#5587#5611#0" expanded="true" />
-            <element signature="e#6046#6059#0" expanded="true" />
-            <element signature="e#6092#6104#0" expanded="true" />
-            <element signature="e#6791#6821#0" expanded="true" />
-            <element signature="e#7257#7272#0" expanded="true" />
-            <element signature="e#7305#7321#0" expanded="true" />
-            <element signature="e#7982#8011#0" expanded="true" />
-            <element signature="e#8357#8395#0" expanded="true" />
-            <element signature="e#8516#8553#0" expanded="true" />
-            <element signature="e#9081#9105#0" expanded="true" />
-            <element signature="e#9447#9480#0" expanded="true" />
-            <element signature="e#9601#9633#0" expanded="true" />
-            <element signature="e#10160#10186#0" expanded="true" />
-            <element signature="e#10613#10647#0" expanded="true" />
-            <element signature="n#GridLayout#1;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#13112#13135#0" expanded="true" />
-            <element signature="e#13318#13342#0" expanded="true" />
-            <element signature="e#13694#13709#0" expanded="true" />
-            <element signature="e#13811#13839#0" expanded="true" />
-            <element signature="e#14071#14100#0" expanded="true" />
-            <element signature="e#14451#14471#0" expanded="true" />
-            <element signature="e#15029#15054#0" expanded="true" />
-            <element signature="e#15245#15278#0" expanded="true" />
-            <element signature="e#15460#15490#0" expanded="true" />
-            <element signature="e#15887#15914#0" expanded="true" />
-            <element signature="e#16056#16091#0" expanded="true" />
-            <element signature="e#16321#16357#0" expanded="true" />
-            <element signature="e#16658#16676#0" expanded="true" />
-            <element signature="e#16867#16893#0" expanded="true" />
-            <element signature="e#17424#17444#0" expanded="true" />
-            <element signature="e#17865#17884#0" expanded="true" />
-            <element signature="e#18274#18297#0" expanded="true" />
-            <element signature="e#18330#18357#0" expanded="true" />
-            <element signature="e#18782#18802#0" expanded="true" />
-            <element signature="e#19192#19207#0" expanded="true" />
-            <element signature="e#19240#19256#0" expanded="true" />
-            <element signature="e#19682#19704#0" expanded="true" />
-            <element signature="e#20094#20111#0" expanded="true" />
-            <element signature="e#20144#20161#0" expanded="true" />
-            <element signature="n#GridLayout#2;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#20899#20923#0" expanded="true" />
-            <element signature="e#21314#21347#0" expanded="true" />
-            <element signature="e#21697#21713#0" expanded="true" />
-            <element signature="e#21904#21932#0" expanded="true" />
-            <element signature="e#22159#22188#0" expanded="true" />
-            <element signature="e#22542#22558#0" expanded="true" />
-            <element signature="e#22749#22777#0" expanded="true" />
-            <element signature="e#23004#23033#0" expanded="true" />
-            <element signature="e#23387#23403#0" expanded="true" />
-            <element signature="e#23594#23622#0" expanded="true" />
-            <element signature="e#23849#23878#0" expanded="true" />
-            <element signature="e#24232#24248#0" expanded="true" />
-            <element signature="e#24439#24467#0" expanded="true" />
-            <element signature="e#24694#24723#0" expanded="true" />
-            <element signature="e#25077#25093#0" expanded="true" />
-            <element signature="e#25284#25312#0" expanded="true" />
-            <element signature="e#25539#25568#0" expanded="true" />
-            <element signature="e#25922#25938#0" expanded="true" />
-            <element signature="e#26129#26157#0" expanded="true" />
-            <element signature="e#26384#26413#0" expanded="true" />
-            <element signature="e#26767#26783#0" expanded="true" />
-            <element signature="e#26974#27002#0" expanded="true" />
-            <element signature="e#27229#27258#0" expanded="true" />
-            <element signature="e#27612#27628#0" expanded="true" />
-            <element signature="e#27819#27847#0" expanded="true" />
-            <element signature="e#28074#28103#0" expanded="true" />
-            <element signature="n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#28754#28778#0" expanded="true" />
-            <element signature="e#29552#29568#0" expanded="true" />
-            <element signature="e#29759#29787#0" expanded="true" />
-            <element signature="e#30398#30415#0" expanded="true" />
-            <element signature="e#30606#30634#0" expanded="true" />
-            <element signature="e#30862#30891#0" expanded="true" />
-            <element signature="e#31246#31263#0" expanded="true" />
-            <element signature="e#31454#31482#0" expanded="true" />
-            <element signature="e#31710#31739#0" expanded="true" />
-            <element signature="e#32094#32111#0" expanded="true" />
-            <element signature="e#32302#32330#0" expanded="true" />
-            <element signature="e#32558#32587#0" expanded="true" />
-            <element signature="e#32942#32959#0" expanded="true" />
-            <element signature="e#33150#33178#0" expanded="true" />
-            <element signature="e#33406#33435#0" expanded="true" />
-            <element signature="e#33998#34026#0" expanded="true" />
-            <element signature="e#34254#34283#0" expanded="true" />
-            <element signature="e#34846#34874#0" expanded="true" />
-            <element signature="e#35102#35131#0" expanded="true" />
-            <element signature="e#35694#35722#0" expanded="true" />
-            <element signature="e#35950#35979#0" expanded="true" />
-            <element signature="n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="e#36632#36656#0" expanded="true" />
-            <element signature="e#37047#37080#0" expanded="true" />
-            <element signature="e#37431#37448#0" expanded="true" />
-            <element signature="e#37639#37667#0" expanded="true" />
-            <element signature="e#37895#37924#0" expanded="true" />
-            <element signature="e#38279#38296#0" expanded="true" />
-            <element signature="e#38487#38515#0" expanded="true" />
-            <element signature="e#38743#38772#0" expanded="true" />
-            <element signature="e#39127#39144#0" expanded="true" />
-            <element signature="e#39335#39363#0" expanded="true" />
-            <element signature="e#39591#39620#0" expanded="true" />
-            <element signature="e#39975#39992#0" expanded="true" />
-            <element signature="e#40183#40211#0" expanded="true" />
-            <element signature="e#40439#40468#0" expanded="true" />
-            <element signature="e#40823#40840#0" expanded="true" />
-            <element signature="e#41031#41059#0" expanded="true" />
-            <element signature="e#41287#41316#0" expanded="true" />
-            <element signature="e#41671#41688#0" expanded="true" />
-            <element signature="e#41879#41907#0" expanded="true" />
-            <element signature="e#42135#42164#0" expanded="true" />
-            <element signature="e#42519#42536#0" expanded="true" />
-            <element signature="e#42727#42755#0" expanded="true" />
-            <element signature="e#42983#43012#0" expanded="true" />
-            <element signature="e#43367#43384#0" expanded="true" />
-            <element signature="e#43575#43603#0" expanded="true" />
-            <element signature="e#43831#43860#0" expanded="true" />
-            <element signature="n#LinearLayout#1;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#74632#74633#0" expanded="true" />
+            <element signature="e#74652#74653#0" expanded="true" />
+            <element signature="e#74680#74681#0" expanded="true" />
+            <element signature="e#74699#74700#0" expanded="true" />
+            <element signature="e#74734#74735#0" expanded="true" />
+            <element signature="e#74754#74755#0" expanded="true" />
+            <element signature="e#74939#75834#0" expanded="true" />
+            <element signature="e#75833#75834#0" expanded="true" />
+            <element signature="e#92660#92661#0" expanded="true" />
+            <element signature="e#92697#92698#0" expanded="true" />
           </folding>
         </state>
       </provider>
