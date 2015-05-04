@@ -6,7 +6,7 @@
         <devices>
           <device id="4.7in WXGA" />
         </devices>
-        <target>android-19</target>
+        <target>android-18</target>
       </config>
     </shared>
     <layouts>
@@ -25,14 +25,6 @@
     <list default="true" id="028c36fd-bc0a-4a05-bd31-c63923839796" name="Default" comment="增加设置读取出厂数据的布局，采用TableLayout 实现">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-debug-unaligned.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-debug.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$id.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$layout.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$menu.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$string.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$style.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/tools/SampleGattAttributes.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/tools/SampleGattAttributes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$1.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$2.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$3.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$4.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$4.class" />
@@ -44,12 +36,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java" afterPath="$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/mednovo/mti_pii/R.java" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/mednovo/mti_pii/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/tools/SampleGattAttributes.java" afterPath="$PROJECT_DIR$/src/com/mednovo/tools/SampleGattAttributes.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java" afterPath="$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/integers.xml" afterPath="$PROJECT_DIR$/res/values/integers.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/talk_activity.xml" afterPath="$PROJECT_DIR$/res/layout/talk_activity.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -102,11 +91,19 @@
     <leaf>
       <file leaf-file-name="talk_activity.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="116" column="40" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.53125">
+              <caret line="303" column="0" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
               <folding>
                 <element signature="n#RelativeLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+                <element signature="e#11242#11266#0" expanded="true" />
+                <element signature="e#11457#11489#0" expanded="true" />
+                <element signature="e#11670#11699#0" expanded="true" />
+                <element signature="e#12520#12549#0" expanded="true" />
+                <element signature="e#15841#15868#0" expanded="true" />
                 <element signature="n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
                 <element signature="n#TextView#1;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
                 <element signature="n#TextView#2;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
@@ -125,11 +122,7 @@
                 <element signature="n#EditText#6;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
                 <element signature="n#TextView#9;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
                 <element signature="n#EditText#7;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-                <element signature="n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-                <element signature="n#TextView#0;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-                <element signature="n#TextView#1;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
                 <element signature="n#TextView#2;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-                <element signature="n#EditText#0;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
                 <element signature="n#TextView#3;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
                 <element signature="n#EditText#1;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
                 <element signature="n#TextView#4;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
@@ -148,54 +141,30 @@
               </folding>
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="integers.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/integers.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="TalkActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.337963">
-              <caret line="2364" column="13" selection-start-line="2364" selection-start-column="13" selection-end-line="2364" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.34441087">
+              <caret line="109" column="17" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="17" />
               <folding>
-                <element signature="e#3029#4141#0" expanded="true" />
-                <element signature="e#4140#4141#0" expanded="true" />
-                <element signature="class#62412:62648" expanded="false" />
-                <element signature="method#onItemSelected#0;class#62412:62648" expanded="false" />
-                <element signature="method#onNothingSelected#0;class#62412:62648" expanded="false" />
-                <element signature="class#62744:63983" expanded="false" />
-                <element signature="method#onNothingSelected#0;class#64290:69891" expanded="false" />
-                <element signature="e#70368#70765#0" expanded="true" />
-                <element signature="e#70764#70765#0" expanded="true" />
-                <element signature="e#70819#71165#0" expanded="true" />
-                <element signature="e#71164#71165#0" expanded="true" />
-                <element signature="e#71208#71522#0" expanded="true" />
-                <element signature="e#71521#71522#0" expanded="true" />
-                <element signature="e#71566#71882#0" expanded="true" />
-                <element signature="e#71881#71882#0" expanded="true" />
-                <element signature="e#71928#72248#0" expanded="true" />
-                <element signature="e#72247#72248#0" expanded="true" />
-                <element signature="e#73477#73504#0" expanded="true" />
-                <element signature="e#73544#73545#0" expanded="true" />
-                <element signature="e#73593#73594#0" expanded="true" />
-                <element signature="e#73632#73633#0" expanded="true" />
-                <element signature="e#73664#73665#0" expanded="true" />
-                <element signature="e#73721#73722#0" expanded="true" />
-                <element signature="e#73760#73761#0" expanded="true" />
-                <element signature="e#73813#73814#0" expanded="true" />
-                <element signature="e#73837#73838#0" expanded="true" />
+                <element signature="class#70225:70461" expanded="false" />
+                <element signature="method#onItemSelected#0;class#70225:70461" expanded="false" />
+                <element signature="method#onNothingSelected#0;class#70225:70461" expanded="false" />
+                <element signature="class#70557:71796" expanded="false" />
+                <element signature="method#onNothingSelected#0;class#72103:78042" expanded="false" />
                 <element signature="method#getView#0;class#ChatAdapater#0;class#TalkActivity#0" expanded="false" />
-                <element signature="e#74632#74633#0" expanded="true" />
-                <element signature="e#74652#74653#0" expanded="true" />
-                <element signature="e#74680#74681#0" expanded="true" />
-                <element signature="e#74699#74700#0" expanded="true" />
-                <element signature="e#74734#74735#0" expanded="true" />
-                <element signature="e#74754#74755#0" expanded="true" />
-                <element signature="e#74939#75834#0" expanded="true" />
-                <element signature="e#75833#75834#0" expanded="true" />
-                <element signature="e#92660#92661#0" expanded="true" />
-                <element signature="e#92697#92698#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -205,7 +174,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding>
                 <element signature="e#680#730#0" expanded="false" />
               </folding>
@@ -216,8 +185,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.48">
-              <caret line="85" column="42" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
+            <state vertical-scroll-proportion="-4.84">
+              <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -226,9 +195,12 @@
       <file leaf-file-name="CRC16.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CRC16.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.03125">
+            <state vertical-scroll-proportion="0.0">
               <caret line="228" column="8" selection-start-line="228" selection-start-column="8" selection-end-line="228" selection-end-column="26" />
-              <folding />
+              <folding>
+                <element signature="e#8892#8893#0" expanded="false" />
+                <element signature="e#8932#8933#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -870,14 +842,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/values/integers.xml" />
         <option value="$PROJECT_DIR$/src/com/mednovo/tools/CRC16.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/tools/GeneralCommands.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/tools/SampleGattAttributes.java" />
-        <option value="$PROJECT_DIR$/res/layout/talk_activity.xml" />
         <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/MainActivity.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/ServiceActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/integers.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/layout/talk_activity.xml" />
         <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java" />
       </list>
     </option>
@@ -898,7 +871,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1370" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -948,6 +921,7 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
@@ -1151,7 +1125,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1385,28 +1358,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.4939302" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.49081165" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19984686" sideWeight="0.31656805" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19984686" sideWeight="0.31656805" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.56431854" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33004552" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38965517" sideWeight="0.4777948" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.49693722" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.43568146" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.4303216" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20172414" sideWeight="0.43568146" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4051724" sideWeight="0.4303216" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4448276" sideWeight="0.4517611" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.212098" sideWeight="0.47560975" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19984686" sideWeight="0.6834319" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24355084" sideWeight="0.5114943" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51896554" sideWeight="0.5482389" order="13" side_tool="false" content_ui="tabs" x="24" y="248" width="1318" height="232" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19802731" sideWeight="0.6834319" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24355084" sideWeight="0.5114943" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37586206" sideWeight="0.5482389" order="13" side_tool="false" content_ui="tabs" x="24" y="248" width="1318" height="232" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1414,7 +1388,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.6689655" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" x="802" y="139" width="500" height="141" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.330781" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1438,193 +1411,193 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>802</line>
+          <line>974</line>
           <properties />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>814</line>
+          <line>986</line>
           <properties />
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>819</line>
+          <line>991</line>
           <properties />
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>805</line>
+          <line>977</line>
           <properties />
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>839</line>
+          <line>1011</line>
           <properties />
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>829</line>
+          <line>1001</line>
           <properties />
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>832</line>
+          <line>1004</line>
           <properties />
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>850</line>
+          <line>1022</line>
           <properties />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>867</line>
+          <line>1039</line>
           <properties />
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>991</line>
+          <line>1163</line>
           <properties />
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>997</line>
+          <line>1169</line>
           <properties />
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1042</line>
+          <line>1214</line>
           <properties />
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1048</line>
+          <line>1220</line>
           <properties />
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1070</line>
+          <line>1242</line>
           <properties />
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1059</line>
+          <line>1231</line>
           <properties />
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1131</line>
+          <line>1303</line>
           <properties />
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1143</line>
+          <line>1315</line>
           <properties />
           <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1146</line>
+          <line>1318</line>
           <properties />
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>985</line>
+          <line>1157</line>
           <properties />
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>715</line>
+          <line>887</line>
           <properties />
           <option name="timeStamp" value="112" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>655</line>
+          <line>827</line>
           <properties />
           <option name="timeStamp" value="114" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>663</line>
+          <line>835</line>
           <properties />
           <option name="timeStamp" value="115" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>662</line>
+          <line>834</line>
           <properties />
           <option name="timeStamp" value="116" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>674</line>
+          <line>846</line>
           <properties />
           <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>672</line>
+          <line>844</line>
           <properties />
           <option name="timeStamp" value="121" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>1256</line>
+          <line>1434</line>
           <properties />
           <option name="timeStamp" value="122" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>751</line>
+          <line>923</line>
           <properties />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>728</line>
+          <line>900</line>
           <properties />
           <option name="timeStamp" value="125" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>761</line>
+          <line>933</line>
           <properties />
           <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>779</line>
+          <line>951</line>
           <properties />
           <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>763</line>
+          <line>935</line>
           <properties />
           <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2361</line>
+          <line>2627</line>
           <properties />
           <option name="timeStamp" value="151" />
         </line-breakpoint>
@@ -1654,127 +1627,127 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2406</line>
+          <line>2672</line>
           <properties />
           <option name="timeStamp" value="183" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2465</line>
+          <line>2731</line>
           <properties />
           <option name="timeStamp" value="184" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2474</line>
+          <line>2740</line>
           <properties />
           <option name="timeStamp" value="185" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2478</line>
+          <line>2744</line>
           <properties />
           <option name="timeStamp" value="186" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2485</line>
+          <line>2751</line>
           <properties />
           <option name="timeStamp" value="188" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2469</line>
+          <line>2735</line>
           <properties />
           <option name="timeStamp" value="189" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2472</line>
+          <line>2738</line>
           <properties />
           <option name="timeStamp" value="190" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2470</line>
+          <line>2736</line>
           <properties />
           <option name="timeStamp" value="191" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2495</line>
+          <line>2761</line>
           <properties />
           <option name="timeStamp" value="195" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2198</line>
+          <line>2464</line>
           <properties />
           <option name="timeStamp" value="209" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2357</line>
+          <line>2623</line>
           <properties />
           <option name="timeStamp" value="210" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2170</line>
+          <line>2436</line>
           <properties />
           <option name="timeStamp" value="223" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2178</line>
+          <line>2444</line>
           <properties />
           <option name="timeStamp" value="226" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2182</line>
+          <line>2448</line>
           <properties />
           <option name="timeStamp" value="227" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2208</line>
+          <line>2474</line>
           <properties />
           <option name="timeStamp" value="236" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2204</line>
+          <line>2470</line>
           <properties />
           <option name="timeStamp" value="237" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2214</line>
+          <line>2480</line>
           <properties />
           <option name="timeStamp" value="238" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2220</line>
+          <line>2486</line>
           <properties />
           <option name="timeStamp" value="239" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2205</line>
+          <line>2471</line>
           <properties />
           <option name="timeStamp" value="240" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2346</line>
+          <line>2612</line>
           <properties />
           <option name="timeStamp" value="244" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2417</line>
+          <line>2683</line>
           <properties />
           <option name="timeStamp" value="246" />
         </line-breakpoint>
@@ -1786,25 +1759,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2412</line>
+          <line>2678</line>
           <properties />
           <option name="timeStamp" value="248" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2413</line>
+          <line>2679</line>
           <properties />
           <option name="timeStamp" value="249" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2400</line>
+          <line>2666</line>
           <properties />
           <option name="timeStamp" value="252" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2401</line>
+          <line>2667</line>
           <properties />
           <option name="timeStamp" value="253" />
         </line-breakpoint>
@@ -1822,67 +1795,67 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2135</line>
+          <line>2401</line>
           <properties />
           <option name="timeStamp" value="259" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2139</line>
+          <line>2405</line>
           <properties />
           <option name="timeStamp" value="260" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2157</line>
+          <line>2423</line>
           <properties />
           <option name="timeStamp" value="261" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2151</line>
+          <line>2417</line>
           <properties />
           <option name="timeStamp" value="262" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2145</line>
+          <line>2411</line>
           <properties />
           <option name="timeStamp" value="263" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>675</line>
+          <line>847</line>
           <properties />
           <option name="timeStamp" value="264" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2191</line>
+          <line>2457</line>
           <properties />
           <option name="timeStamp" value="268" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2190</line>
+          <line>2456</line>
           <properties />
           <option name="timeStamp" value="269" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2192</line>
+          <line>2458</line>
           <properties />
           <option name="timeStamp" value="271" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2194</line>
+          <line>2460</line>
           <properties />
           <option name="timeStamp" value="272" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2195</line>
+          <line>2461</line>
           <properties />
           <option name="timeStamp" value="273" />
         </line-breakpoint>
@@ -1900,18 +1873,72 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2367</line>
+          <line>2633</line>
           <properties />
           <option name="timeStamp" value="283" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
-          <line>2370</line>
+          <line>2636</line>
           <properties />
           <option name="timeStamp" value="284" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>1942</line>
+          <properties />
+          <option name="timeStamp" value="285" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>2159</line>
+          <properties />
+          <option name="timeStamp" value="286" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>97</line>
+          <properties />
+          <option name="timeStamp" value="290" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="291" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>603</line>
+          <properties />
+          <option name="timeStamp" value="293" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>612</line>
+          <properties />
+          <option name="timeStamp" value="294" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>770</line>
+          <properties />
+          <option name="timeStamp" value="295" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>676</line>
+          <properties />
+          <option name="timeStamp" value="299" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java</url>
+          <line>685</line>
+          <properties />
+          <option name="timeStamp" value="300" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="285" />
+      <option name="time" value="301" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="MTI_PII">
@@ -1926,74 +1953,47 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/res/layout/devicefmt.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/service_grounp_fmt.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/service_page.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/service_child_fmt.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/msg_to_fmt.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/msg_from_fmt.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="android-dummy://MTI_PII/MTI_PII/Translations Editor">
-      <provider selected="true" editor-type-id="string-resource-editor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/util/ArrayMap.java">
@@ -2014,14 +2014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="4797" column="18" selection-start-line="4797" selection-start-column="18" selection-end-line="4797" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/integers.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2113,7 +2105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33240223">
           <caret line="168" column="13" selection-start-line="168" selection-start-column="13" selection-end-line="168" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2200,10 +2191,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37974682">
           <caret line="815" column="23" selection-start-line="815" selection-start-column="23" selection-end-line="815" selection-end-column="23" />
-          <folding>
-            <element signature="e#38254#38255#0" expanded="false" />
-            <element signature="e#38284#38285#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2243,14 +2230,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/java/io/PrintStream.java">
@@ -2270,34 +2257,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CRC16.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.03125">
+        <state vertical-scroll-proportion="0.0">
           <caret line="228" column="8" selection-start-line="228" selection-start-column="8" selection-end-line="228" selection-end-column="26" />
+          <folding>
+            <element signature="e#8892#8893#0" expanded="false" />
+            <element signature="e#8932#8933#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9307833">
+          <caret line="194" column="0" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/service_grounp_fmt.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30645162">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/service_page.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/ServiceActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33224756">
-          <caret line="65" column="47" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="47" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+    </entry>
+    <entry file="android-dummy://MTI_PII/MTI_PII/Translations Editor">
+      <provider selected="true" editor-type-id="string-resource-editor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.48">
-          <caret line="85" column="42" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
+        <state vertical-scroll-proportion="-4.84">
+          <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="116" column="40" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.53125">
+          <caret line="303" column="0" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
           <folding>
             <element signature="n#RelativeLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
+            <element signature="e#11242#11266#0" expanded="true" />
+            <element signature="e#11457#11489#0" expanded="true" />
+            <element signature="e#11670#11699#0" expanded="true" />
+            <element signature="e#12520#12549#0" expanded="true" />
+            <element signature="e#15841#15868#0" expanded="true" />
             <element signature="n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
             <element signature="n#TextView#1;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
             <element signature="n#TextView#2;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
@@ -2316,11 +2347,7 @@
             <element signature="n#EditText#6;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
             <element signature="n#TextView#9;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
             <element signature="n#EditText#7;n#GridLayout#3;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="n#TextView#0;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="n#TextView#1;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
             <element signature="n#TextView#2;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
-            <element signature="n#EditText#0;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
             <element signature="n#TextView#3;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
             <element signature="n#EditText#1;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
             <element signature="n#TextView#4;n#GridLayout#4;n#LinearLayout#0;n#LinearLayout#0;n#!!top" expanded="false" />
@@ -2339,14 +2366,11 @@
           </folding>
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/res/values/integers.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9307833">
-          <caret line="194" column="0" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -2354,7 +2378,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding>
             <element signature="e#680#730#0" expanded="false" />
           </folding>
@@ -2363,46 +2387,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.337963">
-          <caret line="2364" column="13" selection-start-line="2364" selection-start-column="13" selection-end-line="2364" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.34441087">
+          <caret line="109" column="17" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="17" />
           <folding>
-            <element signature="e#3029#4141#0" expanded="true" />
-            <element signature="e#4140#4141#0" expanded="true" />
-            <element signature="class#62412:62648" expanded="false" />
-            <element signature="method#onItemSelected#0;class#62412:62648" expanded="false" />
-            <element signature="method#onNothingSelected#0;class#62412:62648" expanded="false" />
-            <element signature="class#62744:63983" expanded="false" />
-            <element signature="method#onNothingSelected#0;class#64290:69891" expanded="false" />
-            <element signature="e#70368#70765#0" expanded="true" />
-            <element signature="e#70764#70765#0" expanded="true" />
-            <element signature="e#70819#71165#0" expanded="true" />
-            <element signature="e#71164#71165#0" expanded="true" />
-            <element signature="e#71208#71522#0" expanded="true" />
-            <element signature="e#71521#71522#0" expanded="true" />
-            <element signature="e#71566#71882#0" expanded="true" />
-            <element signature="e#71881#71882#0" expanded="true" />
-            <element signature="e#71928#72248#0" expanded="true" />
-            <element signature="e#72247#72248#0" expanded="true" />
-            <element signature="e#73477#73504#0" expanded="true" />
-            <element signature="e#73544#73545#0" expanded="true" />
-            <element signature="e#73593#73594#0" expanded="true" />
-            <element signature="e#73632#73633#0" expanded="true" />
-            <element signature="e#73664#73665#0" expanded="true" />
-            <element signature="e#73721#73722#0" expanded="true" />
-            <element signature="e#73760#73761#0" expanded="true" />
-            <element signature="e#73813#73814#0" expanded="true" />
-            <element signature="e#73837#73838#0" expanded="true" />
+            <element signature="class#70225:70461" expanded="false" />
+            <element signature="method#onItemSelected#0;class#70225:70461" expanded="false" />
+            <element signature="method#onNothingSelected#0;class#70225:70461" expanded="false" />
+            <element signature="class#70557:71796" expanded="false" />
+            <element signature="method#onNothingSelected#0;class#72103:78042" expanded="false" />
             <element signature="method#getView#0;class#ChatAdapater#0;class#TalkActivity#0" expanded="false" />
-            <element signature="e#74632#74633#0" expanded="true" />
-            <element signature="e#74652#74653#0" expanded="true" />
-            <element signature="e#74680#74681#0" expanded="true" />
-            <element signature="e#74699#74700#0" expanded="true" />
-            <element signature="e#74734#74735#0" expanded="true" />
-            <element signature="e#74754#74755#0" expanded="true" />
-            <element signature="e#74939#75834#0" expanded="true" />
-            <element signature="e#75833#75834#0" expanded="true" />
-            <element signature="e#92660#92661#0" expanded="true" />
-            <element signature="e#92697#92698#0" expanded="true" />
           </folding>
         </state>
       </provider>

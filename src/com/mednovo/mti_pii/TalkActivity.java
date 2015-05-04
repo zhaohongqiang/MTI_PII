@@ -407,6 +407,16 @@ public class TalkActivity extends Activity implements OnClickListener {
 		final byte[] tmp_System_time = new byte[5];
 
 		/**
+		 * @param 设置基础率数据定义
+		 */
+		final int[] basal_rate_names = new int[]{
+				R.id.hour_value1,R.id.hour_value2,R.id.hour_value3,R.id.hour_value4,R.id.hour_value5,R.id.hour_value6,
+				R.id.hour_value7,R.id.hour_value8,R.id.hour_value9,R.id.hour_value10,R.id.hour_value11,R.id.hour_value12,
+				R.id.hour_value13,R.id.hour_value14,R.id.hour_value15,R.id.hour_value16,R.id.hour_value17,R.id.hour_value18,
+				R.id.hour_value19,R.id.hour_value20,R.id.hour_value21,R.id.hour_value22,R.id.hour_value23,R.id.hour_value24
+		};
+
+		/**
 		 * @param 运行状态数据定义
 		 */
 		String Basal_Infusion_value = "";
@@ -590,13 +600,175 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 		switch (send_fmt_int){
 			case CommandsFound.SET_FACTORYDATA:
+				if(CRC16_len == 0x08){//响应设置出厂数据
+					if((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1]) ) {
+						if(((byte) 0x00) == tmp_byte[3]){//返回结果
+							receive = "设置成功";
+						}else{
+							receive = "设置失败";
+						}
+					}
+				}else {//查询出厂设置数据
+					if ((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1])) {
+						System.arraycopy(tmp_byte, 3, tmp_Serial_Num, 0, 13);
+						System.arraycopy(tmp_byte, 17, tmp_CompensationStepNum, 0, 2);
+						System.arraycopy(tmp_byte, 19, tmp_Driving_scheme, 0, 1);
+						try {
+							Serial_Num_txt = new String(tmp_Serial_Num, "UTF-8");
+						} catch (UnsupportedEncodingException e) {
+							e.printStackTrace();
+						}
+						CompensationStepNum_txt = bytesToHexStringToDecString(tmp_CompensationStepNum);
+						Driving_scheme_txt = bytesToHexStringToDecString(tmp_Driving_scheme);
+
+						Serial_Num.setText(Serial_Num_txt.toCharArray(), 0, Serial_Num_txt.length());
+						CompensationStepNum.setText(CompensationStepNum_txt.toCharArray(), 0, CompensationStepNum_txt.length());
+						Driving_scheme.setText(Driving_scheme_txt.toCharArray(), 0, Driving_scheme_txt.length());
+
+						if (((byte) 0x00) == tmp_byte[16]) {//蓝牙允许
+							Open_Bluetooth.setChecked(true);
+						} else {
+							Open_Bluetooth.setChecked(false);
+						}
+
+						if (((byte) 0x00) == tmp_byte[20]) {//更改浓度
+							Concentration_change.setChecked(true);
+						} else {
+							Concentration_change.setChecked(false);
+						}
+
+						System.arraycopy(tmp_byte, 21, tmp_version_software, 0, 6);
+						try {
+							version_software_txt = new String(tmp_version_software, "UTF-8");
+						} catch (UnsupportedEncodingException e) {
+							e.printStackTrace();
+						}
+						version_software.setText(version_software_txt.toCharArray(), 0, version_software_txt.length());
+						receive = "读取默认值成功！";
+					}
+				}
+				break;
 			case CommandsFound.SET_SYSSETDATA:
+				if(CRC16_len == 0x08){//响应设置系统数据
+					if((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1]) ) {
+						if(((byte) 0x00) == tmp_byte[3]){//返回结果
+							receive = "设置成功";
+						}else{
+							receive = "设置失败";
+						}
+					}
+				}else {//查询系统设置数据
+					if ((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1])) {
+						System.arraycopy(tmp_byte,3,tmp_Max_meal_bolus,0,2);
+						System.arraycopy(tmp_byte,5,tmp_Max_basal_rate,0,2);
+						System.arraycopy(tmp_byte,7,tmp_Max_hours_bolus_hours,0,2);
+						System.arraycopy(tmp_byte,9,tmp_Max_hours_bolus_dosevalue,0,2);
+						System.arraycopy(tmp_byte,11,tmp_Max_daily_total,0,2);
+						System.arraycopy(tmp_byte,13,tmp_Concentration_set,0,1);
+						//System.arraycopy(tmp_byte,14,tmp_System_flag,0,1);
+						System.arraycopy(tmp_byte, 15, tmp_System_time, 0, 5);
+
+						Max_meal_bolus_txt = tmp_two_decimal_places(tmp_Max_meal_bolus);
+						Max_basal_rate_txt = tmp_two_decimal_places(tmp_Max_basal_rate);
+						Max_hours_bolus_hours_txt = bytesToHexStringToDecString(tmp_Max_hours_bolus_hours);
+						Max_hours_bolus_dosevalue_txt = tmp_two_decimal_places(tmp_Max_hours_bolus_dosevalue);
+						Max_daily_total_txt = tmp_two_decimal_places(tmp_Max_daily_total);
+
+						max_meal_bolus.setText(Max_meal_bolus_txt);
+						//max_meal_bolus.setText(Max_meal_bolus_txt.toCharArray(), 0, Max_meal_bolus_txt.length());
+						max_basal_rate.setText(Max_basal_rate_txt);
+						max_hours_bolus_Hours.setText(Max_hours_bolus_hours_txt);
+						max_hours_bolus_Dose_value.setText(Max_hours_bolus_dosevalue_txt);
+						max_daily_total.setText(Max_daily_total_txt);
+
+
+						//System_flag = byteToBit(tmp_byte[14]);
+						System_flag = system_set_status(tmp_byte[14]);
+
+						System_year_txt = byteToHexStringToDecString(tmp_System_time[0]);
+						System_month_txt = byteToHexStringToDecString(tmp_System_time[1]);
+						System_day_txt = byteToHexStringToDecString(tmp_System_time[2]);
+						System_hour_txt = byteToHexStringToDecString(tmp_System_time[3]);
+						System_min_txt = byteToHexStringToDecString(tmp_System_time[4]);
+
+						System_year_txt = tmp_add_zero(System_year_txt);//个位数加零
+						System_month_txt = tmp_add_zero(System_month_txt);//个位数加零
+						System_day_txt = tmp_add_zero(System_day_txt);
+						System_hour_txt = tmp_add_zero(System_hour_txt);
+						System_min_txt = tmp_add_zero(System_min_txt);
+
+						time_set.setText(String.format("%s-%s-%s %s:%s",
+								System_year_txt, System_month_txt,System_day_txt,
+								System_hour_txt,System_min_txt));
+
+						/*receive = "最大大剂量  "+ Max_meal_bolus_txt + " U" + "\r\n"
+								+ "最大基础率  " + Max_basal_rate_txt + " U/h" + "\r\n"
+								+ "最大时段量  "
+								+ Max_hours_bolus_hours_txt + " 小时 " + Max_hours_bolus_dosevalue_txt + "  U" + "\r\n"
+								+ "最大日总量  " + Max_daily_total_txt + " U" + "\r\n";*/
+
+						if(((byte) 0x00) == tmp_byte[13]){//浓度设定
+							Concentration_set.setText("U40");
+							receive = receive + "浓度设定： U40" + "\r\n";
+						}else{
+							Concentration_set.setText("U100");
+							receive = receive + "浓度设定： U100" + "\r\n";
+						}
+
+						/*receive = receive + System_flag
+								+ "日期  " + System_year_txt + "-"
+								+	System_month_txt + "-"
+								+ System_day_txt + "\r\n"
+								+ "时间  " + System_hour_txt + ":" + System_min_txt;*/
+						receive = "读取默认值成功！";
+					}
+				}
+				break;
 			case CommandsFound.SET_BASALDATA:
-				if((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1]) ) {
-					if(((byte) 0x00) == tmp_byte[3]){//返回结果
-						receive = "设置成功";
-					}else{
-						receive = "设置失败";
+				if(CRC16_len == 0x08){//响应设置基础率数据
+					if((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1]) ) {
+						if(((byte) 0x00) == tmp_byte[3]){//返回结果
+							receive = "设置成功";
+						}else{
+							receive = "设置失败";
+						}
+					}
+				}else {//查询基础率设置数据
+					if ((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1])) {//数据接收完整
+						System.arraycopy(tmp_byte, 3, tmp_BasalData_value, 0, 48);
+
+						//receive = "剂量值" + "\r\n";
+						for(int i=0;i<48;i+=2){
+							BasalData_tmp_value[i/2] = twobytesTodecimal_places(tmp_BasalData_value[i],tmp_BasalData_value[i+1]);
+							//receive = receive + BasalHour_tmp[i/2] + BasalData_tmp_value[i/2] + " U/h" + "\r\n";
+						}
+						hour_value1.setText(BasalData_tmp_value[0]);
+						hour_value2.setText(BasalData_tmp_value[1]);
+						hour_value3.setText(BasalData_tmp_value[2]);
+						hour_value4.setText(BasalData_tmp_value[3]);
+						hour_value5.setText(BasalData_tmp_value[4]);
+						hour_value6.setText(BasalData_tmp_value[5]);
+						hour_value7.setText(BasalData_tmp_value[6]);
+						hour_value8.setText(BasalData_tmp_value[7]);
+						hour_value9.setText(BasalData_tmp_value[8]);
+						hour_value10.setText(BasalData_tmp_value[9]);
+						hour_value11.setText(BasalData_tmp_value[10]);
+						hour_value12.setText(BasalData_tmp_value[11]);
+						hour_value13.setText(BasalData_tmp_value[12]);
+						hour_value14.setText(BasalData_tmp_value[13]);
+						hour_value15.setText(BasalData_tmp_value[14]);
+						hour_value16.setText(BasalData_tmp_value[15]);
+						hour_value17.setText(BasalData_tmp_value[16]);
+						hour_value18.setText(BasalData_tmp_value[17]);
+						hour_value19.setText(BasalData_tmp_value[18]);
+						hour_value20.setText(BasalData_tmp_value[19]);
+						hour_value21.setText(BasalData_tmp_value[20]);
+						hour_value22.setText(BasalData_tmp_value[21]);
+						hour_value23.setText(BasalData_tmp_value[22]);
+						hour_value24.setText(BasalData_tmp_value[23]);
+
+						receive = "读取默认值成功！";
+						Log.v("zhq_log  receive ","" + receive);
 					}
 				}
 				break;
@@ -1220,8 +1392,10 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private String system_set_status(byte b) {
 		String result = "";
 		if((byte) 0 == (byte) ((b >> 0) & 0x1)){
+			lcd_setup.setChecked(false);
 			result = "液晶设置状态： 不常显示\n";
-		}else{
+		}else {
+			lcd_setup.setChecked(true);
 			result = "液晶设置状态： 常显示\n";
 		}
 		if((byte) 0 == (byte) ((b >> 1) & 0x1)){
@@ -1230,13 +1404,17 @@ public class TalkActivity extends Activity implements OnClickListener {
 			result += "液晶开关状态： 开\n";
 		}
 		if((byte) 0 == (byte) ((b >> 2) & 0x1)){
+			ring_setup.setChecked(false);
 			result += "鸣笛设置状态： 不鸣笛\n";
 		}else{
+			ring_setup.setChecked(true);
 			result += "鸣笛设置状态： 鸣笛\n";
 		}
 		if((byte) 0 == (byte) ((b >> 3) & 0x1)){
+			language_set.setChecked(false);
 			result += "语言设置状态： English\n";
 		}else{
+			language_set.setChecked(true);
 			result += "语言设置状态： 中文\n";
 		}
 		if((byte) 0 == (byte) ((b >> 4) & 0x1)){
@@ -1755,12 +1933,14 @@ public class TalkActivity extends Activity implements OnClickListener {
 				system_set.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
 				basal_rate_set_one.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
 				generalsend_command.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
-
+				button_success.setVisibility(View.GONE);
 
 				switch (send_fmt_int) {
 					case CommandsFound.SET_FACTORYDATA:
 						Log.v("zhq_log CommandsFound SET_FACTORYDATA ", "" + CommandsFound.SET_FACTORYDATA);
 						factory_data.setVisibility(View.VISIBLE);//可见
+						button_success.setVisibility(View.VISIBLE);
+						Read_SettingData(send_fmt_int + 1);//查询数据
 						break;
 					case CommandsFound.READ_FACTORYDATA:
 						Log.v("zhq_log CommandsFound READ_FACTORYDATA ", "" + CommandsFound.READ_FACTORYDATA);
@@ -1768,6 +1948,8 @@ public class TalkActivity extends Activity implements OnClickListener {
 					case CommandsFound.SET_SYSSETDATA:
 						Log.v("zhq_log CommandsFound", "" + CommandsFound.SET_SYSSETDATA);
 						system_set.setVisibility(View.VISIBLE);//可见
+						button_success.setVisibility(View.VISIBLE);
+						Read_SettingData(send_fmt_int + 1);//查询数据
 						break;
 					case CommandsFound.READ_SYSSETDATA:
 						Log.v("zhq_log CommandsFound", "" + CommandsFound.READ_SYSSETDATA);
@@ -1775,6 +1957,8 @@ public class TalkActivity extends Activity implements OnClickListener {
 					case CommandsFound.SET_BASALDATA:
 						Log.v("zhq_log CommandsFound", "" + CommandsFound.SET_BASALDATA);
 						basal_rate_set_one.setVisibility(View.VISIBLE);//可见
+						button_success.setVisibility(View.VISIBLE);
+						Read_SettingData(send_fmt_int + 1);//查询数据
 						break;
 					case CommandsFound.READ_BASALDATA:
 						Log.v("zhq_log CommandsFound", "" + CommandsFound.READ_BASALDATA);
@@ -1884,11 +2068,11 @@ public class TalkActivity extends Activity implements OnClickListener {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if (isChecked) {
 					//选中时 do some thing
-					Open_Bluetooth.setText("开");
+					//Open_Bluetooth.setText("开");
 					GeneralCommands.Bluetooth_Allow = "00";
 				} else {
 					//非选中时 do some thing
-					Open_Bluetooth.setText("关");
+					//Open_Bluetooth.setText("关");
 					GeneralCommands.Bluetooth_Allow = "FF";
 				}
 			}
@@ -1970,6 +2154,88 @@ public class TalkActivity extends Activity implements OnClickListener {
 			descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
 			Tools.mBLEService.mBluetoothGatt.writeDescriptor(descriptor);
 		}
+	}
+
+	private void Read_SettingData(int send_fmt_int) {
+		byte[] sendmsg = Read_SetData(send_fmt_int);
+		if (sendmsg == null) {
+			return;
+		}
+		Log.v("zhq_log 常用 sendmsg", "" + sendmsg);
+
+		if(sendmsg.length == sendmsg[1]){
+
+		}else{
+			Toast.makeText(getApplicationContext(), "数据长度错误", Toast.LENGTH_LONG)
+					.show();
+			return;
+		}
+
+		int tmp = (sendmsg.length - 1)/20 + 1;
+		//byte[] newsendmsg new byte[20];
+		if(sendmsg.length <= 20){
+			mBluetoothGattCharacteristic.setValue(sendmsg);
+			Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
+		}
+		else {//发送数据超过20个字节时
+			for (int i = 0;i < tmp;i++) {
+				int j = (i == tmp - 1) ? (sendmsg.length - i*20) : 20;
+				byte[] newsendmsg  = new byte[j];
+
+				System.arraycopy(sendmsg, 0 + i*20, newsendmsg, 0, j);
+				mBluetoothGattCharacteristic.setValue(newsendmsg);
+				boolean status = Tools.mBLEService.mBluetoothGatt.writeCharacteristic(mBluetoothGattCharacteristic);
+				Log.v("zhq_log status", "" + status);
+				System.out.println(Arrays.toString(newsendmsg));
+			}
+		}
+		return;
+
+	}
+
+	private byte[] Read_SetData(int send_fmt_int) {
+		String tmp_str = "";//发送数据
+		byte[] tmp_byte = null;
+		byte[] write_msg_byte = null;
+		String tmp_contror_code = "00";//控制码
+
+		Log.v("zhq_log CommandsFound  send_fmt_int ",""+ send_fmt_int);
+
+		tmp_str = DataTransmission.Data_Transmission(
+				SEND_SELCET[send_fmt_int],send_fmt_int,tmp_contror_code);
+
+		if (0 == tmp_str.length())
+			return null;
+
+		tmp_byte = tmp_str.getBytes();
+		write_msg_byte = new byte[tmp_byte.length / 2 + tmp_byte.length % 2];
+		for (int i = 0; i < tmp_byte.length; i++) {
+			if ((tmp_byte[i] <= '9') && (tmp_byte[i] >= '0')) {
+				if (0 == i % 2)
+					write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - '0') * 16) & 0xFF);
+				else
+					write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - '0') & 0xFF);
+			} else {
+				if (0 == i % 2)
+					write_msg_byte[i / 2] = (byte) (((tmp_byte[i] - 'A' + 10) * 16) & 0xFF);
+				else
+					write_msg_byte[i / 2] |= (byte) ((tmp_byte[i] - 'A' + 10) & 0xFF);
+			}
+		}
+
+		if (!Tools.mBLEService.isConnected()) {
+			Toast.makeText(getApplicationContext(), "已断开连接", Toast.LENGTH_LONG)
+					.show();
+			return null;
+		}
+
+		// 显示
+		if (false) {
+			ChatMsgFmt entity = new ChatMsgFmt("手机端", SEND_SELCET[send_fmt_int], MESSAGE_FROM.ME);
+			chat_list.add(entity);
+			chat_list_adapter.notifyDataSetChanged();
+		}
+		return write_msg_byte;
 	}
 
 	// 消息适配器

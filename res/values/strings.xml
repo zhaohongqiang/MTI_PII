@@ -54,7 +54,7 @@
     <string name="default_max_daily_total">60</string>
     <string name="daily_total_unit">U</string>
 
-    <string name="Concentration_set">浓度(单位/ml)</string>
+    <string name="Concentration_set">浓度(IU/ml)</string>//浓度(单位/ml)
     <string name="default_Concentration_set">U40</string>
     <string name="system_set">系统设置值</string>
     <string name="lcd_setup">液晶</string>
