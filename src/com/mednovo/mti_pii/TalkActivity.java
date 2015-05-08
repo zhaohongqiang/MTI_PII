@@ -104,7 +104,9 @@ public class TalkActivity extends Activity implements OnClickListener {
 				}
 				// 读取数据
 				if (BLEService.ACTION_READ_OVER.equals(action)) {
-					dis_recive_msg(intent.getByteArrayExtra("value"));
+					//if(" " == receive_bytes[0])
+						dis_recive_msg(intent.getByteArrayExtra("value"));
+					Analysis_all_recive_msg(receive_bytes);
 					//Analysis_recive_msg(intent.getByteArrayExtra("value"));
 					return;
 				}
@@ -179,9 +181,50 @@ public class TalkActivity extends Activity implements OnClickListener {
 		if (talking_stopdis_btn.isChecked()) {
 			return; // 停止显示
 		}
+		String tmp = "";
+
 		if (0 == tmp_byte.length) {
 			return;
 		}
+
+		if(false){//其他读取命令
+			switch (read_fmt_int) {
+				case 0: // 字符串显示
+					try {
+						//tmp = new String(tmp_byte, "GB2312");
+						tmp = new String(tmp_byte, "utf-8");//修改读取格式为utf-8型
+					} catch (UnsupportedEncodingException e) {
+						e.printStackTrace();
+					}
+					break;
+				case 1: // 16进制显示
+					for (int i = 0; i < tmp_byte.length; i++) {
+						String hex = Integer.toHexString(tmp_byte[i] & 0xFF);
+						if (hex.length() == 1) {
+							hex = '0' + hex;
+						}
+						tmp += ' ';
+						tmp = tmp + hex;
+					}
+					break;
+				case 2: // 10进制显示
+					int count = 0;
+					for (int i = 0; i < tmp_byte.length; i++) {
+						count *= 256;
+						count += (tmp_byte[tmp_byte.length - 1 - i] & 0xFF);
+					}
+					tmp = Integer.toString(count);
+					break;
+				default:
+					break;
+			}
+
+			//ChatMsgFmt entity2 = new ChatMsgFmt("Device", tmp, MESSAGE_FROM.OTHERS);
+			ChatMsgFmt entity2 = new ChatMsgFmt("蓝牙端", tmp, MESSAGE_FROM.OTHERS);
+			chat_list.add(entity2);
+			chat_list_adapter.notifyDataSetChanged();
+		}
+
 		switch (send_fmt_int){
 			case CommandsFound.SET_FACTORYDATA:
 			case CommandsFound.SET_SYSSETDATA:
@@ -1381,12 +1424,15 @@ public class TalkActivity extends Activity implements OnClickListener {
 				break;
 		}
 
-		//ChatMsgFmt entity2 = new ChatMsgFmt("Device", tmp, MESSAGE_FROM.OTHERS);
-		//ChatMsgFmt entity2 = new ChatMsgFmt("蓝牙端", tmp, MESSAGE_FROM.OTHERS);
-		ChatMsgFmt entity2 = new ChatMsgFmt("蓝牙端", receive, MESSAGE_FROM.OTHERS);
-		chat_list.add(entity2);
-		chat_list_adapter.notifyDataSetChanged();
-
+		if(receive == null || receive.length() <= 0) {
+			System.out.println("zhq_log 空的");
+		}else{
+			//ChatMsgFmt entity2 = new ChatMsgFmt("Device", tmp, MESSAGE_FROM.OTHERS);
+			//ChatMsgFmt entity2 = new ChatMsgFmt("蓝牙端", tmp, MESSAGE_FROM.OTHERS);
+			ChatMsgFmt entity2 = new ChatMsgFmt("蓝牙端", receive, MESSAGE_FROM.OTHERS);
+			chat_list.add(entity2);
+			chat_list_adapter.notifyDataSetChanged();
+		}
 	}
 
 	private String system_set_status(byte b) {
@@ -1678,7 +1724,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private EditText send_time_edit;
 	private LinearLayout writeable_Layout;
     private LinearLayout alwaysuse_Layout;
-
+	private LinearLayout command_layout;
 
     private LinearLayout generalsend_command;
 	private GridLayout factory_data;
@@ -1776,6 +1822,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 		send_time_edit = (EditText) findViewById(R.id.send_time_edit);
 		writeable_Layout = (LinearLayout) findViewById(R.id.writeable_Layout);
         alwaysuse_Layout = (LinearLayout) findViewById(R.id.alwaysuse_Layout);
+		command_layout = (LinearLayout) findViewById(R.id.command_layout);
 
         generalsend_command = (LinearLayout) findViewById(R.id.generalsend_command);
 
@@ -2135,17 +2182,26 @@ public class TalkActivity extends Activity implements OnClickListener {
 		proper = mBluetoothGattCharacteristic.getProperties();
 		if (0 != (proper & 0x02)) { // 可读
 			talking_read_btn.setVisibility(View.VISIBLE);
+			command_layout.setVisibility(View.GONE);
 		}
 		if ((0 != (proper & BluetoothGattCharacteristic.PROPERTY_WRITE))
 				|| (0 != (proper & BluetoothGattCharacteristic.PROPERTY_WRITE_NO_RESPONSE))) { // 可写
 			writeable_Layout.setVisibility(View.VISIBLE);
-            alwaysuse_Layout.setVisibility(View.INVISIBLE);//不可见
-            if(0 != (proper & 0x02)) {//可读
-                alwaysuse_Layout.setVisibility(View.VISIBLE);//可见 打开常用命令
+            //alwaysuse_Layout.setVisibility(View.INVISIBLE);//不可见
+			command_layout.setVisibility(View.GONE);
+
+			if(0 != (proper & 0x02)) {//可读
+                //alwaysuse_Layout.setVisibility(View.VISIBLE);//可见 打开常用命令
+				if ((0 != (proper & BluetoothGattCharacteristic.PROPERTY_NOTIFY))
+						|| (0 != (proper & BluetoothGattCharacteristic.PROPERTY_INDICATE))) { // 通知
+					writeable_Layout.setVisibility(View.GONE);
+					command_layout.setVisibility(View.VISIBLE);
+				}
             }
 		}
 		if ((0 != (proper & BluetoothGattCharacteristic.PROPERTY_NOTIFY))
 				|| (0 != (proper & BluetoothGattCharacteristic.PROPERTY_INDICATE))) { // 通知
+			//command_layout.setVisibility(View.INVISIBLE);
 			Tools.mBLEService.mBluetoothGatt.setCharacteristicNotification(
 					mBluetoothGattCharacteristic, true);
 			BluetoothGattDescriptor descriptor = mBluetoothGattCharacteristic
@@ -2335,7 +2391,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 			}
 			sendontime_handl.sendEmptyMessageDelayed(0, delay_time_int);
 
-			byte[] sendmsg = getMsgEdit(true); // 发送数据 sendmsg = getMsgEdit(false); // 发送数据
+			byte[] sendmsg = getNewMsgEdit(true); // 发送数据 sendmsg = getMsgEdit(false); // 发送数据
 			if (sendmsg == null) {
 				return;
 			}

@@ -26,6 +26,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 import android.widget.ExpandableListView.OnChildClickListener;
@@ -173,6 +175,11 @@ public class ServiceActivity extends Activity {
 	private void getDefaultName() {
 		// 开启一个缓冲对话框
 		pd = new ProgressDialog(this);
+		/*Window window = pd.getWindow();
+		WindowManager.LayoutParams lp = window.getAttributes();
+		// 设置透明度为0.3
+		lp.alpha = 0.6f;
+		window.setAttributes(lp);*/
 		pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 		pd.setTitle("正在加载...");
 		pd.setMessage("正在连接");

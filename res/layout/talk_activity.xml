@@ -81,7 +81,7 @@
         android:transcriptMode="alwaysScroll" />
 
     <LinearLayout
-        android:id="@+id/writeable_Layout"
+        android:id="@+id/command_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -89,7 +89,8 @@
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/alwaysuse_Layout">
+            android:id="@+id/alwaysuse_Layout"
+            android:weightSum="1">
 
             <TextView
                 android:id="@+id/AlwaysUse"
@@ -164,7 +165,10 @@
                 android:textOff="@string/No"
                 android:id="@+id/open_bluetooth"
                 android:visibility="visible"
-                android:checked="true" />
+                android:checked="true"
+                android:clickable="false"
+                android:enabled="true"
+                android:focusable="false" />
 
             <EditText
                 android:id="@+id/open_bluetooth_read"
@@ -1394,91 +1398,100 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
 
             <CheckBox
                 android:id="@+id/send_onTime_checkbox"
                 android:text="定时发送"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
+                android:layout_width="wrap_content"
+                android:visibility="visible"/>
 
             <EditText
                 android:text="1000"
                 android:id="@+id/send_time_edit"
-                android:layout_width="80dp"
+                android:layout_width="65dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:visibility="visible"/>
 
             <TextView
                 android:text="ms"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:visibility="visible"/>
 
             <Button
-                style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="完成"
-                android:id="@+id/button_success" />
+                android:layout_marginLeft="10dp"
+                android:text="设置完成"
+                android:id="@+id/button_success"
+                android:background="@drawable/devicefmt"
+                android:layout_marginBottom="5dp" />
 
             <Button
                 android:id="@+id/General_sendbutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/frommsgshp"
-                android:text="常用发送"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <Spinner
-                android:id="@+id/write_fmt_select"
-                android:layout_width="70dp"
-                android:layout_height="wrap_content" />
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" >
-
-                <EditText
-                    android:id="@+id/edit_string_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/edit_hex_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:digits="@string/Input_digits"
-                    android:textSize="20sp"
-                    android:visibility="gone" />
-
-                <EditText
-                    android:id="@+id/edit_shi_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:textSize="20sp"
-                    android:visibility="gone" />
-            </FrameLayout>
-
-            <Button
-                android:id="@+id/sendbuttonid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:background="@drawable/btnshape"
-                android:text="自定义发送"
+                android:text="发送"
                 android:textSize="20sp" />
         </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/writeable_Layout"
+        android:visibility="gone" >
+
+        <Spinner
+            android:id="@+id/write_fmt_select"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <EditText
+                android:id="@+id/edit_string_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edit_hex_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/Input_digits"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edit_shi_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/sendbuttonid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btnshape"
+            android:text="自定义发送"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </LinearLayout>
