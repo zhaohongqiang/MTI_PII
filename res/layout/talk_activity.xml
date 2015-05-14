@@ -155,7 +155,22 @@
                 android:textColor="#ff000000"
                 android:layout_marginLeft="10dp"/>
 
-            <Switch
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:thumbTextPadding="10dp"
+                android:switchMinWidth="56dp"
+                android:textOn=""
+                android:textOff=""
+                android:background="@android:color/transparent"
+                android:button="@drawable/checkbox_iphone"
+                android:id="@+id/open_bluetooth"
+                android:visibility="visible"
+                android:checked="true"
+                android:clickable="false" />
+
+            <!--<Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="2"
@@ -166,9 +181,8 @@
                 android:id="@+id/open_bluetooth"
                 android:visibility="visible"
                 android:checked="true"
-                android:clickable="false"
-                android:enabled="true"
-                android:focusable="false" />
+                android:clickable="false" />
+            -->//修改为自定义的按钮之前
 
             <EditText
                 android:id="@+id/open_bluetooth_read"
@@ -188,6 +202,20 @@
                 android:textColor="#ff000000"
                 android:layout_marginLeft="10dp" />
 
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:thumbTextPadding="10dp"
+                android:switchMinWidth="56dp"
+                android:textOn=""
+                android:textOff=""
+                android:background="@android:color/transparent"
+                android:button="@drawable/checkbox_iphone"
+                android:id="@+id/Concentration_change"
+                android:visibility="visible" />
+
+            <!--修改为自定义的按钮之前
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -198,6 +226,7 @@
                 android:textOff="@string/Refuse"
                 android:id="@+id/Concentration_change"
                 android:visibility="visible" />
+             -->
 
             <EditText
                 android:id="@+id/Concentration_change_read"
@@ -478,6 +507,19 @@
                 android:textColor="#ff000000"
                 android:layout_marginLeft="10dp" />
 
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumbTextPadding="10dp"
+                android:switchMinWidth="56dp"
+                android:textOn=""
+                android:textOff=""
+                android:background="@android:color/transparent"
+                android:button="@drawable/checkbox_iphone"
+                android:id="@+id/ring_setup"
+                android:layout_columnSpan="4"
+                android:checked="true" />
+            <!--修改自定义按钮之前
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -488,6 +530,7 @@
                 android:id="@+id/ring_setup"
                 android:layout_columnSpan="4"
                 android:checked="true" />
+            -->
 
             <TextView
                 android:id="@+id/set8_3"
@@ -509,6 +552,7 @@
                 android:textOff="@string/English"
                 android:id="@+id/language_set"
                 android:layout_columnSpan="4"
+                android:clickable="false"
                 android:checked="true" />
 
         </GridLayout>
@@ -1437,9 +1481,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/btnshape"
                 android:text="发送"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/selector" />
         </LinearLayout>
 
     </LinearLayout>

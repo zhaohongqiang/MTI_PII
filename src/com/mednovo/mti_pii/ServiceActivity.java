@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import com.mednovo.ProgressDialog_myself.CustomProgressDialog;
 import com.mednovo.tools.SampleGattAttributes;
 import com.mednovo.tools.Tools;
 import com.mednovo.mti_pii.R;
@@ -129,6 +130,20 @@ public class ServiceActivity extends Activity {
 				return false;
 			}
 		});
+
+		service_list_view.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+
+			@Override
+			public void onGroupExpand(int groupPosition) {
+				for (int i = 0, count = service_list_view
+						.getExpandableListAdapter().getGroupCount(); i < count; i++) {
+					if (groupPosition != i) {// 关闭其他分组
+						service_list_view.collapseGroup(i);
+					}
+				}
+			}
+
+		});
 	}
 
 	// 获取名字
@@ -142,7 +157,8 @@ public class ServiceActivity extends Activity {
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
 			service_list_adapter.notifyDataSetChanged();
-			pd.dismiss();
+			//pd.dismiss();
+			progressDialog.dismiss();
 		}
 	};
 	private Handler readNameFail = new Handler(){
@@ -165,26 +181,42 @@ public class ServiceActivity extends Activity {
 	};
 	
 	private ProgressDialog pd;
+	private CustomProgressDialog progressDialog = null;
+
 	private Handler reflashDialogMessage = new Handler(){
 		@Override
 		public void handleMessage(Message msg) {
 			Bundle b = msg.getData();
-			pd.setMessage(b.getString("msg"));
+			//pd.setMessage(b.getString("msg"));
+			progressDialog.setMessage(b.getString("msg"));
 		}
 	};
+
+
+
 	private void getDefaultName() {
 		// 开启一个缓冲对话框
-		pd = new ProgressDialog(this);
+		if(false) {
+			pd = new ProgressDialog(this);
 		/*Window window = pd.getWindow();
 		WindowManager.LayoutParams lp = window.getAttributes();
 		// 设置透明度为0.3
 		lp.alpha = 0.6f;
 		window.setAttributes(lp);*/
-		pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-		pd.setTitle("正在加载...");
-		pd.setMessage("正在连接");
-		pd.show();
-		
+			pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+			pd.setTitle("正在加载...");
+			pd.setMessage("正在连接");
+			pd.show();
+		}
+
+		if (progressDialog == null)
+		{
+			progressDialog = CustomProgressDialog.createDialog(this);
+			//progressDialog.setTitle("正在加载...");
+			progressDialog.setMessage("正在连接...");
+		}
+		progressDialog.show();
+
 		device = (BluetoothDevice) getIntent()
 				.getParcelableExtra("device");
 		new readNameThread().start();
@@ -238,6 +270,13 @@ public class ServiceActivity extends Activity {
 			String uuid;
 			b.putString("msg", "读取通道信息");
 			reflashDialogMessage.sendMessage(msg);
+
+			/*if (progressDialog != null)
+			{
+				progressDialog.dismiss();
+				progressDialog = null;
+			}*/
+
 			grounps.clear();
 			childs.clear();
 			for (BluetoothGattService service : services) {
@@ -252,6 +291,12 @@ public class ServiceActivity extends Activity {
 				grounp.put("name",
 						SampleGattAttributes.lookup(uuid, "unknow"));
 				grounp.put("Uuid", uuid);
+				if(grounp.get("Uuid").equals("0000faf0-0000-1000-8000-00805f9b34fb")== false){
+					System.out.println("zhq_log 0000faf0-0000-1000-8000-00805f9b34fb");
+				}else {
+					//grounps.add(grounp);
+					System.out.println("zhq_log ----0000faf0-0000-1000-8000-00805f9b34fb");
+				}
 				grounps.add(grounp);
 				List<BluetoothGattCharacteristic> grounpCharacteristic = new ArrayList<BluetoothGattCharacteristic>();
 
@@ -307,7 +352,7 @@ public class ServiceActivity extends Activity {
 				childs.add(child); // 一个一级条目添加完成
 				mBluetoothGattCharacteristic.add(grounpCharacteristic);
 			}
-			
+
 			dis_services_handl.sendEmptyMessage(0);
 		}
 	}
