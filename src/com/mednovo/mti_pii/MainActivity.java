@@ -2,6 +2,8 @@ package com.mednovo.mti_pii;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.mednovo.chart_myself.HorizontalBarChartActivity;
 import com.mednovo.mtblesdk.MTBeacon;
 import com.mednovo.tools.Tools;
 import com.mednovo.mti_pii.BLEService.LocalBinder;
@@ -23,6 +25,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -77,6 +80,7 @@ public class MainActivity extends Activity {
 	}
 
 	// ³õÊ¼»¯¿Ø¼þ
+	private Button button;
 	private LayoutInflater mInflater;
 	private ListView ble_listview;
 	private List<MTBeacon> scan_devices = new ArrayList<MTBeacon>();
@@ -127,12 +131,32 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
+									int position, long id) {
 				// scan_flag = false;
 				// Tools.mBLEService.stopscanBle(mLeScanCallback);
-				Intent intent = new Intent(getApplicationContext(),	ServiceActivity.class);
+				Intent intent = new Intent(getApplicationContext(), ServiceActivity.class);
 				intent.putExtra("device", scan_devices_dis.get(position).GetDevice());
 				startActivity(intent);
+			}
+		});
+
+		button = (Button) findViewById(R.id.button);
+		button.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				switch (v.getId()) {
+					case R.id.button:
+						/*Intent intent = new Intent(getApplicationContext(), HorizontalBarChartActivity.class);
+						startActivity(intent);*/
+
+						Intent intent = new Intent();
+						intent.setClass(MainActivity.this, HorizontalBarChartActivity.class);
+						startActivity(intent);
+						break;
+					default:
+						break;
+				}
+
 			}
 		});
 	}

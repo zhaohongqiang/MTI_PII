@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MTI_PII.iml" filepath="$PROJECT_DIR$/MTI_PII.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my_mpchartlib/my_mpchartlib.iml" filepath="$PROJECT_DIR$/my_mpchartlib/my_mpchartlib.iml" />
     </modules>
   </component>
 </project>

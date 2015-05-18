@@ -13,6 +13,7 @@ import java.util.UUID;
 
 //import com.mednovo.tools.CommandsEnum;
 //import com.mednovo.tools.CommandsNewEnum;
+import com.mednovo.chart_myself.HorizontalBarChartActivity;
 import com.mednovo.tools.CRC16;
 import com.mednovo.tools.CommandsFound;
 import com.mednovo.tools.DataTransmission;
@@ -784,6 +785,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 						for(int i=0;i<48;i+=2){
 							BasalData_tmp_value[i/2] = twobytesTodecimal_places(tmp_BasalData_value[i],tmp_BasalData_value[i+1]);
 							//receive = receive + BasalHour_tmp[i/2] + BasalData_tmp_value[i/2] + " U/h" + "\r\n";
+							GeneralCommands.BasalData_value[i/2] = twobytesTodecimal_places(tmp_BasalData_value[i],tmp_BasalData_value[i+1]);
 						}
 						hour_value1.setText(BasalData_tmp_value[0]);
 						hour_value2.setText(BasalData_tmp_value[1]);
@@ -926,6 +928,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 						receive = "¼ÁÁ¿Öµ" + "\r\n";
 						for(int i=0;i<48;i+=2){
 							BasalData_tmp_value[i/2] = twobytesTodecimal_places(tmp_BasalData_value[i],tmp_BasalData_value[i+1]);
+							GeneralCommands.BasalData_value[i/2] = twobytesTodecimal_places(tmp_BasalData_value[i],tmp_BasalData_value[i+1]);
 							receive = receive + BasalHour_tmp[i/2] + BasalData_tmp_value[i/2] + " U/h" + "\r\n";
 						}
 						Log.v("zhq_log  receive ","" + receive);
@@ -1433,6 +1436,17 @@ public class TalkActivity extends Activity implements OnClickListener {
 			chat_list.add(entity2);
 			chat_list_adapter.notifyDataSetChanged();
 		}
+
+		if(send_fmt_int == CommandsFound.READ_BASALDATA){
+			myselfchartActivity();
+		}
+
+	}
+
+	private void myselfchartActivity() {
+		Intent intent = new Intent();
+		intent.setClass(TalkActivity.this, HorizontalBarChartActivity.class);
+		startActivity(intent);
 	}
 
 	private String system_set_status(byte b) {

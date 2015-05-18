@@ -29,6 +29,9 @@
         <service android:name="com.mednovo.mti_pii.BLEService" >
         </service>
         <activity
+            android:name="com.mednovo.chart_myself.HorizontalBarChartActivity">
+        </activity>
+        <activity
             android:name="com.mednovo.mti_pii.ServiceActivity"
             android:screenOrientation="portrait">
         </activity>

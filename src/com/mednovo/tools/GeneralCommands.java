@@ -70,6 +70,12 @@ public class GeneralCommands {//常用命令
                                             "08","08","08","08","08","08","08","08"
                                            };
 
+    public static String[] BasalData_value = {"0.1","0.2","0.3","0.4","0.5","0.6",
+                                                "0.1","0.2","0.3","0.4","0.5","0.6",
+                                                "0.1","0.2","0.3","0.4","0.5","0.6",
+                                                "0.1","0.2","0.3","0.4","0.5","0.6"
+                                            };
+
     static {      //组串时 枚举未实现，将名称替换为功能码  Function_code
         //user
         //attributes.put(getResources().getString(R.string.Set_factorydata), "MedNovo MTI-PII");//设置出厂数据
