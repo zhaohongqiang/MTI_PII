@@ -1473,8 +1473,9 @@
                 android:layout_marginLeft="10dp"
                 android:text="设置完成"
                 android:id="@+id/button_success"
-                android:background="@drawable/devicefmt"
-                android:layout_marginBottom="5dp" />
+                android:background="@drawable/mybutton_style"
+                android:textSize="10dp"
+                android:layout_gravity="bottom" />
 
             <Button
                 android:id="@+id/General_sendbutton"
@@ -1483,7 +1484,7 @@
                 android:layout_marginLeft="10dp"
                 android:text="发送"
                 android:textSize="20sp"
-                android:background="@drawable/selector" />
+                android:background="@drawable/mybutton_style" />
         </LinearLayout>
 
     </LinearLayout>

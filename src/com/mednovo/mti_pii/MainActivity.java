@@ -80,7 +80,6 @@ public class MainActivity extends Activity {
 	}
 
 	// ³õÊ¼»¯¿Ø¼þ
-	private Button button;
 	private LayoutInflater mInflater;
 	private ListView ble_listview;
 	private List<MTBeacon> scan_devices = new ArrayList<MTBeacon>();
@@ -137,26 +136,6 @@ public class MainActivity extends Activity {
 				Intent intent = new Intent(getApplicationContext(), ServiceActivity.class);
 				intent.putExtra("device", scan_devices_dis.get(position).GetDevice());
 				startActivity(intent);
-			}
-		});
-
-		button = (Button) findViewById(R.id.button);
-		button.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				switch (v.getId()) {
-					case R.id.button:
-						/*Intent intent = new Intent(getApplicationContext(), HorizontalBarChartActivity.class);
-						startActivity(intent);*/
-
-						Intent intent = new Intent();
-						intent.setClass(MainActivity.this, HorizontalBarChartActivity.class);
-						startActivity(intent);
-						break;
-					default:
-						break;
-				}
-
 			}
 		});
 	}

@@ -453,7 +453,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 		/**
 		 * @param 设置基础率数据定义
 		 */
-		final int[] basal_rate_names = new int[]{
+		final int[] R_id = new int[]{
 				R.id.hour_value1,R.id.hour_value2,R.id.hour_value3,R.id.hour_value4,R.id.hour_value5,R.id.hour_value6,
 				R.id.hour_value7,R.id.hour_value8,R.id.hour_value9,R.id.hour_value10,R.id.hour_value11,R.id.hour_value12,
 				R.id.hour_value13,R.id.hour_value14,R.id.hour_value15,R.id.hour_value16,R.id.hour_value17,R.id.hour_value18,
@@ -786,8 +786,9 @@ public class TalkActivity extends Activity implements OnClickListener {
 							BasalData_tmp_value[i/2] = twobytesTodecimal_places(tmp_BasalData_value[i],tmp_BasalData_value[i+1]);
 							//receive = receive + BasalHour_tmp[i/2] + BasalData_tmp_value[i/2] + " U/h" + "\r\n";
 							GeneralCommands.BasalData_value[i/2] = twobytesTodecimal_places(tmp_BasalData_value[i],tmp_BasalData_value[i+1]);
+							hour_value[i/2].setText(BasalData_tmp_value[i/2]);
 						}
-						hour_value1.setText(BasalData_tmp_value[0]);
+						/*hour_value1.setText(BasalData_tmp_value[0]);
 						hour_value2.setText(BasalData_tmp_value[1]);
 						hour_value3.setText(BasalData_tmp_value[2]);
 						hour_value4.setText(BasalData_tmp_value[3]);
@@ -811,7 +812,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 						hour_value22.setText(BasalData_tmp_value[21]);
 						hour_value23.setText(BasalData_tmp_value[22]);
 						hour_value24.setText(BasalData_tmp_value[23]);
-
+*/
 						receive = "读取默认值成功！";
 						Log.v("zhq_log  receive ","" + receive);
 					}
@@ -1437,16 +1438,18 @@ public class TalkActivity extends Activity implements OnClickListener {
 			chat_list_adapter.notifyDataSetChanged();
 		}
 
-		if(send_fmt_int == CommandsFound.READ_BASALDATA){
-			myselfchartActivity();
+		if(send_fmt_int == CommandsFound.READ_BASALDATA || send_fmt_int == CommandsFound.SET_BASALDATA){
+			myselfchartActivity(send_fmt_int);
 		}
 
 	}
 
-	private void myselfchartActivity() {
+	private void myselfchartActivity(int send_fmt_int) {
 		Intent intent = new Intent();
-		intent.setClass(TalkActivity.this, HorizontalBarChartActivity.class);
-		startActivity(intent);
+		intent.setClass(getApplicationContext(), HorizontalBarChartActivity.class);
+		intent.putExtra("set_Or_read",send_fmt_int);
+		startActivityForResult(intent, 0);
+		//startActivity(intent);
 	}
 
 	private String system_set_status(byte b) {
@@ -1790,6 +1793,15 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private EditText hour_value22;
 	private EditText hour_value23;
 	private EditText hour_value24;
+	private EditText hour_value[] = new EditText[24];
+
+	private int[] R_id = new int[]{
+			R.id.hour_value1,R.id.hour_value2,R.id.hour_value3,R.id.hour_value4,R.id.hour_value5,R.id.hour_value6,
+			R.id.hour_value7,R.id.hour_value8,R.id.hour_value9,R.id.hour_value10,R.id.hour_value11,R.id.hour_value12,
+			R.id.hour_value13,R.id.hour_value14,R.id.hour_value15,R.id.hour_value16,R.id.hour_value17,R.id.hour_value18,
+			R.id.hour_value19,R.id.hour_value20,R.id.hour_value21,R.id.hour_value22,R.id.hour_value23,R.id.hour_value24
+	};
+
 
     private EditText control_code;
     private Button general_sendbut;
@@ -1889,6 +1901,10 @@ public class TalkActivity extends Activity implements OnClickListener {
 		hour_value22 = (EditText) findViewById(R.id.hour_value22);
 		hour_value23 = (EditText) findViewById(R.id.hour_value23);
 		hour_value24 = (EditText) findViewById(R.id.hour_value24);
+
+		for(int i=0;i<24;i++){
+			hour_value[i] = (EditText) findViewById(R_id[i]);
+		}
 
         control_code = (EditText) findViewById(R.id.Control_code);//控制码
         general_sendbut = (Button) findViewById(R.id.General_sendbutton);
@@ -2540,155 +2556,164 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 					break;
 				case CommandsFound.SET_BASALDATA:
-					String hour_value1_txt = hour_value1.getText().toString();
-					hour_value1_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value1_txt)));
-					Log.v("zhq_log hour_value1_txt", "" + hour_value1_txt);
+					if(false) {//注释掉冗余的代码
+						String hour_value1_txt = hour_value1.getText().toString();
+						hour_value1_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value1_txt)));
+						Log.v("zhq_log hour_value1_txt", "" + hour_value1_txt);
 
-					String hour_value2_txt = hour_value2.getText().toString();
-					hour_value2_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value2_txt)));
-					Log.v("zhq_log hour_value2_txt", "" + hour_value2_txt);
+						String hour_value2_txt = hour_value2.getText().toString();
+						hour_value2_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value2_txt)));
+						Log.v("zhq_log hour_value2_txt", "" + hour_value2_txt);
 
-					String hour_value3_txt = hour_value3.getText().toString();
-					hour_value3_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value3_txt)));
-					Log.v("zhq_log hour_value3_txt", "" + hour_value3_txt);
+						String hour_value3_txt = hour_value3.getText().toString();
+						hour_value3_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value3_txt)));
+						Log.v("zhq_log hour_value3_txt", "" + hour_value3_txt);
 
-					String hour_value4_txt = hour_value4.getText().toString();
-					hour_value4_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value4_txt)));
-					Log.v("zhq_log hour_value4_txt", "" + hour_value4_txt);
+						String hour_value4_txt = hour_value4.getText().toString();
+						hour_value4_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value4_txt)));
+						Log.v("zhq_log hour_value4_txt", "" + hour_value4_txt);
 
-					String hour_value5_txt = hour_value5.getText().toString();
-					hour_value5_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value5_txt)));
-					Log.v("zhq_log hour_value5_txt", "" + hour_value5_txt);
+						String hour_value5_txt = hour_value5.getText().toString();
+						hour_value5_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value5_txt)));
+						Log.v("zhq_log hour_value5_txt", "" + hour_value5_txt);
 
-					String hour_value6_txt = hour_value6.getText().toString();
-					hour_value6_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value6_txt)));
-					Log.v("zhq_log hour_value6_txt", "" + hour_value6_txt);
+						String hour_value6_txt = hour_value6.getText().toString();
+						hour_value6_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value6_txt)));
+						Log.v("zhq_log hour_value6_txt", "" + hour_value6_txt);
 
-					String hour_value7_txt = hour_value7.getText().toString();
-					hour_value7_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value7_txt)));
-					Log.v("zhq_log hour_value7_txt", "" + hour_value7_txt);
+						String hour_value7_txt = hour_value7.getText().toString();
+						hour_value7_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value7_txt)));
+						Log.v("zhq_log hour_value7_txt", "" + hour_value7_txt);
 
-					String hour_value8_txt = hour_value8.getText().toString();
-					hour_value8_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value8_txt)));
-					Log.v("zhq_log hour_value8_txt", "" + hour_value8_txt);
+						String hour_value8_txt = hour_value8.getText().toString();
+						hour_value8_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value8_txt)));
+						Log.v("zhq_log hour_value8_txt", "" + hour_value8_txt);
 
-					String hour_value9_txt = hour_value9.getText().toString();
-					hour_value9_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value9_txt)));
-					Log.v("zhq_log hour_value9_txt", "" + hour_value9_txt);
+						String hour_value9_txt = hour_value9.getText().toString();
+						hour_value9_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value9_txt)));
+						Log.v("zhq_log hour_value9_txt", "" + hour_value9_txt);
 
-					String hour_value10_txt = hour_value10.getText().toString();
-					hour_value10_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value10_txt)));
-					Log.v("zhq_log hour_value10_txt", "" + hour_value10_txt);
+						String hour_value10_txt = hour_value10.getText().toString();
+						hour_value10_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value10_txt)));
+						Log.v("zhq_log hour_value10_txt", "" + hour_value10_txt);
 
-					String hour_value11_txt = hour_value11.getText().toString();
-					hour_value11_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value11_txt)));
-					Log.v("zhq_log hour_value11_txt", "" + hour_value11_txt);
+						String hour_value11_txt = hour_value11.getText().toString();
+						hour_value11_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value11_txt)));
+						Log.v("zhq_log hour_value11_txt", "" + hour_value11_txt);
 
-					String hour_value12_txt = hour_value12.getText().toString();
-					hour_value12_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value12_txt)));
-					Log.v("zhq_log hour_value12_txt", "" + hour_value12_txt);
+						String hour_value12_txt = hour_value12.getText().toString();
+						hour_value12_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value12_txt)));
+						Log.v("zhq_log hour_value12_txt", "" + hour_value12_txt);
 
-					String hour_value13_txt = hour_value13.getText().toString();
-					hour_value13_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value13_txt)));
-					Log.v("zhq_log hour_value13_txt", "" + hour_value13_txt);
+						String hour_value13_txt = hour_value13.getText().toString();
+						hour_value13_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value13_txt)));
+						Log.v("zhq_log hour_value13_txt", "" + hour_value13_txt);
 
-					String hour_value14_txt = hour_value14.getText().toString();
-					hour_value14_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value14_txt)));
-					Log.v("zhq_log hour_value14_txt", "" + hour_value14_txt);
+						String hour_value14_txt = hour_value14.getText().toString();
+						hour_value14_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value14_txt)));
+						Log.v("zhq_log hour_value14_txt", "" + hour_value14_txt);
 
-					String hour_value15_txt = hour_value15.getText().toString();
-					hour_value15_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value15_txt)));
-					Log.v("zhq_log hour_value15_txt", "" + hour_value15_txt);
+						String hour_value15_txt = hour_value15.getText().toString();
+						hour_value15_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value15_txt)));
+						Log.v("zhq_log hour_value15_txt", "" + hour_value15_txt);
 
-					String hour_value16_txt = hour_value16.getText().toString();
-					hour_value16_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value16_txt)));
-					Log.v("zhq_log hour_value16_txt", "" + hour_value16_txt);
+						String hour_value16_txt = hour_value16.getText().toString();
+						hour_value16_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value16_txt)));
+						Log.v("zhq_log hour_value16_txt", "" + hour_value16_txt);
 
-					String hour_value17_txt = hour_value7.getText().toString();
-					hour_value17_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value17_txt)));
-					Log.v("zhq_log hour_value17_txt", "" + hour_value17_txt);
+						String hour_value17_txt = hour_value7.getText().toString();
+						hour_value17_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value17_txt)));
+						Log.v("zhq_log hour_value17_txt", "" + hour_value17_txt);
 
-					String hour_value18_txt = hour_value18.getText().toString();
-					hour_value18_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value18_txt)));
-					Log.v("zhq_log hour_value18_txt", "" + hour_value18_txt);
+						String hour_value18_txt = hour_value18.getText().toString();
+						hour_value18_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value18_txt)));
+						Log.v("zhq_log hour_value18_txt", "" + hour_value18_txt);
 
-					String hour_value19_txt = hour_value19.getText().toString();
-					hour_value19_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value19_txt)));
-					Log.v("zhq_log hour_value19_txt", "" + hour_value19_txt);
+						String hour_value19_txt = hour_value19.getText().toString();
+						hour_value19_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value19_txt)));
+						Log.v("zhq_log hour_value19_txt", "" + hour_value19_txt);
 
-					String hour_value20_txt = hour_value20.getText().toString();
-					hour_value20_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value20_txt)));
-					Log.v("zhq_log hour_value20_txt", "" + hour_value20_txt);
+						String hour_value20_txt = hour_value20.getText().toString();
+						hour_value20_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value20_txt)));
+						Log.v("zhq_log hour_value20_txt", "" + hour_value20_txt);
 
-					String hour_value21_txt = hour_value21.getText().toString();
-					hour_value21_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value21_txt)));
-					Log.v("zhq_log hour_value21_txt", "" + hour_value21_txt);
+						String hour_value21_txt = hour_value21.getText().toString();
+						hour_value21_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value21_txt)));
+						Log.v("zhq_log hour_value21_txt", "" + hour_value21_txt);
 
-					String hour_value22_txt = hour_value22.getText().toString();
-					hour_value22_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value22_txt)));
-					Log.v("zhq_log hour_value22_txt", "" + hour_value22_txt);
+						String hour_value22_txt = hour_value22.getText().toString();
+						hour_value22_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value22_txt)));
+						Log.v("zhq_log hour_value22_txt", "" + hour_value22_txt);
 
-					String hour_value23_txt = hour_value23.getText().toString();
-					hour_value23_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value23_txt)));
-					Log.v("zhq_log hour_value23_txt", "" + hour_value23_txt);
+						String hour_value23_txt = hour_value23.getText().toString();
+						hour_value23_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value23_txt)));
+						Log.v("zhq_log hour_value23_txt", "" + hour_value23_txt);
 
-					String hour_value24_txt = hour_value24.getText().toString();
-					hour_value24_txt = Add_zero(
-										DataTransmission.bytesToHexString(
-												DataTransmission.Expand_DectoBytes(hour_value24_txt)));
-					Log.v("zhq_log hour_value24_txt", "" + hour_value24_txt);
-					Data_field_txt = hour_value1_txt + hour_value2_txt + hour_value3_txt + hour_value4_txt
-									+ hour_value5_txt + hour_value6_txt + hour_value7_txt + hour_value8_txt
-									+ hour_value9_txt + hour_value10_txt + hour_value11_txt + hour_value12_txt
-									+ hour_value13_txt + hour_value14_txt + hour_value15_txt + hour_value16_txt
-									+ hour_value17_txt + hour_value18_txt + hour_value19_txt + hour_value20_txt
-									+ hour_value21_txt + hour_value22_txt + hour_value23_txt + hour_value24_txt;
+						String hour_value24_txt = hour_value24.getText().toString();
+						hour_value24_txt = Add_zero(
+								DataTransmission.bytesToHexString(
+										DataTransmission.Expand_DectoBytes(hour_value24_txt)));
+						Log.v("zhq_log hour_value24_txt", "" + hour_value24_txt);
+						Data_field_txt = hour_value1_txt + hour_value2_txt + hour_value3_txt + hour_value4_txt
+								+ hour_value5_txt + hour_value6_txt + hour_value7_txt + hour_value8_txt
+								+ hour_value9_txt + hour_value10_txt + hour_value11_txt + hour_value12_txt
+								+ hour_value13_txt + hour_value14_txt + hour_value15_txt + hour_value16_txt
+								+ hour_value17_txt + hour_value18_txt + hour_value19_txt + hour_value20_txt
+								+ hour_value21_txt + hour_value22_txt + hour_value23_txt + hour_value24_txt;
+					}
+					String hour_value_txt[] = new String[24];
+					for(int i=0;i<24;i++){
+						hour_value_txt[i] =  Add_zero(
+												DataTransmission.bytesToHexString(
+													DataTransmission.Expand_DectoBytes(hour_value[i].getText().toString())));
+						Data_field_txt += hour_value_txt[i];
+					}
 					break;
 				default:
 					break;
