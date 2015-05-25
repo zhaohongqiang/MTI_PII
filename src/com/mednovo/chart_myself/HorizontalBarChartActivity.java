@@ -90,15 +90,15 @@ public class HorizontalBarChartActivity extends DemoBase implements OnSeekBarCha
         basal_read.setVisibility(View.GONE);
         basal_set.setVisibility(View.GONE);
         my_buttontest1.setVisibility(View.GONE);
-        total.setVisibility(View.GONE);
-        total_txt.setVisibility(View.GONE);
+        //total.setVisibility(View.GONE);
+        //total_txt.setVisibility(View.GONE);
 
         if(set_Or_read == 4){//set
             basal_set.setVisibility(View.VISIBLE);
             //basal_rate_set.setVisibility(View.VISIBLE);
-            total.setVisibility(View.VISIBLE);
-            total_txt.setVisibility(View.VISIBLE);
-            my_buttontest1.setVisibility(View.VISIBLE);
+            //total.setVisibility(View.VISIBLE);
+            //total_txt.setVisibility(View.VISIBLE);
+            //my_buttontest1.setVisibility(View.VISIBLE);
         }else{//read
             basal_read.setVisibility(View.VISIBLE);
             basal_rate_set.setVisibility(View.GONE);
@@ -319,16 +319,16 @@ public class HorizontalBarChartActivity extends DemoBase implements OnSeekBarCha
 
         ArrayList<BarEntry> yVals1 = new ArrayList<BarEntry>();
 
-        float total_tmp = (float) 0.0;
+        float total_tmp = (float) 0.00;
         for (int i = 0; i < count; i++) {
             float mult = (range + 1);
             float val = (float) (Math.random() * mult);
             //val = (float) (++i);
             val = Float.parseFloat(GeneralCommands.BasalData_value[i]);
-            total_tmp += val;
+            total_tmp += val*100;
             yVals1.add(new BarEntry(val, i));
         }
-        total.setText(Float.toString(total_tmp));
+        total.setText(Float.toString(total_tmp/100));
 
         BarDataSet set1 = new BarDataSet(yVals1, "DataSet");
         set1.setBarSpacePercent(35f);
@@ -351,17 +351,17 @@ public class HorizontalBarChartActivity extends DemoBase implements OnSeekBarCha
         }
 
         ArrayList<BarEntry> yVals1 = new ArrayList<BarEntry>();
-        float total_tmp = (float) 0.0;
+        float total_tmp = (float) 0.00;
         for (int i = 0; i < count; i++) {
             //float mult = (range + 1);
             //float val = (float) (Math.random() * mult);
             //val = (float) (++i);
             float val = Float.parseFloat(range[i]);
-            total_tmp += val;
+            total_tmp += val*100;
             yVals1.add(new BarEntry(val, i));
         }
 
-        total.setText(Float.toString(total_tmp));
+        total.setText(Float.toString(total_tmp/100));
 
         BarDataSet set1 = new BarDataSet(yVals1, "DataSet");
         set1.setBarSpacePercent(35f);

@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom">
+
+    <com.github.mikephil.charting.charts.HorizontalBarChart
+        android:id="@+id/chart1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_above="@+id/total_txt"
+        android:layout_marginLeft="25dp" />
+    
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="8dp"
+        android:layout_toLeftOf="@+id/tvYMax"
+        android:layout_marginRight="5dp"
+        android:max="200"
+        android:paddingBottom="12dp"
+        android:visibility="gone" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar2"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="35dp"
+        android:layout_toLeftOf="@+id/tvXMax"
+        android:layout_marginRight="5dp"
+        android:max="500"
+        android:paddingBottom="12dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvXMax"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBar1"
+        android:layout_alignParentRight="true"
+        android:text="500"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvYMax"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBar2"
+        android:layout_alignParentRight="true"
+        android:text="500"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/basal_set"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="visible"
+        android:text="@string/basal_rate_set"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp" />
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/total"
+        android:text="24"
+        android:visibility="visible"
+        android:layout_alignBottom="@+id/total_txt"
+        android:layout_toEndOf="@+id/total_txt"
+        android:layout_marginStart="26dp"
+        android:maxLength="5" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="完成"
+        android:id="@+id/my_buttontest1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="5dp" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="6"
+        android:rowCount="13"
+        android:id="@+id/basal_rate_set"
+        android:visibility="visible"
+        android:layout_above="@+id/my_buttontest1"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/basal_rate_set1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_1"
+            android:textSize="14sp"
+            android:textColor="#ff000000"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value1"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_2"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value2"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_3"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value3"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_4"
+            android:textSize="14sp"
+            android:textColor="#ff000000"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value4"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_5"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value5"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_6"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value6"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_7"
+            android:textSize="14sp"
+            android:textColor="#ff000000"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value7"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_8"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value8"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_9"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value9"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_10"
+            android:textSize="14sp"
+            android:textColor="#ff000000"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value10"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_11"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value11"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_12"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value12"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_13"
+            android:textSize="14sp"
+            android:textColor="#ff000000"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value13"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_14"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value14"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_15"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value15"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_16"
+            android:textSize="14sp"
+            android:textColor="#ff000000"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value16"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_17"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value17"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_18"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value18"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_19"
+            android:textSize="14sp"
+            android:textColor="#ff000000"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value19"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_20"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value20"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_21"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value21"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_22"
+            android:textSize="14sp"
+            android:textColor="#ff000000"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value22"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_23"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value23"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/basal_rate_set24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/hour_24"
+            android:textSize="14sp"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:text="@string/default_hour_value"
+            android:id="@+id/hour_value24"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="@integer/max_hour_value_len"
+            android:inputType="numberDecimal"/>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/basal_read"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="visible"
+        android:text="@string/basal_rate_read"
+        android:layout_alignStart="@+id/basal_rate_set"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/total_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="visible"
+        android:text="基础率总量"
+        android:layout_marginLeft="10dp"
+        android:textSize="25dp"
+        android:textIsSelectable="false"
+        android:singleLine="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="visible"
+        android:text="U"
+        android:textSize="25dp"
+        android:textIsSelectable="false"
+        android:singleLine="false"
+        android:layout_alignBottom="@+id/total_txt"
+        android:layout_toEndOf="@+id/total" />
+
+</RelativeLayout>
