@@ -2231,6 +2231,11 @@ public class TalkActivity extends Activity implements OnClickListener {
 		}
 		if ((0 != (proper & BluetoothGattCharacteristic.PROPERTY_NOTIFY))
 				|| (0 != (proper & BluetoothGattCharacteristic.PROPERTY_INDICATE))) { // 通知
+			if ((0 != (proper & BluetoothGattCharacteristic.PROPERTY_WRITE))
+					|| (0 != (proper & BluetoothGattCharacteristic.PROPERTY_WRITE_NO_RESPONSE))) { // 可写
+			}else{
+				command_layout.setVisibility(View.INVISIBLE);
+			}
 			//command_layout.setVisibility(View.INVISIBLE);
 			Tools.mBLEService.mBluetoothGatt.setCharacteristicNotification(
 					mBluetoothGattCharacteristic, true);
@@ -2731,7 +2736,9 @@ public class TalkActivity extends Activity implements OnClickListener {
 			if(sendmsg.length == sendmsg[1]){
 
 			}else{
-				Toast.makeText(getApplicationContext(), "数据长度错误", Toast.LENGTH_LONG)
+				/*Toast.makeText(getApplicationContext(), "数据长度错误", Toast.LENGTH_LONG)
+						.show();*/
+				Toast.makeText(getApplicationContext(), "请点击设置完成按钮，然后点击发送!", Toast.LENGTH_LONG)
 						.show();
 				return;
 			}
