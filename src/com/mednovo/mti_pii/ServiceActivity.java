@@ -235,8 +235,14 @@ public class ServiceActivity extends Activity {
 				//for (int i = 0; i < 10; i++) {
 				while(true){
 					connect_flag = false;
-					System.out.println("conectBle");
+					System.out.println("zhq_log conectBle");
 					if(exit_activity)return;  // 如果已经退出程序，则结束线程
+					if(Tools.mBLEService == null){
+						b.putString("msg", "加载失败...");
+						reflashDialogMessage.sendMessage(msg);
+						//dis_services_handl.sendEmptyMessage(0);
+						return;
+					}
 					Tools.mBLEService.conectBle(device);
 					for (int j = 0; j < 50; j++) {
 						if (connect_flag) {
@@ -259,7 +265,7 @@ public class ServiceActivity extends Activity {
 			read_name_flag = false; // 读取设备名
 			List<BluetoothGattService> services = Tools.mBLEService.mBluetoothGatt.getServices();
 			
-			System.out.println("services.size-->"+services.size());
+			System.out.println("zhq_log services.size-->"+services.size());
 			if(services.size() == 0){
 				if(device.getBondState() == BluetoothDevice.BOND_BONDED){
 					readNameFail.sendEmptyMessage(0);
@@ -308,7 +314,7 @@ public class ServiceActivity extends Activity {
 					BluetoothGattDescriptor descriptor = gattCharacteristic
 							.getDescriptor(UUID.fromString("00002901-0000-1000-8000-00805f9b34fb"));
 					if (null != descriptor) {
-						read_name_flag = false;
+						read_name_flag = false; //del by zhq for 5.27
 						Tools.mBLEService.mBluetoothGatt.readDescriptor(descriptor);
 						while (!read_name_flag) {// 等待读取完成
 							if (exit_activity || bind_flag){
@@ -360,8 +366,10 @@ public class ServiceActivity extends Activity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		if(!Tools.mBLEService.isConnected()){
-			finish();
+		if(Tools.mBLEService != null){
+			if(!Tools.mBLEService.isConnected()){
+				finish();
+			}
 		}
 	}
 	private boolean exit_activity = false;

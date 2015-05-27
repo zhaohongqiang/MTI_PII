@@ -68,6 +68,13 @@ public class TalkActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.talk_activity);
 
 		Intent intent = getIntent();
+		if(Tools.mBLEService == null){
+			Toast.makeText(getApplicationContext(), "已断开连接",
+					Toast.LENGTH_LONG).show();
+			Intent intent_return = new Intent(this, MainActivity.class);
+			startActivity(intent_return);
+			return;
+		}
 		mBluetoothGattCharacteristic = Tools.mBLEService.mBluetoothGatt
 				.getServices().get(intent.getIntExtra("one", 0))
 				.getCharacteristics().get(intent.getIntExtra("two", 0));
@@ -1200,6 +1207,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 								+ "剂量值" + "\r\n";
 						for(int i=0;i<48;i+=2){
 							Basalrecord_tmp_value[i/2] = twobytesTodecimal_places(tmp_Basalrecord_value[i],tmp_Basalrecord_value[i+1]);
+							GeneralCommands.BasalData_value[i/2] = twobytesTodecimal_places(tmp_Basalrecord_value[i],tmp_Basalrecord_value[i+1]);
 							receive = receive + BasalHour_tmp[i/2] + Basalrecord_tmp_value[i/2] + " U/h" + "\r\n";
 						}
 						Log.v("zhq_log  receive ","" + receive);
@@ -1438,7 +1446,8 @@ public class TalkActivity extends Activity implements OnClickListener {
 			chat_list_adapter.notifyDataSetChanged();
 		}
 
-		if(send_fmt_int == CommandsFound.READ_BASALDATA || send_fmt_int == CommandsFound.SET_BASALDATA){
+		if(send_fmt_int == CommandsFound.READ_BASALDATA || send_fmt_int == CommandsFound.SET_BASALDATA
+				|| send_fmt_int == CommandsFound.READ_BASALRECORD){
 			myselfchartActivity(send_fmt_int);
 		}
 
@@ -2011,6 +2020,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 				basal_rate_set_one.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
 				generalsend_command.setVisibility(View.GONE);//隐藏不参与布局（不占地方）
 				button_success.setVisibility(View.GONE);
+				send_onTime_checkbox.setClickable(true);
 
 				switch (send_fmt_int) {
 					case CommandsFound.SET_FACTORYDATA:
@@ -2036,10 +2046,11 @@ public class TalkActivity extends Activity implements OnClickListener {
 						basal_rate_set_one.setVisibility(View.VISIBLE);//可见
 						button_success.setVisibility(View.VISIBLE);
 						Read_SettingData(send_fmt_int + 1);//查询数据
+						send_onTime_checkbox.setClickable(false);
 						break;
 					case CommandsFound.READ_BASALDATA:
 						Log.v("zhq_log CommandsFound", "" + CommandsFound.READ_BASALDATA);
-
+						send_onTime_checkbox.setClickable(false);
 						break;
 					case CommandsFound.READ_RUNNINGDATA:
 						Log.v("zhq_log CommandsFound", "" + CommandsFound.READ_RUNNINGDATA);
@@ -2060,6 +2071,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 					case CommandsFound.READ_BASALRECORD:
 						Log.v("zhq_log CommandsFound", "" + CommandsFound.READ_BASALRECORD);
 						generalsend_command.setVisibility(View.VISIBLE);//可见
+						send_onTime_checkbox.setClickable(false);
 						break;
 					case CommandsFound.READ_TEMPORARYRECORD:
 						Log.v("zhq_log CommandsFound", "" + CommandsFound.READ_TEMPORARYRECORD);
@@ -2960,10 +2972,12 @@ public class TalkActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		if (Tools.mBLEService.isConnected()) {
-			talking_conect_flag_txt.setText("已连接");
-		} else {
-			talking_conect_flag_txt.setText("已断开");
+		if(Tools.mBLEService != null) {
+			if (Tools.mBLEService.isConnected()) {
+				talking_conect_flag_txt.setText("已连接");
+			} else {
+				talking_conect_flag_txt.setText("已断开");
+			}
 		}
 	}
 

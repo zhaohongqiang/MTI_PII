@@ -8,7 +8,7 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.ImageView;
 
-public class StartActivity extends Activit
+public class StartActivity extends Activity{
 	private ImageView welcomeImg = null;
 
 	@Override

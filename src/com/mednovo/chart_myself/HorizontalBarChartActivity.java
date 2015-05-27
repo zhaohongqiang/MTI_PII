@@ -99,9 +99,13 @@ public class HorizontalBarChartActivity extends DemoBase implements OnSeekBarCha
             //total.setVisibility(View.VISIBLE);
             //total_txt.setVisibility(View.VISIBLE);
             //my_buttontest1.setVisibility(View.VISIBLE);
-        }else{//read
+        }else if(set_Or_read == 5){//read
             basal_read.setVisibility(View.VISIBLE);
             basal_rate_set.setVisibility(View.GONE);
+        }else{
+            basal_read.setVisibility(View.VISIBLE);
+            basal_rate_set.setVisibility(View.GONE);
+            basal_read.setText("读取基础率记录");
         }
         for(int i=0;i<24;i++){
             hour_value_txt[i] = (EditText) findViewById(R_id[i]);

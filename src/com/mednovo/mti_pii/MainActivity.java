@@ -36,6 +36,7 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onServiceDisconnected(ComponentName name) {
+			Tools.mBLEService = null;//add by zhq for 5.27
 		}
 
 		@Override
