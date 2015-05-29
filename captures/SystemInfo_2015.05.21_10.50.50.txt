@@ -1,0 +1,32 @@
+Applications Memory Usage (kB):
+Uptime: 256741328 Realtime: 418152650
+
+** MEMINFO in pid 16504 [com.mednovo.mti_pii] **
+                   Pss  Private  Private  Swapped     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0     4208     2919      508
+  Dalvik Heap     6464     6152        0     9632    19536    19491       45
+ Dalvik Other     1629     1444        0     1372                           
+        Stack       68       68        0       12                           
+    Other dev        4        0        4        0                           
+     .so mmap     1003      700       28     3140                           
+    .apk mmap      112        0       20        0                           
+    .ttf mmap      283        0       60        0                           
+    .dex mmap     1164       44      348      176                           
+   Other mmap       38        4        8        0                           
+      Unknown     1699     1692        0      512                           
+        TOTAL    12464    10104      468    14844    23744    22410      553
+ 
+ Objects
+               Views:      111         ViewRootImpl:        5
+         AppContexts:        6           Activities:        3
+              Assets:        6        AssetManagers:        6
+       Local Binders:       21        Proxy Binders:       25
+    Death Recipients:        1
+     OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 

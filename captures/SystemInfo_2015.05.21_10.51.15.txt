@@ -1,0 +1,105 @@
+TASK com.mednovo.mti_pii id=240
+  ACTIVITY com.mednovo.mti_pii/.ServiceActivity 437980b8 pid=16504
+    Local Activity 42a05a28 State:
+      mResumed=false mStopped=true mFinished=false
+      mLoadersStarted=false
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 460mcc1mnc zh_CN ldltr sw360dp w360dp h615dp 320dpi nrml long port finger -keyb/v/h -nav/h skin=/system/framework/framework-res.apk s.18 themeChanged=0 themeChangedFlags=0}
+    FragmentManager misc state:
+      mActivity=com.mednovo.mti_pii.ServiceActivity@42a05a28
+      mContainer=android.app.Activity$1@429c23b0
+      mCurState=3 mStateSaved=true mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=256703903 (63762 ms ago)
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{42a06860 I.E..... R....... 0,0-720,1280}
+        com.android.internal.widget.ActionBarOverlayLayout{42a06ed0 V.ED.... ........ 0,0-720,1280 #102031d android:id/action_bar_overlay_layout}
+          android.widget.FrameLayout{42a07ae0 V.E..... ........ 0,146-720,1280 #1020002 android:id/content}
+            android.widget.LinearLayout{42a0dc18 V.E..... ........ 0,0-720,1134}
+              android.widget.ExpandableListView{42a42260 VFED.VC. .F...... 20,20-700,1114 #7f0b006e app:id/service_list_view}
+                android.widget.RelativeLayout{42a3c5b0 V.E..... ........ 0,0-680,95}
+                  android.widget.TextView{42a3ca50 V.ED.... ........ 60,0-680,54 #7f0b006c app:id/grounpname_txt}
+                  android.widget.TextView{42a3cf78 V.ED.... ........ 60,54-607,95 #7f0b006d app:id/grounp_uuid_txt}
+                android.widget.RelativeLayout{42c256f8 V.E..... ........ 0,97-680,192}
+                  android.widget.TextView{42c25b40 V.ED.... ........ 60,0-680,54 #7f0b006c app:id/grounpname_txt}
+                  android.widget.TextView{42c26068 V.ED.... ........ 60,54-622,95 #7f0b006d app:id/grounp_uuid_txt}
+                android.widget.RelativeLayout{42c39908 V.E..... ........ 0,194-680,289}
+                  android.widget.TextView{42c39d60 V.ED.... ........ 60,0-680,54 #7f0b006c app:id/grounpname_txt}
+                  android.widget.TextView{42c3a288 V.ED.... ........ 60,54-622,95 #7f0b006d app:id/grounp_uuid_txt}
+          com.android.internal.widget.ActionBarContainer{42a07ee0 V.ED.... ........ 0,50-720,146 #102031e android:id/action_bar_container}
+            com.android.internal.widget.ActionBarView{42a083f0 V.E..... ........ 0,0-720,96 #102031f android:id/action_bar}
+              android.widget.LinearLayout{42a08930 V.....C. ........ 17,0-371,96}
+                com.android.internal.widget.ActionBarView$HomeView{42a099b0 V.E..... ........ 0,0-86,96}
+                  android.widget.ImageView{42a09d48 G.ED.... ......I. 0,0-0,0 #102025a android:id/up}
+                  android.widget.ImageView{42a0a0a0 V.ED.... ........ 8,16-78,80 #102002c android:id/home}
+                android.widget.LinearLayout{42a0b278 V.E..... ........ 86,23-354,72}
+                  android.widget.TextView{42a0b588 V.ED.... ........ 0,0-252,49 #1020265 android:id/action_bar_title}
+                  android.widget.TextView{42a0c410 G.ED.... ......I. 0,0-0,0 #1020266 android:id/action_bar_subtitle}
+              com.android.internal.view.menu.ActionMenuView{429f3da0 V.ED.... ......ID 720,0-720,96}
+            com.android.internal.widget.ActionBarContextView{42a0cc30 G.E..... ......ID 0,0-0,0 #1020320 android:id/action_context_bar}
+          com.android.internal.widget.ActionBarContainer{42a0d100 G.ED.... ......ID 0,0-0,0 #1020321 android:id/split_action_bar}
+    Looper (main, tid 1) {42724c78}
+      Message 0: { when=+417ms what=0 target=com.mednovo.mti_pii.MainActivity$4 target=Handler (com.mednovo.mti_pii.MainActivity$4) {42731688} }
+      (Total messages: 1, idling=false, quitting=false)
+
+  ACTIVITY com.mednovo.mti_pii/.MainActivity 42b36b58 pid=16504
+    Local Activity 42730810 State:
+      mResumed=false mStopped=true mFinished=false
+      mLoadersStarted=false
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 460mcc1mnc zh_CN ldltr sw360dp w360dp h615dp 320dpi nrml long port finger -keyb/v/h -nav/h skin=/system/framework/framework-res.apk s.18 themeChanged=0 themeChangedFlags=0}
+    FragmentManager misc state:
+      mActivity=com.mednovo.mti_pii.MainActivity@42730810
+      mContainer=android.app.Activity$1@427309b0
+      mCurState=3 mStateSaved=true mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=256703903 (63778 ms ago)
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{427434d0 I.E..... R......D 0,0-720,1280}
+        com.android.internal.widget.ActionBarOverlayLayout{42744ab8 V.ED.... .......D 0,0-720,1280 #102031d android:id/action_bar_overlay_layout}
+          android.widget.FrameLayout{42745968 V.E..... .......D 0,146-720,1280 #1020002 android:id/content}
+            android.widget.LinearLayout{4285f048 V.E..... .......D 0,0-720,1134}
+              android.widget.LinearLayout{42974db0 V.E..... .......D 0,0-720,96}
+                android.widget.ProgressBar{42975210 V.ED.... ......ID 0,0-96,96}
+                android.widget.TextView{429888e8 V.ED.... ........ 96,0-446,96}
+              android.widget.ListView{42988f40 VFED.VC. .F...... 0,96-720,1134 #7f0b0061 app:id/ble_listview}
+                android.widget.LinearLayout{42a0e250 V.E..... ........ 0,0-720,159}
+                  android.widget.LinearLayout{42a0ed18 V.E..... ........ 20,20-700,101}
+                    android.widget.TextView{42a0f040 V.ED.... ........ 0,0-505,81 #7f0b0064 app:id/device_name_txt}
+                    android.widget.TextView{42a0f4f8 V.ED.... ........ 505,34-615,72 #7f0b0065 app:id/device_rssi_txt}
+                  android.widget.TextView{42a0f9c0 V.ED.... ........ 20,101-325,139 #7f0b0066 app:id/device_mac_txt}
+          com.android.internal.widget.ActionBarContainer{42745e90 V.ED.... ........ 0,50-720,146 #102031e android:id/action_bar_container}
+            com.android.internal.widget.ActionBarView{4274b3b0 V.E..... ........ 0,0-720,96 #102031f android:id/action_bar}
+              android.widget.LinearLayout{4274bb20 V.....C. ........ 17,0-371,96}
+                com.android.internal.widget.ActionBarView$HomeView{4274d058 V.E..... ........ 0,0-86,96}
+                  android.widget.ImageView{4274d530 G.ED.... ......I. 0,0-0,0 #102025a android:id/up}
+                  android.widget.ImageView{4274d938 V.ED.... ........ 8,16-78,80 #102002c android:id/home}
+                android.widget.LinearLayout{4274ed18 V.E..... ........ 86,23-354,72}
+                  android.widget.TextView{4274f1c0 V.ED.... ........ 0,0-252,49 #1020265 android:id/action_bar_title}
+                  android.widget.TextView{42757c68 G.ED.... ......I. 0,0-0,0 #1020266 android:id/action_bar_subtitle}
+              com.android.internal.view.menu.ActionMenuView{429bd6d0 V.ED.... ......ID 720,0-720,96}
+            com.android.internal.widget.ActionBarContextView{42759358 G.E..... ......ID 0,0-0,0 #1020320 android:id/action_context_bar}
+          com.android.internal.widget.ActionBarContainer{42759b68 G.ED.... ......ID 0,0-0,0 #1020321 android:id/split_action_bar}
+    Looper (main, tid 1) {42724c78}
+      Message 0: { when=+399ms what=0 target=com.mednovo.mti_pii.MainActivity$4 target=Handler (com.mednovo.mti_pii.MainActivity$4) {42731688} }
+      (Total messages: 1, idling=false, quitting=false)

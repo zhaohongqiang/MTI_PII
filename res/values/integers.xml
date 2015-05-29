@@ -12,5 +12,7 @@
     <integer name="max_Concentration_set_len">6</integer>
     <integer name="max_hour_value_len">3</integer>
 
+    <integer name="text_maxline">4</integer>
+    <integer name="otherline">1</integer>
 
 </resources>

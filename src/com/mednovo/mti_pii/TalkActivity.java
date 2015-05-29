@@ -1776,8 +1776,8 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private Switch language_set;
 
 	private GridLayout basal_rate_set_one;
-	private GridLayout basal_rate_set_two;
-	private GridLayout basal_rate_set_three;
+	//private GridLayout basal_rate_set_two;
+	//private GridLayout basal_rate_set_three;
 	private EditText hour_value1;
 	private EditText hour_value2;
 	private EditText hour_value3;
@@ -1884,8 +1884,8 @@ public class TalkActivity extends Activity implements OnClickListener {
 		language_set = (Switch) findViewById(R.id.language_set);
 
 		basal_rate_set_one = (GridLayout) findViewById(R.id.basal_rate_set_one);
-		basal_rate_set_two = (GridLayout) findViewById(R.id.basal_rate_set_two);
-		basal_rate_set_three = (GridLayout) findViewById(R.id.basal_rate_set_three);
+		//basal_rate_set_two = (GridLayout) findViewById(R.id.basal_rate_set_two);
+		//basal_rate_set_three = (GridLayout) findViewById(R.id.basal_rate_set_three);
 		hour_value1 = (EditText) findViewById(R.id.hour_value1);
 		hour_value2 = (EditText) findViewById(R.id.hour_value2);
 		hour_value3 = (EditText) findViewById(R.id.hour_value3);

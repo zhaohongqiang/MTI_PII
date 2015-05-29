@@ -1,0 +1,206 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView android:text="@string/SerialNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/TextSize" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:background="@android:drawable/editbox_background_normal"
+        android:autoText="false"
+        android:maxLength="13"
+        android:textStyle="bold"
+        android:text="@string/DdfaultlNum"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/TextSize"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SerialNumData"
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/TextSize"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CompensationStepNum_Code"
+        android:id="@+id/textView3"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_above="@+id/textView2"
+        android:textSize="@dimen/TextSize"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/EraseRecording"
+        android:id="@+id/textView4"
+        android:layout_marginTop="35dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/TextSize" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ConcentrationChange"
+        android:id="@+id/textView5"
+        android:layout_marginTop="35dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/editText4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/TextSize" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AntiBlockingScheme"
+        android:id="@+id/textView6"
+        android:textStyle="bold"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/editText5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/TextSize" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="@dimen/HexSize"
+        android:lines="@integer/text_maxline"
+        android:maxLines="@integer/text_maxline"
+        android:textStyle="bold"
+        android:text="@string/DdfaultlSerialNumData"
+        android:layout_marginTop="5dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:background="@android:drawable/editbox_background_normal"
+        android:textStyle="bold"
+        android:ems="4"
+        android:maxLines="@integer/otherline"
+        android:lines="@integer/otherline"
+        android:textSize="@dimen/TextSize"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/textView3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:background="@android:drawable/editbox_background_normal"
+        android:textStyle="bold"
+        android:ems="4"
+        android:maxLines="@integer/otherline"
+        android:lines="@integer/otherline"
+        android:longClickable="false"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignStart="@+id/editText3"
+        android:textSize="@dimen/TextSize"
+        android:layout_alignEnd="@+id/editText3"
+        android:layout_marginBottom="-5dp"
+        android:gravity="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText5"
+        android:background="@android:drawable/editbox_background_normal"
+        android:textStyle="bold"
+        android:ems="4"
+        android:maxLines="@integer/otherline"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignLeft="@+id/editText4"
+        android:layout_alignStart="@+id/editText4"
+        android:textSize="@dimen/TextSize"
+        android:layout_toStartOf="@+id/button2"
+        android:layout_marginBottom="-5dp"
+        android:gravity="center"
+        android:layout_alignEnd="@+id/editText4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText6"
+        android:layout_toEndOf="@+id/textView2"
+        android:background="@android:drawable/editbox_background_normal"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_alignRight="@+id/editText3"
+        android:layout_alignEnd="@+id/editText3"
+        android:ems="4"
+        android:maxLines="@integer/otherline"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignLeft="@+id/editText4"
+        android:textSize="@dimen/TextSize"
+        android:layout_marginBottom="-5dp"
+        android:gravity="center" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Clear"
+        android:id="@+id/button"
+        android:layout_toEndOf="@+id/editText"
+        android:layout_above="@+id/textView"
+        android:layout_toRightOf="@+id/editText"
+        android:layout_alignTop="@+id/editText"
+        android:background="@drawable/btnshape"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Cal"
+        android:id="@+id/button2"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/button"
+        android:background="@drawable/btnshape" />
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+AGGREGATED OVER LAST 24 HOURS:
+Per-Package Stats:
+  * com.mednovo.mti_pii / u0a313:
+      * com.mednovo.mti_pii / u0a313:
+               TOTAL: 16% (2.1MB-22MB-36MB/1.9MB-22MB-36MB over 104)
+                 Top: 16% (2.1MB-22MB-36MB/1.9MB-22MB-36MB over 104)
+             Service: 0.00%
+          (Last Act): 2.1% (14MB-22MB-29MB/12MB-24MB-28MB over 10)
+            (Cached): 0.71% (11MB-14MB-24MB/9.8MB-13MB-22MB over 4)
+      * com.mednovo.mti_pii.BLEService:
+        Process: com.mednovo.mti_pii
+            Running count 23 / time 19%
+              Bound count 23 / time 19%
+          Executing count 23 / time 0.00%
+  * com.mednovo.mti_pii / u0a314:
+      * com.mednovo.mti_pii / u0a314:
+               TOTAL: 8.7% (2.2MB-22MB-33MB/1.9MB-23MB-31MB over 58)
+                 Top: 8.7% (2.2MB-22MB-33MB/1.9MB-23MB-31MB over 58)
+          (Last Act): 0.30% (12MB-12MB-12MB/10MB-11MB-11MB over 3)
+            (Cached): 0.45% (12MB-17MB-28MB/12MB-17MB-28MB over 3)
+      * com.mednovo.mti_pii.BLEService:
+        Process: com.mednovo.mti_pii
+            Running count 8 / time 9.5%
+              Bound count 8 / time 9.5%
+          Executing count 7 / time 0.00%
+
+Summary:
+  * com.mednovo.mti_pii / u0a313:
+           TOTAL: 16% (2.1MB-22MB-36MB/1.9MB-22MB-36MB over 104)
+             Top: 16% (2.1MB-22MB-36MB/1.9MB-22MB-36MB over 104)
+         Service: 0.00%
+      (Last Act): 2.1% (14MB-22MB-29MB/12MB-24MB-28MB over 10)
+        (Cached): 0.71% (11MB-14MB-24MB/9.8MB-13MB-22MB over 4)
+  * com.mednovo.mti_pii / u0a314:
+           TOTAL: 8.7% (2.2MB-22MB-33MB/1.9MB-23MB-31MB over 58)
+             Top: 8.7% (2.2MB-22MB-33MB/1.9MB-23MB-31MB over 58)
+      (Last Act): 0.30% (12MB-12MB-12MB/10MB-11MB-11MB over 3)
+        (Cached): 0.45% (12MB-17MB-28MB/12MB-17MB-28MB over 3)
+
+Run time Stats:
+  SOff/Norm: +2h34m8s409ms
+       Low : +46m6s299ms
+       Crit: +1h49m45s855ms
+  SOn /Norm: +3h46m57s50ms
+       Mod : +10s574ms
+       Low : +49m48s530ms
+       Crit: +6h14m43s893ms
+      TOTAL: +16h1m40s610ms
+
+          Start time: 2015-05-20 09:30:34
+  Total elapsed time: +1d1h21m25s214ms (partial) libdvm.so chromeview
+
+AGGREGATED OVER LAST 3 HOURS:
+Per-Package Stats:
+  * com.mednovo.mti_pii / u0a314:
+      * com.mednovo.mti_pii / u0a314:
+               TOTAL: 23% (2.2MB-19MB-33MB/1.9MB-20MB-31MB over 37)
+                 Top: 23% (2.2MB-19MB-33MB/1.9MB-20MB-31MB over 37)
+          (Last Act): 1.2% (12MB-12MB-12MB/10MB-11MB-11MB over 3)
+            (Cached): 2.1% (12MB-17MB-28MB/12MB-17MB-28MB over 3)
+      * com.mednovo.mti_pii.BLEService:
+        Process: com.mednovo.mti_pii
+            Running count 7 / time 26%
+              Bound count 7 / time 26%
+          Executing count 6 / time 0.00%
+
+Summary:
+  * com.mednovo.mti_pii / u0a314:
+           TOTAL: 23% (2.2MB-19MB-33MB/1.9MB-20MB-31MB over 37)
+             Top: 23% (2.2MB-19MB-33MB/1.9MB-20MB-31MB over 37)
+      (Last Act): 1.2% (12MB-12MB-12MB/10MB-11MB-11MB over 3)
+        (Cached): 2.1% (12MB-17MB-28MB/12MB-17MB-28MB over 3)
+
+Run time Stats:
+  SOff/Norm: +10m45s166ms
+       Low : +25m10s412ms
+       Crit: +55m55s728ms
+  SOn /Norm: +29m18s942ms
+       Low : +7m15s609ms
+       Crit: +1h17m32s338ms
+      TOTAL: +3h25m58s195ms
+
+          Start time: 2015-05-21 07:21:53
+  Total elapsed time: +3h30m7s569ms (partial) libdvm.so chromeview
+
+CURRENT STATS:
+Per-Package Stats:
+  * com.mednovo.mti_pii / u0a314:
+      * com.mednovo.mti_pii / u0a314:
+               TOTAL: 12% (7.9MB-17MB-30MB/6.9MB-16MB-30MB over 3)
+                 Top: 12% (7.9MB-17MB-30MB/6.9MB-16MB-30MB over 3)
+          (Last Act): 9.1% (12MB-12MB-12MB/10MB-11MB-11MB over 3)
+            (Cached): 2.6% (28MB-28MB-28MB/28MB-28MB-28MB over 1)
+      * com.mednovo.mti_pii.BLEService:
+        Process: com.mednovo.mti_pii
+            Running count 3 / time 24%
+              Bound count 3 / time 24%
+          Executing count 2 / time 0.01%
+
+Summary:
+  * com.mednovo.mti_pii / u0a314:
+           TOTAL: 12% (7.9MB-17MB-30MB/6.9MB-16MB-30MB over 3)
+             Top: 12% (7.9MB-17MB-30MB/6.9MB-16MB-30MB over 3)
+      (Last Act): 9.1% (12MB-12MB-12MB/10MB-11MB-11MB over 3)
+        (Cached): 2.6% (28MB-28MB-28MB/28MB-28MB-28MB over 1)
+
+Run time Stats:
+  SOff/Norm: +65ms
+       Low : +1m19s629ms
+       Crit: +9m12s663ms
+  SOn /Norm: +5m9s78ms
+       Low : +3m0s664ms
+       Crit: +6m28s514ms (running)
+      TOTAL: +25m10s613ms
+
+          Start time: 2015-05-21 10:26:49
+  Total elapsed time: +25m11s370ms (partial) libdvm.so chromeview

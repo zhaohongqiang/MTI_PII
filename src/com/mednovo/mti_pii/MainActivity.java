@@ -121,6 +121,7 @@ public class MainActivity extends Activity {
 			return scan_devices_dis.size();
 		}
 	};
+	private Button button_code;
 
 	private void initView() {
 		mInflater = LayoutInflater.from(this);
@@ -139,6 +140,20 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 			}
 		});
+		button_code = (Button) findViewById(R.id.button_code);
+		button_code.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if(v == button_code){
+					myselfchartActivity();
+				}
+			}
+		});
+	}
+
+	private void myselfchartActivity() {
+		Intent intent_code = new Intent(this, CodeActivity.class);
+		startActivity(intent_code);
 	}
 
 	// ¿ªÊ¼É¨Ãè

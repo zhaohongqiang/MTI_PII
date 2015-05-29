@@ -3,5 +3,11 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-
+    <dimen name="HexSize">16dp</dimen>
+    <dimen name="MaxSize_xlarge">34dp</dimen>
+    <dimen name="DdfaultlNum_xlarge">38dp</dimen>
+    <dimen name="SerialNumData_xlarge">38dp</dimen>
+    <dimen name="CodeData_xlarge">38dp</dimen>
+    <dimen name="Spacing">10dp</dimen>   !间距
+    <dimen name="TextSize">20dp</dimen>
 </resources>

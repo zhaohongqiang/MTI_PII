@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        >
+        android:weightSum="1">
         <ProgressBar
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content" />
@@ -19,6 +19,14 @@
         	android:layout_height="match_parent"
         	android:gravity="center"
             />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密码计算"
+            android:id="@+id/button_code"
+            android:background="@drawable/btnshape"
+            android:layout_marginLeft="30dp" />
 
     </LinearLayout>
     

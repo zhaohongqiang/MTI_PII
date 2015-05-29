@@ -1,0 +1,207 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView android:text="@string/SerialNum" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/MaxSize_xlarge" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:background="@android:drawable/editbox_background_normal"
+        android:autoText="false"
+        android:maxLength="13"
+        android:textStyle="bold"
+        android:text="@string/DdfaultlNum"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:textSize="@dimen/DdfaultlNum_xlarge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SerialNumData"
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/MaxSize_xlarge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CompensationStepNum_Code"
+        android:id="@+id/textView3"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/editText3"
+        android:textSize="@dimen/MaxSize_xlarge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/EraseRecording"
+        android:id="@+id/textView4"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/MaxSize_xlarge"
+        android:layout_alignBottom="@+id/editText4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ConcentrationChange"
+        android:id="@+id/textView5"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/MaxSize_xlarge"
+        android:layout_alignBottom="@+id/editText5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AntiBlockingScheme"
+        android:id="@+id/textView6"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/MaxSize_xlarge"
+        android:layout_alignParentBottom="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="@dimen/SerialNumData_xlarge"
+        android:lines="@integer/text_maxline"
+        android:maxLines="@integer/text_maxline"
+        android:textStyle="bold"
+        android:text="@string/DdfaultlSerialNumData"
+        android:layout_above="@+id/editText3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:layout_toEndOf="@+id/editText"
+        android:background="@android:drawable/editbox_background_normal"
+        android:textStyle="bold"
+        android:ems="4"
+        android:maxLines="@integer/otherline"
+        android:lines="@integer/otherline"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:textSize="@dimen/CodeData_xlarge"
+        android:layout_alignRight="@+id/button2"
+        android:layout_above="@+id/editText4"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/Spacing" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:layout_toEndOf="@+id/textView2"
+        android:background="@android:drawable/editbox_background_normal"
+        android:textStyle="bold"
+        android:ems="4"
+        android:maxLines="@integer/otherline"
+        android:lines="@integer/otherline"
+        android:longClickable="false"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_alignRight="@+id/button2"
+        android:layout_alignEnd="@+id/button2"
+        android:textSize="@dimen/CodeData_xlarge"
+        android:layout_above="@+id/editText5"
+        android:layout_marginBottom="@dimen/Spacing" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText5"
+        android:layout_toEndOf="@+id/textView2"
+        android:background="@android:drawable/editbox_background_normal"
+        android:textStyle="bold"
+        android:ems="4"
+        android:maxLines="@integer/otherline"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/editText4"
+        android:layout_alignRight="@+id/button2"
+        android:layout_alignEnd="@+id/button2"
+        android:textSize="@dimen/CodeData_xlarge"
+        android:layout_alignParentRight="false"
+        android:layout_above="@+id/editText6"
+        android:layout_marginBottom="@dimen/Spacing" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText6"
+        android:layout_toEndOf="@+id/textView2"
+        android:background="@android:drawable/editbox_background_normal"
+        android:textStyle="bold"
+        android:layout_alignRight="@+id/button2"
+        android:layout_alignEnd="@+id/editText3"
+        android:ems="4"
+        android:maxLines="@integer/otherline"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignLeft="@+id/button"
+        android:textSize="@dimen/CodeData_xlarge"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Clear"
+        android:id="@+id/button"
+        android:layout_toEndOf="@+id/editText"
+        android:layout_toRightOf="@+id/editText"
+        android:layout_alignTop="@+id/editText"
+        android:textSize="@dimen/MaxSize_xlarge"
+        android:layout_marginLeft="250dp"
+        android:layout_alignBottom="@+id/editText" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Cal"
+        android:id="@+id/button2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/button"
+        android:textSize="@dimen/MaxSize_xlarge"
+        android:layout_alignBottom="@+id/button" />
+
+</RelativeLayout>

@@ -119,4 +119,17 @@
     <string name="Power">系统电量</string>
     <string name="default_Power">100%</string>
 
+
+    <string name="SerialNum">请输入十三位产品序列号：</string>
+    <string name="DdfaultlNum">0101143300001</string>
+    <string name="SerialNumData">序列号写入数据：</string>
+    <string name="DdfaultlSerialNumData">"@1000\n30 31 30 31 31 34 33 33 30 30 30 30 31\nq</string>
+    <string name="CompensationStepNum_Code">补偿步数密码：</string>
+    <string name="EraseRecording">擦除记录密码：</string>
+    <string name="ConcentrationChange">浓度更改密码：</string>
+    <string name="AntiBlockingScheme">防堵方案密码：</string>
+    <string name="Clear">清除</string>
+    <string name="Cal">计算</string>
+
+
 </resources>

@@ -13,6 +13,7 @@ ADDED from AndroidManifest.xml:2:1
 		ADDED from AndroidManifest.xml:2:11
 uses-sdk
 ADDED from AndroidManifest.xml:7:5
+MERGED from MTI_PII:my_mpchartlib:unspecified:7:5
 	android:targetSdkVersion
 		ADDED from AndroidManifest.xml:9:9
 		INJECTED from AndroidManifest.xml:0:0
@@ -45,7 +46,7 @@ ADDED from AndroidManifest.xml:14:5
 		ADDED from AndroidManifest.xml:16:9
 	android:theme
 		ADDED from AndroidManifest.xml:18:9
-activity#com.mt.truthblue2_1.MainActivity
+activity#com.mednovo.mti_pii.StartActivity
 ADDED from AndroidManifest.xml:19:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:22:13
@@ -60,22 +61,38 @@ ADDED from AndroidManifest.xml:24:17
 	android:name
 		ADDED from AndroidManifest.xml:24:25
 category#android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:26:17
+ADDED from AndroidManifest.xml:25:17
 	android:name
-		ADDED from AndroidManifest.xml:26:27
-service#com.mt.truthblue2_1.BLEService
-ADDED from AndroidManifest.xml:30:9
+		ADDED from AndroidManifest.xml:25:27
+service#com.mednovo.mti_pii.BLEService
+ADDED from AndroidManifest.xml:29:9
 	android:name
-		ADDED from AndroidManifest.xml:30:18
-activity#com.mt.truthblue2_1.ServiceActivity
-ADDED from AndroidManifest.xml:32:9
+		ADDED from AndroidManifest.xml:29:18
+activity#com.mednovo.mti_pii.MainActivity
+ADDED from AndroidManifest.xml:31:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:32:50
+		ADDED from AndroidManifest.xml:33:13
 	android:name
-		ADDED from AndroidManifest.xml:32:19
-activity#com.mt.truthblue2_1.TalkActivity
-ADDED from AndroidManifest.xml:33:9
+		ADDED from AndroidManifest.xml:32:13
+activity#com.mednovo.mti_pii.CodeActivity
+ADDED from AndroidManifest.xml:35:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:33:47
+		ADDED from AndroidManifest.xml:37:13
 	android:name
-		ADDED from AndroidManifest.xml:33:19
+		ADDED from AndroidManifest.xml:36:13
+activity#com.mednovo.chart_myself.HorizontalBarChartActivity
+ADDED from AndroidManifest.xml:39:9
+	android:name
+		ADDED from AndroidManifest.xml:40:13
+activity#com.mednovo.mti_pii.ServiceActivity
+ADDED from AndroidManifest.xml:42:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:44:13
+	android:name
+		ADDED from AndroidManifest.xml:43:13
+activity#com.mednovo.mti_pii.TalkActivity
+ADDED from AndroidManifest.xml:46:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:48:13
+	android:name
+		ADDED from AndroidManifest.xml:47:13

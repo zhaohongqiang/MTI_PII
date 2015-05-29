@@ -1034,6 +1034,7 @@
 
         </GridLayout>
 
+        <!--
         <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1409,7 +1410,7 @@
                 android:maxLength="@integer/max_hour_value_len"
                 android:inputType="numberDecimal"/>
         </GridLayout>
-
+        -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
