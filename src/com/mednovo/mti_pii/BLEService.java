@@ -11,8 +11,10 @@ import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Binder;
 import android.os.IBinder;
+import android.widget.Toast;
 
 public class BLEService extends Service {
 
@@ -116,6 +118,14 @@ public class BLEService extends Service {
 
 	// 初始化BLE
 	public boolean initBle() {
+		
+		// 判断此设备是否支持蓝牙4.0设备
+		if (!getPackageManager().hasSystemFeature(
+				PackageManager.FEATURE_BLUETOOTH_LE)) {
+			Toast.makeText(this, "设备不支持蓝牙设备！", Toast.LENGTH_SHORT)
+					.show();			
+		}
+	
 		mBluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
 
 		if (null == mBluetoothManager) {
@@ -124,6 +134,8 @@ public class BLEService extends Service {
 
 		mBluetoothAdapter = mBluetoothManager.getAdapter();
 		if (null == mBluetoothAdapter) {
+			Toast.makeText(this, "bluetooth4.0 is not supported!",
+					Toast.LENGTH_SHORT).show();			
 			return false;
 		}
 
