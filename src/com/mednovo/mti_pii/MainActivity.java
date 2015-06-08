@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.mednovo.chart_myself.HorizontalBarChartActivity;
+import com.mednovo.data_myself.DBManager;
 import com.mednovo.mtblesdk.MTBeacon;
 import com.mednovo.tools.Tools;
 import com.mednovo.mti_pii.BLEService.LocalBinder;
@@ -31,6 +32,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
+	public DBManager dbHelper;
 	private final static int REQUEST_ENABLE_BT = 2001;
 	private ServiceConnection connection = new ServiceConnection() {
 
@@ -72,6 +74,11 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+		//首次执行导入.db文件
+		dbHelper = new DBManager(this);
+		dbHelper.openDatabase();
+		dbHelper.closeDatabase();
 
 		initView();
 
