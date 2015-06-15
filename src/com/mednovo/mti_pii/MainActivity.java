@@ -76,9 +76,9 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 
 		//首次执行导入.db文件
-		dbHelper = new DBManager(this);
+		/*dbHelper = new DBManager(this);
 		dbHelper.openDatabase();
-		dbHelper.closeDatabase();
+		dbHelper.closeDatabase();*/
 
 		initView();
 

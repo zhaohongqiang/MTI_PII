@@ -113,7 +113,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 				// 读取数据
 				if (BLEService.ACTION_READ_OVER.equals(action)) {
 					//if(" " == receive_bytes[0])
-						dis_recive_msg(intent.getByteArrayExtra("value"));
+						//dis_recive_msg(intent.getByteArrayExtra("value"));
 					Analysis_all_recive_msg(receive_bytes);
 					//Analysis_recive_msg(intent.getByteArrayExtra("value"));
 					return;
@@ -1980,9 +1980,11 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 		});
 
+		send_onTime_checkbox.setOnClickListener(this);
+
         send_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, SEND_SELCET);
-        send_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        send_fmt_select.setAdapter(send_adapter);
+		send_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		send_fmt_select.setAdapter(send_adapter);
         send_fmt_select.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 			@Override
@@ -2148,7 +2150,6 @@ public class TalkActivity extends Activity implements OnClickListener {
 		talking_clear_btn.setOnClickListener(this);
 		talking_stopdis_btn.setOnClickListener(this);
 		sendbuttonid.setOnClickListener(this);
-		send_onTime_checkbox.setOnClickListener(this);
 
         general_sendbut.setOnClickListener(this);
 		button_success.setOnClickListener(this);
@@ -2801,6 +2802,10 @@ public class TalkActivity extends Activity implements OnClickListener {
 			return;
 		}
 		if (v == send_onTime_checkbox) { // 定时发送数据
+			/*if(4 == send_fmt_int || 5 == send_fmt_int || 10 == send_fmt_int){
+				Toast.makeText(getApplicationContext(), "禁止连续发送", Toast.LENGTH_LONG)
+						.show();
+			}*/
 			if (send_onTime_checkbox.isChecked()) {
 				sendontime_handl.sendEmptyMessage(0);
 			}

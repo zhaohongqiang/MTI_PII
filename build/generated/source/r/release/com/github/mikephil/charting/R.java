@@ -8,6 +8,6 @@ package com.github.mikephil.charting;
 
 public final class R {
 	public static final class string {
-		public static final int app_name = 0x7f080030;
+		public static final int app_name = 0x7f090030;
 	}
 }
