@@ -17,11 +17,14 @@
 
     <string name="default_serialnum">0101143300001</string>
     <string name="Serial_Num">产品序列号</string>
+    <string name="Factory_Data">产品出厂日期</string>
+    <string name="default_Factory_Data">150617</string>
     <string name="CompensationStepNum">补偿步数</string>
     <string name="default_CompensationStepNum">16</string>
     <string name="Driving_scheme">驱动方案</string>
     <string name="default_Driving_scheme">1</string>
     <string name="Concentration_change">更改浓度</string>
+    <string name="Step">步距</string>
     <string name="Set_successfully">设置成功</string>
     <string name="Set_fail">设置失败</string>
 
@@ -123,7 +126,7 @@
     <string name="SerialNum">请输入十三位产品序列号：</string>
     <string name="DdfaultlNum">0101143300001</string>
     <string name="SerialNumData">序列号写入数据：</string>
-    <string name="DdfaultlSerialNumData">"@1000\n30 31 30 31 31 34 33 33 30 30 30 30 31\nq</string>
+    <string name="DdfaultlSerialNumData">"@1000\n30 31 30 31 31 34 33 33 30 30 30 30 31 15 06 17 00\nq</string>
     <string name="CompensationStepNum_Code">补偿步数密码：</string>
     <string name="EraseRecording">擦除记录密码：</string>
     <string name="ConcentrationChange">浓度更改密码：</string>

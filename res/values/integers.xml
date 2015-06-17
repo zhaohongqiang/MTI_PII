@@ -2,8 +2,10 @@
 <resources>
     <integer name="max_controlcode_len">3</integer>
     <integer name="max_serialnum_len">13</integer>
+    <integer name="max_Factory_Data_len">6</integer>
     <integer name="max_CompensationStepNum_len">2</integer>
     <integer name="max_Driving_scheme_len">1</integer>
+    <integer name="max_Step_len">1</integer>
     <integer name="max_meal_bolus_len">5</integer>
     <integer name="max_basal_rate_len">5</integer>
     <integer name="max_Dose_value_len">2</integer>

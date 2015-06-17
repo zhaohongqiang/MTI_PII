@@ -8,7 +8,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Toast;
+import android.widget.ToggleButton;
+
+import com.mednovo.tools.GeneralCommands;
+
 import java.io.UnsupportedEncodingException;
 
 
@@ -17,6 +23,9 @@ import java.io.UnsupportedEncodingException;
  */
 
 public class CodeActivity extends Activity {
+
+    private String start = "@1000\n";
+    private String Bluetooth_Allow = "ff";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +39,52 @@ public class CodeActivity extends Activity {
         Log.v("height",""+ height);
         Button Clear = (Button) findViewById(R.id.button);
         Button Cal = (Button) findViewById(R.id.button2);
+        Button Normal = (Button) findViewById(R.id.button_normal);
+        Button Bluetooth = (Button) findViewById(R.id.button_bluetooth);
+        final ToggleButton OnorOff_bluetooth = (ToggleButton) findViewById(R.id.OnorOff_bluetooth);
+        //final String[] start = {""};
+
+        Normal.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()) {
+                    case R.id.button_normal:
+                        start = "@1000\n";
+                        OnorOff_bluetooth.setChecked(false);
+                        break;
+                }
+            }
+        });
+
+        Bluetooth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()) {
+                    case R.id.button_bluetooth:
+                        start = "@1800\n";
+                        OnorOff_bluetooth.setChecked(true);
+                        break;
+                }
+            }
+        });
+
+        OnorOff_bluetooth.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    Bluetooth_Allow = "00";
+                } else {
+                    Bluetooth_Allow = "ff";
+                }
+            }
+        });
 
         Cal.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 EditText editText1 =(EditText)findViewById(R.id.editText);
+                EditText factory_data =(EditText)findViewById(R.id.factory_data);
                 EditText editText2 =(EditText)findViewById(R.id.editText2);
                 EditText editText3 =(EditText)findViewById(R.id.editText3);
                 EditText editText4 =(EditText)findViewById(R.id.editText4);
@@ -45,7 +95,10 @@ public class CodeActivity extends Activity {
                         //获取文本框1的文本
                         String Serial_TmpNo="";
                         String Serial_TxtNo="";
+                        String factory_tmpdata="";
+                        String Tmp_Data = "";
                         byte Serial_No[] = null;
+
                         if(editText1.getText().length() == 0){
                             editText2.getText().clear();
                             editText3.getText().clear();
@@ -57,6 +110,8 @@ public class CodeActivity extends Activity {
                         else if(editText1.getText().length() < 13)
                         {
                             //dialog();
+                            Toast.makeText(getApplicationContext(), "序列号输入错误，请检查是否是十三位数", Toast.LENGTH_LONG)
+                                    .show();
                             break;
                         }
                         else {
@@ -68,7 +123,18 @@ public class CodeActivity extends Activity {
                             }
                             Serial_TxtNo = new String(Serial_No);//使用Serial_No之前要首先初始化
                             Serial_TmpNo = bytesToHexString(Serial_No);
-                            editText2.setText(Serial_TmpNo.toCharArray(), 0, Serial_TmpNo.length());//将文本框1的文本赋给文本框2
+                            if(factory_data.getText().length()< 6){
+                                Toast.makeText(getApplicationContext(), "请输入6位产品出厂日期", Toast.LENGTH_LONG)
+                                        .show();
+                                break;
+                            }
+                            factory_tmpdata = factory_data.getText().toString().substring(0,2) + " "
+                                                + factory_data.getText().toString().substring(2,4) + " "
+                                                + factory_data.getText().toString().substring(4,6) + " ";
+
+                            Tmp_Data = Serial_TmpNo + factory_tmpdata + Bluetooth_Allow + "\n" + "q";
+                            //editText2.setText(Serial_TmpNo.toCharArray(), 0, Serial_TmpNo.length());//将文本框1的文本赋给文本框2
+                            editText2.setText(Tmp_Data.toCharArray(), 0, Tmp_Data.length());//将文本框1的文本赋给文本框2
 
 
                             byte[] Buf1 = new byte[9];//byte Buf1[] = null;
@@ -139,12 +205,14 @@ public class CodeActivity extends Activity {
             @Override
             public void onClick(View v) {
                 EditText editText1 =(EditText)findViewById(R.id.editText);
+                EditText factory_data = (EditText)findViewById(R.id.factory_data);
                 EditText editText2 =(EditText)findViewById(R.id.editText2);
                 switch (v.getId()) {
                     case R.id.button:
                         // 清空
                         //editText1.setText("");
                         editText1.getText().clear();
+                        factory_data.getText().clear();
                         break;
                 }
             }
@@ -244,8 +312,10 @@ public class CodeActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-    public static String bytesToHexString(byte[] bytes) {
-        String result = "@1000\n";
+    public String bytesToHexString(byte[] bytes) {
+        //String result = "@1000\n";
+        String result = "";
+        result += start;
         for (int i = 0; i < bytes.length; i++) {
             String hexString = Integer.toHexString(bytes[i] & 0xFF);
             if (hexString.length() == 1) {
@@ -254,8 +324,8 @@ public class CodeActivity extends Activity {
             result += hexString.toUpperCase();
             result += " ";
         }
-        result += '\n';
-        result += 'q';
+        //result += '\n';
+        //result += 'q';
         return result;
     }
     public static String TwobytesToHexString(byte byteone ,byte bytetwo) {

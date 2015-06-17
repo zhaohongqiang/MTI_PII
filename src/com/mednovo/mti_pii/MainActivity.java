@@ -6,6 +6,7 @@ import java.util.List;
 import com.mednovo.chart_myself.HorizontalBarChartActivity;
 import com.mednovo.data_myself.DBManager;
 import com.mednovo.mtblesdk.MTBeacon;
+import com.mednovo.pump_code.pump_main;
 import com.mednovo.tools.Tools;
 import com.mednovo.mti_pii.BLEService.LocalBinder;
 import android.annotation.SuppressLint;
@@ -161,6 +162,10 @@ public class MainActivity extends Activity {
 	private void myselfchartActivity() {
 		Intent intent_code = new Intent(this, CodeActivity.class);
 		startActivity(intent_code);
+
+		/*Intent intent_pump = new Intent(this, pump_main.class);
+		startActivity(intent_pump);*/
+
 	}
 
 	// ¿ªÊ¼É¨Ãè

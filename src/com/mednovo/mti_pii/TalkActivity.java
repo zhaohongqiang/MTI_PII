@@ -280,7 +280,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 		}
 	}
 
-	private void Analysis_recive_msg(byte[] tmp_byte) {//解析数据
+	/*private void Analysis_recive_msg(byte[] tmp_byte) {//解析数据
 		if (talking_stopdis_btn.isChecked())
 			return; // 停止显示
 
@@ -293,15 +293,19 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 
 		String Serial_Num_txt = "";
+		String Factory_Data = "";
 		String CompensationStepNum_txt = "";
 		String Driving_scheme_txt = "";
 		String Open_Bluetooth_txt = "";
+		String Step = "";
 		String version_software_txt = "";
 		String Concentration_change_txt = "";
 
 		final byte[] tmp_Serial_Num = new byte[13];
-		final byte[] tmp_CompensationStepNum = new byte[2];
+		final byte[] tmp_Factory_Data = new byte[3];
+		final byte[] tmp_CompensationStepNum = new byte[1];
 		final byte[] tmp_Driving_scheme = new byte[1];
+		final byte[] tmp_Step = new byte[1];
 		final byte[] tmp_version_software = new byte[6];
 
 		switch (send_fmt_int){
@@ -402,7 +406,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 		chat_list.add(entity2);
 		chat_list_adapter.notifyDataSetChanged();
 
-	}
+	}*/
 
 
 
@@ -422,15 +426,19 @@ public class TalkActivity extends Activity implements OnClickListener {
 		 * @param 出厂数据定义
 		 */
 		String Serial_Num_txt = "";
+		String Factory_Data_txt = "";
 		String CompensationStepNum_txt = "";
 		String Driving_scheme_txt = "";
 		String Open_Bluetooth_txt = "";
+		String Step_txt = "";
 		String version_software_txt = "";
 		String Concentration_change_txt = "";
 
 		byte[] tmp_Serial_Num = new byte[13];
-		byte[] tmp_CompensationStepNum = new byte[2];
+		byte[] tmp_Factory_Data = new byte[3];
+		byte[] tmp_CompensationStepNum = new byte[1];
 		byte[] tmp_Driving_scheme = new byte[1];
+		byte[] tmp_Step = new byte[1];
 		byte[] tmp_version_software = new byte[6];
 
 		/**
@@ -662,33 +670,42 @@ public class TalkActivity extends Activity implements OnClickListener {
 				}else {//查询出厂设置数据
 					if ((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1])) {
 						System.arraycopy(tmp_byte, 3, tmp_Serial_Num, 0, 13);
-						System.arraycopy(tmp_byte, 17, tmp_CompensationStepNum, 0, 2);
-						System.arraycopy(tmp_byte, 19, tmp_Driving_scheme, 0, 1);
+						System.arraycopy(tmp_byte, 16, tmp_Factory_Data, 0, 3);
+						System.arraycopy(tmp_byte, 20, tmp_CompensationStepNum, 0, 1);
+						System.arraycopy(tmp_byte, 21, tmp_Driving_scheme, 0, 1);
+						System.arraycopy(tmp_byte, 23, tmp_Step, 0, 1);
 						try {
 							Serial_Num_txt = new String(tmp_Serial_Num, "UTF-8");
 						} catch (UnsupportedEncodingException e) {
 							e.printStackTrace();
 						}
+
+						Factory_Data_txt = byteToHexString(tmp_Factory_Data[0])
+											+ byteToHexString(tmp_Factory_Data[1])
+											+ byteToHexString(tmp_Factory_Data[2]);
 						CompensationStepNum_txt = bytesToHexStringToDecString(tmp_CompensationStepNum);
 						Driving_scheme_txt = bytesToHexStringToDecString(tmp_Driving_scheme);
+						Step_txt = bytesToHexStringToDecString(tmp_Step);
 
 						Serial_Num.setText(Serial_Num_txt.toCharArray(), 0, Serial_Num_txt.length());
+						Factory_data.setText(Factory_Data_txt.toCharArray(), 0, Factory_Data_txt.length());
 						CompensationStepNum.setText(CompensationStepNum_txt.toCharArray(), 0, CompensationStepNum_txt.length());
 						Driving_scheme.setText(Driving_scheme_txt.toCharArray(), 0, Driving_scheme_txt.length());
+						Step.setText(Step_txt.toCharArray(),0,Step_txt.length());
 
-						if (((byte) 0x00) == tmp_byte[16]) {//蓝牙允许
+						if (((byte) 0x00) == tmp_byte[19]) {//蓝牙允许
 							Open_Bluetooth.setChecked(true);
 						} else {
 							Open_Bluetooth.setChecked(false);
 						}
 
-						if (((byte) 0x00) == tmp_byte[20]) {//更改浓度
+						if (((byte) 0x00) == tmp_byte[22]) {//更改浓度
 							Concentration_change.setChecked(true);
 						} else {
 							Concentration_change.setChecked(false);
 						}
 
-						System.arraycopy(tmp_byte, 21, tmp_version_software, 0, 6);
+						System.arraycopy(tmp_byte, 24, tmp_version_software, 0, 6);
 						try {
 							version_software_txt = new String(tmp_version_software, "UTF-8");
 						} catch (UnsupportedEncodingException e) {
@@ -828,21 +845,31 @@ public class TalkActivity extends Activity implements OnClickListener {
 			case CommandsFound.READ_FACTORYDATA:
 				if((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1]) ){
 					System.arraycopy(tmp_byte,3,tmp_Serial_Num,0,13);
-					System.arraycopy(tmp_byte,17,tmp_CompensationStepNum,0,2);
-					System.arraycopy(tmp_byte,19,tmp_Driving_scheme,0,1);
+					System.arraycopy(tmp_byte, 16, tmp_Factory_Data, 0, 3);
+					System.arraycopy(tmp_byte, 20, tmp_CompensationStepNum, 0, 1);
+					System.arraycopy(tmp_byte, 21, tmp_Driving_scheme, 0, 1);
+					System.arraycopy(tmp_byte, 23, tmp_Step, 0, 1);
 					try {
 						Serial_Num_txt = new String(tmp_Serial_Num,"UTF-8");
 					} catch (UnsupportedEncodingException e) {
 						e.printStackTrace();
 					}
+
+
+					Factory_Data_txt = byteToHexString(tmp_Factory_Data[0])
+							  			+ byteToHexString(tmp_Factory_Data[1])
+										+ byteToHexString(tmp_Factory_Data[2]);
 					CompensationStepNum_txt = bytesToHexStringToDecString(tmp_CompensationStepNum);
 					Driving_scheme_txt = bytesToHexStringToDecString(tmp_Driving_scheme);
+					Step_txt = bytesToHexStringToDecString(tmp_Step);
 
 					Serial_Num.setText(Serial_Num_txt.toCharArray(), 0, Serial_Num_txt.length());
+					Factory_data.setText(Factory_Data_txt.toCharArray(), 0, Factory_Data_txt.length());
 					CompensationStepNum.setText(CompensationStepNum_txt.toCharArray(), 0, CompensationStepNum_txt.length());
 					Driving_scheme.setText(Driving_scheme_txt.toCharArray(),0,Driving_scheme_txt.length());
+					Step.setText(Step_txt.toCharArray(),0,Step_txt.length());
 
-					if(((byte) 0x00) == tmp_byte[16]){//蓝牙允许
+					if(((byte) 0x00) == tmp_byte[19]){//蓝牙允许
 						//Open_Bluetooth.setChecked(true);
 						Open_Bluetooth_txt = "允许开启蓝牙";
 						Open_Bluetooth_Read.setText("是");
@@ -852,11 +879,13 @@ public class TalkActivity extends Activity implements OnClickListener {
 						Open_Bluetooth_Read.setText("否");
 					}
 					receive = "产品序列号  "+ Serial_Num_txt +"\r\n"
+					    	+ "产品出厂日期  "+ Factory_Data_txt +"\r\n"
 							+ "补偿步数  " + CompensationStepNum_txt + "\r\n"
 							+ "驱动方案  " + Driving_scheme_txt + "\r\n"
+							+ "步距设置	" + Step_txt + "\r\n"
 							+ Open_Bluetooth_txt + "\r\n";
 
-					if(((byte) 0x00) == tmp_byte[20]){//更改浓度
+					if(((byte) 0x00) == tmp_byte[22]){//更改浓度
 						//Open_Bluetooth.setChecked(true);
 						Concentration_change_txt = "允许更改浓度";
 						Concentration_change_read.setText("允许");
@@ -866,7 +895,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 						Concentration_change_read.setText("禁止");
 					}
 
-					System.arraycopy(tmp_byte, 21, tmp_version_software, 0, 6);
+					System.arraycopy(tmp_byte, 24, tmp_version_software, 0, 6);
 					try {
 						version_software_txt = new String(tmp_version_software,"UTF-8");
 					} catch (UnsupportedEncodingException e) {
@@ -1593,7 +1622,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 	private String tmp_two_decimal_places(byte[] tmp) {//保留小数点后两位
 		String result = "";
 		DecimalFormat df = new DecimalFormat("0.00");//格式化小数，不足的补0
-		result = df.format(((double)(bytesToHexStringToInt(tmp)))/100);
+		result = df.format(((double) (bytesToHexStringToInt(tmp))) / 100);
 		return result;
 	}
 
@@ -1732,6 +1761,20 @@ public class TalkActivity extends Activity implements OnClickListener {
 		return Integer.toString(tmp);
 	}
 
+	private static String byteToHexString(byte contror_code) {//byte型转换为十六进制
+		String result = "";
+		int tmp = 0;
+		{
+			String hexString = Integer.toHexString(contror_code & 0xFF);
+
+			if (hexString.length() == 1) {
+				hexString = '0' + hexString;
+			}
+			result += hexString.toUpperCase();
+		}
+		return result;
+	}
+
 
 	// 初始化控件
 	private TextView talking_conect_flag_txt;
@@ -1755,8 +1798,10 @@ public class TalkActivity extends Activity implements OnClickListener {
     private LinearLayout generalsend_command;
 	private GridLayout factory_data;
 	private EditText Serial_Num;
+	private EditText Factory_data;
 	private EditText CompensationStepNum;
 	private EditText Driving_scheme;
+	private EditText Step;
 	private EditText version_software;
 	private ToggleButton Open_Bluetooth;
 	private ToggleButton Concentration_change;
@@ -1863,8 +1908,10 @@ public class TalkActivity extends Activity implements OnClickListener {
 
 		factory_data = (GridLayout) findViewById(R.id.factorydata);
 		Serial_Num = (EditText) findViewById(R.id.serial_num);
+		Factory_data = (EditText) findViewById(R.id.Factory_Data);
 		CompensationStepNum = (EditText) findViewById(R.id.CompensationStepNum);
 		Driving_scheme = (EditText) findViewById(R.id.Driving_scheme);
+		Step = (EditText) findViewById(R.id.Step);
 		version_software = (EditText) findViewById(R.id.version_software);
 		Open_Bluetooth = (ToggleButton) findViewById(R.id.open_bluetooth);
 		Open_Bluetooth_Read = (EditText) findViewById(R.id.open_bluetooth_read);
@@ -2482,10 +2529,12 @@ public class TalkActivity extends Activity implements OnClickListener {
 					Serial_Num_txt = DataTransmission.bytesToHexString(tmp_Serial_Num);
 					Log.v("zhq_log Serial_Num_txt", "" + Serial_Num_txt);
 
+					String Factory_Data_txt = Factory_data.getText().toString();
+					Log.v("zhq_log tmp_Factory_Data", "" + Factory_Data_txt);
+
 					String CompensationStepNum_txt = CompensationStepNum.getText().toString();
 					byte[] tmp_CompensationStepNum_txt = DataTransmission.DectoBytes(CompensationStepNum_txt);
 					CompensationStepNum_txt = DataTransmission.bytesToHexString(tmp_CompensationStepNum_txt);
-					CompensationStepNum_txt = Add_zero(CompensationStepNum_txt);
 					Log.v("zhq_log CompensationStepNum_txt", "" + CompensationStepNum_txt);
 
 					String Driving_scheme_txt = Driving_scheme.getText().toString();
@@ -2493,10 +2542,14 @@ public class TalkActivity extends Activity implements OnClickListener {
 					Driving_scheme_txt = DataTransmission.bytesToHexString(tmp_Driving_scheme_txt);
 					Log.v("zhq_log Driving_scheme_txt", "" + Driving_scheme_txt);
 
-					Data_field_txt = Serial_Num_txt + GeneralCommands.Bluetooth_Allow
-							+ CompensationStepNum_txt + Driving_scheme_txt
-							+ GeneralCommands.Concentration_change;
+					String Step_txt = Step.getText().toString();
+					byte[] tmp_Step_txt = DataTransmission.DectoBytes(Step_txt);
+					Step_txt = DataTransmission.bytesToHexString(tmp_Step_txt);
+					Log.v("zhq_log Step_txt", "" + Step_txt);
 
+					Data_field_txt = Serial_Num_txt + Factory_Data_txt + GeneralCommands.Bluetooth_Allow
+							+ CompensationStepNum_txt + Driving_scheme_txt
+							+ GeneralCommands.Concentration_change + Step_txt;
 					break;
 				case CommandsFound.SET_SYSSETDATA:
 					String max_meal_bolus_txt = max_meal_bolus.getText().toString();

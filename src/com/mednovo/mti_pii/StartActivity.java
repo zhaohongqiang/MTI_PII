@@ -8,6 +8,8 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.ImageView;
 
+import com.mednovo.pump_code.pump_main;
+
 public class StartActivity extends Activity{
 	private ImageView welcomeImg = null;
 

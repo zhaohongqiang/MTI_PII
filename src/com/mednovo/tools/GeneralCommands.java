@@ -65,7 +65,7 @@ public class GeneralCommands {//≥£”√√¸¡Ó
                                             "10","11","12","13","14",
                                             "20","21","22","23","24","25","26","27"
                                             };
-    public static String[] Frame_tmplength = {"19","08",
+    public static String[] Frame_tmplength = {"1C","08",
                                             "18","08","37","08","08",
                                             "08","08","08","08","08","08","08","08"
                                            };

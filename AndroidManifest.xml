@@ -47,6 +47,13 @@
             android:name="com.mednovo.mti_pii.TalkActivity"
             android:screenOrientation="portrait">
         </activity>
+
+//增加横版的胰岛素泵主界面
+        <activity
+            android:name="com.mednovo.pump_code.pump_main"
+            android:screenOrientation="landscape">
+        </activity>
+
     </application>
 
 </manifest>

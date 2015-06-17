@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:textSize="@dimen/TextSize" />
 
     <EditText
@@ -39,11 +39,9 @@
         android:text="@string/SerialNumData"
         android:id="@+id/textView"
         android:textStyle="bold"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:textSize="@dimen/TextSize"
-        android:layout_marginTop="10dp" />
+        android:layout_below="@+id/OnorOff_bluetooth"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -51,19 +49,17 @@
         android:text="@string/CompensationStepNum_Code"
         android:id="@+id/textView3"
         android:textStyle="bold"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignBottom="@+id/editText3"
-        android:layout_above="@+id/textView2"
         android:textSize="@dimen/TextSize"
-        android:layout_marginBottom="5dp" />
+        android:layout_alignBaseline="@+id/editText3"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/EraseRecording"
         android:id="@+id/textView4"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="20dp"
         android:textStyle="bold"
         android:layout_below="@+id/textView3"
         android:layout_alignParentLeft="true"
@@ -75,7 +71,7 @@
         android:layout_height="wrap_content"
         android:text="@string/ConcentrationChange"
         android:id="@+id/textView5"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="20dp"
         android:textStyle="bold"
         android:layout_below="@+id/editText4"
         android:layout_alignParentLeft="true"
@@ -88,11 +84,10 @@
         android:text="@string/AntiBlockingScheme"
         android:id="@+id/textView6"
         android:textStyle="bold"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/editText5"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textSize="@dimen/TextSize" />
+        android:textSize="@dimen/TextSize"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -122,8 +117,9 @@
         android:lines="@integer/otherline"
         android:textSize="@dimen/TextSize"
         android:gravity="center"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/textView3" />
+        android:layout_below="@+id/editText2"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_marginTop="15dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -185,11 +181,13 @@
         android:text="@string/Clear"
         android:id="@+id/button"
         android:layout_toEndOf="@+id/editText"
-        android:layout_above="@+id/textView"
         android:layout_toRightOf="@+id/editText"
         android:layout_alignTop="@+id/editText"
         android:background="@drawable/btnshape"
-        android:layout_marginLeft="10dp" />
+        android:layout_marginLeft="10dp"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="-20dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -197,10 +195,86 @@
         android:layout_height="wrap_content"
         android:text="@string/Cal"
         android:id="@+id/button2"
-        android:layout_above="@+id/textView"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/button"
-        android:background="@drawable/btnshape" />
+        android:background="@drawable/btnshape"
+        android:layout_alignBottom="@+id/button" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="普通版本"
+        android:id="@+id/button_normal"
+        android:background="@drawable/btnshape"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/button_bluetooth" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="蓝牙版本"
+        android:id="@+id/button_bluetooth"
+        android:background="@drawable/btnshape"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/editText3" />
+
+    <TextView
+        android:id="@+id/bluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Open_Bluetooth"
+        android:textSize="@dimen/TextSize"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/OnorOff_bluetooth"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumbTextPadding="10dp"
+        android:switchMinWidth="56dp"
+        android:textOn=""
+        android:textOff=""
+        android:background="@android:color/transparent"
+        android:button="@drawable/checkbox_iphone"
+        android:id="@+id/OnorOff_bluetooth"
+        android:visibility="visible"
+        android:checked="false"
+        android:layout_below="@+id/factory_data"
+        android:layout_alignEnd="@+id/editText"
+        android:clickable="false" />
+
+    <TextView
+        android:text="@string/Factory_Data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:textStyle="bold"
+        android:textSize="@dimen/TextSize"
+        android:layout_alignBottom="@+id/factory_data"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp" />
+
+    <EditText
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/factory_data"
+        android:background="@android:drawable/editbox_background_normal"
+        android:autoText="false"
+        android:maxLength="6"
+        android:textStyle="bold"
+        android:text="150617"
+        android:textSize="@dimen/TextSize"
+        android:layout_below="@+id/editText"
+        android:layout_toEndOf="@+id/textView7"
+        android:layout_alignRight="@+id/editText" />
 </RelativeLayout>
