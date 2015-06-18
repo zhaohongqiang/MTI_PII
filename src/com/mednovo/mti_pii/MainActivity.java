@@ -160,11 +160,11 @@ public class MainActivity extends Activity {
 	}
 
 	private void myselfchartActivity() {
-		Intent intent_code = new Intent(this, CodeActivity.class);
-		startActivity(intent_code);
+		/*Intent intent_code = new Intent(this, CodeActivity.class);
+		startActivity(intent_code);*/
 
-		/*Intent intent_pump = new Intent(this, pump_main.class);
-		startActivity(intent_pump);*/
+		Intent intent_pump = new Intent(this, pump_main.class);
+		startActivity(intent_pump);
 
 	}
 

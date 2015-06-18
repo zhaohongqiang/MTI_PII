@@ -4,12 +4,12 @@
     <shared>
       <config>
         <devices>
-          <device id="Galaxy Nexus" />
-          <device id="Nexus S" />
+          <device id="Nexus 4" />
           <device id="Nexus 5" />
           <device id="Nexus 7" />
-          <device id="Nexus 4" />
           <device id="Nexus 7 2013" />
+          <device id="Galaxy Nexus" />
+          <device id="Nexus S" />
           <device id="Nexus 10" />
           <device id="Nexus 6" />
         </devices>
@@ -20,6 +20,11 @@
       <layout url="file://$PROJECT_DIR$/res/layout-land/pump_main.xml">
         <config>
           <state>Landscape</state>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout-xlarge/pump_main.xml">
+        <config>
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
@@ -38,6 +43,18 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/menu_updown.xml">
+        <config>
+          <state>Landscape</state>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/pump_meal_bolus.xml">
+        <config>
+          <state>Landscape</state>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -51,20 +68,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80853a2d-316c-4dea-aa4c-b7a78d607028" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout-land/pump_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/Menu_Down.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/Menu_Up.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/menu_updown.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_meal_bolus.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/pump_meal_bolus.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-debug-unaligned.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-debug.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-release-unaligned.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-release-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MTI_PII-release.apk" afterPath="$PROJECT_DIR$/MTI_PII-release.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/MainActivity$1.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/MainActivity$2.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/MainActivity$3.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/MainActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/MainActivity$4.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/MainActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/MainActivity$5.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/MainActivity$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/MainActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$dimen.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$drawable.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$id.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$layout.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$layout.class" />
@@ -73,34 +85,21 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$style.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/ServiceActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/ServiceActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$2.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$3.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$4.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$ChatAdapater.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$ChatAdapater.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$ChatMsgFmt.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$ChatMsgFmt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$MESSAGE_FROM.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity$MESSAGE_FROM.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/Thumbs.db" afterPath="$PROJECT_DIR$/res/drawable-hdpi/Thumbs.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/Thumbs.db" afterPath="$PROJECT_DIR$/res/drawable-mdpi/Thumbs.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/mti_pii/CodeActivity.java" afterPath="$PROJECT_DIR$/src/com/mednovo/mti_pii/CodeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/tools/GeneralCommands.java" afterPath="$PROJECT_DIR$/src/com/mednovo/tools/GeneralCommands.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/mti_pii/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/mednovo/mti_pii/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/mednovo/mti_pii/R.java" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/mednovo/mti_pii/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/mti_pii/StartActivity.java" afterPath="$PROJECT_DIR$/src/com/mednovo/mti_pii/StartActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java" afterPath="$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_code.xml" afterPath="$PROJECT_DIR$/res/layout/activity_code.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/dimens.xml" afterPath="$PROJECT_DIR$/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/integers.xml" afterPath="$PROJECT_DIR$/res/values/integers.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/lint-results-release-fatal.html" afterPath="$PROJECT_DIR$/build/outputs/lint-results-release-fatal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/build/outputs/apk/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/talk_activity.xml" afterPath="$PROJECT_DIR$/res/layout/talk_activity.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_main.java" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/pump_main.xml" afterPath="$PROJECT_DIR$/res/layout-land/pump_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MTI_PII.iws" />
@@ -129,230 +128,102 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="class#2813:3826" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TalkActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2809" column="13" selection-start-line="2809" selection-start-column="13" selection-end-line="2809" selection-end-column="13" />
+              <caret line="1781" column="19" selection-start-line="1781" selection-start-column="19" selection-end-line="1781" selection-end-column="19" />
               <folding>
                 <element signature="method#CRC16_recive_msg#0;class#TalkActivity#0" expanded="false" />
+                <element signature="class#75208:75444" expanded="false" />
+                <element signature="class#75540:76779" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataTransmission.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java">
+      <file leaf-file-name="pump_main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+              <caret line="75" column="53" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1415#1620#0" expanded="true" />
+                <element signature="e#1619#1620#0" expanded="true" />
+                <element signature="e#1663#1872#0" expanded="true" />
+                <element signature="e#1871#1872#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pump_second.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_second.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_code.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_code.xml">
-          <provider editor-type-id="android-designer">
+      <file leaf-file-name="Menu_Up.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/Menu_Up.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu_Down.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/Menu_Down.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu_updown.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/menu_updown.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.546875">
-              <caret line="244" column="19" selection-start-line="244" selection-start-column="19" selection-end-line="244" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="57" column="56" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
               <folding>
-                <element signature="e#223#258#0" expanded="true" />
-                <element signature="e#284#319#0" expanded="true" />
-                <element signature="e#343#376#0" expanded="true" />
-                <element signature="e#403#436#0" expanded="true" />
-                <element signature="e#496#515#0" expanded="true" />
-                <element signature="e#877#894#0" expanded="true" />
-                <element signature="e#1281#1302#0" expanded="true" />
-                <element signature="e#1467#1484#0" expanded="true" />
-                <element signature="e#1652#1675#0" expanded="true" />
-                <element signature="e#1769#1786#0" expanded="true" />
-                <element signature="e#2016#2050#0" expanded="true" />
-                <element signature="e#2145#2162#0" expanded="true" />
-                <element signature="e#2444#2468#0" expanded="true" />
-                <element signature="e#2742#2759#0" expanded="true" />
-                <element signature="e#2888#2917#0" expanded="true" />
-                <element signature="e#3191#3208#0" expanded="true" />
-                <element signature="e#3337#3365#0" expanded="true" />
-                <element signature="e#3460#3477#0" expanded="true" />
-                <element signature="e#4079#4095#0" expanded="true" />
-                <element signature="e#4118#4141#0" expanded="true" />
-                <element signature="e#4167#4190#0" expanded="true" />
-                <element signature="e#4245#4276#0" expanded="true" />
-                <element signature="e#4614#4634#0" expanded="true" />
-                <element signature="e#4657#4677#0" expanded="true" />
-                <element signature="e#4703#4720#0" expanded="true" />
-                <element signature="e#5186#5206#0" expanded="true" />
-                <element signature="e#5229#5249#0" expanded="true" />
-                <element signature="e#5466#5483#0" expanded="true" />
-                <element signature="e#5907#5927#0" expanded="true" />
-                <element signature="e#6106#6123#0" expanded="true" />
-                <element signature="e#6793#6813#0" expanded="true" />
-                <element signature="e#6941#6958#0" expanded="true" />
-                <element signature="e#7208#7223#0" expanded="true" />
-                <element signature="e#7798#7811#0" expanded="true" />
-                <element signature="e#9073#9097#0" expanded="true" />
-                <element signature="e#9123#9140#0" expanded="true" />
-                <element signature="e#10002#10024#0" expanded="true" />
-                <element signature="e#10208#10225#0" expanded="true" />
-                <element signature="e#10792#10809#0" expanded="true" />
+                <element signature="e#634#652#0" expanded="true" />
+                <element signature="e#800#818#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="talk_activity.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33650795">
-              <caret line="228" column="47" selection-start-line="228" selection-start-column="47" selection-end-line="228" selection-end-column="47" />
-              <folding>
-                <element signature="e#3714#3733#0" expanded="true" />
-                <element signature="e#4600#4620#0" expanded="true" />
-                <element signature="e#4811#4838#0" expanded="true" />
-                <element signature="e#5062#5090#0" expanded="true" />
-                <element signature="e#5665#5687#0" expanded="true" />
-                <element signature="e#5878#5908#0" expanded="true" />
-                <element signature="e#6134#6165#0" expanded="true" />
-                <element signature="e#6517#6541#0" expanded="true" />
-                <element signature="e#8438#8468#0" expanded="true" />
-                <element signature="e#10283#10312#0" expanded="true" />
-                <element signature="e#10658#10696#0" expanded="true" />
-                <element signature="e#10817#10854#0" expanded="true" />
-                <element signature="e#11382#11406#0" expanded="true" />
-                <element signature="e#11748#11781#0" expanded="true" />
-                <element signature="e#11902#11934#0" expanded="true" />
-                <element signature="e#12461#12475#0" expanded="true" />
-                <element signature="e#12807#12830#0" expanded="true" />
-                <element signature="e#12951#12983#0" expanded="true" />
-                <element signature="e#13510#13536#0" expanded="true" />
-                <element signature="e#13963#13997#0" expanded="true" />
-                <element signature="e#14589#14613#0" expanded="true" />
-                <element signature="e#14804#14836#0" expanded="true" />
-                <element signature="e#15017#15046#0" expanded="true" />
-                <element signature="e#15442#15466#0" expanded="true" />
-                <element signature="e#15608#15640#0" expanded="true" />
-                <element signature="e#15867#15896#0" expanded="true" />
-                <element signature="e#16200#16225#0" expanded="true" />
-                <element signature="e#16462#16485#0" expanded="true" />
-                <element signature="e#16668#16692#0" expanded="true" />
-                <element signature="e#17044#17059#0" expanded="true" />
-                <element signature="e#17161#17189#0" expanded="true" />
-                <element signature="e#17372#17401#0" expanded="true" />
-                <element signature="e#17752#17772#0" expanded="true" />
-                <element signature="e#18330#18355#0" expanded="true" />
-                <element signature="e#18546#18579#0" expanded="true" />
-                <element signature="e#18761#18791#0" expanded="true" />
-                <element signature="e#19188#19215#0" expanded="true" />
-                <element signature="e#19357#19392#0" expanded="true" />
-                <element signature="e#19622#19658#0" expanded="true" />
-                <element signature="e#19959#19977#0" expanded="true" />
-                <element signature="e#20168#20194#0" expanded="true" />
-                <element signature="e#20725#20745#0" expanded="true" />
-                <element signature="e#21166#21185#0" expanded="true" />
-                <element signature="e#21575#21598#0" expanded="true" />
-                <element signature="e#21631#21658#0" expanded="true" />
-                <element signature="e#22083#22103#0" expanded="true" />
-                <element signature="e#23575#23597#0" expanded="true" />
-                <element signature="e#23987#24004#0" expanded="true" />
-                <element signature="e#24037#24054#0" expanded="true" />
-                <element signature="e#24834#24850#0" expanded="true" />
-                <element signature="e#25041#25069#0" expanded="true" />
-                <element signature="e#25287#25316#0" expanded="true" />
-                <element signature="e#25670#25686#0" expanded="true" />
-                <element signature="e#25828#25856#0" expanded="true" />
-                <element signature="e#26089#26118#0" expanded="true" />
-                <element signature="e#26472#26488#0" expanded="true" />
-                <element signature="e#26630#26658#0" expanded="true" />
-                <element signature="e#26876#26905#0" expanded="true" />
-                <element signature="e#27259#27275#0" expanded="true" />
-                <element signature="e#27466#27494#0" expanded="true" />
-                <element signature="e#27712#27741#0" expanded="true" />
-                <element signature="e#28095#28111#0" expanded="true" />
-                <element signature="e#28253#28281#0" expanded="true" />
-                <element signature="e#28499#28528#0" expanded="true" />
-                <element signature="e#28882#28898#0" expanded="true" />
-                <element signature="e#29040#29068#0" expanded="true" />
-                <element signature="e#29286#29315#0" expanded="true" />
-                <element signature="e#29669#29685#0" expanded="true" />
-                <element signature="e#29876#29904#0" expanded="true" />
-                <element signature="e#30122#30151#0" expanded="true" />
-                <element signature="e#30505#30521#0" expanded="true" />
-                <element signature="e#30663#30691#0" expanded="true" />
-                <element signature="e#30909#30938#0" expanded="true" />
-                <element signature="e#31292#31308#0" expanded="true" />
-                <element signature="e#31450#31478#0" expanded="true" />
-                <element signature="e#31696#31725#0" expanded="true" />
-                <element signature="e#32080#32097#0" expanded="true" />
-                <element signature="e#32288#32316#0" expanded="true" />
-                <element signature="e#32535#32564#0" expanded="true" />
-                <element signature="e#32919#32936#0" expanded="true" />
-                <element signature="e#33078#33106#0" expanded="true" />
-                <element signature="e#33325#33354#0" expanded="true" />
-                <element signature="e#33749#33766#0" expanded="true" />
-                <element signature="e#33868#33896#0" expanded="true" />
-                <element signature="e#34115#34144#0" expanded="true" />
-                <element signature="e#34499#34516#0" expanded="true" />
-                <element signature="e#34707#34735#0" expanded="true" />
-                <element signature="e#34954#34983#0" expanded="true" />
-                <element signature="e#35338#35355#0" expanded="true" />
-                <element signature="e#35497#35525#0" expanded="true" />
-                <element signature="e#35744#35773#0" expanded="true" />
-                <element signature="e#36128#36145#0" expanded="true" />
-                <element signature="e#36287#36315#0" expanded="true" />
-                <element signature="e#36534#36563#0" expanded="true" />
-                <element signature="e#36918#36935#0" expanded="true" />
-                <element signature="e#37126#37154#0" expanded="true" />
-                <element signature="e#37373#37402#0" expanded="true" />
-                <element signature="e#37757#37774#0" expanded="true" />
-                <element signature="e#37916#37944#0" expanded="true" />
-                <element signature="e#38163#38192#0" expanded="true" />
-                <element signature="e#38547#38564#0" expanded="true" />
-                <element signature="e#38706#38734#0" expanded="true" />
-                <element signature="e#38953#38982#0" expanded="true" />
-                <element signature="e#39337#39354#0" expanded="true" />
-                <element signature="e#39545#39573#0" expanded="true" />
-                <element signature="e#39792#39821#0" expanded="true" />
-                <element signature="e#40176#40193#0" expanded="true" />
-                <element signature="e#40335#40363#0" expanded="true" />
-                <element signature="e#40582#40611#0" expanded="true" />
-                <element signature="e#40966#40983#0" expanded="true" />
-                <element signature="e#41125#41153#0" expanded="true" />
-                <element signature="e#41372#41401#0" expanded="true" />
-                <element signature="e#41756#41773#0" expanded="true" />
-                <element signature="e#41964#41992#0" expanded="true" />
-                <element signature="e#42211#42240#0" expanded="true" />
-                <element signature="e#42595#42612#0" expanded="true" />
-                <element signature="e#42754#42782#0" expanded="true" />
-                <element signature="e#43001#43030#0" expanded="true" />
-                <element signature="e#43385#43402#0" expanded="true" />
-                <element signature="e#43544#43572#0" expanded="true" />
-                <element signature="e#43791#43820#0" expanded="true" />
-                <element signature="e#60234#60256#0" expanded="true" />
-                <element signature="e#60447#60476#0" expanded="true" />
-                <element signature="e#60704#60734#0" expanded="true" />
-                <element signature="e#63678#63700#0" expanded="true" />
-              </folding>
+      <file leaf-file-name="pump_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout-land/pump_main.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="174" column="34" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
+              <folding />
             </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -1488,14 +1359,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/mednovo/view/SlideSwitchView.java" />
-        <option value="$PROJECT_DIR$/src/com/mednovo/view/CheckSwitchButton.java" />
-        <option value="$PROJECT_DIR$/src/com/mednovo/view/SwitchButton.java" />
-        <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/view/SwitchButton.java" />
-        <option value="$PROJECT_DIR$/res/values/attrs.xml" />
-        <option value="$PROJECT_DIR$/src/com/mednovo/button_myself/view/SwitchButton.java" />
-        <option value="$PROJECT_DIR$/res/drawable/button_press.xml" />
-        <option value="$PROJECT_DIR$/res/drawable/selector.xml" />
         <option value="$PROJECT_DIR$/res/values/style_switch.xml" />
         <option value="$PROJECT_DIR$/src/com/mednovo/widgets/CustomProgressDialog.java" />
         <option value="$PROJECT_DIR$/res/layout/customprogressdialog.xml" />
@@ -1525,20 +1388,28 @@
         <option value="$PROJECT_DIR$/res/raw/MTI_PII_test.txt" />
         <option value="$PROJECT_DIR$/src/com/mednovo/data_myself/DBManager.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_code.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_main.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/StartActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/pump_main.xml" />
-        <option value="$PROJECT_DIR$/res/layout-land/pump_main.xml" />
-        <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/tools/GeneralCommands.java" />
         <option value="$PROJECT_DIR$/res/values/integers.xml" />
         <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/CodeActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_code.xml" />
         <option value="$PROJECT_DIR$/res/layout/talk_activity.xml" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/MainActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout-land/pump_main.xml" />
+        <option value="$PROJECT_DIR$/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/res/layout-land/pump_second.xml" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_meal_bolus.java" />
+        <option value="$PROJECT_DIR$/res/layout/pump_meal_bolus.xml" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_main.java" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/Menu_UP.java" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_second.java" />
+        <option value="$PROJECT_DIR$/res/layout/Menu_UpDown.xml" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/Menu_Down.java" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/Menu_Up.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -1619,6 +1490,28 @@
               <option name="myItemId" value="values" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles.xml" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MTI_PII" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MTI_PII" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1672,6 +1565,28 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MTI_PII" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MTI_PII" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pump_main.xml" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1774,6 +1689,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1794,8 +1711,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1816,7 +1731,7 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.23.2:5555" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="hongmi1S" />
     <property name="FullScreen" value="false" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="false" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -1848,8 +1763,8 @@
       <recent name="com.mednovo.mti_pii" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\zhao\AndroidStudioProjects\MTI_PII\res\layout-land" />
       <recent name="C:\Users\zhao\AndroidStudioProjects\MTI_PII\res\layout" />
+      <recent name="C:\Users\zhao\AndroidStudioProjects\MTI_PII\res\layout-land" />
       <recent name="C:\Users\zhao\AndroidStudioProjects\MTI_PII\res\drawable" />
       <recent name="C:\Users\zhao\AndroidStudioProjects\MTI_PII\res" />
       <recent name="C:\Users\zhao\AndroidStudioProjects\MTI_PII\res\menu" />
@@ -2075,7 +1990,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1370" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.49387443" order="6" side_tool="false" content_ui="tabs" />
@@ -2085,7 +2000,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2137931" sideWeight="0.5333839" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2143951" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3820827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17931035" sideWeight="0.4666161" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36034483" sideWeight="0.4257274" order="7" side_tool="false" content_ui="tabs" />
@@ -2093,7 +2008,7 @@
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2913793" sideWeight="0.4310873" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27931035" sideWeight="0.5689127" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26110262" sideWeight="0.46927375" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1898928" sideWeight="0.46927375" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25114855" sideWeight="0.47765362" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -2395,48 +2310,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/captures/SystemInfo_2015.05.21_10.50.50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21288516">
-          <caret line="4" column="74" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/captures/SystemInfo_2015.05.21_10.51.15.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8935574">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/captures/SystemInfo_2015.05.21_10.51.48.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8935574">
-          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/devicefmt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37254903">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/selector.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4789916">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/bluetooth/BluetoothGattCharacteristic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39009288">
-          <caret line="524" column="23" selection-start-line="524" selection-start-column="23" selection-end-line="524" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/welcome.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2468,41 +2341,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_horizontalbarchart.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14700194">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-land/activity_code.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-xlarge/activity_code.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/mybutton_style.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable/btnshape.xml">
@@ -2530,13 +2386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.107344635">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -2607,14 +2456,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/view/View.java">
@@ -2625,67 +2474,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/start_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/StartActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6258823">
-          <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/shell.png">
-      <provider selected="true" editor-type-id="images">
+      <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/service_page.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/ServiceActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="10.774117">
-          <caret line="334" column="12" selection-start-line="334" selection-start-column="12" selection-end-line="334" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
-          <folding />
-        </state>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/CommandsFound.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2701,116 +2514,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-land/pump_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/shell.png">
+      <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.28">
-          <caret line="128" column="99" selection-start-line="128" selection-start-column="99" selection-end-line="128" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/CodeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.96875">
-          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-          <folding>
-            <element signature="e#1465#1817#0" expanded="true" />
-            <element signature="e#1816#1817#0" expanded="true" />
-            <element signature="e#1858#2211#0" expanded="true" />
-            <element signature="e#2210#2211#0" expanded="true" />
-            <element signature="e#2268#2613#0" expanded="true" />
-            <element signature="e#2612#2613#0" expanded="true" />
-            <element signature="e#2648#9640#0" expanded="true" />
-            <element signature="e#9639#9640#0" expanded="true" />
-            <element signature="e#9676#10337#0" expanded="true" />
-            <element signature="e#10336#10337#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_code.xml">
-      <provider editor-type-id="android-designer">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="244" column="19" selection-start-line="244" selection-start-column="19" selection-end-line="244" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.546875">
-          <caret line="244" column="19" selection-start-line="244" selection-start-column="19" selection-end-line="244" selection-end-column="19" />
-          <folding>
-            <element signature="e#223#258#0" expanded="true" />
-            <element signature="e#284#319#0" expanded="true" />
-            <element signature="e#343#376#0" expanded="true" />
-            <element signature="e#403#436#0" expanded="true" />
-            <element signature="e#496#515#0" expanded="true" />
-            <element signature="e#877#894#0" expanded="true" />
-            <element signature="e#1281#1302#0" expanded="true" />
-            <element signature="e#1467#1484#0" expanded="true" />
-            <element signature="e#1652#1675#0" expanded="true" />
-            <element signature="e#1769#1786#0" expanded="true" />
-            <element signature="e#2016#2050#0" expanded="true" />
-            <element signature="e#2145#2162#0" expanded="true" />
-            <element signature="e#2444#2468#0" expanded="true" />
-            <element signature="e#2742#2759#0" expanded="true" />
-            <element signature="e#2888#2917#0" expanded="true" />
-            <element signature="e#3191#3208#0" expanded="true" />
-            <element signature="e#3337#3365#0" expanded="true" />
-            <element signature="e#3460#3477#0" expanded="true" />
-            <element signature="e#4079#4095#0" expanded="true" />
-            <element signature="e#4118#4141#0" expanded="true" />
-            <element signature="e#4167#4190#0" expanded="true" />
-            <element signature="e#4245#4276#0" expanded="true" />
-            <element signature="e#4614#4634#0" expanded="true" />
-            <element signature="e#4657#4677#0" expanded="true" />
-            <element signature="e#4703#4720#0" expanded="true" />
-            <element signature="e#5186#5206#0" expanded="true" />
-            <element signature="e#5229#5249#0" expanded="true" />
-            <element signature="e#5466#5483#0" expanded="true" />
-            <element signature="e#5907#5927#0" expanded="true" />
-            <element signature="e#6106#6123#0" expanded="true" />
-            <element signature="e#6793#6813#0" expanded="true" />
-            <element signature="e#6941#6958#0" expanded="true" />
-            <element signature="e#7208#7223#0" expanded="true" />
-            <element signature="e#7798#7811#0" expanded="true" />
-            <element signature="e#9073#9097#0" expanded="true" />
-            <element signature="e#9123#9140#0" expanded="true" />
-            <element signature="e#10002#10024#0" expanded="true" />
-            <element signature="e#10208#10225#0" expanded="true" />
-            <element signature="e#10792#10809#0" expanded="true" />
-          </folding>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_horizontalbarchart.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#2813:3826" expanded="false" />
-          </folding>
-        </state>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mednovo/tools/DataTransmission.java">
@@ -2821,151 +2552,207 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
+    <entry file="file://$PROJECT_DIR$/res/drawable/mybutton_style.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6885246">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-xlarge/pump_main.xml">
+      <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2809" column="13" selection-start-line="2809" selection-start-column="13" selection-end-line="2809" selection-end-column="13" />
-          <folding>
-            <element signature="method#CRC16_recive_msg#0;class#TalkActivity#0" expanded="false" />
-          </folding>
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/StartActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.15039578">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.125">
+          <caret line="1525" column="50" selection-start-line="1517" selection-start-column="12" selection-end-line="1525" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/ServiceActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33650795">
-          <caret line="228" column="47" selection-start-line="228" selection-start-column="47" selection-end-line="228" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="168" selection-end-column="5" />
           <folding>
-            <element signature="e#3714#3733#0" expanded="true" />
-            <element signature="e#4600#4620#0" expanded="true" />
-            <element signature="e#4811#4838#0" expanded="true" />
-            <element signature="e#5062#5090#0" expanded="true" />
-            <element signature="e#5665#5687#0" expanded="true" />
-            <element signature="e#5878#5908#0" expanded="true" />
-            <element signature="e#6134#6165#0" expanded="true" />
-            <element signature="e#6517#6541#0" expanded="true" />
-            <element signature="e#8438#8468#0" expanded="true" />
-            <element signature="e#10283#10312#0" expanded="true" />
-            <element signature="e#10658#10696#0" expanded="true" />
-            <element signature="e#10817#10854#0" expanded="true" />
-            <element signature="e#11382#11406#0" expanded="true" />
-            <element signature="e#11748#11781#0" expanded="true" />
-            <element signature="e#11902#11934#0" expanded="true" />
-            <element signature="e#12461#12475#0" expanded="true" />
-            <element signature="e#12807#12830#0" expanded="true" />
-            <element signature="e#12951#12983#0" expanded="true" />
-            <element signature="e#13510#13536#0" expanded="true" />
-            <element signature="e#13963#13997#0" expanded="true" />
-            <element signature="e#14589#14613#0" expanded="true" />
-            <element signature="e#14804#14836#0" expanded="true" />
-            <element signature="e#15017#15046#0" expanded="true" />
-            <element signature="e#15442#15466#0" expanded="true" />
-            <element signature="e#15608#15640#0" expanded="true" />
-            <element signature="e#15867#15896#0" expanded="true" />
-            <element signature="e#16200#16225#0" expanded="true" />
-            <element signature="e#16462#16485#0" expanded="true" />
-            <element signature="e#16668#16692#0" expanded="true" />
-            <element signature="e#17044#17059#0" expanded="true" />
-            <element signature="e#17161#17189#0" expanded="true" />
-            <element signature="e#17372#17401#0" expanded="true" />
-            <element signature="e#17752#17772#0" expanded="true" />
-            <element signature="e#18330#18355#0" expanded="true" />
-            <element signature="e#18546#18579#0" expanded="true" />
-            <element signature="e#18761#18791#0" expanded="true" />
-            <element signature="e#19188#19215#0" expanded="true" />
-            <element signature="e#19357#19392#0" expanded="true" />
-            <element signature="e#19622#19658#0" expanded="true" />
-            <element signature="e#19959#19977#0" expanded="true" />
-            <element signature="e#20168#20194#0" expanded="true" />
-            <element signature="e#20725#20745#0" expanded="true" />
-            <element signature="e#21166#21185#0" expanded="true" />
-            <element signature="e#21575#21598#0" expanded="true" />
-            <element signature="e#21631#21658#0" expanded="true" />
-            <element signature="e#22083#22103#0" expanded="true" />
-            <element signature="e#23575#23597#0" expanded="true" />
-            <element signature="e#23987#24004#0" expanded="true" />
-            <element signature="e#24037#24054#0" expanded="true" />
-            <element signature="e#24834#24850#0" expanded="true" />
-            <element signature="e#25041#25069#0" expanded="true" />
-            <element signature="e#25287#25316#0" expanded="true" />
-            <element signature="e#25670#25686#0" expanded="true" />
-            <element signature="e#25828#25856#0" expanded="true" />
-            <element signature="e#26089#26118#0" expanded="true" />
-            <element signature="e#26472#26488#0" expanded="true" />
-            <element signature="e#26630#26658#0" expanded="true" />
-            <element signature="e#26876#26905#0" expanded="true" />
-            <element signature="e#27259#27275#0" expanded="true" />
-            <element signature="e#27466#27494#0" expanded="true" />
-            <element signature="e#27712#27741#0" expanded="true" />
-            <element signature="e#28095#28111#0" expanded="true" />
-            <element signature="e#28253#28281#0" expanded="true" />
-            <element signature="e#28499#28528#0" expanded="true" />
-            <element signature="e#28882#28898#0" expanded="true" />
-            <element signature="e#29040#29068#0" expanded="true" />
-            <element signature="e#29286#29315#0" expanded="true" />
-            <element signature="e#29669#29685#0" expanded="true" />
-            <element signature="e#29876#29904#0" expanded="true" />
-            <element signature="e#30122#30151#0" expanded="true" />
-            <element signature="e#30505#30521#0" expanded="true" />
-            <element signature="e#30663#30691#0" expanded="true" />
-            <element signature="e#30909#30938#0" expanded="true" />
-            <element signature="e#31292#31308#0" expanded="true" />
-            <element signature="e#31450#31478#0" expanded="true" />
-            <element signature="e#31696#31725#0" expanded="true" />
-            <element signature="e#32080#32097#0" expanded="true" />
-            <element signature="e#32288#32316#0" expanded="true" />
-            <element signature="e#32535#32564#0" expanded="true" />
-            <element signature="e#32919#32936#0" expanded="true" />
-            <element signature="e#33078#33106#0" expanded="true" />
-            <element signature="e#33325#33354#0" expanded="true" />
-            <element signature="e#33749#33766#0" expanded="true" />
-            <element signature="e#33868#33896#0" expanded="true" />
-            <element signature="e#34115#34144#0" expanded="true" />
-            <element signature="e#34499#34516#0" expanded="true" />
-            <element signature="e#34707#34735#0" expanded="true" />
-            <element signature="e#34954#34983#0" expanded="true" />
-            <element signature="e#35338#35355#0" expanded="true" />
-            <element signature="e#35497#35525#0" expanded="true" />
-            <element signature="e#35744#35773#0" expanded="true" />
-            <element signature="e#36128#36145#0" expanded="true" />
-            <element signature="e#36287#36315#0" expanded="true" />
-            <element signature="e#36534#36563#0" expanded="true" />
-            <element signature="e#36918#36935#0" expanded="true" />
-            <element signature="e#37126#37154#0" expanded="true" />
-            <element signature="e#37373#37402#0" expanded="true" />
-            <element signature="e#37757#37774#0" expanded="true" />
-            <element signature="e#37916#37944#0" expanded="true" />
-            <element signature="e#38163#38192#0" expanded="true" />
-            <element signature="e#38547#38564#0" expanded="true" />
-            <element signature="e#38706#38734#0" expanded="true" />
-            <element signature="e#38953#38982#0" expanded="true" />
-            <element signature="e#39337#39354#0" expanded="true" />
-            <element signature="e#39545#39573#0" expanded="true" />
-            <element signature="e#39792#39821#0" expanded="true" />
-            <element signature="e#40176#40193#0" expanded="true" />
-            <element signature="e#40335#40363#0" expanded="true" />
-            <element signature="e#40582#40611#0" expanded="true" />
-            <element signature="e#40966#40983#0" expanded="true" />
-            <element signature="e#41125#41153#0" expanded="true" />
-            <element signature="e#41372#41401#0" expanded="true" />
-            <element signature="e#41756#41773#0" expanded="true" />
-            <element signature="e#41964#41992#0" expanded="true" />
-            <element signature="e#42211#42240#0" expanded="true" />
-            <element signature="e#42595#42612#0" expanded="true" />
-            <element signature="e#42754#42782#0" expanded="true" />
-            <element signature="e#43001#43030#0" expanded="true" />
-            <element signature="e#43385#43402#0" expanded="true" />
-            <element signature="e#43544#43572#0" expanded="true" />
-            <element signature="e#43791#43820#0" expanded="true" />
-            <element signature="e#60234#60256#0" expanded="true" />
-            <element signature="e#60447#60476#0" expanded="true" />
-            <element signature="e#60704#60734#0" expanded="true" />
-            <element signature="e#63678#63700#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="class#2813:3826" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/CodeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+          <folding>
+            <element signature="e#1465#1817#0" expanded="false" />
+            <element signature="e#1816#1817#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10817942">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.08">
+          <caret line="39" column="32" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-land/pump_second.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/pump_meal_bolus.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.25">
+          <caret line="145" column="27" selection-start-line="145" selection-start-column="27" selection-end-line="145" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_meal_bolus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1781" column="19" selection-start-line="1781" selection-start-column="19" selection-end-line="1781" selection-end-column="19" />
+          <folding>
+            <element signature="method#CRC16_recive_msg#0;class#TalkActivity#0" expanded="false" />
+            <element signature="class#75208:75444" expanded="false" />
+            <element signature="class#75540:76779" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-land/pump_main.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="174" column="34" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_second.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="53" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1415#1620#0" expanded="true" />
+            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#1663#1872#0" expanded="true" />
+            <element signature="e#1871#1872#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="56" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
+          <folding>
+            <element signature="e#634#652#0" expanded="true" />
+            <element signature="e#800#818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/Menu_Up.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/Menu_Down.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/menu_updown.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>

@@ -54,6 +54,25 @@
             android:screenOrientation="landscape">
         </activity>
 
+        <activity
+            android:name="com.mednovo.pump_code.Menu_Up"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name="com.mednovo.pump_code.Menu_Down"
+            android:screenOrientation="landscape">
+        </activity>
+
+        <activity
+            android:name="com.mednovo.pump_code.pump_second"
+            android:screenOrientation="landscape">
+        </activity>
+
+        <activity
+            android:name="com.mednovo.pump_code.pump_meal_bolus"
+            android:screenOrientation="landscape">
+        </activity>
+
     </application>
 
 </manifest>

@@ -10,4 +10,7 @@
     <dimen name="CodeData_xlarge">38dp</dimen>
     <dimen name="Spacing">10dp</dimen>   !间距
     <dimen name="TextSize">18dp</dimen>
+
+    <dimen name="buttonSize">40dp</dimen>
+
 </resources>
