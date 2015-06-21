@@ -156,7 +156,7 @@
 
 
        <TextView
-            android:id="@+id/basal_rate_set18"
+            android:id="@+id/menu_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -198,7 +198,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/basal_rate_set18"
+            android:id="@+id/notuse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"

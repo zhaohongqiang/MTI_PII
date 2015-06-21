@@ -51,7 +51,7 @@
 //增加横版的胰岛素泵主界面
         <activity
             android:name="com.mednovo.pump_code.pump_main"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape">//主界面
         </activity>
 
         <activity
@@ -65,13 +65,64 @@
 
         <activity
             android:name="com.mednovo.pump_code.pump_second"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape">//菜单界面
         </activity>
 
         <activity
             android:name="com.mednovo.pump_code.pump_meal_bolus"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape">//大剂量界面
         </activity>
+
+            <activity
+                android:name="com.mednovo.pump_code.pump_bolus"
+                android:screenOrientation="landscape">//即时大剂量界面 定时大剂量界面
+            </activity>
+
+
+        <activity
+            android:name="com.mednovo.pump_code.pump_suspend"
+            android:screenOrientation="landscape">//暂停泵界面
+        </activity>
+
+        <activity
+            android:name="com.mednovo.pump_code.pump_basal"
+            android:screenOrientation="landscape">//基础率界面
+        </activity>
+
+        <activity
+            android:name="com.mednovo.pump_code.pump_Temporary_rate"
+            android:screenOrientation="landscape">//暂时率界面
+        </activity>
+
+        <activity
+            android:name="com.mednovo.pump_code.pump_System_set"
+            android:screenOrientation="landscape">//系统设定界面
+        </activity>pump_system
+
+            <activity
+                android:name="com.mednovo.pump_code.pump_system"
+                android:screenOrientation="landscape">//系统设定下界面
+            </activity>
+
+        <activity
+            android:name="com.mednovo.pump_code.pump_history"
+            android:screenOrientation="landscape">//历史记录界面
+        </activity>
+
+        <activity
+            android:name="com.mednovo.pump_code.pump_data"
+            android:screenOrientation="landscape">//数据通讯界面
+        </activity>
+
+        <activity
+            android:name="com.mednovo.pump_code.pump_factory_set"
+            android:screenOrientation="landscape">//出厂设置界面
+        </activity>
+
+            <activity
+                android:name="com.mednovo.pump_code.pump_factory_data"
+                android:screenOrientation="landscape">//出厂设置下界面
+            </activity>
 
     </application>
 

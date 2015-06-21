@@ -12,5 +12,5 @@
     <dimen name="TextSize">18dp</dimen>
 
     <dimen name="buttonSize">40dp</dimen>
-
+    <dimen name="listSize">23dp</dimen>
 </resources>

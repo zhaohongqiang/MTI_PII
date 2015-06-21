@@ -27,7 +27,7 @@
             android:layout_columnSpan="2" />
 
         <TextView
-            android:id="@+id/basal_rate_set18"
+            android:id="@+id/one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -41,7 +41,7 @@
             android:layout_columnSpan="2" />
 
         <TextView
-            android:id="@+id/basal_rate_set18"
+            android:id="@+id/two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -81,7 +81,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/basal_rate_set18"
+            android:id="@+id/three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -95,7 +95,7 @@
             android:layout_columnSpan="2" />
 
         <TextView
-            android:id="@+id/basal_rate_set18"
+            android:id="@+id/four"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -108,7 +108,7 @@
             android:layout_column="2"/>
 
        <TextView
-            android:id="@+id/basal_rate_set18"
+            android:id="@+id/five"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -122,7 +122,7 @@
             android:layout_columnSpan="2" />
 
         <TextView
-            android:id="@+id/basal_rate_set18"
+            android:id="@+id/six"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -163,7 +163,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/basal_rate_set18"
+            android:id="@+id/notuse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"

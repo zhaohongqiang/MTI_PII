@@ -3,6 +3,8 @@ package com.mednovo.mti_pii;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
@@ -16,6 +18,11 @@ public class StartActivity extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		//设置无标题
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		//设置全屏
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.start_main);
 		welcomeImg = (ImageView) this.findViewById(R.id.welcome_img);
 		AlphaAnimation anima = new AlphaAnimation(0.3f, 1.0f);
