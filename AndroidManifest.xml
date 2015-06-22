@@ -109,6 +109,11 @@
             android:screenOrientation="landscape">//历史记录界面
         </activity>
 
+            <activity
+                android:name="com.mednovo.pump_code.pump_history_data"
+                android:screenOrientation="landscape">//历史记录界面
+            </activity>
+
         <activity
             android:name="com.mednovo.pump_code.pump_data"
             android:screenOrientation="landscape">//数据通讯界面

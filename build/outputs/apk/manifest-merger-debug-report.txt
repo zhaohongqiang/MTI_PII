@@ -168,21 +168,27 @@ ADDED from AndroidManifest.xml:107:9
 		ADDED from AndroidManifest.xml:109:13
 	android:name
 		ADDED from AndroidManifest.xml:108:13
-activity#com.mednovo.pump_code.pump_data
-ADDED from AndroidManifest.xml:112:9
+activity#com.mednovo.pump_code.pump_history_data
+ADDED from AndroidManifest.xml:112:13
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:114:13
+		ADDED from AndroidManifest.xml:114:17
 	android:name
-		ADDED from AndroidManifest.xml:113:13
-activity#com.mednovo.pump_code.pump_factory_set
+		ADDED from AndroidManifest.xml:113:17
+activity#com.mednovo.pump_code.pump_data
 ADDED from AndroidManifest.xml:117:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:119:13
 	android:name
 		ADDED from AndroidManifest.xml:118:13
-activity#com.mednovo.pump_code.pump_factory_data
-ADDED from AndroidManifest.xml:122:13
+activity#com.mednovo.pump_code.pump_factory_set
+ADDED from AndroidManifest.xml:122:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:124:17
+		ADDED from AndroidManifest.xml:124:13
 	android:name
-		ADDED from AndroidManifest.xml:123:17
+		ADDED from AndroidManifest.xml:123:13
+activity#com.mednovo.pump_code.pump_factory_data
+ADDED from AndroidManifest.xml:127:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:129:17
+	android:name
+		ADDED from AndroidManifest.xml:128:17

@@ -66,7 +66,7 @@ public class pump_system extends Activity implements View.OnClickListener{
 
         switch(Flag_list){
             case 1:
-                system_five.setText("15 U");
+                system_five.setText("15.0 U");
                 break;
             case 2:
                 system_five.setText("2.00 U/h");
@@ -80,22 +80,27 @@ public class pump_system extends Activity implements View.OnClickListener{
             case 5:
                 system_four.setText("请医生指导设定！");
                 system_five.setText("U-100");
+                system_five.setTextColor(0xffff0000);
                 break;
             case 6:
                 system_five.setText("常显示");
+                system_five.setTextColor(0xffff0000);
                 break;
             case 7:
                 system_five.setText("鸣笛");
+                system_five.setTextColor(0xffff0000);
                 break;
             case 8:
                 system_five.setText("15年");
                 break;
             case 9:
                 system_five.setText("恢复");
+                system_five.setTextColor(0xffff0000);
                 break;
             case 10:
                 system_four.setText("English");
                 system_five.setText("中文");
+                system_five.setTextColor(0xffff0000);
                 break;
         }
 
@@ -111,6 +116,79 @@ public class pump_system extends Activity implements View.OnClickListener{
     public void onClick(View v) {
         if(v == Button_Menu){
             onBackPressed();
+        }
+        if(v == Button_DOWN){
+            String [] tmp = {};
+            double value = 0.0;
+            switch(Flag_list){
+                case 1:
+                    tmp = system_five.getText().toString().split("U");;
+                    value = (Float.parseFloat(tmp[0])*100 - 100)/100;
+                    system_five.setText(Double.toString(value));
+                    break;
+                case 2:
+                    tmp = system_five.getText().toString().split("U");;
+                    value = (Double.parseDouble(tmp[0])*1000 - 100)/1000;
+                    system_five.setText(Double.toString(value));
+                    break;
+                case 3:
+                    system_five.setText("1小时 30.0 U");
+                    break;
+                case 4:
+                    tmp = system_five.getText().toString().split("U");;
+                    value = (Float.parseFloat(tmp[0])*100 - 100)/100;
+                    system_five.setText(Double.toString(value));
+                    break;
+                case 5:
+                    if(system_five.getText().toString().equals("U-100")){
+                        system_five.setText("U-40");
+                    }else{
+                        system_five.setText("U-100");
+                    }
+                    break;
+                case 6:
+                    if(system_five.getText().toString().equals("常显示")){
+                        system_five.setText("不常显示");
+                    }else {
+                        system_five.setText("常显示");
+                    }
+                    break;
+                case 7:
+                    if(system_five.getText().toString().equals("鸣笛")){
+                        system_five.setText("不鸣笛");
+                    }else{
+                        system_five.setText("鸣笛");
+                    }
+                    break;
+                case 8:
+                    system_five.setText("15年");
+                    break;
+                case 9:
+                    if(system_five.getText().toString().equals("恢复")){
+                        system_five.setText("不恢复");
+                    }else{
+                        system_five.setText("恢复");
+                    }
+                    break;
+                case 10:
+                    if(0xffff0000 == system_five.getCurrentTextColor()){
+                        //system_four.setText("English");
+                        system_four.setTextColor(0xffff0000);
+                        system_five.setTextColor(0xff000000);
+                    }else{
+                        //system_five.setText("中文");
+                        system_five.setTextColor(0xffff0000);
+                        system_four.setTextColor(0xff000000);
+                    }
+                    break;
+            }
+        }
+        if(v == Button_UP){
+
+        }
+
+        if(v == Button_OK){
+
         }
     }
 

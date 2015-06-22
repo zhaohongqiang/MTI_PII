@@ -36,9 +36,10 @@ public class pump_history extends Activity implements View.OnClickListener{
     private TextView history_three;
     private TextView history_one;
     private String Menu_name;
+    private String Tmp_name;
     private static final String List_name[] = { "1 即时大剂量", "2 定时大剂量", "3 暂停泵记录", "4 基础率记录",
             "5 暂时率记录", "6 日总量记录", "7 事件记录", "8 排气记录"};
-    private int Flag_menu = 0;
+    private int Flag_list = 0;
 
     /**
      *
@@ -70,6 +71,15 @@ public class pump_history extends Activity implements View.OnClickListener{
     private void MenuActivity() {
         Intent intent_pump_second = new Intent(this, pump_second.class);
         startActivity(intent_pump_second);
+    }
+
+    private void OneActivity() {
+        Intent intent_pump_history_data = new Intent();
+        intent_pump_history_data.setClass(getApplicationContext(), pump_history_data.class);
+        intent_pump_history_data.putExtra("Flag_list", Flag_list);//
+        intent_pump_history_data.putExtra("Menu_name",Menu_name);
+        intent_pump_history_data.putExtra("Tmp_name",Tmp_name);//
+        startActivityForResult(intent_pump_history_data, 0);
     }
 
     // 按钮监听
@@ -134,11 +144,20 @@ public class pump_history extends Activity implements View.OnClickListener{
             onBackPressed();
         }
         if(v == Button_OK){
-            if(0 == Flag_menu){//进入大剂量界面
-
-            }else{
-
+            if (0xffff0000 == history_three.getCurrentTextColor()) {//1
+                String[] tmp = history_three.getText().toString().split(" ");
+                Flag_list = Integer.parseInt(tmp[0]);
+                Tmp_name = tmp[1];
+            } else if (0xffff0000 == history_four.getCurrentTextColor()) {//2
+                String[] tmp = history_four.getText().toString().split(" ");
+                Flag_list = Integer.parseInt(tmp[0]);
+                Tmp_name = tmp[1];
+            } else if (0xffff0000 == history_five.getCurrentTextColor()) {//3
+                String[] tmp = history_five.getText().toString().split(" ");
+                Flag_list = Integer.parseInt(tmp[0]);
+                Tmp_name = tmp[1];
             }
+            OneActivity();//进入相应界面
         }
 
     }

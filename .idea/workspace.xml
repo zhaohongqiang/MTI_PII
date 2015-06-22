@@ -68,45 +68,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80853a2d-316c-4dea-aa4c-b7a78d607028" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_System_set.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_Temporary_rate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_basal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_bolus.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_data.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_factory_data.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_factory_set.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_history.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_sdk.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_suspend.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_system.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-debug-unaligned.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-debug.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/MTI_PII-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$dimen.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$drawable.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$id.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$layout.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$menu.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$string.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$style.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/ServiceActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/ServiceActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/mednovo/mti_pii/TalkActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/mednovo/mti_pii/R.java" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/mednovo/mti_pii/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/mti_pii/StartActivity.java" afterPath="$PROJECT_DIR$/src/com/mednovo/mti_pii/StartActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/dimens.xml" afterPath="$PROJECT_DIR$/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/build/outputs/apk/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/pump_main.xml" afterPath="$PROJECT_DIR$/res/layout-land/pump_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-xlarge/pump_main.xml" afterPath="$PROJECT_DIR$/res/layout-xlarge/pump_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_meal_bolus.java" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_meal_bolus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/pump_meal_bolus.xml" afterPath="$PROJECT_DIR$/res/layout/pump_meal_bolus.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_second.java" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_second.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/pump_second.xml" afterPath="$PROJECT_DIR$/res/layout-land/pump_second.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_system.java" afterPath="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_system.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MTI_PII.iws" />
@@ -139,31 +101,8 @@
         <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_second.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="110" column="81" selection-start-line="110" selection-start-column="81" selection-end-line="110" selection-end-column="81" />
+              <caret line="165" column="25" selection-start-line="165" selection-start-column="15" selection-end-line="165" selection-end-column="25" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pump_meal_bolus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_meal_bolus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="89" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TalkActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2614" column="0" selection-start-line="2614" selection-start-column="0" selection-end-line="2614" selection-end-column="0" />
-              <folding>
-                <element signature="method#CRC16_recive_msg#0;class#TalkActivity#0" expanded="false" />
-                <element signature="class#75208:75444" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -172,28 +111,24 @@
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="122" column="60" selection-start-line="122" selection-start-column="60" selection-end-line="122" selection-end-column="60" />
-              <folding />
+              <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+              <folding>
+                <element signature="e#634#652#0" expanded="true" />
+                <element signature="e#800#818#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pump_factory_set.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_factory_set.java">
+      <file leaf-file-name="TalkActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="68" selection-start-line="78" selection-start-column="68" selection-end-line="78" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pump_factory_data.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_factory_data.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15065913">
-              <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
-              <folding />
+            <state vertical-scroll-proportion="-2.5625">
+              <caret line="2585" column="52" selection-start-line="2585" selection-start-column="52" selection-end-line="2585" selection-end-column="52" />
+              <folding>
+                <element signature="method#CRC16_recive_msg#0;class#TalkActivity#0" expanded="false" />
+                <element signature="class#75208:75444" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,17 +137,17 @@
         <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_System_set.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="76" column="55" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="55" />
+              <caret line="151" column="34" selection-start-line="151" selection-start-column="34" selection-end-line="151" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <file leaf-file-name="pump_system.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_system.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="116" column="28" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.79569894">
+              <caret line="180" column="61" selection-start-line="180" selection-start-column="61" selection-end-line="180" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -1350,7 +1285,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/service_page.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_horizontalbarchart.xml" />
         <option value="$PROJECT_DIR$/res/layout/start_main.xml" />
         <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/ServiceActivity.java" />
@@ -1382,13 +1316,10 @@
         <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/Menu_Down.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/Menu_Up.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/mti_pii/StartActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout-land/pump_main.xml" />
         <option value="$PROJECT_DIR$/res/layout-land/pump_second.xml" />
         <option value="$PROJECT_DIR$/res/layout-xlarge/pump_main.xml" />
         <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_sdk.java" />
         <option value="$PROJECT_DIR$/res/values/dimens.xml" />
-        <option value="$PROJECT_DIR$/res/layout/pump_meal_bolus.xml" />
-        <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_history.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_second.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_data.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_suspend.java" />
@@ -1397,10 +1328,14 @@
         <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_meal_bolus.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_bolus.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_System_set.java" />
-        <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_system.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_factory_set.java" />
         <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_factory_data.java" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_history.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_history_data.java" />
+        <option value="$PROJECT_DIR$/res/layout-land/pump_main.xml" />
+        <option value="$PROJECT_DIR$/res/layout/pump_meal_bolus.xml" />
+        <option value="$PROJECT_DIR$/src/com/mednovo/pump_code/pump_system.java" />
       </list>
     </option>
   </component>
@@ -1447,7 +1382,27 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MTI_PII" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MTI_PII" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MTI_PII" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1726,27 +1681,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MTI_PII" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MTI_PII" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MTI_PII" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1766,7 +1701,7 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.23.2:5555" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="hongmi1S" />
     <property name="FullScreen" value="false" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -2035,25 +1970,25 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26156583" sideWeight="0.49615383" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38153845" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17793594" sideWeight="0.4666161" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29715303" sideWeight="0.4257274" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29003558" sideWeight="0.4310873" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30782917" sideWeight="0.4310873" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27931035" sideWeight="0.5689127" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22384615" sideWeight="0.46024096" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22384615" sideWeight="0.46024096" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25076923" sideWeight="0.47765362" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4483986" sideWeight="0.50384617" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26156583" sideWeight="0.50384617" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38153845" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2329,18 +2264,6 @@
           <properties />
           <option name="timeStamp" value="142" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_meal_bolus.java</url>
-          <line>96</line>
-          <properties />
-          <option name="timeStamp" value="143" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_meal_bolus.java</url>
-          <line>100</line>
-          <properties />
-          <option name="timeStamp" value="144" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/com/mednovo/chart_myself/HorizontalBarChartActivity.java</url>
           <line>46</line>
@@ -2354,7 +2277,7 @@
           <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="145" />
+      <option name="time" value="148" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="MTI_PII">
@@ -2363,29 +2286,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/data_myself/DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#904#905#0" expanded="false" />
-            <element signature="e#942#943#0" expanded="false" />
-            <element signature="e#985#986#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1072#1073#0" expanded="false" />
-            <element signature="e#1112#1113#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/android/database/sqlite/SQLiteDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1125" column="31" selection-start-line="1125" selection-start-column="31" selection-end-line="1125" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -2547,16 +2447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-land/pump_second.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/talk_activity.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -2611,31 +2501,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-land/pump_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8125">
-          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/pump_meal_bolus.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -2646,13 +2516,6 @@
           <folding>
             <element signature="class#2813:3826" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_history.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1640625">
-          <caret line="64" column="47" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -2707,52 +2570,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_second.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="81" selection-start-line="110" selection-start-column="81" selection-end-line="110" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_bolus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2614" column="0" selection-start-line="2614" selection-start-column="0" selection-end-line="2614" selection-end-column="0" />
-          <folding>
-            <element signature="method#CRC16_recive_msg#0;class#TalkActivity#0" expanded="false" />
-            <element signature="class#75208:75444" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_meal_bolus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="89" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_system.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5681818">
-          <caret line="93" column="42" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_System_set.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="55" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2764,18 +2585,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_factory_data.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="60" selection-start-line="122" selection-start-column="60" selection-end-line="122" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.37637362">
+          <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_factory_data.java">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15065913">
-          <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding>
+            <element signature="e#634#652#0" expanded="true" />
+            <element signature="e#800#818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_history.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1587301">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-land/pump_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-land/pump_second.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_meal_bolus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/pump_meal_bolus.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_history_data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8888888">
+          <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-20/java/lang/Double.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79928315">
+          <caret line="320" column="7" selection-start-line="320" selection-start-column="7" selection-end-line="320" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_System_set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="151" column="34" selection-start-line="151" selection-start-column="34" selection-end-line="151" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/mti_pii/TalkActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5625">
+          <caret line="2585" column="52" selection-start-line="2585" selection-start-column="52" selection-end-line="2585" selection-end-column="52" />
+          <folding>
+            <element signature="method#CRC16_recive_msg#0;class#TalkActivity#0" expanded="false" />
+            <element signature="class#75208:75444" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_second.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="165" column="25" selection-start-line="165" selection-start-column="15" selection-end-line="165" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mednovo/pump_code/pump_system.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79569894">
+          <caret line="180" column="61" selection-start-line="180" selection-start-column="61" selection-end-line="180" selection-end-column="61" />
           <folding />
         </state>
       </provider>
