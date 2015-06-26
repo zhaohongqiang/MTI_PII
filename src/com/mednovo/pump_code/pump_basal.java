@@ -37,7 +37,7 @@ public class pump_basal extends Activity implements View.OnClickListener{
     private TextView Basal_three;
     private TextView Basal_one;
     private String Menu_name;
-    private int Flag_menu = 0;
+    private int Flag_list = 0;
 
     private void initView() {
         Button_Menu = (Button) findViewById(R.id.MENU);
@@ -70,16 +70,26 @@ public class pump_basal extends Activity implements View.OnClickListener{
         startActivityForResult(intent_pump_second, 0);
     }
 
+
+    private void OneActivity() {
+        Intent intent_pump_bolus = new Intent();
+        intent_pump_bolus.setClass(getApplicationContext(), pump_basal_in.class);
+        intent_pump_bolus.putExtra("Flag_list", Flag_list);
+        intent_pump_bolus.putExtra("Menu_name",Menu_name);
+        startActivityForResult(intent_pump_bolus, 0);
+    }
+
+
     // 按钮监听
     @Override
     public void onClick(View v) {
         if(v == Button_DOWN || v == Button_UP){
             if(0xffff0000 == Basal_three.getCurrentTextColor()){
-                Flag_menu = 0;
+                Flag_list = 1;
                 Basal_four.setTextColor(0xffff0000);
                 Basal_three.setTextColor(0xff000000);
             }else {
-                Flag_menu = 1;
+                Flag_list = 0;
                 Basal_three.setTextColor(0xffff0000);
                 Basal_four.setTextColor(0xff000000);
             }
@@ -89,11 +99,7 @@ public class pump_basal extends Activity implements View.OnClickListener{
             onBackPressed();
         }
         if(v == Button_OK){
-            if(0 == Flag_menu){//进入快设基础率界面
-
-            }else{
-
-            }
+            OneActivity();
         }
 
     }

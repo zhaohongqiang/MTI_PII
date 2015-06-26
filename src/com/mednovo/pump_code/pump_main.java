@@ -14,7 +14,7 @@ import com.mednovo.mti_pii.R;
 
 
 
-public class pump_main extends Activity {
+public class pump_main extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,7 @@ public class pump_main extends Activity {
     private  Button Button_OK;
     private  Button Button_UP;
     private  Button Button_DOWN;
+    private  Boolean Click_flag = false;
 
     private void initView() {
         Button_Menu = (Button) findViewById(R.id.MENU);
@@ -39,32 +40,10 @@ public class pump_main extends Activity {
         Button_UP = (Button) findViewById(R.id.UP);
         Button_DOWN = (Button) findViewById(R.id.DOWN);
 
-        Button_Menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(v == Button_Menu) {
-                    MenuActivity();
-                }
-            }
-        });
-        Button_UP.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(v == Button_UP) {
-                    UpActivity();
-                }
-            }
-        });
-
-        Button_DOWN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(v == Button_DOWN) {
-                    DownActivity();
-                }
-            }
-        });
-
+        Button_Menu.setOnClickListener(this);
+        Button_OK.setOnClickListener(this);
+        Button_UP.setOnClickListener(this);
+        Button_DOWN.setOnClickListener(this);
     }
 
     private void MenuActivity() {
@@ -80,6 +59,39 @@ public class pump_main extends Activity {
     private void DownActivity() {
         Intent intent_Menu_Down = new Intent(this, Menu_Down.class);
         startActivity(intent_Menu_Down);
+    }
+
+    private void ExhaustActivity(String Menu_name) {
+
+        Intent intent_pump_Confirm = new Intent();
+        intent_pump_Confirm.setClass(getApplicationContext(), pump_Confirm.class);
+        intent_pump_Confirm.putExtra("Menu_name",Menu_name);
+        startActivityForResult(intent_pump_Confirm, 0);
+    }
+
+    // °´Å¥¼àÌý
+    @Override
+    public void onClick(View v) {
+        if(v == Button_Menu) {
+            MenuActivity();
+        }
+
+        if(v == Button_DOWN) {
+            if(Click_flag){
+                Click_flag = false;
+                ExhaustActivity("ÅÅÆø");
+            }else {
+                DownActivity();
+            }
+        }
+
+        if(v == Button_UP) {
+            UpActivity();
+        }
+
+        if(v == Button_OK){
+            Click_flag = true;
+        }
     }
 
 }

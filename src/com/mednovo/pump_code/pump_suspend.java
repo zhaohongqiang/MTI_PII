@@ -58,7 +58,7 @@ public class pump_suspend extends Activity implements View.OnClickListener{
         Intent data = getIntent();
         Menu_name = data.getExtras().getString("Menu_name");
         Suspend_one.setText(Menu_name);
-        Suspend_four.setText("06£º11 ÔÝÍ£Êä×¢");
+        Suspend_four.setText("06:11 ÔÝÍ£Êä×¢");
         Suspend_five.setVisibility(View.INVISIBLE);
     }
 

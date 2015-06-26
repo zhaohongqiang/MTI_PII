@@ -51,7 +51,8 @@
 //增加横版的胰岛素泵主界面
         <activity
             android:name="com.mednovo.pump_code.pump_main"
-            android:screenOrientation="landscape">//主界面
+            android:screenOrientation="landscape"
+            android:configChanges="orientation">//主界面
         </activity>
 
         <activity
@@ -65,12 +66,14 @@
 
         <activity
             android:name="com.mednovo.pump_code.pump_second"
-            android:screenOrientation="landscape">//菜单界面
+            android:screenOrientation="landscape"
+            android:configChanges="orientation">//菜单界面
         </activity>
 
         <activity
             android:name="com.mednovo.pump_code.pump_meal_bolus"
-            android:screenOrientation="landscape">//大剂量界面
+            android:screenOrientation="landscape"
+            android:configChanges="orientation">//大剂量界面
         </activity>
 
             <activity
@@ -89,6 +92,11 @@
             android:screenOrientation="landscape">//基础率界面
         </activity>
 
+            <activity
+                android:name="com.mednovo.pump_code.pump_basal_in"
+                android:screenOrientation="landscape">//基础率界面
+            </activity>
+
         <activity
             android:name="com.mednovo.pump_code.pump_Temporary_rate"
             android:screenOrientation="landscape">//暂时率界面
@@ -102,6 +110,11 @@
             <activity
                 android:name="com.mednovo.pump_code.pump_system"
                 android:screenOrientation="landscape">//系统设定下界面
+            </activity>
+
+            <activity
+                android:name="com.mednovo.pump_code.pump_Confirm"
+                android:screenOrientation="landscape">//确认界面
             </activity>
 
         <activity
@@ -118,6 +131,11 @@
             android:name="com.mednovo.pump_code.pump_data"
             android:screenOrientation="landscape">//数据通讯界面
         </activity>
+
+            <activity
+                android:name="com.mednovo.pump_code.pump_data_in"
+                android:screenOrientation="landscape">//数据通讯界面
+            </activity>
 
         <activity
             android:name="com.mednovo.pump_code.pump_factory_set"

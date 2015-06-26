@@ -36,7 +36,7 @@ public class pump_data extends Activity implements View.OnClickListener{
     private TextView data_three;
     private TextView data_one;
     private String Menu_name;
-    private int Flag_menu = 0;
+    private int Flag_list = 0;
 
     /**
      *
@@ -70,16 +70,24 @@ public class pump_data extends Activity implements View.OnClickListener{
         startActivity(intent_pump_second);
     }
 
+    private void OneActivity() {
+        Intent intent_pump_bolus = new Intent();
+        intent_pump_bolus.setClass(getApplicationContext(), pump_data_in.class);
+        intent_pump_bolus.putExtra("Flag_list",Flag_list);
+        intent_pump_bolus.putExtra("Menu_name",Menu_name);
+        startActivityForResult(intent_pump_bolus, 0);
+    }
+
     // 按钮监听
     @Override
     public void onClick(View v) {
         if(v == Button_DOWN || v == Button_UP){
             if(0xffff0000 == data_three.getCurrentTextColor()){
-                Flag_menu = 0;
+                Flag_list = 1;
                 data_four.setTextColor(0xffff0000);
                 data_three.setTextColor(0xff000000);
             }else {
-                Flag_menu = 1;
+                Flag_list = 0;
                 data_three.setTextColor(0xffff0000);
                 data_four.setTextColor(0xff000000);
             }
@@ -89,11 +97,7 @@ public class pump_data extends Activity implements View.OnClickListener{
             onBackPressed();
         }
         if(v == Button_OK){
-            if(0 == Flag_menu){//进入大剂量界面
-
-            }else{
-
-            }
+            OneActivity();
         }
 
     }
