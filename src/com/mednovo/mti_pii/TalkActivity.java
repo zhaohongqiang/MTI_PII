@@ -1109,7 +1109,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 						Toast.makeText(getApplicationContext(), "无记录", Toast.LENGTH_LONG)
 								.show();
 					}else{
-						if(((byte) 0x00) == tmp_byte[12]){//读取
+						if(((byte) 0x00) == tmp_byte[14]){//读取
 							receive = "读取成功";
 						}else{
 							receive = "读取失败";
@@ -1244,7 +1244,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 					}
 				}
 				break;
-			case CommandsFound.READ_TEMPORARYRECORD://协议有错误，未发送暂时率结束时间
+			case CommandsFound.READ_TEMPORARYRECORD:
 				if((((byte) 0xA8) == tmp_byte[0]) && (((byte) 0xA2) == tmp_byte[CRC16_len - 1]) ){//数据接收完整
 					if(CRC16_len == 8) {
 						//无记录或者错误
@@ -2783,6 +2783,7 @@ public class TalkActivity extends Activity implements OnClickListener {
 						hour_value_txt[i] =  Add_zero(
 												DataTransmission.bytesToHexString(
 													DataTransmission.Expand_DectoBytes(hour_value[i].getText().toString())));
+						GeneralCommands.BasalData_value[i] = hour_value[i].getText().toString();
 						Data_field_txt += hour_value_txt[i];
 					}
 					break;

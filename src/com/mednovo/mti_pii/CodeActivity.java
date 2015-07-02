@@ -52,6 +52,7 @@ public class CodeActivity extends Activity {
                     case R.id.button_normal:
                         start = "@1000\n";
                         OnorOff_bluetooth.setChecked(false);
+                        OnorOff_bluetooth.setClickable(false);
                         break;
                 }
             }
@@ -64,6 +65,7 @@ public class CodeActivity extends Activity {
                     case R.id.button_bluetooth:
                         start = "@1800\n";
                         OnorOff_bluetooth.setChecked(true);
+                        OnorOff_bluetooth.setClickable(true);
                         break;
                 }
             }
